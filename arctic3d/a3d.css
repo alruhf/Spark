@@ -1,0 +1,236 @@
+/* Arctic 3D UI: icons only, big touch targets (>= 88 px), tablet landscape first */
+.a3d{position:absolute;inset:0;z-index:20;background:#0b1a30;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+.a3d-cv{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.a3d-ui{position:absolute;inset:0;pointer-events:none}
+.a3d-ui>*,.a3d-rui>*{pointer-events:auto}.a3d-rui{position:absolute;inset:0;pointer-events:none}
+.a3d-b{border:4px solid #fff;border-radius:24px;background:#10243ecc;box-shadow:0 6px 18px #0006;padding:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
+.a3d-b svg,.a3d-b img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.a3d-b.on{background:#2e9d5a;border-color:#f6c445;box-shadow:0 0 0 4px #f6c44588}
+.a3d-back{z-index:7;position:absolute;left:max(14px,env(safe-area-inset-left,0px));top:max(14px,env(safe-area-inset-top,0px));width:88px;height:88px;border-radius:50%}
+.a3d-coins{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:max(14px,env(safe-area-inset-top,0px));display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:28px;background:#10243ecc;color:#fff;font:800 26px system-ui;pointer-events:none}
+.a3d-coins img{width:40px}
+.a3d-count{position:absolute;left:50%;top:max(16px,env(safe-area-inset-top,0px));transform:translateX(-50%);min-width:64px;padding:6px 16px;border-radius:24px;background:#ffffffd9;color:#10243e;font:900 30px system-ui;text-align:center;pointer-events:none}
+.a3d-bar{position:absolute;left:50%;bottom:max(14px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;gap:14px;padding:10px;border-radius:30px;background:#0b1a30aa}
+.a3d-t{width:96px;height:96px}
+.a3d-turn{position:absolute;top:50%;width:88px;height:88px;margin-top:-44px;border-radius:50%}
+.a3d-turn.l{left:max(14px,env(safe-area-inset-left,0px))}.a3d-turn.r{right:max(14px,env(safe-area-inset-right,0px))}
+.a3d-enter{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));width:150px;height:116px;opacity:0;transform:scale(.5);pointer-events:none;transition:all .4s;background:#2e9d5a}
+.a3d-enter.on{opacity:1;transform:scale(1);pointer-events:auto;animation:a3dpulse 1.6s ease-in-out infinite}
+@keyframes a3dpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.a3d-cue{position:absolute;left:50%;top:90px;transform:translateX(-50%) scale(.8);opacity:0;transition:all .3s;width:72px;height:72px;border-radius:50%;background:#ffffffd9 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M8 18h8l10-8v28l-10-8H8z' fill='%2310243e'/><path d='M32 16a10 10 0 010 16M36 11a16 16 0 010 26' fill='none' stroke='%2310243e' stroke-width='3' stroke-linecap='round'/></svg>") center/60% no-repeat;pointer-events:none}
+.a3d-cue.on{opacity:1;transform:translateX(-50%) scale(1)}
+.a3d-tray{position:absolute;left:50%;bottom:max(12px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;gap:10px;padding:10px;border-radius:26px;background:#0b1a30cc;max-width:calc(100vw - 360px);overflow-x:auto;scrollbar-width:none}
+.a3d-tile{flex:0 0 auto;width:92px;height:92px;padding:4px;border-radius:20px;background:#ffffff26}
+.a3d-exit{position:absolute;left:max(14px,env(safe-area-inset-left,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));width:140px;height:108px}
+.a3d-paint{position:absolute;right:max(14px,env(safe-area-inset-right,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));width:108px;height:108px}
+.a3d-pal{position:absolute;right:max(14px,env(safe-area-inset-right,0px));bottom:140px;display:none;grid-template-columns:repeat(2,88px);gap:10px;padding:10px;border-radius:24px;background:#0b1a30cc}
+.a3d-pal.on{display:grid}.a3d-pal.hint{animation:a3dpulse .45s 2}
+.a3d-col{width:88px;height:88px;border-radius:50%}
+.a3d-sbar{position:absolute;left:50%;bottom:140px;transform:translateX(-50%);display:none;gap:12px;padding:10px;border-radius:26px;background:#0b1a30cc}
+.a3d-sbar.on{display:flex}.a3d-s{width:92px;height:92px}
+.a3d[data-mode="room"] .a3d-turn{top:40%}
+@media (max-aspect-ratio:9/10){.a3d-tray{max-width:calc(100vw - 20px);bottom:140px}.a3d-pal{bottom:260px}.a3d-sbar{bottom:260px}.a3d-t{width:80px;height:80px}.a3d-bar{gap:8px}.a3d-enter{bottom:130px}}
+/* ---- P2: camp hub, bubble, photo, shop, sled, aurora */
+.a3d-hub{position:absolute;left:50%;bottom:max(12px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;gap:14px;padding:10px 14px;border-radius:26px;background:#10243ecc;z-index:4}
+.a3d-h{width:96px;height:96px;border-radius:24px;border:4px solid #fff;background:#1d3a63;display:grid;place-items:center;padding:12px;cursor:pointer}
+.a3d-h svg,.a3d-h img{width:100%;height:100%;object-fit:contain}
+.a3d-h[data-go="sled"]{background:#2e7d4f}.a3d-h[data-go="aurora"]{background:#3b2a6b}.a3d-h[data-go="shop"]{background:#b7791f}.a3d-h[data-go="day"]{background:#2e86c1}
+.a3d-bub{position:absolute;left:0;top:0;display:none;gap:12px;z-index:5;pointer-events:none}
+.a3d-bub.on{display:flex}
+.a3d-bub.on{transform-origin:0 0}
+.a3d-act{pointer-events:auto;width:92px;height:92px;border-radius:50%;border:4px solid #fff;background:#1d3a63ee;display:grid;place-items:center;padding:16px;cursor:pointer;box-shadow:0 6px 18px #0004}
+.a3d-act svg,.a3d-act img{width:100%;height:100%;object-fit:contain}
+.a3d-act.feed{background:#2e86c1ee}.a3d-act.pet{background:#c2577aee}.a3d-act.follow{background:#2e7d4fee}.a3d-act.camera{background:#b7791fee}
+.a3d-act.empty{opacity:.45}.a3d-act.shake{animation:a3dshake .4s}
+@keyframes a3dshake{25%{rotate:-12deg}75%{rotate:12deg}}
+.a3d-fishchip{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:78px;display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:24px;background:#10243ecc;color:#fff;font:800 28px system-ui;z-index:4}
+.a3d-fishchip svg{width:48px;height:30px}
+.a3d-heart{position:absolute;left:0;top:0;color:#ff5a7a;font-size:40px;pointer-events:none;z-index:5;margin:-20px 0 0 -14px;text-shadow:0 2px 6px #0005}
+.a3d-flycoin{position:absolute;width:48px;height:48px;margin:-24px 0 0 -24px;transition:left .6s ease-in,top .6s ease-in,transform .6s;z-index:9;pointer-events:none}
+.a3d-photo{position:absolute;inset:0;display:none;z-index:4;pointer-events:none}
+.a3d-photo.on{display:block}
+.a3d-vf{position:absolute;inset:12% 18%;border:6px dashed #ffffffcc;border-radius:24px}
+.a3d-photo.flash .a3d-vf{background:#fff8}
+.a3d-strip{position:absolute;left:50%;top:14px;transform:translateX(-50%);display:flex;gap:10px}
+.a3d-strip i{width:110px;height:76px;border-radius:12px;border:4px solid #fff;background:#10243e99 center/cover no-repeat}
+.a3d-strip i.on{border-color:#f6c445}
+.a3d-shutter{pointer-events:auto;position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:130px;height:130px;border-radius:50%;border:6px solid #fff;background:#d9473b;padding:26px;cursor:pointer}
+.a3d-shutter img{width:100%;height:100%;object-fit:contain}
+@media (orientation:portrait){.a3d-h{width:60px;height:60px;padding:7px;border-radius:16px;border-width:3px}.a3d-hub{gap:6px;padding:6px 8px}.a3d-act{width:80px;height:80px}.a3d-strip i{width:76px;height:54px}}
+.a3d-aur{position:absolute;inset:0;display:none;z-index:3;transition:opacity 1.1s}
+.a3d-aur.on{display:block}.a3d-aur.fade{opacity:0}
+.a3d-aurcv{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.a3d-aurpal{position:absolute;left:50%;bottom:max(14px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;gap:12px;padding:10px 14px;border-radius:24px;background:#0a1830cc}
+.a3d-aurcol{width:76px;height:76px;border-radius:50%;border:5px solid #ffffff66;cursor:pointer;box-shadow:0 0 18px currentColor}
+.a3d-aurcol.on{border-color:#fff;transform:scale(1.08)}
+.a3d-aurdots{position:absolute;left:50%;top:18px;transform:translateX(-50%);display:flex;gap:12px}
+.a3d-aurdots i{width:34px;height:34px;border-radius:50%;border:4px solid #fff;background:#ffffff22}
+.a3d-aurdots i.on{background:#5dff9e;box-shadow:0 0 16px #5dff9e}
+@media (orientation:portrait){.a3d-aurcol{width:58px;height:58px}}
+.a3d-aur{pointer-events:auto}
+.a3d-sled{position:absolute;inset:0;display:none;pointer-events:none;z-index:4}
+.a3d-sled.on{display:block}
+.a3d-sled>*{pointer-events:auto}
+.a3d-go{position:absolute;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));width:150px;height:120px;border-radius:30px;border:5px solid #fff;background:#2e7d4f;padding:16px;display:none;cursor:pointer}
+.a3d-go.ready{animation:a3dpulse 1.6s ease-in-out infinite;box-shadow:0 0 0 6px #f6c445}
+.a3d-sled[data-phase="hitch"] .a3d-go{display:block}
+.a3d-steer{position:absolute;bottom:max(18px,env(safe-area-inset-bottom,0px));width:150px;height:150px;border-radius:50%;border:5px solid #fff;background:#1d3a63cc;padding:30px;display:none;cursor:pointer;touch-action:none}
+.a3d-steer.l{left:max(18px,env(safe-area-inset-left,0px))}.a3d-steer.r{right:max(18px,env(safe-area-inset-right,0px))}
+.a3d-sled[data-phase="ride"] .a3d-steer{display:block}
+.a3d-arrow{position:absolute;left:50%;top:14px;width:84px;height:84px;display:none;pointer-events:none;transform-origin:50% 50%}
+.a3d-arrow span{position:absolute;inset:0}
+.a3d-sled[data-phase="ride"] .a3d-arrow{display:block}
+.a3d-paws{position:absolute;left:max(110px,calc(env(safe-area-inset-left,0px) + 110px));top:22px;display:flex;gap:6px;pointer-events:none}
+.a3d-paws i{width:30px;height:30px;border-radius:50%;background:#ffffff33;border:3px solid #fff}.a3d-paws i.on{background:#f6c445}
+.a3d-load{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:134px;display:flex;gap:6px;pointer-events:none}
+.a3d-load i{width:54px;height:34px;opacity:.3}.a3d-load i.on{opacity:1}.a3d-load svg{width:100%;height:100%}
+.a3d-bowl{position:absolute;left:0;top:0;width:96px;height:96px;border-radius:50%;border:4px solid #fff;background:#f6c445;padding:14px;display:none;cursor:pointer}
+.a3d-bowl.done{background:#2e7d4f}.a3d-bowl.done svg{opacity:.5}
+.a3d-sled[data-phase="hitch"] .a3d-bowl{display:block}
+.a3d-rew{position:absolute;inset:0;display:none;place-items:center;align-content:center;gap:24px;background:#0a183088;z-index:6}
+.a3d-rew.on{display:grid}
+.a3d-rewfish{display:flex;gap:16px;min-height:80px}.a3d-rewfish i{width:110px;height:70px;animation:a3dpulse .45s 1}.a3d-rewfish svg{width:100%;height:100%}
+.a3d-rewbtns{display:flex;gap:28px;justify-content:center}
+.a3d-again,.a3d-tocamp{width:140px;height:120px;border-radius:30px;border:5px solid #fff;background:#2e7d4f;padding:18px;cursor:pointer}.a3d-tocamp{background:#b7791f}
+@media (orientation:portrait){.a3d-steer{width:120px;height:120px;padding:24px}.a3d-go{width:120px;height:100px}}
+.a3d-shop{position:absolute;inset:0;display:none;place-items:center;background:#0a1830aa;z-index:6}
+.a3d-shop.on{display:grid}
+.a3d-shoprow{display:flex;gap:28px}
+.a3d-card{width:260px;padding:18px;border-radius:28px;background:#fdf6ea;border:5px solid #fff;display:grid;justify-items:center;gap:12px;box-shadow:0 10px 30px #0005}
+.a3d-card.owned{background:#e6f6ea}.a3d-card.shake{animation:a3dshake .4s}
+.a3d-cardimg{width:180px;height:180px;border-radius:50%;background:radial-gradient(#3a5f93,#1d3a63)}
+.a3d-price{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;max-width:230px}
+.a3d-price i{width:36px;height:36px;opacity:.28;filter:grayscale(1);transition:transform .25s}.a3d-price i.on{opacity:1;filter:none}.a3d-price i.pay{transform:translateY(-14px) scale(1.2)}
+.a3d-price img{width:100%;height:100%}
+.a3d-buy{width:150px;height:84px;border-radius:24px;border:4px solid #fff;background:#2e7d4f;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;cursor:pointer}
+.a3d-buy img,.a3d-buy svg{height:100%}.a3d-buy.got{background:#5aa36e}
+.a3d-pg{position:absolute;top:50%;transform:translateY(-50%);width:104px;height:104px;border-radius:50%;border:5px solid #fff;background:#1d3a63;padding:22px;cursor:pointer}
+.a3d-pg.prev{left:max(24px,env(safe-area-inset-left,0px))}.a3d-pg.next{right:max(24px,env(safe-area-inset-right,0px))}
+.a3d-shopx{display:none!important;position:absolute;left:max(14px,env(safe-area-inset-left,0px));top:max(14px,env(safe-area-inset-top,0px));width:88px;height:88px;border-radius:50%;border:4px solid #fff;background:#1d3a63;padding:18px;cursor:pointer}
+@media (orientation:portrait){.a3d-shoprow{flex-direction:column;gap:14px}.a3d-card{width:220px;padding:12px;gap:8px}.a3d-cardimg{width:120px;height:120px}.a3d-pg{top:auto;bottom:24px;transform:none;width:90px;height:90px}}
+.a3d-edge{position:absolute;left:0;top:0;width:64px;height:64px;border-radius:50%;border:3px solid #fff;padding:0;background:none;display:none;cursor:pointer;z-index:4;box-shadow:0 2px 8px #0006}
+.a3d-sled .a3d-bowl{z-index:3}
+@media (orientation:portrait){.a3d-bowl{width:80px;height:80px;padding:12px}}
+/* P3: bag counts, empty tray -> trader, place pins, ice fishing */
+.a3d-tile,.a3d-card{position:relative}
+.a3d-n{position:absolute;right:4px;top:4px;min-width:30px;height:30px;padding:0 6px;border-radius:15px;background:#f6c445;color:#3a2a10;font:800 18px/30px system-ui,sans-serif;border:3px solid #fff;text-align:center;pointer-events:none}
+.a3d-card .a3d-n{right:10px;top:10px}
+.a3d-tile.empty{background:#e2716f55;animation:a3dpulse 1.4s infinite}
+.a3d-tile.empty svg{width:100%;height:100%}
+.a3d-pin{position:absolute;left:0;top:0;width:74px;height:74px;border-radius:50%;border:4px solid #fff;padding:10px;background:var(--pc,#1d3a63);display:none;cursor:pointer;z-index:4;box-shadow:0 4px 12px #0006}
+.a3d-pin svg{width:100%;height:100%}
+.a3d-pin::after{content:'';position:absolute;left:50%;bottom:-14px;margin-left:-9px;border:9px solid transparent;border-top-color:#fff}
+.a3d-pin.edge{width:66px;height:66px;padding:8px;opacity:.92}
+.a3d-pin.edge::after{display:none}
+.a3d-fishui{position:absolute;right:28px;bottom:40px;display:none;z-index:4}
+.a3d-fishui.on{display:block}
+.a3d-fbtn{position:relative;width:140px;height:140px;border-radius:50%;border:6px solid #fff;background:#1d3a63;padding:26px;cursor:pointer;touch-action:none;box-shadow:0 6px 18px #0006}
+.a3d-fbtn svg{width:100%;height:100%;pointer-events:none}
+.a3d-fbtn .ring{position:absolute;inset:-6px;width:calc(100% + 12px);height:calc(100% + 12px);transform:rotate(-90deg)}
+.a3d-fbtn .ring circle{fill:none;stroke:#f6c445;stroke-width:8;stroke-dasharray:100;stroke-dashoffset:100;stroke-linecap:round}
+.a3d-fbtn.drill:active{transform:scale(.94)}
+.a3d-fbtn.reel.go{background:#27ae60;animation:a3dpulse .6s infinite}
+.a3d-fbtn.cast{background:#2e86c1;animation:a3dpulse 1.6s infinite}
+@media (orientation:portrait){.a3d-fishui{right:50%;transform:translateX(50%);bottom:120px}.a3d-fbtn{width:120px;height:120px;padding:22px}}
+
+/* P5: trader 2 per page, big arrows (ages 4-6), sell fish */
+.a3d-pg{width:132px;height:132px;padding:26px;border-width:6px;box-shadow:0 8px 22px #0006}
+.a3d-sell{position:absolute;left:50%;top:max(16px,env(safe-area-inset-top,0px));transform:translateX(-50%);height:96px;padding:10px 22px;border-radius:30px;border:5px solid #fff;background:#2e86c1;display:flex;align-items:center;gap:8px;cursor:pointer;box-shadow:0 8px 22px #0005}
+.a3d-sell svg,.a3d-sell img{height:100%}.a3d-sellf{height:64px;width:100px;display:block}.a3d-sellf svg{width:100%;height:100%}.a3d-sella{height:46px!important}.a3d-sellc{height:58px;width:58px;display:block}
+.a3d-sell.none{opacity:.5}.a3d-sell.shake{animation:a3dshake .4s}
+.a3d-sellfly{position:fixed;width:90px;height:56px;margin:-28px 0 0 -10px;transition:transform .7s ease-in,opacity .7s ease-in;z-index:9999;pointer-events:none}.a3d-sellfly svg{width:100%;height:100%}
+@media (orientation:portrait){.a3d-pg{width:116px;height:116px;bottom:20px}.a3d-sell{height:84px}.a3d-sellf{width:84px;height:54px}.a3d-sellc{width:50px;height:50px}}
+
+/* P5b snowy loading cover (hides the camp until the real models are in) */
+.a3d-cover{position:absolute;inset:0;z-index:50;background:radial-gradient(circle at 50% 40%,#ffffff,#dfeaf5 60%,#bcd0e6);transition:opacity .6s;pointer-events:auto;overflow:hidden}.a3d-cover.off{opacity:0;pointer-events:none}
+.a3d-cover i{position:absolute;top:-10%;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 0 8px #9fbbd8;animation:a3dsnow 2.2s linear infinite}.a3d-cover i:nth-child(1){left:28%}.a3d-cover i:nth-child(2){left:52%;animation-delay:.7s}.a3d-cover i:nth-child(3){left:74%;animation-delay:1.4s}
+@keyframes a3dsnow{to{transform:translateY(120vh)}}
+/* P5c dome party */
+.a3d-party{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+.a3d-party i{position:absolute;top:-4%;width:12px;height:16px;border-radius:3px;animation:a3dconf 2.2s ease-in forwards}
+@keyframes a3dconf{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+
+/* P6: Spark guide orb in the Arctic (same look as site Spark; beats sbx.css hide + play-clean.css placement) */
+.a3d .swd{z-index:5}
+
+/* P6B: Spark the guide (Allen's character) + mystic swirl. Beats sbx.css hide + play-clean.css placement */
+body.sbx-on .a3d .spark-companion.a3d-spark{display:block!important;position:absolute;left:max(10px,env(safe-area-inset-left,0px));right:auto;top:calc(max(14px,env(safe-area-inset-top,0px)) + 100px);bottom:auto;width:104px;height:131px;z-index:6;pointer-events:auto;transform:none;background:none;border:0;padding:0;border-radius:0;animation:none;overflow:visible;-webkit-tap-highlight-color:transparent}
+.a3d-spark .sg-body{position:absolute;inset:0;animation:sgBob 3.2s ease-in-out infinite;transform-origin:50% 92%}
+.a3d-spark .sg-body img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 4px 8px #0007);pointer-events:none}
+.a3d-spark .sg-lid{position:absolute;border-radius:50%;background:radial-gradient(ellipse at 50% 70%,#c99367 0%,#b27a52 70%,#7a4e33 100%);transform:scaleY(0);transform-origin:50% 0;transition:transform .07s}
+.a3d-spark .sg-lid.l{left:31.5%;top:31.2%;width:17.8%;height:14.6%}.a3d-spark .sg-lid.r{left:61.9%;top:31.3%;width:15.8%;height:13%}
+.a3d-spark.blink .sg-lid{transform:scaleY(1)}
+.a3d-spark .sg-mouth{position:absolute;left:52.6%;top:47.2%;width:7.6%;height:1.2%;border-radius:0 0 50% 50%/0 0 100% 100%;background:#3a1d14;opacity:0}
+.a3d-spark[data-state="speaking"] .sg-mouth{animation:sgTalk .26s ease-in-out infinite alternate;opacity:1}
+.a3d-spark[data-state="speaking"] .sg-body{animation:sgTalkBob .52s ease-in-out infinite}
+.a3d-spark .sg-swirl{position:absolute;left:-14%;right:-14%;top:2%;height:96%;border-radius:50%;background:conic-gradient(from 0deg,#58e6ff,#ff7ccc,#ffd75b,#9b7dff,#5effb6,#58e6ff);-webkit-mask:radial-gradient(closest-side,transparent 62%,#000 72%,#000 84%,transparent 100%);mask:radial-gradient(closest-side,transparent 62%,#000 72%,#000 84%,transparent 100%);filter:blur(4px);opacity:.92;animation:sgSpin 5s linear infinite}
+.a3d-spark .sg-swirl.b{left:-4%;right:-4%;top:10%;height:84%;opacity:.55;animation:sgSpin 3.4s linear infinite reverse;filter:blur(7px)}
+.a3d-spark .sg-dots{position:absolute;left:-10%;right:-10%;top:5%;height:90%;animation:sgSpin 7s linear infinite}
+.a3d-spark .sg-dots i{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 8px 3px currentColor;animation:sgTw 1.6s ease-in-out infinite alternate}
+.a3d-spark .sg-dots i:nth-child(1){left:48%;top:-2%;color:#58e6ff}.a3d-spark .sg-dots i:nth-child(2){left:94%;top:30%;color:#ff7ccc;animation-delay:.3s}.a3d-spark .sg-dots i:nth-child(3){left:88%;top:80%;color:#ffd75b;animation-delay:.6s}.a3d-spark .sg-dots i:nth-child(4){left:40%;top:98%;color:#9b7dff;animation-delay:.9s}.a3d-spark .sg-dots i:nth-child(5){left:0;top:66%;color:#5effb6;animation-delay:1.2s}.a3d-spark .sg-dots i:nth-child(6){left:6%;top:16%;color:#ff9f5b;animation-delay:1.5s}
+.a3d-spark[data-state="listening"] .sg-swirl{animation-duration:1.2s;opacity:1;filter:blur(3px)}.a3d-spark[data-state="listening"] .sg-dots{animation-duration:2s}
+.a3d-spark[data-state="thinking"] .sg-swirl{animation-duration:.8s}.a3d-spark[data-state="thinking"] .sg-dots{animation-duration:1.2s}
+.a3d-spark .sg-mic{position:absolute;left:50%;bottom:-6px;width:38px;height:38px;margin-left:-19px;border-radius:50%;background:#e2456f;border:3px solid #fff;padding:6px;display:none;box-shadow:0 0 0 0 #e2456f88;animation:sgMic 1s ease-out infinite}
+.a3d-spark .sg-mic svg{width:100%;height:100%}.a3d-spark[data-state="listening"] .sg-mic{display:block}
+.a3d-sparkre{position:absolute;z-index:6;left:calc(max(10px,env(safe-area-inset-left,0px)) + 100px);top:calc(max(14px,env(safe-area-inset-top,0px)) + 104px);width:40px;height:40px;border-radius:50%;border:3px solid #fff;background:#10243ecc;padding:7px;pointer-events:auto;cursor:pointer;display:grid;place-items:center}.a3d-sparkre svg{width:100%;height:100%}
+.a3d-sparkbub{position:absolute;z-index:6;left:calc(max(10px,env(safe-area-inset-left,0px)) + 130px);top:calc(max(14px,env(safe-area-inset-top,0px)) + 110px);max-width:min(340px,calc(100vw - 160px));padding:12px 16px;border-radius:20px;background:#fffffff0;color:#17324f;font:600 17px/1.35 system-ui,sans-serif;box-shadow:0 6px 18px #0005;opacity:0;transform:scale(.9);transition:all .25s;pointer-events:none}.a3d-sparkbub.on{opacity:1;transform:none}
+@keyframes sgSpin{to{transform:rotate(360deg)}}@keyframes sgBob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-4px) rotate(1deg)}}
+@keyframes sgTalkBob{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.035,1.02)}}@keyframes sgTalk{from{height:1.2%}to{height:3.4%}}
+@keyframes sgTw{from{opacity:.35;transform:scale(.7)}to{opacity:1;transform:scale(1.15)}}@keyframes sgMic{to{box-shadow:0 0 0 14px #e2456f00}}
+@media(max-width:700px),(max-height:500px){body.sbx-on .a3d .spark-companion.a3d-spark{width:88px;height:111px;top:calc(max(14px,env(safe-area-inset-top,0px)) + 98px)}.a3d-sparkre{left:calc(max(10px,env(safe-area-inset-left,0px)) + 86px);top:calc(max(14px,env(safe-area-inset-top,0px)) + 100px);width:36px;height:36px}.a3d-sparkbub{left:12px;right:12px;max-width:none;top:auto;bottom:130px;font-size:16px}}
+/* phone shop: the cards fill the middle and the sell strip sits on top -> Spark moves to the free bottom-left corner, above the shop */
+.a3d[data-mode="shop"] .spark-companion.a3d-spark,.a3d[data-mode="shop"] .a3d-sparkre{z-index:9!important}
+@media(max-width:700px){.a3d[data-mode="shop"] .spark-companion.a3d-spark{top:auto!important;bottom:max(14px,env(safe-area-inset-bottom,0px))!important;z-index:9!important}.a3d[data-mode="shop"] .a3d-sparkre{top:auto;bottom:max(14px,env(safe-area-inset-bottom,0px));left:84px;z-index:9}}
+/* P6C */
+.a3d-hint{position:absolute;left:50%;top:calc(max(16px,env(safe-area-inset-top,0px)) + 64px);transform:translateX(-50%) scale(.9);display:none;align-items:center;gap:10px;max-width:min(560px,calc(100vw - 260px));padding:10px 16px;border-radius:22px;background:#10243eee;border:3px solid #fff;color:#fff;font:700 17px/1.25 system-ui,sans-serif;box-shadow:0 6px 18px #0006;pointer-events:none;z-index:5}
+.a3d-hint.on{display:flex;animation:a3dHintIn .3s ease-out forwards}.a3d-hint .hi{flex:0 0 40px;height:34px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 40'%3E%3Cpath d='M4 38a20 20 0 0140 0z' fill='white' stroke='%23a9bdd6' stroke-width='2'/%3E%3Cpath d='M18 38v-8a6 6 0 0112 0v8z' fill='%23152238'/%3E%3Cpath d='M8 30h32M12 22h24M18 15h12' stroke='%23a9bdd6' stroke-width='2'/%3E%3C/svg%3E")}
+.a3d-hint .hb{flex:0 0 90px;height:12px;border-radius:6px;background:#ffffff33;overflow:hidden}.a3d-hint .hb i{display:block;height:100%;width:0;background:#f6c445;transition:width .3s}
+.a3d-hint[data-stage="ring"] .hb,.a3d-hint[data-stage="done"] .hb{display:none}
+@keyframes a3dHintIn{to{transform:translateX(-50%) scale(1)}}
+.a3d-enter{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:170px;height:140px;border-radius:28px;background:#2e9d5a;box-shadow:0 0 0 6px #f6c44566,0 8px 24px #0007}.a3d-enter svg{width:64px;height:64px}.a3d-entl{color:#fff;font:800 22px/1 system-ui,sans-serif;white-space:nowrap}
+.a3d-fdone{position:absolute;left:max(14px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));display:none;align-items:center;gap:8px;height:96px;padding:0 26px 0 18px;border-radius:30px;border:5px solid #fff;background:#2e9d5a;box-shadow:0 8px 22px #0007;pointer-events:auto;cursor:pointer;z-index:6}
+.a3d-fdone.on{display:flex}.a3d-fdone svg{width:56px;height:56px}.a3d-fdone b{color:#fff;font:800 26px/1 system-ui,sans-serif}
+.a3d-steps{position:absolute;left:0;top:0;width:54px;height:54px;border-radius:50%;background:#2e9d5aee;border:3px solid #fff;padding:7px;display:none;pointer-events:none;z-index:4}.a3d-steps.on{display:block;animation:a3dStep .5s steps(2) infinite}.a3d-steps svg{width:100%;height:100%}
+@keyframes a3dStep{50%{filter:brightness(1.25)}}
+.a3d-ripple{position:absolute;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;border:4px solid #ffd84a;pointer-events:none;z-index:9;animation:a3dRip .6s ease-out forwards}@keyframes a3dRip{to{transform:scale(6);opacity:0}}
+@media(max-width:700px){.a3d-hint{top:auto;bottom:118px;max-width:calc(100vw - 24px);font-size:15px}.a3d-enter{width:140px;height:120px}.a3d-entl{font-size:19px}.a3d-fdone{height:78px;padding:0 18px 0 12px}.a3d-fdone svg{width:44px;height:44px}.a3d-fdone b{font-size:21px}}
+.a3d-doorpin{position:absolute;left:0;top:0;width:64px;height:64px;border-radius:50%;border:4px solid #fff;background:#f2a72b;box-shadow:0 0 0 0 #ffd35a99,0 6px 16px #0006;padding:9px;display:none;pointer-events:auto;cursor:pointer;z-index:3;animation:a3dDoorPin 1.4s ease-out infinite}.a3d-doorpin.on{display:block}.a3d-doorpin svg{width:100%;height:100%}
+@keyframes a3dDoorPin{to{box-shadow:0 0 0 18px #ffd35a00,0 6px 16px #0006}}
+.a3d-doorpin.edge{width:56px;height:56px;opacity:.95}
+/* P6D: clothes cards = big studio product photos */
+.a3d-card.cloth .a3d-cardimg{width:230px;height:230px;border-radius:26px;object-fit:contain;background:radial-gradient(circle at 50% 32%,#ffffff 0,#e6edf6 55%,#c5d3e6 100%);box-shadow:inset 0 -10px 24px #0001}
+@media(max-width:700px),(max-height:500px){.a3d-card.cloth .a3d-cardimg{width:150px;height:150px;border-radius:20px}}
+@media(max-width:700px) and (orientation:portrait){.a3d-card.cloth .a3d-cardimg{width:112px;height:112px;border-radius:18px}}
+
+/* P6D (Allen): place pins anchored in the world, smaller, fade in/out */
+.a3d-pin{width:58px;height:58px;padding:8px;border-width:3px;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.a3d-pin.pin-on{opacity:1;pointer-events:auto}
+.a3d-pin::after{bottom:-12px;margin-left:-8px;border-width:8px}
+@media(max-width:520px){.a3d .a3d-pin,.a3d .a3d-pin.edge{width:54px!important;height:54px!important;padding:7px}}
+
+.a3d-sellfly,.a3d-coinfly,.a3d-ripple{pointer-events:none!important}
+.a3d-bub.pop{animation:a3dBubPop .45s cubic-bezier(.3,1.6,.5,1)}@keyframes a3dBubPop{0%{opacity:0;scale:.6}100%{opacity:1;scale:1}}
+/* P6E (Tester): picture hint for a 4-year-old - little animated blocks show what to do next */
+.a3d-hint .hv{flex:0 0 74px;height:46px;position:relative;display:block}
+.a3d-hint .hv b{position:absolute;width:16px;height:14px;border-radius:3px;background:#eef6ff;border:2px solid #9fc3e8;bottom:2px}
+.a3d-hint .hv b:nth-child(1){left:4px}.a3d-hint .hv b:nth-child(2){left:22px}.a3d-hint .hv b:nth-child(3){left:40px}.a3d-hint .hv b:nth-child(4){left:58px;animation:a3dHvDrop 1.4s ease-in infinite}
+.a3d-hint .hv u{position:absolute;left:50%;top:0;width:0;height:0;margin-left:-8px;border:8px solid transparent;border-top:12px solid #f6c445;animation:a3dHvArrow 1s ease-in-out infinite;display:none}
+.a3d-hint[data-stage="walls"] .hv b{bottom:2px}.a3d-hint[data-stage="walls"] .hv b:nth-child(4){left:22px;bottom:18px}.a3d-hint[data-stage="walls"] .hv u{display:block;left:30px}
+.a3d-hint[data-stage="door"] .hv b:nth-child(2){background:#2a3f5f;border-color:#f6c445;border-radius:9px 9px 2px 2px;animation:a3dHvPulse 1s ease-in-out infinite}.a3d-hint[data-stage="door"] .hv b:nth-child(4){animation:none}
+.a3d-hint[data-stage="done"] .hv b{display:none}.a3d-hint[data-stage="done"] .hv u{display:block;transform:rotate(-90deg);left:30px;top:14px}
+.a3d-hint .ht{font-size:14px;opacity:.85}
+@keyframes a3dHvDrop{0%{transform:translateY(-26px);opacity:0}40%{opacity:1}70%,100%{transform:translateY(0);opacity:1}}
+@keyframes a3dHvArrow{50%{transform:translateY(5px)}}
+@keyframes a3dHvPulse{50%{box-shadow:0 0 10px 3px #f6c445}}
+.a3d .a3d-edge{width:50px!important;height:50px!important}
+.a3d .a3d-edge::before{content:'';position:absolute;inset:-18px;border-radius:50%}/* P6G: bigger hit area for the paw */
+.a3d-hint .hv{transform:scale(1.7);transform-origin:left center;margin:10px 56px 10px 4px}/* P6I: bigger, clearer hint picture */
+/* P6I: big Clothes / Home tabs at the trader */
+.a3d-shop .a3d-tabs{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:14px;z-index:3}
+.a3d-shop .a3d-tab{width:84px;height:72px;border-radius:20px;border:4px solid #fff;background:#2a3f5f;opacity:.75;padding:6px;box-shadow:0 3px 10px #0005;cursor:pointer}
+.a3d-shop .a3d-tab svg{width:100%;height:100%}
+.a3d-shop .a3d-tab.on{opacity:1;background:#3b8f5a;transform:scale(1.08);border-color:#f6c445}
+@media (max-width:500px){.a3d-shop .a3d-tab{width:70px;height:60px}}
+.a3d-shop .a3d-card.poor{opacity:.5;filter:saturate(.5)}
+
+/* spark17 (Tester: phone Arctic - two big turn buttons sat mid-screen beside the child, the left one under Spark): on phones they are 62px and sit lower, in the ground band in front of the child, clear of Spark and Go inside */@media (max-width:600px){.a3d:not([data-mode="room"]) .a3d-turn{width:62px;height:62px;margin-top:-31px;top:66%}.a3d[data-mode="room"] .a3d-turn{width:62px;height:62px;margin-top:-31px}}

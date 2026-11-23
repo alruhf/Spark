@@ -1,0 +1,43 @@
+/* spark37 item 11 — styles for future parent sign-in buttons only.
+   Selectors are scoped to .spark-auth-btn. Nothing is mounted while
+   providers stay at enabled:false, so this file cannot change gameplay. */
+
+.spark-auth-btn[hidden],
+.spark-auth-btn.spark-auth-dormant {
+  display: none !important;
+}
+
+.spark-auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+  min-height: 44px;
+  margin: 8px 0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  background: #fff;
+  color: #1f1f1f;
+  font: 600 16px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+.spark-auth-btn:focus-visible {
+  outline: 3px solid #4285f4;
+  outline-offset: 2px;
+}
+
+.spark-auth-btn--google {
+  border-color: #dadce0;
+  background: #fff;
+  color: #1f1f1f;
+}
+
+.spark-auth-btn--apple {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}

@@ -1,0 +1,1488 @@
+{
+ "version": 1,
+ "note": "Starter answers for Spark's saved answer library. Seeded as status approved, source seed. Re-seeding never duplicates or overwrites edits.",
+ "answers": [
+  {
+   "area": "earth",
+   "question": "why is the earth round",
+   "variants": [
+    "why is the world round",
+    "why is earth shaped like a ball"
+   ],
+   "answer": "Gravity pulls everything toward the middle, so big things like Earth squish into a ball shape. Round and cozy!"
+  },
+  {
+   "area": "earth",
+   "question": "how big is the earth",
+   "variants": [
+    "how large is the earth",
+    "how big is planet earth"
+   ],
+   "answer": "Earth is huge! Going all the way around it is about 25,000 miles. A car driving nonstop would take more than two weeks!"
+  },
+  {
+   "area": "earth",
+   "question": "why do we have day and night",
+   "variants": [
+    "why does it get dark at night",
+    "where does the sun go at night"
+   ],
+   "answer": "Earth spins like a top! When our side faces the sun, it's day. When it turns away, it's night."
+  },
+  {
+   "area": "earth",
+   "question": "why is the sky blue",
+   "variants": [
+    "what makes the sky blue",
+    "how come the sky is blue"
+   ],
+   "answer": "Sunlight has every color inside it. Air bounces the blue light all around the sky, so blue is what we see!"
+  },
+  {
+   "area": "earth",
+   "question": "how far away is the moon",
+   "variants": [
+    "how far is the moon",
+    "how far is it to the moon"
+   ],
+   "answer": "The Moon is about 239,000 miles away. That's like going around the whole Earth almost 10 times!"
+  },
+  {
+   "area": "earth",
+   "question": "why does the moon change shape",
+   "variants": [
+    "why does the moon look different",
+    "what are the phases of the moon"
+   ],
+   "answer": "The Moon doesn't really change. As it circles Earth each month, we see different amounts of its sunny side."
+  },
+  {
+   "area": "earth",
+   "question": "what is the sun",
+   "variants": [
+    "is the sun a star",
+    "what is the sun made of"
+   ],
+   "answer": "The Sun is a star, a giant ball of super hot gas. It's so big that about a million Earths could fit inside!"
+  },
+  {
+   "area": "earth",
+   "question": "how hot is the sun",
+   "variants": [
+    "is the sun hot",
+    "how hot is it on the sun"
+   ],
+   "answer": "The Sun's surface is about 10,000 degrees Fahrenheit, way hotter than any oven! That's why we never look right at it."
+  },
+  {
+   "area": "earth",
+   "question": "what are stars",
+   "variants": [
+    "what is a star",
+    "what are stars made of"
+   ],
+   "answer": "Stars are giant balls of glowing gas, like our Sun. They look tiny because they are very, very far away."
+  },
+  {
+   "area": "earth",
+   "question": "how many stars are there",
+   "variants": [
+    "how many stars are in the sky",
+    "how many stars are in space"
+   ],
+   "answer": "More than anyone can count! Our galaxy alone has billions and billions of stars. On a dark night you can see thousands."
+  },
+  {
+   "area": "earth",
+   "question": "what is a galaxy",
+   "variants": [
+    "what is the milky way",
+    "what galaxy do we live in"
+   ],
+   "answer": "A galaxy is a giant family of stars. We live in one called the Milky Way. It's shaped like a big swirl!"
+  },
+  {
+   "area": "earth",
+   "question": "what is gravity",
+   "variants": [
+    "why don't we fall off the earth",
+    "why do things fall down"
+   ],
+   "answer": "Gravity is an invisible pull. Earth pulls on you all the time, which keeps your feet on the ground. No floating away!"
+  },
+  {
+   "area": "earth",
+   "question": "what is the universe",
+   "variants": [
+    "how big is the universe",
+    "what is outer space"
+   ],
+   "answer": "The universe is everything there is: all the stars, planets, moons and space itself. It's bigger than anyone can imagine!"
+  },
+  {
+   "area": "earth",
+   "question": "what is an astronaut",
+   "variants": [
+    "how do you become an astronaut",
+    "what do astronauts do"
+   ],
+   "answer": "An astronaut is a person who travels into space. They train for years and wear special suits to breathe up there!"
+  },
+  {
+   "area": "africa",
+   "question": "how big is africa",
+   "variants": [
+    "how large is africa",
+    "is africa big"
+   ],
+   "answer": "Africa is the second biggest continent! The USA, China and India could all fit inside it, with room to spare."
+  },
+  {
+   "area": "africa",
+   "question": "how many countries are in africa",
+   "variants": [
+    "how many countries does africa have"
+   ],
+   "answer": "Africa has 54 countries! That's more than any other continent."
+  },
+  {
+   "area": "africa",
+   "question": "what is the sahara",
+   "variants": [
+    "what is the biggest desert in africa",
+    "how big is the sahara desert"
+   ],
+   "answer": "The Sahara is the biggest hot desert in the world. It's almost as big as the whole United States!"
+  },
+  {
+   "area": "africa",
+   "question": "what is the longest river in africa",
+   "variants": [
+    "what is the longest river in the world",
+    "which river is the longest"
+   ],
+   "answer": "The Nile! It's one of the longest rivers in the world, flowing about 4,100 miles north to the sea."
+  },
+  {
+   "area": "africa",
+   "question": "what is the tallest mountain in africa",
+   "variants": [
+    "what is mount kilimanjaro",
+    "what is the biggest mountain in africa"
+   ],
+   "answer": "Mount Kilimanjaro in Tanzania! It's so tall it has snow on top, even though it's close to the equator."
+  },
+  {
+   "area": "africa",
+   "question": "what animals live in africa",
+   "variants": [
+    "what animals are in africa",
+    "which animals live in africa"
+   ],
+   "answer": "Lions, elephants, giraffes, zebras, hippos, rhinos, cheetahs and gorillas! Africa has some of the most amazing animals on Earth."
+  },
+  {
+   "area": "africa",
+   "question": "is africa hot",
+   "variants": [
+    "is it always hot in africa",
+    "is africa a hot place"
+   ],
+   "answer": "Lots of Africa is warm, but not all of it! There are snowy mountain tops, cool highlands and chilly desert nights."
+  },
+  {
+   "area": "africa",
+   "question": "is there a rainforest in africa",
+   "variants": [
+    "where do gorillas live",
+    "what is the congo rainforest"
+   ],
+   "answer": "Africa has a giant rainforest by the Congo River. It's home to gorillas, chimps and forest elephants!"
+  },
+  {
+   "area": "africa",
+   "question": "what languages do people speak in africa",
+   "variants": [
+    "what language do they speak in africa",
+    "how many languages are in africa"
+   ],
+   "answer": "Africa has well over a thousand languages! People speak Swahili, Arabic, Zulu, Amharic, French, English and many more."
+  },
+  {
+   "area": "africa",
+   "question": "what is the biggest land animal",
+   "variants": [
+    "what is the biggest animal in africa",
+    "how big is an african elephant"
+   ],
+   "answer": "The African elephant! It's the biggest animal on land and can be heavier than three cars put together."
+  },
+  {
+   "area": "africa",
+   "question": "what is victoria falls",
+   "variants": [
+    "what is the biggest waterfall in africa"
+   ],
+   "answer": "Victoria Falls is a giant waterfall between Zambia and Zimbabwe. Its mist rises so high, people call it the smoke that thunders!"
+  },
+  {
+   "area": "africa",
+   "question": "where do lemurs live",
+   "variants": [
+    "what is madagascar",
+    "what is a lemur"
+   ],
+   "answer": "Lemurs live on Madagascar, a big island near Africa. It's the only place in the wild where they're found!"
+  },
+  {
+   "area": "savannah",
+   "question": "what is a savannah",
+   "variants": [
+    "what is the savannah like",
+    "what does a savannah look like"
+   ],
+   "answer": "A savannah is a big, grassy land with a few trees here and there. It's warm, and lots of animals roam it!"
+  },
+  {
+   "area": "savannah",
+   "question": "why do zebras have stripes",
+   "variants": [
+    "why are zebras striped",
+    "what are zebra stripes for"
+   ],
+   "answer": "Scientists think stripes help keep biting flies away and may help zebras stay cool. And every zebra's stripes are different!"
+  },
+  {
+   "area": "savannah",
+   "question": "why do giraffes have long necks",
+   "variants": [
+    "why is a giraffe neck so long",
+    "why are giraffe necks long"
+   ],
+   "answer": "A long neck lets a giraffe eat leaves high in the trees, where other animals can't reach. Yum!"
+  },
+  {
+   "area": "savannah",
+   "question": "how tall is a giraffe",
+   "variants": [
+    "how tall are giraffes",
+    "how big is a giraffe"
+   ],
+   "answer": "A grown-up giraffe can be about 18 feet tall. That's taller than a one-story house!"
+  },
+  {
+   "area": "savannah",
+   "question": "why do lions roar",
+   "variants": [
+    "why does a lion roar",
+    "how loud is a lion roar"
+   ],
+   "answer": "Lions roar to tell other lions, this is our home! A roar can be heard about 5 miles away."
+  },
+  {
+   "area": "savannah",
+   "question": "how fast is a cheetah",
+   "variants": [
+    "how fast can a cheetah run",
+    "how fast do cheetahs run"
+   ],
+   "answer": "Cheetahs are the fastest runners on land! For a short sprint they can go about 70 miles an hour, as fast as a car on the highway."
+  },
+  {
+   "area": "savannah",
+   "question": "why do elephants have trunks",
+   "variants": [
+    "what do elephants use their trunks for",
+    "what is an elephant trunk for"
+   ],
+   "answer": "An elephant's trunk is a nose and a hand! It uses it to smell, grab food, drink water and even give hugs."
+  },
+  {
+   "area": "savannah",
+   "question": "why do elephants have big ears",
+   "variants": [
+    "why are elephant ears so big",
+    "why do elephants flap their ears"
+   ],
+   "answer": "African elephants flap their big ears to cool off. Blood in the ears cools down, like a built-in fan!"
+  },
+  {
+   "area": "savannah",
+   "question": "what do lions eat",
+   "variants": [
+    "what does a lion eat",
+    "what food do lions eat"
+   ],
+   "answer": "Lions are meat eaters. They mostly eat big grass-eating animals like zebras and wildebeest."
+  },
+  {
+   "area": "savannah",
+   "question": "what do giraffes eat",
+   "variants": [
+    "what does a giraffe eat",
+    "what food do giraffes eat"
+   ],
+   "answer": "Giraffes love leaves, especially from acacia trees. Their long tongues can grab leaves right past the thorns!"
+  },
+  {
+   "area": "savannah",
+   "question": "what is a watering hole",
+   "variants": [
+    "why do animals go to the watering hole",
+    "why do animals drink at the watering hole"
+   ],
+   "answer": "A watering hole is a pond where animals come to drink. In the dry season, it's the busiest spot on the savannah!"
+  },
+  {
+   "area": "savannah",
+   "question": "why do hippos stay in the water",
+   "variants": [
+    "why do hippos live in water",
+    "why are hippos in the water"
+   ],
+   "answer": "Hippos spend the day in water to stay cool and keep their skin from drying in the sun. At night they come out to eat grass."
+  },
+  {
+   "area": "savannah",
+   "question": "what is a baobab tree",
+   "variants": [
+    "what is a baobab",
+    "why is the baobab tree so fat"
+   ],
+   "answer": "A baobab is a giant tree with a super thick trunk. It can store lots of water inside to get through dry times!"
+  },
+  {
+   "area": "savannah",
+   "question": "what does a wildlife ranger do",
+   "variants": [
+    "what is a wildlife ranger",
+    "what do park rangers do"
+   ],
+   "answer": "Rangers protect animals and their homes. They watch over them, help hurt animals get better, and keep the land safe."
+  },
+  {
+   "area": "egypt",
+   "question": "what are the pyramids",
+   "variants": [
+    "why did they build the pyramids",
+    "who built the pyramids"
+   ],
+   "answer": "The pyramids are giant stone buildings made long ago in Egypt. Many were built as tombs for kings called pharaohs."
+  },
+  {
+   "area": "egypt",
+   "question": "how big is the great pyramid",
+   "variants": [
+    "how tall is the great pyramid",
+    "how many blocks are in the great pyramid"
+   ],
+   "answer": "The Great Pyramid was the tallest building in the world for over 3,800 years! It's made of more than 2 million stone blocks."
+  },
+  {
+   "area": "egypt",
+   "question": "what is a pharaoh",
+   "variants": [
+    "who was the pharaoh",
+    "what did a pharaoh do"
+   ],
+   "answer": "A pharaoh was a king of ancient Egypt. The pharaoh was the most important ruler in the land."
+  },
+  {
+   "area": "egypt",
+   "question": "what is the nile river",
+   "variants": [
+    "what is the nile",
+    "why was the nile important"
+   ],
+   "answer": "The Nile is a long river that runs through Egypt. Its water helped farmers grow food right next to the desert!"
+  },
+  {
+   "area": "egypt",
+   "question": "who was moses",
+   "variants": [
+    "who is moses",
+    "who was moses in the bible"
+   ],
+   "answer": "In the Bible, Moses was a Hebrew baby saved in a basket on the Nile. He grew up to lead God's people out of Egypt."
+  },
+  {
+   "area": "egypt",
+   "question": "why was baby moses in a basket",
+   "variants": [
+    "why was moses in a basket",
+    "who found baby moses"
+   ],
+   "answer": "His mother hid him in a little basket boat on the Nile to keep him safe. Pharaoh's daughter found him and raised him."
+  },
+  {
+   "area": "egypt",
+   "question": "what were the ten plagues",
+   "variants": [
+    "what are the plagues of egypt",
+    "what were the plagues"
+   ],
+   "answer": "In the Bible, God sent ten plagues on Egypt, like frogs, flies and darkness, so Pharaoh would let His people go free."
+  },
+  {
+   "area": "egypt",
+   "question": "how did moses cross the red sea",
+   "variants": [
+    "how did they cross the red sea",
+    "what happened at the red sea"
+   ],
+   "answer": "The Bible says God parted the Red Sea, making a dry path between walls of water, and His people walked safely across!"
+  },
+  {
+   "area": "egypt",
+   "question": "who was joseph in egypt",
+   "variants": [
+    "who was joseph in the bible",
+    "who was joseph"
+   ],
+   "answer": "In the Bible, Joseph was sold by his brothers, but God was with him. He became a leader in Egypt and saved many from hunger."
+  },
+  {
+   "area": "egypt",
+   "question": "what was joseph's coat",
+   "variants": [
+    "what was joseph's coat of many colors",
+    "why did joseph have a special coat"
+   ],
+   "answer": "Joseph's father Jacob gave him a special coat. Many Bibles call it a coat of many colors!"
+  },
+  {
+   "area": "egypt",
+   "question": "how did joseph save egypt",
+   "variants": [
+    "what did joseph do for pharaoh",
+    "what were pharaoh's dreams"
+   ],
+   "answer": "God helped Joseph explain Pharaoh's dreams. Egypt saved grain in seven good years, so there was food in seven hungry years."
+  },
+  {
+   "area": "egypt",
+   "question": "did jesus live in egypt",
+   "variants": [
+    "was baby jesus in egypt",
+    "why was jesus in egypt"
+   ],
+   "answer": "Yes! The Bible says Mary and Joseph took baby Jesus to Egypt to keep Him safe, and later they went back home."
+  },
+  {
+   "area": "egypt",
+   "question": "what are hieroglyphs",
+   "variants": [
+    "what are hieroglyphics",
+    "how did egyptians write"
+   ],
+   "answer": "Hieroglyphs are ancient Egyptian writing made of little pictures. Some pictures stood for sounds, like our letters!"
+  },
+  {
+   "area": "egypt",
+   "question": "why do camels have humps",
+   "variants": [
+    "what is in a camel hump",
+    "do camels store water in their humps"
+   ],
+   "answer": "A camel's hump stores fat, not water! The fat gives it energy for long desert walks without food."
+  },
+  {
+   "area": "egypt",
+   "question": "what is a shaduf",
+   "variants": [
+    "how does a shaduf work",
+    "what is a shaduf for"
+   ],
+   "answer": "A shaduf is a long pole with a bucket on one end and a weight on the other. Egyptians used it to lift river water to their fields."
+  },
+  {
+   "area": "arctic",
+   "question": "why is the arctic cold",
+   "variants": [
+    "why is it so cold in the arctic",
+    "why is the north pole cold"
+   ],
+   "answer": "The Arctic is at the top of the world, so sunlight hits it at a low slant and spreads thin. That keeps it icy cold!"
+  },
+  {
+   "area": "arctic",
+   "question": "what do polar bears eat",
+   "variants": [
+    "what does a polar bear eat",
+    "what food do polar bears eat"
+   ],
+   "answer": "Polar bears mostly eat seals. They wait by holes in the sea ice where seals come up to breathe."
+  },
+  {
+   "area": "arctic",
+   "question": "why are polar bears white",
+   "variants": [
+    "why is a polar bear white",
+    "what color is a polar bear"
+   ],
+   "answer": "Polar bear fur looks white, which helps them hide in the snow. Under the fur, their skin is actually black!"
+  },
+  {
+   "area": "arctic",
+   "question": "how do polar bears stay warm",
+   "variants": [
+    "why don't polar bears get cold",
+    "how does a polar bear stay warm"
+   ],
+   "answer": "Polar bears have thick fur and a layer of fat called blubber. It's like wearing a cozy coat all the time!"
+  },
+  {
+   "area": "arctic",
+   "question": "do penguins live in the arctic",
+   "variants": [
+    "where do penguins live",
+    "are there penguins in the arctic"
+   ],
+   "answer": "Nope! Wild penguins live in the southern half of the world, like Antarctica. The Arctic has polar bears, seals and walruses."
+  },
+  {
+   "area": "arctic",
+   "question": "what is an igloo",
+   "variants": [
+    "how do you build an igloo",
+    "why is it warm in an igloo"
+   ],
+   "answer": "An igloo is a dome made of snow blocks. Snow traps air, so inside it's much warmer than the wind outside!"
+  },
+  {
+   "area": "arctic",
+   "question": "what are the northern lights",
+   "variants": [
+    "what is the aurora",
+    "why does the sky glow green"
+   ],
+   "answer": "The northern lights are glowing ribbons of green and pink in the sky. They happen when tiny bits from the Sun hit our air."
+  },
+  {
+   "area": "arctic",
+   "question": "does the sun set in the arctic",
+   "variants": [
+    "why is it light all night in the arctic",
+    "is it dark all winter in the arctic"
+   ],
+   "answer": "In Arctic summer, the Sun can stay up all night! In winter it can stay down for weeks. Days and nights get really long there."
+  },
+  {
+   "area": "arctic",
+   "question": "why do walruses have tusks",
+   "variants": [
+    "what is a walrus",
+    "what do walruses use their tusks for"
+   ],
+   "answer": "Walruses use their long tusks to pull themselves out of the water onto the ice. Their whiskers help them find clams!"
+  },
+  {
+   "area": "arctic",
+   "question": "what is an arctic fox",
+   "variants": [
+    "what color is an arctic fox",
+    "how do arctic foxes hide"
+   ],
+   "answer": "Arctic foxes have fur that turns white in winter and brown in summer, so they can hide all year long!"
+  },
+  {
+   "area": "arctic",
+   "question": "do people live in the arctic",
+   "variants": [
+    "who lives in the arctic",
+    "what people live in the arctic"
+   ],
+   "answer": "Yes! People like the Inuit have lived in the Arctic for thousands of years, fishing, hunting and traveling by sled."
+  },
+  {
+   "area": "arctic",
+   "question": "what is a husky",
+   "variants": [
+    "why do huskies pull sleds",
+    "what are sled dogs"
+   ],
+   "answer": "Huskies are strong, fluffy dogs that love to run in the snow. A team of them can pull a sled a long way!"
+  },
+  {
+   "area": "arctic",
+   "question": "what is ice fishing",
+   "variants": [
+    "how does ice fishing work",
+    "how do you fish through ice"
+   ],
+   "answer": "In ice fishing, people cut a small hole in the frozen water and drop a line in. The fish swim below the ice!"
+  },
+  {
+   "area": "arctic",
+   "question": "what is an iceberg",
+   "variants": [
+    "how big is an iceberg",
+    "why do icebergs float"
+   ],
+   "answer": "An iceberg is a giant chunk of ice floating in the sea. Most of it hides under the water. Only the tip pokes out!"
+  },
+  {
+   "area": "reef",
+   "question": "what is a coral reef",
+   "variants": [
+    "what is coral",
+    "is coral alive"
+   ],
+   "answer": "Coral looks like a plant or a rock, but it's made of tiny animals! Together they build reefs where lots of fish live."
+  },
+  {
+   "area": "reef",
+   "question": "how big is the great barrier reef",
+   "variants": [
+    "what is the great barrier reef",
+    "what is the biggest coral reef"
+   ],
+   "answer": "The Great Barrier Reef near Australia is the biggest coral reef in the world. It's so big, astronauts can see it from space!"
+  },
+  {
+   "area": "reef",
+   "question": "why do so many fish live on the reef",
+   "variants": [
+    "why do fish live in the reef",
+    "why are there lots of fish on the reef"
+   ],
+   "answer": "Reefs are full of nooks to hide in and lots of food to eat. That makes them busy, colorful fish neighborhoods!"
+  },
+  {
+   "area": "reef",
+   "question": "where do clownfish live",
+   "variants": [
+    "what is a clownfish",
+    "why do clownfish live in anemones"
+   ],
+   "answer": "Clownfish live in sea anemones. The anemone's sting doesn't hurt them, so it keeps them safe from bigger fish!"
+  },
+  {
+   "area": "reef",
+   "question": "how do fish breathe",
+   "variants": [
+    "can fish breathe underwater",
+    "how do fish breathe in water"
+   ],
+   "answer": "Fish breathe with gills! Gills pull oxygen out of the water as it flows over them."
+  },
+  {
+   "area": "reef",
+   "question": "do sharks sleep",
+   "variants": [
+    "how do sharks sleep",
+    "do sharks ever stop swimming"
+   ],
+   "answer": "Sharks rest, but some must keep swimming to push water over their gills. Others can lie still on the sea floor."
+  },
+  {
+   "area": "reef",
+   "question": "how many teeth does a shark have",
+   "variants": [
+    "do sharks lose their teeth",
+    "how many teeth do sharks have"
+   ],
+   "answer": "Sharks lose old teeth and grow new ones all their lives! Some sharks go through thousands of teeth."
+  },
+  {
+   "area": "reef",
+   "question": "how long do sea turtles live",
+   "variants": [
+    "what is a sea turtle",
+    "where do sea turtles lay eggs"
+   ],
+   "answer": "Sea turtles swim the oceans for many years, and some live 50 years or more! Mama turtles come to the beach to lay eggs."
+  },
+  {
+   "area": "reef",
+   "question": "how many arms does an octopus have",
+   "variants": [
+    "what is an octopus",
+    "how many hearts does an octopus have"
+   ],
+   "answer": "An octopus has eight arms and three hearts! It can change color and squeeze through tiny spaces."
+  },
+  {
+   "area": "reef",
+   "question": "why is trash bad for the reef",
+   "variants": [
+    "why should we pick up trash in the ocean",
+    "is plastic bad for the ocean"
+   ],
+   "answer": "Trash can hurt sea animals. A turtle may think a plastic bag is a jellyfish and eat it. Picking up trash keeps the reef healthy!"
+  },
+  {
+   "area": "reef",
+   "question": "what is a jellyfish",
+   "variants": [
+    "do jellyfish have brains",
+    "how do jellyfish move"
+   ],
+   "answer": "Jellyfish have no brain, no heart and no bones! They float along, and some can even glow in the dark."
+  },
+  {
+   "area": "reef",
+   "question": "is a starfish a fish",
+   "variants": [
+    "what is a starfish",
+    "can a starfish regrow an arm"
+   ],
+   "answer": "Sea stars, or starfish, aren't really fish. Most have five arms, and if one arm is lost, it can grow back!"
+  },
+  {
+   "area": "reef",
+   "question": "why is coral colorful",
+   "variants": [
+    "why is coral so bright",
+    "what makes coral colorful"
+   ],
+   "answer": "Tiny helpers called algae live inside coral and give it bright colors. They also make food for the coral!"
+  },
+  {
+   "area": "north-america",
+   "question": "what is north america",
+   "variants": [
+    "what countries are in north america",
+    "what is in north america"
+   ],
+   "answer": "North America is the continent with Canada, the United States, Mexico and more. It stretches from the icy Arctic to warm beaches!"
+  },
+  {
+   "area": "north-america",
+   "question": "what is the biggest country in north america",
+   "variants": [
+    "is canada bigger than the united states",
+    "how big is canada"
+   ],
+   "answer": "Canada is the biggest country in North America. It's the second biggest country in the whole world!"
+  },
+  {
+   "area": "north-america",
+   "question": "what is the tallest mountain in north america",
+   "variants": [
+    "what is denali",
+    "what is the biggest mountain in north america"
+   ],
+   "answer": "Denali in Alaska is the tallest mountain in North America. It's more than 20,000 feet high!"
+  },
+  {
+   "area": "north-america",
+   "question": "what is the grand canyon",
+   "variants": [
+    "how deep is the grand canyon",
+    "how was the grand canyon made"
+   ],
+   "answer": "The Grand Canyon is a giant canyon in Arizona, carved by the Colorado River. In places it's more than a mile deep!"
+  },
+  {
+   "area": "north-america",
+   "question": "what animals live in north america",
+   "variants": [
+    "what animals are in north america",
+    "which animals live in north america"
+   ],
+   "answer": "Bears, moose, bald eagles, bison, wolves, raccoons and even alligators! North America has lots of amazing animals."
+  },
+  {
+   "area": "north-america",
+   "question": "what is a bald eagle",
+   "variants": [
+    "is a bald eagle really bald",
+    "why is it called a bald eagle"
+   ],
+   "answer": "The bald eagle is a big bird with a white head. It isn't really bald! It's a symbol of the United States."
+  },
+  {
+   "area": "north-america",
+   "question": "what are the great lakes",
+   "variants": [
+    "how many great lakes are there",
+    "how big are the great lakes"
+   ],
+   "answer": "The Great Lakes are five huge lakes between the USA and Canada. They're so big they look like oceans!"
+  },
+  {
+   "area": "north-america",
+   "question": "what is the longest river in north america",
+   "variants": [
+    "what is the mississippi river",
+    "how long is the mississippi river"
+   ],
+   "answer": "The Missouri and Mississippi rivers together make the longest river system in North America, flowing all the way to the Gulf."
+  },
+  {
+   "area": "north-america",
+   "question": "what is niagara falls",
+   "variants": [
+    "where is niagara falls",
+    "how big is niagara falls"
+   ],
+   "answer": "Niagara Falls is a set of giant waterfalls between the USA and Canada. Tons and tons of water pour over it every second!"
+  },
+  {
+   "area": "north-america",
+   "question": "what is a bison",
+   "variants": [
+    "what is a buffalo",
+    "how big is a bison"
+   ],
+   "answer": "Bison are big, shaggy animals that roam the plains. They're the heaviest land animals in North America!"
+  },
+  {
+   "area": "north-america",
+   "question": "what is a moose",
+   "variants": [
+    "how big is a moose",
+    "do moose swim"
+   ],
+   "answer": "A moose is the biggest kind of deer! Males grow huge antlers, and moose are great swimmers too."
+  },
+  {
+   "area": "australia",
+   "question": "what is australia",
+   "variants": [
+    "is australia a country or a continent",
+    "is australia a continent"
+   ],
+   "answer": "Australia is both! It's a country and a continent, and it's surrounded by ocean."
+  },
+  {
+   "area": "australia",
+   "question": "why do kangaroos hop",
+   "variants": [
+    "how do kangaroos move",
+    "how far can a kangaroo jump"
+   ],
+   "answer": "Kangaroos hop on big, strong back legs. Hopping lets them travel far without getting tired!"
+  },
+  {
+   "area": "australia",
+   "question": "what is a joey",
+   "variants": [
+    "why do kangaroos have pouches",
+    "what is in a kangaroo pouch"
+   ],
+   "answer": "A baby kangaroo is called a joey. It lives in mom's pouch, safe and warm, until it's big enough to hop around."
+  },
+  {
+   "area": "australia",
+   "question": "what is a koala",
+   "variants": [
+    "do koalas sleep a lot",
+    "is a koala a bear"
+   ],
+   "answer": "Koalas munch eucalyptus leaves and sleep up to 20 hours a day! They aren't bears. They're marsupials, like kangaroos."
+  },
+  {
+   "area": "australia",
+   "question": "what is a platypus",
+   "variants": [
+    "does a platypus lay eggs",
+    "what does a platypus look like"
+   ],
+   "answer": "A platypus has a duck-like bill and a beaver-like tail, and it lays eggs, even though it's a mammal. What a surprise!"
+  },
+  {
+   "area": "australia",
+   "question": "what is the outback",
+   "variants": [
+    "what is the australian outback",
+    "what lives in the outback"
+   ],
+   "answer": "The outback is the big, dry middle of Australia. It has red dirt, few people, and animals like kangaroos and emus."
+  },
+  {
+   "area": "australia",
+   "question": "what is an emu",
+   "variants": [
+    "can an emu fly",
+    "how fast is an emu"
+   ],
+   "answer": "An emu is a giant bird that can't fly, but it can run super fast! It's one of the tallest birds in the world."
+  },
+  {
+   "area": "australia",
+   "question": "why are the seasons opposite in australia",
+   "variants": [
+    "is christmas in summer in australia",
+    "is it summer in australia now"
+   ],
+   "answer": "Australia is in the southern half of the world. When it's winter in the USA, it's summer there. Christmas at the beach!"
+  },
+  {
+   "area": "australia",
+   "question": "what is the sydney opera house",
+   "variants": [
+    "what is the building that looks like sails"
+   ],
+   "answer": "The Sydney Opera House is a famous building in Australia. Its roof looks like giant white sails by the water!"
+  },
+  {
+   "area": "australia",
+   "question": "what is a wombat",
+   "variants": [
+    "where do wombats live",
+    "what do wombats eat"
+   ],
+   "answer": "Wombats are chubby, furry diggers that live in burrows. Fun fact: their poop is shaped like little cubes!"
+  },
+  {
+   "area": "australia",
+   "question": "what is uluru",
+   "variants": [
+    "what is the big red rock in australia",
+    "what is ayers rock"
+   ],
+   "answer": "Uluru is a giant red rock in the middle of Australia. It's very special to the Aboriginal people, who have lived there a long time."
+  },
+  {
+   "area": "australia",
+   "question": "what is a kookaburra",
+   "variants": [
+    "what bird sounds like laughing",
+    "why does a kookaburra laugh"
+   ],
+   "answer": "A kookaburra is an Australian bird whose call sounds like loud, happy laughing!"
+  },
+  {
+   "area": "continents",
+   "question": "how many continents are there",
+   "variants": [
+    "what are the continents",
+    "what are the seven continents"
+   ],
+   "answer": "There are seven continents: Africa, Antarctica, Asia, Australia, Europe, North America and South America!"
+  },
+  {
+   "area": "continents",
+   "question": "what is the biggest continent",
+   "variants": [
+    "which continent is the biggest",
+    "what is the largest continent"
+   ],
+   "answer": "Asia is the biggest continent. It has the most people, too!"
+  },
+  {
+   "area": "continents",
+   "question": "what is the smallest continent",
+   "variants": [
+    "which continent is the smallest"
+   ],
+   "answer": "Australia is the smallest continent, but it's still really big!"
+  },
+  {
+   "area": "continents",
+   "question": "what is antarctica",
+   "variants": [
+    "where is antarctica",
+    "who lives in antarctica"
+   ],
+   "answer": "Antarctica is the icy continent at the bottom of the world. It's the coldest place on Earth, and penguins live there!"
+  },
+  {
+   "area": "continents",
+   "question": "what is the tallest mountain in the world",
+   "variants": [
+    "what is mount everest",
+    "how tall is mount everest"
+   ],
+   "answer": "Mount Everest in Asia is the tallest mountain on Earth, about 29,000 feet high. That's more than 5 miles up!"
+  },
+  {
+   "area": "continents",
+   "question": "what is the amazon rainforest",
+   "variants": [
+    "what is the biggest rainforest",
+    "what lives in the amazon rainforest"
+   ],
+   "answer": "The Amazon in South America is the biggest rainforest in the world. It's home to jaguars, sloths, toucans and more!"
+  },
+  {
+   "area": "continents",
+   "question": "what is the amazon river",
+   "variants": [
+    "how big is the amazon river",
+    "which river has the most water"
+   ],
+   "answer": "The Amazon River in South America carries more water than any other river on Earth!"
+  },
+  {
+   "area": "continents",
+   "question": "what is a sloth",
+   "variants": [
+    "why are sloths so slow",
+    "where do sloths live"
+   ],
+   "answer": "Sloths live in rainforests in Central and South America. They move so slowly that tiny plants can grow on their fur!"
+  },
+  {
+   "area": "continents",
+   "question": "what is europe",
+   "variants": [
+    "what countries are in europe",
+    "what is in europe"
+   ],
+   "answer": "Europe is a continent with lots of countries close together, like France, Italy, Spain and Germany. It has many old castles!"
+  },
+  {
+   "area": "continents",
+   "question": "what is the great wall of china",
+   "variants": [
+    "how long is the great wall of china",
+    "why was the great wall built"
+   ],
+   "answer": "The Great Wall of China was built in Asia long ago to protect the land. It stretches for thousands of miles!"
+  },
+  {
+   "area": "continents",
+   "question": "where do pandas live",
+   "variants": [
+    "what is a panda",
+    "what do pandas eat"
+   ],
+   "answer": "Giant pandas live in the mountains of China. They munch bamboo for many hours every day!"
+  },
+  {
+   "area": "continents",
+   "question": "what is the biggest country in the world",
+   "variants": [
+    "which country is the biggest",
+    "what is the largest country"
+   ],
+   "answer": "Russia is the biggest country in the world. It's in both Europe and Asia!"
+  },
+  {
+   "area": "continents",
+   "question": "where do tigers live",
+   "variants": [
+    "what is a tiger",
+    "what is the biggest cat"
+   ],
+   "answer": "Tigers are the biggest wild cats. They live in Asia, and every tiger has its own stripe pattern!"
+  },
+  {
+   "area": "general",
+   "question": "who are you",
+   "variants": [
+    "who are you spark",
+    "what are you",
+    "what is your name"
+   ],
+   "answer": "I'm Spark, your explorer friend! I help you find fun places, give hints, and share cool facts about our world."
+  },
+  {
+   "area": "general",
+   "question": "what can you do",
+   "variants": [
+    "what can you do spark",
+    "what do you do"
+   ],
+   "answer": "I can show you places to explore, give hints when you're stuck, and answer questions about animals, space and more!"
+  },
+  {
+   "area": "general",
+   "question": "what is your favorite animal",
+   "variants": [
+    "do you have a favorite animal",
+    "what animal do you like best"
+   ],
+   "answer": "I love them all, but giraffes are extra fun. They're so tall they could peek in an upstairs window!"
+  },
+  {
+   "area": "general",
+   "question": "what is your favorite color",
+   "variants": [
+    "do you have a favorite color",
+    "what color do you like"
+   ],
+   "answer": "I like gold, the color of my sparkle! But a rainbow has every color, and that's pretty great too."
+  },
+  {
+   "area": "general",
+   "question": "why is the ocean salty",
+   "variants": [
+    "why is the sea salty",
+    "why is ocean water salty"
+   ],
+   "answer": "Rivers carry tiny bits of salt from rocks into the ocean. Water floats up into clouds, but the salt stays behind!"
+  },
+  {
+   "area": "general",
+   "question": "how deep is the ocean",
+   "variants": [
+    "what is the deepest part of the ocean",
+    "how deep is the sea"
+   ],
+   "answer": "The deepest spot, the Mariana Trench, is almost 7 miles down. Mount Everest could fit inside with room to spare!"
+  },
+  {
+   "area": "general",
+   "question": "how many oceans are there",
+   "variants": [
+    "what are the oceans",
+    "what is the biggest ocean"
+   ],
+   "answer": "There are five oceans: the Pacific, Atlantic, Indian, Southern and Arctic. The Pacific is the biggest!"
+  },
+  {
+   "area": "general",
+   "question": "what is the biggest animal",
+   "variants": [
+    "what is the biggest animal in the world",
+    "how big is a blue whale"
+   ],
+   "answer": "The blue whale is the biggest animal ever! It's longer than a basketball court."
+  },
+  {
+   "area": "general",
+   "question": "is a whale a fish",
+   "variants": [
+    "do whales breathe air",
+    "how do whales breathe"
+   ],
+   "answer": "Whales aren't fish, they're mammals like us! They swim up to breathe air through a blowhole on top of their head."
+  },
+  {
+   "area": "general",
+   "question": "how do dolphins talk",
+   "variants": [
+    "do dolphins talk",
+    "what sounds do dolphins make"
+   ],
+   "answer": "Dolphins talk with clicks and whistles. Each dolphin even has its own special whistle, kind of like a name!"
+  },
+  {
+   "area": "general",
+   "question": "what is the fastest animal",
+   "variants": [
+    "what is the fastest animal in the world",
+    "which animal is the fastest"
+   ],
+   "answer": "The peregrine falcon! When it dives, it can go over 200 miles an hour. The cheetah is the fastest runner on land."
+  },
+  {
+   "area": "general",
+   "question": "what is the tallest animal",
+   "variants": [
+    "which animal is the tallest",
+    "what is the tallest animal in the world"
+   ],
+   "answer": "The giraffe is the tallest animal on Earth. A big one is about as tall as three grown-ups stacked up!"
+  },
+  {
+   "area": "general",
+   "question": "why do cats purr",
+   "variants": [
+    "what does it mean when a cat purrs",
+    "how do cats purr"
+   ],
+   "answer": "Cats often purr when they feel happy and cozy. Sometimes they purr to calm themselves down, too."
+  },
+  {
+   "area": "general",
+   "question": "why do dogs wag their tails",
+   "variants": [
+    "why does my dog wag its tail",
+    "what does a tail wag mean"
+   ],
+   "answer": "Dogs wag their tails to show feelings. A big, loose wag usually means happy and excited to see you!"
+  },
+  {
+   "area": "general",
+   "question": "how do birds fly",
+   "variants": [
+    "how can birds fly",
+    "why can birds fly"
+   ],
+   "answer": "Birds have light, hollow bones and strong wings. Flapping pushes air down, which lifts them up into the sky!"
+  },
+  {
+   "area": "general",
+   "question": "how do bees make honey",
+   "variants": [
+    "where does honey come from",
+    "how is honey made"
+   ],
+   "answer": "Bees sip sweet nectar from flowers and store it in wax cells. As the water dries out, it turns into honey!"
+  },
+  {
+   "area": "general",
+   "question": "how does a caterpillar turn into a butterfly",
+   "variants": [
+    "why do caterpillars turn into butterflies",
+    "what is a chrysalis"
+   ],
+   "answer": "A caterpillar eats and grows, then makes a chrysalis. Inside, it changes, and out comes a butterfly!"
+  },
+  {
+   "area": "general",
+   "question": "what is a mammal",
+   "variants": [
+    "what makes an animal a mammal",
+    "are people mammals"
+   ],
+   "answer": "Mammals have hair or fur, breathe air, and feed their babies milk. Dogs, whales, elephants and people are all mammals!"
+  },
+  {
+   "area": "general",
+   "question": "why does it rain",
+   "variants": [
+    "where does rain come from",
+    "how does rain happen"
+   ],
+   "answer": "The sun warms water so it floats up and makes clouds. When clouds get full and heavy, drops fall down as rain!"
+  },
+  {
+   "area": "general",
+   "question": "what makes a rainbow",
+   "variants": [
+    "how is a rainbow made",
+    "what colors are in a rainbow"
+   ],
+   "answer": "Sunlight shining through raindrops splits into colors: red, orange, yellow, green, blue, indigo and violet!"
+  },
+  {
+   "area": "general",
+   "question": "what is thunder",
+   "variants": [
+    "what is lightning",
+    "why is there thunder and lightning"
+   ],
+   "answer": "Lightning is a giant spark in the sky. It heats the air so fast that the air goes BOOM, and that's thunder!"
+  },
+  {
+   "area": "general",
+   "question": "why does it snow",
+   "variants": [
+    "how is snow made",
+    "what is a snowflake"
+   ],
+   "answer": "When it's very cold up in the clouds, water freezes into tiny ice crystals. They stick together and float down as snowflakes!"
+  },
+  {
+   "area": "general",
+   "question": "what is a tornado",
+   "variants": [
+    "how does a tornado happen",
+    "what makes a tornado"
+   ],
+   "answer": "A tornado is a spinning tube of wind that reaches from a storm cloud to the ground. Grown-ups watch the weather to keep everyone safe."
+  },
+  {
+   "area": "general",
+   "question": "what is wind",
+   "variants": [
+    "where does wind come from",
+    "why is it windy"
+   ],
+   "answer": "Wind is moving air! The sun warms some places more than others, and air rushes around to even things out."
+  },
+  {
+   "area": "general",
+   "question": "how many planets are there",
+   "variants": [
+    "what are the planets",
+    "how many planets are in the solar system"
+   ],
+   "answer": "There are eight planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune!"
+  },
+  {
+   "area": "general",
+   "question": "what is the biggest planet",
+   "variants": [
+    "which planet is the biggest",
+    "how big is jupiter"
+   ],
+   "answer": "Jupiter is the biggest planet. More than 1,000 Earths could fit inside it!"
+  },
+  {
+   "area": "general",
+   "question": "what is the hottest planet",
+   "variants": [
+    "which planet is the hottest",
+    "is venus hot"
+   ],
+   "answer": "Venus is the hottest planet, even hotter than Mercury! Its thick clouds trap heat like a big blanket."
+  },
+  {
+   "area": "general",
+   "question": "why is mars red",
+   "variants": [
+    "why is mars called the red planet",
+    "what color is mars"
+   ],
+   "answer": "Mars is covered in rusty dust, kind of like an old rusty bike. That makes it look red!"
+  },
+  {
+   "area": "general",
+   "question": "what are saturn's rings made of",
+   "variants": [
+    "does saturn have rings",
+    "why does saturn have rings"
+   ],
+   "answer": "Saturn's rings are made of billions of chunks of ice and rock. Some are as small as sand, and some are as big as houses!"
+  },
+  {
+   "area": "general",
+   "question": "what is the smallest planet",
+   "variants": [
+    "which planet is the smallest",
+    "how big is mercury"
+   ],
+   "answer": "Mercury is the smallest planet and the closest to the Sun. It's just a little bigger than our Moon!"
+  },
+  {
+   "area": "general",
+   "question": "can people live on mars",
+   "variants": [
+    "can we go to mars",
+    "has anyone been to mars"
+   ],
+   "answer": "Not yet! Mars is cold, with thin air we can't breathe. Scientists are working on ways people might visit someday."
+  },
+  {
+   "area": "general",
+   "question": "what is a black hole",
+   "variants": [
+    "what are black holes",
+    "what happens in a black hole"
+   ],
+   "answer": "A black hole is a place in space where gravity pulls so hard that not even light can get out!"
+  },
+  {
+   "area": "general",
+   "question": "who was the first person on the moon",
+   "variants": [
+    "who walked on the moon first",
+    "has anyone been to the moon"
+   ],
+   "answer": "Neil Armstrong was the first person to walk on the Moon, in 1969. He called it one small step!"
+  },
+  {
+   "area": "general",
+   "question": "how far away is the sun",
+   "variants": [
+    "how far is the sun",
+    "how far is the sun from earth"
+   ],
+   "answer": "The Sun is about 93 million miles away. Even light, the fastest thing there is, takes about 8 minutes to get here!"
+  },
+  {
+   "area": "general",
+   "question": "what was the biggest dinosaur",
+   "variants": [
+    "which dinosaur was the biggest",
+    "what was the largest dinosaur"
+   ],
+   "answer": "Some of the biggest were long-necked dinosaurs like Argentinosaurus. They were longer than three school buses!"
+  },
+  {
+   "area": "general",
+   "question": "what is a t rex",
+   "variants": [
+    "how big was a t rex",
+    "what is a tyrannosaurus rex"
+   ],
+   "answer": "T. rex was a giant meat-eating dinosaur with big, strong teeth and tiny arms. It was about as long as a school bus!"
+  },
+  {
+   "area": "general",
+   "question": "what happened to the dinosaurs",
+   "variants": [
+    "where did the dinosaurs go",
+    "are dinosaurs still alive"
+   ],
+   "answer": "Most scientists think a giant space rock hit Earth long ago and changed the weather. Birds are cousins of the dinosaurs!"
+  },
+  {
+   "area": "general",
+   "question": "how do we know about dinosaurs",
+   "variants": [
+    "what is a fossil",
+    "how do scientists find dinosaur bones"
+   ],
+   "answer": "We learn from fossils! Bones, teeth and footprints turned to stone, and scientists dig them up like a giant puzzle."
+  },
+  {
+   "area": "general",
+   "question": "what is the biggest tree",
+   "variants": [
+    "what is the tallest tree",
+    "how big is a sequoia tree"
+   ],
+   "answer": "Giant sequoias and redwoods in California are the biggest trees on Earth. Some are taller than a 25-story building!"
+  },
+  {
+   "area": "general",
+   "question": "what is the tallest building",
+   "variants": [
+    "what is the tallest building in the world",
+    "how tall is the burj khalifa"
+   ],
+   "answer": "The Burj Khalifa in Dubai is the tallest building. It's over half a mile high, with more than 160 floors!"
+  },
+  {
+   "area": "general",
+   "question": "how long is a mile",
+   "variants": [
+    "how far is a mile",
+    "how big is a mile"
+   ],
+   "answer": "A mile is about 20 minutes of walking for a grown-up, or 4 laps around a running track!"
+  },
+  {
+   "area": "general",
+   "question": "what is the coldest place on earth",
+   "variants": [
+    "what is the coldest place in the world",
+    "where is the coldest place"
+   ],
+   "answer": "Antarctica is the coldest place on Earth. It can get colder than 100 degrees below zero!"
+  },
+  {
+   "area": "general",
+   "question": "why do leaves change color",
+   "variants": [
+    "why do leaves turn orange",
+    "why do leaves fall in autumn"
+   ],
+   "answer": "In fall, trees stop making green chlorophyll. The green fades, and the yellow and orange that were hiding show up!"
+  },
+  {
+   "area": "general",
+   "question": "why do we need sleep",
+   "variants": [
+    "why do we have to sleep",
+    "why do people sleep"
+   ],
+   "answer": "Sleep helps your body grow and your brain sort out everything you learned. Explorers need good rest!"
+  },
+  {
+   "area": "general",
+   "question": "why do we brush our teeth",
+   "variants": [
+    "why do i have to brush my teeth",
+    "why should i brush my teeth"
+   ],
+   "answer": "Brushing sweeps away tiny germs that love sugar and can make holes in teeth. Two minutes, twice a day!"
+  },
+  {
+   "area": "general",
+   "question": "what is a volcano",
+   "variants": [
+    "how does a volcano work",
+    "what is lava"
+   ],
+   "answer": "A volcano is a mountain with an opening that lets out super hot melted rock, called lava, from deep inside the Earth."
+  },
+  {
+   "area": "general",
+   "question": "what is an earthquake",
+   "variants": [
+    "why does the ground shake",
+    "what makes an earthquake"
+   ],
+   "answer": "An earthquake is when big pieces of the Earth's crust slip and shake the ground. Grown-ups know how to keep you safe."
+  }
+ ]
+}

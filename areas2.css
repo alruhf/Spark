@@ -1,0 +1,262 @@
+/* Spark areas v2 — Savannah-shaped layout (navy HUD pills, gold caption, Spark bottom-right, pack left of Spark, green Go bubble). All rules scoped to .ar2 / body.spark-area. */
+body.spark-area{overflow:hidden}
+body.spark-area .savannah-film{display:none}
+body.spark-area .spark-companion,body.spark-area .spark-companion.spark-left{position:fixed!important;left:auto!important;right:max(10px,env(safe-area-inset-right,0px))!important;bottom:max(10px,env(safe-area-inset-bottom,0px))!important;z-index:150;transition:none!important}
+.ar2{--navy:#10243e;--gold:#f6c445;--go:#2fbf71;--hint:#6af0ab;--fs:clamp(52px,min(10vh,16vw),104px);position:fixed;inset:0;z-index:120;overflow:hidden;background:#0b1626;color:#fff;font-family:inherit;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:none}
+.ar2 [hidden]{display:none!important}
+.ar2 *{box-sizing:border-box}
+.ar2-screen{position:absolute;inset:0;overflow:hidden}
+.ar2-btn{border:1px solid #ffffff3a;background:#10243ef2;color:#fff;border-radius:999px;min-height:44px;padding:8px 16px;font:800 clamp(13px,1.9vh,16px)/1.1 inherit;font-family:inherit;cursor:pointer;box-shadow:0 4px 12px #0006}
+.ar2-btn:active{transform:translateY(1px)}
+.ar2-btn.big{background:var(--go);border-color:#fff8;min-height:52px;padding:10px 24px;font-size:18px}
+.ar2 button:focus-visible{outline:3px solid var(--hint);outline-offset:2px}
+/* HUD */
+.ar2-ui{position:absolute;inset:0;pointer-events:none;z-index:20}
+.ar2-ui>*{pointer-events:auto}
+.ar2-back{position:absolute;left:max(8px,env(safe-area-inset-left,0px));top:max(8px,env(safe-area-inset-top,0px));z-index:5}
+.ar2-skip{position:absolute;right:max(8px,env(safe-area-inset-right,0px));top:max(8px,env(safe-area-inset-top,0px));z-index:5}
+.ar2-prog{position:absolute;left:50%;top:max(8px,env(safe-area-inset-top,0px));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;pointer-events:none;z-index:4}
+.ar2-progtxt{padding:6px 14px;border-radius:999px;background:#10243ee6;border:1px solid #ffffff2a;font-weight:900;font-size:clamp(12px,1.9vh,16px);white-space:nowrap;max-width:60vw;overflow:hidden;text-overflow:ellipsis}
+.ar2-dots{display:flex;gap:7px}
+.ar2-dots i{width:13px;height:13px;border-radius:50%;background:#10243eaa;border:2px solid #fff9}
+.ar2-dots i.cur{background:var(--gold);border-color:#fff;transform:scale(1.2)}
+.ar2-dots i.done{background:var(--go);border-color:#fff}
+.ar2-top2{position:absolute;left:50%;top:clamp(62px,9.5vh,92px);transform:translateX(-50%);width:min(800px,calc(100vw - 24px));display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;z-index:3}
+.ar2-top2>*{pointer-events:auto}
+.ar2-cap{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-radius:16px;background:#0e2038ea;border:1px solid #f6c44566;box-shadow:0 8px 22px #0007;font-weight:750;font-size:clamp(14px,2.35vh,22px);line-height:1.32;max-width:100%}
+.ar2-cap.off{display:none}
+.ar2-cap.pop{animation:ar2Pop .3s ease}
+.ar2-capwho{flex:none;color:var(--gold);font-weight:900}
+.ar2-capwho::after{content:":"}
+.ar2-speak{flex:none;border:0;background:#ffffff1f;color:#fff;border-radius:50%;width:30px;height:30px;font-size:15px;cursor:pointer;padding:0}
+.ar2-chips{display:flex;gap:8px}
+.ar2-chip{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#10243ecc;border:1px solid #ffffff2a;font-size:12px;font-weight:800}
+.ar2-chip i{width:14px;height:14px;border-radius:50%;background:#ffffff22;border:2px solid #fff8}
+.ar2-chip i.on{background:var(--gold);border-color:#fff}
+.ar2[data-mode="intro"] .ar2-top2,.ar2[data-mode="intro"] .ar2-prog,.ar2[data-mode="ride"] .ar2-chips,.ar2[data-mode="camp"] .ar2-chips,.ar2[data-mode="end"] .ar2-chips{display:none}
+.ar2[data-mode="intro"] .ar2-skip,.ar2[data-mode="camp"] .ar2-skip,.ar2[data-mode="end"] .ar2-skip{display:none}
+@keyframes ar2Pop{0%{transform:scale(.96);opacity:.5}100%{transform:scale(1);opacity:1}}
+/* kit (gear you earned) under the back button */
+.ar2-kit{position:absolute;left:max(8px,env(safe-area-inset-left,0px));top:calc(max(8px,env(safe-area-inset-top,0px)) + 54px);display:flex;gap:5px;padding:5px 8px;border-radius:14px;background:#10243ecc;border:1px solid #ffffff2a;z-index:4;pointer-events:none}
+.ar2-kit .k{width:30px;height:30px;border-radius:50%;background:#ffffff22;display:grid;place-items:center;overflow:hidden}
+.ar2-kit .k img,.ar2-kit .k svg{width:84%;height:84%;object-fit:contain}
+.ar2[data-mode="intro"] .ar2-kit,.ar2[data-mode="end"] .ar2-kit{display:none}
+/* intro film */
+.ar2-intro{background:#000}
+.ar2-intro video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.ar2-introload{position:absolute;left:50%;bottom:12%;transform:translateX(-50%);padding:8px 18px;border-radius:999px;background:#10243ecc;border:1px solid #ffffff3a;font-weight:800;font-size:15px;display:flex;align-items:center;gap:10px;z-index:3}
+.ar2-spin{width:18px;height:18px;border-radius:50%;border:3px solid #ffffff55;border-top-color:var(--gold);animation:ar2Spin .8s linear infinite}
+@keyframes ar2Spin{to{transform:rotate(360deg)}}
+.ar2-tap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;border:4px solid #fff;border-radius:999px;background:var(--go);color:#fff;font:900 clamp(20px,3.4vh,30px)/1 inherit;font-family:inherit;padding:18px 36px;box-shadow:0 6px 0 #1c7d49,0 16px 34px #000a;cursor:pointer;animation:ar2Throb 1.4s ease-in-out infinite}
+@keyframes ar2Throb{50%{transform:translate(-50%,-50%) scale(1.07)}}
+.ar2-introskip{position:absolute;right:max(10px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:5}
+.ar2-introback{position:absolute;left:max(8px,env(safe-area-inset-left,0px));top:max(8px,env(safe-area-inset-top,0px));z-index:5}
+/* camp (360) */
+.ar2-view{position:absolute;inset:0;overflow:hidden;cursor:grab;touch-action:none;outline:none;background:#1a120c}
+.ar2-view.grab{cursor:grabbing}
+.ar2-strip{position:absolute;left:0;top:0;height:100%;will-change:transform;pointer-events:none}
+.ar2-strip img{position:absolute;top:0;display:block;max-width:none;pointer-events:none;-webkit-user-drag:none}
+.ar2-marks{position:absolute;inset:0;pointer-events:none}
+.ar2-gear{position:absolute;left:0;top:0;margin:0;border:0;background:transparent;padding:0;cursor:pointer;z-index:2;pointer-events:auto;will-change:transform;touch-action:none;transition:opacity .18s}
+.ar2-gear .pic{position:relative;display:block;width:var(--gs,130px);height:var(--gs,130px);animation:ar2Bob 2.6s ease-in-out infinite;filter:drop-shadow(0 6px 8px #0008) drop-shadow(0 0 14px #ffe56a)}
+.ar2-gear .pic img,.ar2-gear .pic svg{width:100%;height:100%;object-fit:contain;display:block}
+.ar2-gear b{position:absolute;right:-8px;top:-8px;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--gold);color:#1c1404;font-size:21px;font-weight:900;border:2px solid #fff;box-shadow:0 6px 16px #0009;animation:ar2Pulse 2.4s ease-in-out infinite}
+.ar2-gear .word{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);padding:5px 10px;border-radius:12px;background:#071422ee;border:1px solid #ffffff55;font-weight:850;letter-spacing:.03em;white-space:nowrap;font-size:15px}
+.ar2-gear.gone{display:none}.ar2-gear.hide{opacity:0;pointer-events:none}
+@keyframes ar2Bob{50%{transform:translateY(-8px)}}
+@keyframes ar2Pulse{0%,100%{box-shadow:0 6px 16px #0009,0 0 0 0 #f6c44588}50%{box-shadow:0 6px 16px #0009,0 0 0 9px #f6c44500}}
+.ar2-prompt{position:absolute;left:50%;bottom:calc(max(10px,env(safe-area-inset-bottom,0px)) + 66px);transform:translateX(-50%);z-index:4;margin:0;padding:8px 14px;border-radius:14px;background:#10243ee6;border:1px solid #ffffff2a;font-weight:850;font-size:16px;line-height:1.25;text-align:center;max-width:min(520px,calc(100% - 24px));pointer-events:none}
+.ar2-ctl{position:absolute;left:max(10px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:5;display:flex;gap:8px;align-items:center}
+.ar2-turn{width:48px;height:48px;border-radius:50%;border:1px solid #ffffff44;background:#071422e6;color:#fff;font-size:22px;font-weight:900;cursor:pointer;padding:0;display:grid;place-items:center}
+.ar2-where{padding:8px 12px;border-radius:999px;background:#071422cc;border:1px solid #ffffff2a;font-weight:800;font-size:14px;white-space:nowrap}
+.ar2-dock{position:absolute;z-index:5;display:flex;align-items:flex-end;pointer-events:none}
+.ar2-pack{position:relative;width:64px;height:64px;border-radius:18px;background:#10243eee;border:2px solid var(--gold);display:grid;place-items:center;font-size:34px;line-height:1;box-shadow:0 6px 16px #0009}
+.ar2-pack b{position:absolute;right:-6px;top:-10px;min-width:30px;padding:2px 6px;border-radius:999px;background:var(--gold);color:#1c1404;font-size:13px;font-weight:900;text-align:center;border:2px solid #fff}
+.ar2-pack.bump{animation:ar2Bump .45s ease}
+.ar2-pack.glow{animation:ar2Glow .9s ease-in-out infinite}
+@keyframes ar2Bump{0%{transform:scale(1)}40%{transform:scale(1.22)}100%{transform:scale(1)}}
+@keyframes ar2Glow{50%{box-shadow:0 0 0 10px #f6c44566,0 6px 16px #0009}}
+.ar2-bubble{position:absolute;z-index:6;display:none;align-items:center;gap:10px;max-width:min(270px,calc(100% - 24px));padding:9px 14px 9px 10px;border-radius:18px;background:#fff;color:#10243e;font-weight:850;font-size:15px;line-height:1.2;box-shadow:0 8px 20px #000a;pointer-events:auto}
+.ar2-bubble.on{display:flex;animation:ar2PopB .35s ease}
+.ar2-bubble::after{content:"";position:absolute;right:34px;bottom:-9px;width:16px;height:16px;background:#fff;transform:rotate(45deg);border-radius:0 0 4px 0}
+.ar2-go{flex:none;border:0;border-radius:999px;background:var(--go);color:#fff;font-weight:900;font-size:16px;padding:9px 18px;min-height:48px;min-width:72px;cursor:pointer;box-shadow:0 2px 0 #1c7d49;font-family:inherit}
+.ar2-go:active{transform:translateY(1px)}
+@keyframes ar2PopB{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.ar2-load{position:absolute;inset:0;z-index:8;display:grid;place-items:center;background:#1a120c;color:var(--gold);font-weight:900;font-size:18px;transition:opacity .3s}
+.ar2-load.off{opacity:0;pointer-events:none}
+/* flying copy + ghosts + fx */
+.ar2-fly{position:fixed;left:0;top:0;z-index:140;pointer-events:none;will-change:transform,opacity;filter:drop-shadow(0 8px 10px #000a)}
+.ar2-fly img,.ar2-fly svg{width:100%;height:100%;object-fit:contain;display:block}
+.ar2-ghost{position:fixed;left:0;top:0;z-index:200;pointer-events:none;will-change:transform;filter:drop-shadow(0 10px 8px #0008)}
+.ar2-ghost img,.ar2-ghost svg{width:100%;height:100%;object-fit:contain;display:block}
+.ar2-fx{position:fixed;inset:0;pointer-events:none;z-index:190;overflow:hidden}
+.ar2-spark{position:fixed;left:0;top:0;pointer-events:none;z-index:190;font-size:22px;will-change:transform,opacity}
+/* question card (same card as Savannah) */
+.ar2-q{position:absolute;inset:0;display:grid;place-items:center;background:#06142a66;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:30;padding:12px}
+.ar2-qcard{width:min(620px,94vw);max-height:calc(100% - 24px);overflow:auto;padding:clamp(14px,3vh,26px);border-radius:22px;background:linear-gradient(#173a62,#0f2644);border:2px solid var(--gold);box-shadow:0 20px 50px #000b;text-align:center;touch-action:pan-y}
+.ar2-qtag{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:999px;background:var(--gold);color:#1c1404;font-weight:900;font-size:13px;margin-bottom:8px}
+.ar2-qtag .tp{width:26px;height:26px;display:inline-block}
+.ar2-qtag .tp img,.ar2-qtag .tp svg{width:100%;height:100%;object-fit:contain}
+.ar2-qtxt{font-weight:900;font-size:clamp(18px,3.4vh,26px);line-height:1.25;margin-bottom:14px}
+.ar2-qopts{display:grid;gap:clamp(8px,1.6vh,14px);grid-template-columns:repeat(3,minmax(0,1fr))}
+.ar2-ocard{position:relative;display:flex;min-width:0}
+.ar2-opt{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:clamp(5px,1vh,10px);min-height:clamp(120px,22vh,230px);padding:clamp(6px,1.2vh,12px);border-radius:18px;border:3px solid #ffffff44;background:#ffffff1a;color:#fff;font:800 clamp(14px,2.4vh,20px)/1.15 inherit;font-family:inherit;cursor:pointer;touch-action:manipulation;transition:transform .15s,background .15s,border-color .15s}
+.ar2-opt:hover{background:#ffffff2e;transform:translateY(-2px)}
+.ar2-oimg{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:1/1;max-height:clamp(70px,16vh,170px);border-radius:12px;background:#ffffff22;overflow:hidden}
+.ar2-oimg img,.ar2-oimg svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.ar2-oimg.contain img,.ar2-oimg.contain svg{object-fit:contain;padding:6%}
+.ar2-olab{display:block;text-align:center;word-break:break-word;padding:0 2px}
+.ar2-spk{position:absolute;right:8px;top:8px;width:34px;height:34px;border-radius:50%;border:2px solid #ffffff88;background:#1d6fae;color:#fff;font-size:16px;cursor:pointer;padding:0;display:grid;place-items:center;z-index:2}
+.ar2-opt.ok{background:#2fbf7155;border-color:var(--hint);animation:ar2Good .7s ease-in-out 2}
+.ar2-opt.no{background:#ffffff0d;opacity:.45;border-color:#ffffff22;animation:ar2Wob .4s}
+.ar2-opt.hint{border-color:var(--hint);animation:ar2Good .8s ease-in-out infinite}
+.ar2-opt.say{border-color:var(--gold);background:#f6c44533}
+@keyframes ar2Good{50%{transform:scale(1.06);box-shadow:0 0 0 6px #6af0ab55}}
+@keyframes ar2Wob{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@media(max-width:520px){.ar2-qopts{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.ar2-opt{min-height:116px;font-size:13px;padding:5px}}
+@media(max-height:480px){.ar2-chips{display:none!important}.ar2-qcard{padding:8px 12px;display:flex;flex-direction:column}.ar2-qtxt{font-size:15px;margin-bottom:6px}.ar2-oimg{max-height:70px}.ar2-opt{min-height:100px;font-size:13px}.ar2-qtag{margin-bottom:3px}}
+/* stop stage */
+.ar2-stage{background:#0b1626}
+.ar2-bd{position:absolute;inset:-3%;background-repeat:repeat-x;background-size:auto 100%;animation:ar2Drift 26s ease-in-out infinite alternate}
+.ar2-bd.cover{background-size:cover;background-repeat:no-repeat;background-position:center}
+@keyframes ar2Drift{from{transform:translateX(-1.2%) scale(1.02)}to{transform:translateX(1.2%) scale(1.02)}}
+.ar2-act{position:absolute;inset:0;z-index:2}
+.ar2-next{position:absolute;left:50%;bottom:max(14px,4vh);transform:translateX(-50%);z-index:35;border:0;border-radius:999px;background:var(--go);color:#fff;font:900 clamp(18px,3vh,26px)/1 inherit;font-family:inherit;padding:14px 34px;min-height:56px;box-shadow:0 4px 0 #1c7d49,0 12px 24px #000a;cursor:pointer;animation:ar2Next 1.4s ease-in-out infinite}
+@keyframes ar2Next{50%{transform:translateX(-50%) scale(1.07)}}
+@media(max-width:899px){.ar2-next{left:calc(50% - 46px)}}
+/* ride */
+.ar2-ride{background:#6aa0c8}
+.ar2-rb{position:absolute;left:0;right:0;overflow:hidden}
+.ar2-rbi{position:absolute;left:0;top:0;height:100%;background-repeat:repeat-x;will-change:transform}
+.ar2-veh{position:absolute;left:50%;bottom:7%;width:min(46vw,420px);height:min(30vh,260px);transform:translateX(-50%);animation:ar2Rock .55s ease-in-out infinite alternate;z-index:3}
+.ar2-veh img,.ar2-veh svg{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 12px 10px #0007)}
+@keyframes ar2Rock{from{transform:translateX(-50%) translateY(0) rotate(-1.2deg)}to{transform:translateX(-50%) translateY(-8px) rotate(1.2deg)}}
+.ar2-streaks{position:absolute;left:0;right:0;bottom:0;height:22%;z-index:2;background:repeating-linear-gradient(90deg,#ffffff00 0 70px,#ffffff30 70px 74px,#ffffff00 74px 150px);animation:ar2Streak .7s linear infinite;opacity:.5}
+@keyframes ar2Streak{to{background-position-x:-150px}}
+.ar2-nextchip{position:absolute;left:50%;top:clamp(120px,24vh,200px);transform:translateX(-50%);padding:8px 18px;border-radius:999px;background:#10243ee6;border:2px solid var(--gold);font-weight:900;font-size:clamp(14px,2.3vh,20px);z-index:4;white-space:nowrap}
+/* finale */
+.ar2-end{position:absolute;inset:0;display:grid;place-items:center;background:#06142a99;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:40;padding:12px}
+.ar2-endcard{width:min(600px,94vw);max-height:calc(100% - 24px);overflow:auto;padding:clamp(14px,3vh,26px);border-radius:22px;background:linear-gradient(#173a62,#0f2644);border:2px solid var(--gold);box-shadow:0 20px 50px #000b;text-align:center}
+.ar2-endcard h2{margin:6px 0;font-size:clamp(22px,4vh,32px)}
+.ar2-badge{width:clamp(110px,22vh,170px);height:auto;animation:ar2BadgeIn .9s cubic-bezier(.2,1.4,.4,1)}
+@keyframes ar2BadgeIn{0%{transform:scale(0) rotate(-90deg)}100%{transform:scale(1) rotate(0)}}
+.ar2-stickers{display:flex;justify-content:center;gap:10px;margin:10px 0;flex-wrap:wrap}
+.ar2-sticker{width:clamp(58px,11vh,86px);height:clamp(58px,11vh,86px);border-radius:50%;background:#fff;border:4px solid #fff;box-shadow:0 4px 10px #0008;display:grid;place-items:center;overflow:hidden;transform:rotate(var(--r,0deg))}
+.ar2-sticker img,.ar2-sticker svg{width:92%;height:92%;object-fit:contain}
+.ar2-sticker.new{animation:ar2StickerIn .8s cubic-bezier(.2,1.5,.4,1) both}
+@keyframes ar2StickerIn{0%{transform:scale(0) rotate(-60deg)}100%{transform:scale(1) rotate(var(--r,0deg))}}
+.ar2-endbtns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.ar2-confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:41}
+.ar2-confetti i{position:absolute;top:-16px;width:10px;height:14px;border-radius:2px;animation:ar2Conf linear forwards}
+@keyframes ar2Conf{to{transform:translate3d(var(--dx),110vh,0) rotate(720deg);opacity:.9}}
+.ar2-stkpop{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);z-index:36;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none}
+.ar2-stkpop .ar2-sticker{width:clamp(110px,24vh,190px);height:clamp(110px,24vh,190px)}
+.ar2-stkpop span{padding:6px 14px;border-radius:999px;background:var(--gold);color:#1c1404;font-weight:900}
+/* activity shared bits */
+.ar2-trayw{position:absolute;left:50%;bottom:max(10px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);max-width:calc(100vw - 280px);display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:8px 10px;border-radius:18px;background:linear-gradient(#7a5230ee,#5a3a20f2);border:2px solid #d9a45d;box-shadow:0 8px 20px #000a,inset 0 2px 0 #ffffff33;z-index:4}
+@media(max-width:899px){.ar2-trayw{left:max(8px,env(safe-area-inset-left,0px));transform:none;max-width:calc(100vw - 122px)}}
+.ar2-item{position:relative;flex:none;width:var(--fs);height:calc(var(--fs) + 16px);padding:3px 3px 0;border:2px solid #ffffff55;border-radius:14px;background:#fff3;cursor:grab;touch-action:none;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:inherit;-webkit-user-drag:none}
+.ar2-item:hover{background:#fff5;transform:translateY(-2px)}
+.ar2-item.held{opacity:.35}
+.ar2-item.good{animation:ar2Good .7s ease-in-out 5;border-color:var(--hint)}
+.ar2-item .ip{width:100%;height:calc(100% - 16px);display:block;pointer-events:none}
+.ar2-item .ip img,.ar2-item .ip svg{width:100%;height:100%;object-fit:contain;display:block}
+.ar2-item .il{font-size:11px;font-weight:900;line-height:16px;height:16px;white-space:nowrap;text-shadow:0 1px 2px #000;pointer-events:none}
+.ar2-item .cnt{position:absolute;right:-6px;top:-8px;min-width:24px;padding:1px 6px;border-radius:999px;background:var(--gold);color:#1c1404;font-size:12px;font-weight:900;border:2px solid #fff}
+@media(max-height:480px),(max-width:520px){.ar2-item{height:var(--fs)}.ar2-item .il{display:none}.ar2-item .ip{height:100%}}
+.ar2-hint{position:absolute;left:50%;top:clamp(150px,26vh,230px);transform:translateX(-50%);padding:7px 16px;border-radius:14px;background:#10243ee6;border:1px solid #ffffff3a;font-weight:850;font-size:clamp(13px,2vh,17px);z-index:3;pointer-events:none;text-align:center;max-width:min(520px,92vw)}
+.ar2-hearts{position:absolute;pointer-events:none;z-index:6;font-size:28px}
+@media(prefers-reduced-motion:reduce){.ar2-bd,.ar2-veh,.ar2-streaks,.ar2-tap,.ar2-next,.ar2-gear .pic,.ar2-gear b{animation:none!important}}
+
+.ar2-cap,.ar2-chips,.ar2-prompt{pointer-events:none}.ar2-cap .ar2-spkb,.ar2-cap button{pointer-events:auto}
+body.spark-area .spark-companion,body.spark-area .spark-companion.spark-left{transform:scale(.92)!important;transform-origin:bottom left!important}
+
+/* ---- Arctic flow v3 (Savannah model). Only used by areas whose game.json opts in (intro.style=film, camp.style=pack, ride.view=pov). ---- */
+.ar2-filmonly video{opacity:1}
+.ar2-packmode .ar2-gear .word{bottom:-18px;font-size:17px;letter-spacing:.06em}
+.ar2-packmode .ar2-gear .word i{font-style:normal;display:inline-block;transition:transform .15s,color .15s}
+.ar2-packmode .ar2-gear .word i.on{color:var(--gold);transform:translateY(-3px) scale(1.35)}
+.ar2-packmode .ar2-gear.next .pic{filter:drop-shadow(0 6px 8px #0008) drop-shadow(0 0 22px #6af0ab) drop-shadow(0 0 8px #6af0ab)}
+.ar2-packmode .ar2-gear.next b{background:var(--hint)}
+.ar2-packmode .ar2-gear.nudge .pic{animation:ar2Nudge .45s ease}
+@keyframes ar2Nudge{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px) rotate(-6deg)}50%{transform:translateX(9px) rotate(5deg)}80%{transform:translateX(-5px)}}
+.ar2-fly{position:fixed;left:0;top:0;z-index:200;pointer-events:none;filter:drop-shadow(0 0 16px #ffe56a) drop-shadow(0 8px 8px #0008)}
+.ar2-fly img,.ar2-fly svg{width:100%;height:100%;object-fit:contain;display:block}
+.ar2-pov{background:#9fb8d4}
+.ar2-psky{position:absolute;left:0;right:0;background-repeat:repeat-x;z-index:0}
+.ar2-pgnd{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.ar2-pdogs{position:absolute;left:50%;transform:translateX(-50%);z-index:2;pointer-events:none}
+.ar2-pdogs img,.ar2-pdogs svg{width:100%;height:100%;object-fit:contain;object-position:50% 100%;display:block;filter:drop-shadow(0 8px 6px #0004)}
+.ar2-pov.moving .ar2-pdogs img{animation:ar2Gallop .34s ease-in-out infinite alternate}
+@keyframes ar2Gallop{0%{transform:translateY(0) rotate(-1.2deg)}100%{transform:translateY(-6%) rotate(1.2deg)}}
+.ar2-pfg{position:absolute;z-index:3;pointer-events:none}
+.ar2-pfg img,.ar2-pfg svg{width:100%;height:100%;object-fit:contain;display:block}
+.ar2-pov.moving .ar2-pfg{animation:ar2Sled .5s ease-in-out infinite alternate}
+@keyframes ar2Sled{0%{transform:translateY(0) rotate(-.4deg)}100%{transform:translateY(5px) rotate(.4deg)}}
+.ar2-pov .ar2-nextchip{z-index:4}
+@media(prefers-reduced-motion:reduce){.ar2-pov .ar2-pdogs img,.ar2-pov .ar2-pfg,.ar2-packmode .ar2-gear.nudge .pic{animation:none!important}}
+.ar2-packmode .ar2-prompt{left:max(10px,env(safe-area-inset-left,0px));transform:none;bottom:calc(max(10px,env(safe-area-inset-bottom,0px)) + 60px);text-align:left}
+.ar2-kit.many{top:auto;bottom:calc(max(10px,env(safe-area-inset-bottom,0px)) + 8px);display:grid;grid-template-columns:repeat(5,26px);gap:4px}.ar2-kit.many[hidden]{display:none}.ar2-kit.many .k{width:26px;height:26px}.ar2[data-mode="stop"] .ar2-kit.many,.ar2[data-mode="q"] .ar2-kit.many{display:none}
+.ar2-packmode .ar2-gear .word{color:#fff}
+.ar2-packmode .ar2-gear.sm b{width:30px;height:30px;font-size:15px;right:-10px;top:-10px;border-width:2px}
+.ar2-packmode .ar2-gear.sm .word{font-size:13px;padding:3px 8px;bottom:-14px;letter-spacing:.03em}
+/* igloo (real snow blocks) */
+.igpad img{max-width:none;user-select:none;-webkit-user-drag:none;backface-visibility:hidden}
+.igpad .igblk{object-fit:fill}
+.igpad .igghost{object-fit:fill;filter:brightness(0) invert(1) drop-shadow(0 0 5px #ffe56a);opacity:.5;animation:igGhost 1.4s ease-in-out infinite alternate}
+.igpad .igtun img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 6px 8px #1c2c4466)}
+.igpad .igtun img.lit{opacity:0;transition:opacity 1.4s ease}
+@keyframes igGhost{from{opacity:.32}to{opacity:.62}}
+@media(prefers-reduced-motion:reduce){.igpad .igghost{animation:none}}
+
+.ar2-badge.ar2-badgepic{width:auto;height:clamp(90px,24vh,220px);max-width:60vw;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.ar2-pvidride{background:#8aa3bf center/cover no-repeat}
+.ar2-pvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;z-index:0;pointer-events:none;background:transparent}
+.ar2-pvshade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(10,20,40,.35),rgba(10,20,40,0) 22%,rgba(10,20,40,0) 78%,rgba(10,20,40,.3))}
+
+/* tap-the-destination: an item tapped (not dragged) is "armed" until the child taps where it goes */
+.armed{outline:4px solid #f6c445!important;outline-offset:3px;border-radius:14px;animation:ar2Armed 1s ease-in-out infinite alternate}
+@keyframes ar2Armed{from{transform:translateY(0)}to{transform:translateY(-5px)}}
+@media(prefers-reduced-motion:reduce){.armed{animation:none}}
+/* session stopping point (between missions only) */
+.ar2-stoppt{position:absolute;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:#0a1626aa;padding:16px}
+.ar2-stopcard{background:#10243e;color:#fff;border:2px solid #f6c445;border-radius:20px;padding:22px 24px;max-width:420px;text-align:center;box-shadow:0 12px 40px #0008}
+.ar2-stopcard h2{margin:6px 0 6px;font-size:24px}.ar2-stopcard p{margin:0 0 14px;font-size:16px;opacity:.92}.ar2-stopico{font-size:44px}
+
+/* ages 4-6 (band k): every touch target >= 76 CSS px (plan §6/§9) */
+.ar2-bk{--fs:clamp(84px,min(12vh,21vw),116px)}
+.ar2-bk .ar2-btn{min-height:76px;min-width:76px;padding:10px 20px}
+.ar2-bk .ar2-item{min-width:84px;min-height:84px}
+.ar2-bk .fanimal{min-width:80px;min-height:80px}
+.ar2-bk .pcol{width:76px!important;height:76px!important}
+.ar2-bk .ar2-qopt{min-height:96px}
+
+/* band k (ages 4-6): every tap target at least 76 px; the top row gets room for the bigger buttons */
+.ar2-bk .ar2-speak{width:76px;height:76px;font-size:30px}
+.ar2-bk .ar2-turn{width:76px;height:76px;font-size:32px}
+.ar2-bk .ar2-go{min-height:76px;min-width:120px;font-size:24px;padding:12px 26px}
+.ar2-bk .ar2-chip i{width:22px;height:22px}
+.ar2-bk .ar2-next{min-height:76px}
+/* phones: the stop pill sits on its own row under Back/Skip/gear, never under them */
+@media(max-width:599px){.ar2-prog{top:calc(max(8px,env(safe-area-inset-top,0px)) + 54px);flex-direction:row;gap:8px}.ar2-progtxt{max-width:calc(100vw - 110px);font-size:12px;padding:4px 10px}.ar2-top2{top:calc(max(8px,env(safe-area-inset-top,0px)) + 86px)}}
+@media(max-width:599px){.ar2-bk .ar2-prog{top:calc(max(8px,env(safe-area-inset-top,0px)) + 80px)}.ar2-bk .ar2-top2{top:calc(max(8px,env(safe-area-inset-top,0px)) + 132px)}}
+@media(min-width:600px){.ar2-bk .ar2-top2{top:max(96px,9.5vh)}}
+/* Spark is pinned bottom-right inside areas, so its name label always sits on its left (never off-screen as "Sp") */
+body.spark-area .spark-companion .spark-status,body.spark-area .spark-companion.spark-left .spark-status{left:auto!important;right:calc(100% - 4px)!important;max-width:none!important}
+/* short landscape phones (e.g. 844x390): feed tray as a 2x2 grid bottom-left so the animals get the width */
+@media (max-height:480px) and (orientation:landscape){.ar2-trayw.ar2-feedtray{display:grid;grid-template-columns:repeat(2,var(--fs));max-width:none;left:max(8px,env(safe-area-inset-left,0px));transform:none;gap:6px;padding:6px}}
+/* feed (who eats what): picked food + tappable animals */
+.ar2-item.armed{outline:4px solid #ffe56a;outline-offset:3px;transform:translateY(-8px) scale(1.06)}
+.fhit.pick{box-shadow:0 0 0 3px #ffe56a88 inset}
+.fhit.help{animation:fhPulse 1.1s ease-in-out infinite}@keyframes fhPulse{0%,100%{box-shadow:0 0 0 3px #ffe56a inset}50%{box-shadow:0 0 0 3px #ffe56a inset,0 0 24px 8px #ffe56a99}}
+
+/* 10/10 item 14 */
+.ar2-findnum{position:absolute;left:50%;bottom:calc(max(10px,env(safe-area-inset-bottom,0px)) + 18px);transform:translateX(-50%);z-index:5;display:none;align-items:center;gap:10px;padding:6px 16px 6px 18px;border-radius:999px;background:#10243ef0;border:2px solid #ffd54a;color:#fff;font-weight:900;font-size:20px;pointer-events:none;box-shadow:0 6px 18px #0007}
+.ar2-findnum.on{display:flex}.ar2-findnum b{display:grid;place-items:center;min-width:60px;height:60px;border-radius:50%;background:#ffd54a;color:#10243e;font-size:38px;line-height:1}
+.ar2-findnum.pop{animation:ar2FindPop .5s ease-out}@keyframes ar2FindPop{0%{transform:translateX(-50%) scale(.7)}60%{transform:translateX(-50%) scale(1.12)}100%{transform:translateX(-50%) scale(1)}}
+@media(max-width:520px){.ar2-findnum{bottom:calc(max(10px,env(safe-area-inset-bottom,0px)) + 86px)}}
+@media(max-height:450px){.ar2-findnum b{min-width:46px;height:46px;font-size:28px}.ar2-findnum{bottom:8px}}
+
+/* item 18: Go bubble centred, away from the Spark avatar */
+.ar2-bubble.away{left:0;right:0;margin:0 auto;width:max-content}
+.ar2-bubble.away::after{display:none}

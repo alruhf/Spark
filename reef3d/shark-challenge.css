@@ -1,0 +1,39 @@
+/* Shark reading challenge card — big touch targets for phone */
+.r3d-shark-card{position:absolute;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;background:rgba(4,18,36,.55);pointer-events:auto;font-family:system-ui,sans-serif}
+.r3d-shark-panel{width:min(92vw,360px);max-height:88vh;overflow:auto;background:linear-gradient(180deg,#fff8e7,#ffe9b8);border:3px solid #f0b429;border-radius:22px;padding:14px 14px 12px;box-shadow:0 12px 40px rgba(0,0,0,.35);text-align:center}
+.r3d-shark-title{font-size:18px;font-weight:800;color:#1a4a6e;margin:0 0 6px}
+.r3d-shark-prompt{font-size:15px;color:#234;margin:0 0 12px;line-height:1.3}
+.r3d-shark-pic{width:100%;max-width:220px;height:120px;margin:0 auto 12px;border-radius:14px;background:#7ec8e8;display:flex;align-items:center;justify-content:center;font-size:48px;border:2px solid #4a9}
+.r3d-shark-trace-wrap{position:relative;width:min(78vw,260px);height:min(78vw,260px);margin:0 auto 10px;touch-action:none}
+.r3d-shark-trace{width:100%;height:100%;border-radius:16px;background:#fff;border:2px dashed #f0b429;display:block}
+.r3d-shark-letter-big{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:140px;font-weight:900;color:rgba(26,74,110,.18);pointer-events:none;line-height:1}
+.r3d-shark-choices{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:8px 0 4px}
+.r3d-shark-choice{min-width:72px;min-height:72px;padding:12px 18px;font-size:36px;font-weight:900;border-radius:16px;border:3px solid #1a4a6e;background:#ffe8a8!important;color:#0a2a44!important;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;line-height:1;font-family:system-ui,Arial,sans-serif;text-shadow:none;-webkit-text-fill-color:#0a2a44!important}
+.r3d-shark-choice.word{font-size:18px;min-width:96px;padding:14px 12px}
+.r3d-shark-choice.caption{font-size:14px;min-width:100%;text-align:left;line-height:1.25;padding:12px 14px}
+.r3d-shark-choice:active{transform:scale(.96)}
+.r3d-shark-choice.shake{animation:r3dSharkShake .35s ease}
+@keyframes r3dSharkShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.r3d-shark-skip{margin-top:10px;min-height:48px;min-width:120px;padding:10px 18px;font-size:16px;font-weight:700;border-radius:14px;border:2px solid #888;background:#eee;color:#444;cursor:pointer;touch-action:manipulation}
+.r3d-shark-hint{font-size:13px;color:#567;margin-top:6px}
+
+.r3d-shark-letter{display:block;color:#0a2a44!important;-webkit-text-fill-color:#0a2a44!important;font:900 40px/1 system-ui,Arial,sans-serif!important;opacity:1!important;visibility:visible!important}
+.r3d-shark-choice.word .r3d-shark-letter{font-size:20px!important}
+.r3d-shark-choice.caption .r3d-shark-letter{font-size:15px!important;font-weight:800!important;line-height:1.25!important}
+
+/* R22b: success cue + visible ink */
+.r3d-shark-panel{position:relative}
+.r3d-shark-welldone{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:900 40px/1 system-ui,Arial,sans-serif;color:#1f9d55;background:rgba(255,250,230,.92);border-radius:inherit;z-index:5;animation:r3dwd .45s cubic-bezier(.2,1.6,.4,1) both;text-shadow:0 3px 0 #fff}
+@keyframes r3dwd{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.r3d-shark-sparkle{position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px;border-radius:50%;background:radial-gradient(circle,#fff 0 25%,#ffd84a 30% 60%,transparent 65%);animation:r3dsp .9s ease-out both}
+@keyframes r3dsp{from{transform:translate(0,0) scale(.3);opacity:1}to{transform:translate(var(--dx),var(--dy)) scale(1.3);opacity:0}}
+.r3d-shark-card.won .r3d-shark-skip,.r3d-shark-card.won .r3d-shark-hint{visibility:hidden}
+.r3d-shark-letter-big{z-index:1}.r3d-shark-trace{position:relative;z-index:2;background:transparent}.r3d-shark-trace-wrap{background:#fff;border-radius:16px}
+/* R22c: the guide letter is drawn on .r3d-shark-guide (same glyph the trace is scored against); the DOM letter stays for screen readers only */
+.r3d-shark-guide{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.r3d-shark-letter-big{color:transparent!important}
+.r3d-shark-trace,.r3d-shark-trace-wrap{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;-webkit-touch-callout:none}
+
+/* R22j: verdict after each lift */
+.r3d-shark-tracehint{min-height:20px;margin:-4px 0 8px;font-size:15px;font-weight:800;color:#b4441a;line-height:1.3}
+/* R22l (tester R22k: the red 'Keep going!' line pushed the card up ~8 px): its line is always reserved, the text only fades in */.r3d-shark-tracehint:empty{visibility:hidden}.r3d-shark-tracehint:empty::before{content:'.'}

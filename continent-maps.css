@@ -1,0 +1,13 @@
+/* Scoped exclusively to the six new continent pages. */
+.continent-panel .continent-map{position:relative;margin:12px 0 8px;width:100%;aspect-ratio:16/9;background:#020914;border-radius:20px;overflow:hidden;cursor:grab;touch-action:none;isolation:isolate;user-select:none}
+.continent-panel .continent-map.dragging{cursor:grabbing}
+.continent-panel canvas,.continent-panel .continent-connectors{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.continent-panel .continent-connectors{z-index:1;overflow:visible}
+.continent-panel .continent-connectors line{stroke:#e2efffa0;stroke-width:1.2}
+.continent-panel .continent-map-hint{position:absolute;top:14px;left:14px;z-index:2;color:#e7eff9;background:#061326dc;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:850;letter-spacing:.03em;pointer-events:none}
+.continent-panel .continent-region{position:absolute;z-index:3;display:flex;align-items:center;flex-direction:column;gap:5px;min-width:0;max-width:145px;padding:0;border:0;background:transparent;box-shadow:none;text-align:center;transform:translate(-50%,-50%);touch-action:none;color:#fff;cursor:pointer}
+.continent-panel .continent-region:hover{background:transparent;filter:brightness(1.1)}
+.continent-panel .continent-region strong{display:block;font-size:12px;line-height:1.15;background:#061426e8;border:1px solid #ffffff35;border-radius:9px;padding:5px 8px;box-shadow:0 3px 10px #0007;max-width:145px}
+.continent-panel .continent-region-icon{display:block;width:56px;height:56px;flex:none;margin:0;border-radius:50%;border:2px solid #d4e7f4;background-image:url('continent-marker-photos.webp');background-size:600% 400%;box-shadow:0 4px 16px #000a;background-position:var(--photo-x) var(--photo-y)}
+.continent-panel .continent-map:focus-visible,.continent-panel .continent-region:focus-visible{outline:2px solid #79efff;outline-offset:3px}
+@media(max-width:720px){.continent-panel .continent-map{aspect-ratio:4/5}.continent-panel .continent-region-icon{width:42px;height:42px}.continent-panel .continent-region strong{font-size:10px;max-width:100px;padding:4px 5px}.continent-panel .continent-map-hint{font-size:9px;padding:6px 8px;top:9px;left:9px}}

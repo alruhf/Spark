@@ -1,0 +1,1525 @@
+{
+ "area": {
+  "title": "Sahara",
+  "badge": {
+   "name": "Desert Navigator",
+   "c1": "#ffd36a",
+   "c2": "#e08a1e",
+   "pic": "badge_medal"
+  }
+ },
+ "shuffleOptions": true,
+ "camp": {
+  "title": "Desert camp",
+  "walls": [
+   "Camp",
+   "Erg dunes",
+   "Night sky",
+   "Oasis palms"
+  ],
+  "welcome": {
+   "k": "Welcome to our desert camp! Let us pack for the trip. Tap number 1, the water skin.",
+   "e": "Welcome to our desert camp at the edge of the oasis! Tap each thing we need and it goes straight into the pack.",
+   "u": "Welcome to camp! We are going to navigate across the Sahara. Tap each item to pack it.",
+   "t": "Welcome to camp. Tonight we navigate the Sahara by sun, stars and dunes. Tap each item to pack it."
+  },
+  "welcomeAgain": {
+   "k": "Back at camp! Let us pack again. Tap number 1, the water skin.",
+   "e": "Back at camp! Tap the things to pack them.",
+   "u": "Back at camp! Tap the things to pack them.",
+   "t": "Back at camp! Tap the things to pack them."
+  },
+  "back": {
+   "k": "Welcome back! Let us keep packing.",
+   "e": "Welcome back! Let us finish packing.",
+   "u": "Welcome back. A few things still need packing.",
+   "t": "Back at camp. Finish the kit list."
+  },
+  "prompt": {
+   "k": "Tap number 1",
+   "e": "Tap something we need",
+   "u": "Tap something we need",
+   "t": "Tap something we need"
+  },
+  "readyPrompt": {
+   "k": "All packed! Tap Go!",
+   "e": "All packed! Tap Go!",
+   "u": "Kit complete. Tap Go when ready.",
+   "t": "Kit complete. Go when ready."
+  },
+  "readyAgain": {
+   "k": "Everything is packed! Tap Go!",
+   "e": "Everything is packed. Tap Go!",
+   "u": "The kit is already complete. Tap Go to head out.",
+   "t": "Kit already complete. Head out."
+  },
+  "goBubble": {
+   "k": "Ready? Go!",
+   "e": "Ready to ride? Go!",
+   "u": "Ready to head out?",
+   "t": "Set? Head out."
+  },
+  "finish": {
+   "k": "You did it! The pack is full. Tap Go and our camel will carry us across the dunes!",
+   "e": "You did it! All ten things are packed. Tap Go and we will ride a camel across the dunes!",
+   "u": "Everything is packed! Tap Go and we will ride out with the caravan.",
+   "t": "Packed. Tap Go to ride out with the caravan."
+  },
+  "gear": [
+   {
+    "id": "waterskin",
+    "word": "Water skin",
+    "pic": {
+     "a": "prop_waterskin"
+    },
+    "wall": 0,
+    "x": 22,
+    "y": 78,
+    "line": {
+     "k": "Water to drink. Gulp!",
+     "e": "A water skin. In the desert we drink a lot.",
+     "u": "A goatskin water bag. In dry heat we lose water fast, so we sip often.",
+     "t": "A water skin. Sweat evaporates fast in dry air, so you need several litres a day."
+    }
+   },
+   {
+    "id": "scarf",
+    "word": "Head scarf",
+    "pic": {
+     "a": "prop_scarf"
+    },
+    "wall": 0,
+    "x": 40,
+    "y": 80,
+    "line": {
+     "k": "A soft scarf for my head.",
+     "e": "A long indigo scarf. Tuareg people call it a tagelmust.",
+     "u": "A tagelmust: a long indigo scarf that shades the head and keeps blowing sand out of the face.",
+     "t": "The tagelmust shades the head and filters blowing sand. It is a sign of respect among Tuareg men."
+    }
+   },
+   {
+    "id": "dates",
+    "word": "Dates",
+    "pic": {
+     "a": "prop_dates"
+    },
+    "wall": 0,
+    "x": 82,
+    "y": 78,
+    "line": {
+     "k": "Sweet dates. Yum!",
+     "e": "Sweet dates from the oasis palms.",
+     "u": "Dates grow on palms at the oasis. They are sweet and keep for a long time.",
+     "t": "Date palms grow where groundwater reaches the surface. Dried dates keep for months: perfect trail food."
+    }
+   },
+   {
+    "id": "sandals",
+    "word": "Sandals",
+    "pic": {
+     "a": "gear_sandals"
+    },
+    "wall": 1,
+    "x": 28,
+    "y": 80,
+    "line": {
+     "k": "Sandals for hot sand.",
+     "e": "Sandals keep our feet off the hot sand.",
+     "u": "Sandals with wide soles protect our feet from sand that can be hotter than 60 °C.",
+     "t": "Wide soles spread your weight, so you sink less in soft sand, and protect you from sand above 60 °C."
+    }
+   },
+   {
+    "id": "sunglasses",
+    "word": "Sunglasses",
+    "pic": {
+     "a": "gear_sunglasses"
+    },
+    "wall": 1,
+    "x": 52,
+    "y": 82,
+    "line": {
+     "k": "Sunglasses for the bright sun.",
+     "e": "Sunglasses keep the bright glare out of our eyes.",
+     "u": "Sunglasses protect our eyes from the glare off pale sand.",
+     "t": "Sunglasses cut the glare reflected off pale sand and block UV light."
+    }
+   },
+   {
+    "id": "rope",
+    "word": "Tent rope",
+    "pic": {
+     "a": "gear_rope"
+    },
+    "wall": 1,
+    "x": 76,
+    "y": 79,
+    "line": {
+     "k": "A rope for our tent.",
+     "e": "Rope to tie our tent down tight.",
+     "u": "Guy ropes hold the tent steady when the desert wind blows.",
+     "t": "Guy ropes keep the tent standing in strong winds that can carry sand."
+    }
+   },
+   {
+    "id": "lantern",
+    "word": "Lantern",
+    "pic": {
+     "a": "prop_lantern"
+    },
+    "wall": 2,
+    "x": 24,
+    "y": 80,
+    "line": {
+     "k": "A lantern for the dark.",
+     "e": "A lantern to light the camp at night.",
+     "u": "A lantern lights the camp after the Sun sets.",
+     "t": "A lantern lights camp on moonless nights, when the desert sky is very dark."
+    }
+   },
+   {
+    "id": "starchart",
+    "word": "Star chart",
+    "pic": {
+     "a": "gear_starchart"
+    },
+    "wall": 2,
+    "x": 50,
+    "y": 82,
+    "line": {
+     "k": "A star map for the night sky.",
+     "e": "A star chart helps us find the North Star.",
+     "u": "A star chart shows where the Big Dipper and the North Star are.",
+     "t": "A star chart: the positions of the stars, so you can navigate when there are no landmarks."
+    }
+   },
+   {
+    "id": "blanket",
+    "word": "Wool blanket",
+    "pic": {
+     "a": "gear_blanket"
+    },
+    "wall": 2,
+    "x": 76,
+    "y": 80,
+    "line": {
+     "k": "A warm blanket for the cold night.",
+     "e": "A wool blanket for the chilly desert night.",
+     "u": "Desert nights get cold, so we pack a thick wool blanket.",
+     "t": "Wool traps air, which slows heat loss on cold, clear desert nights."
+    }
+   },
+   {
+    "id": "compass",
+    "word": "Compass",
+    "pic": {
+     "a": "gear_compass"
+    },
+    "wall": 3,
+    "x": 40,
+    "y": 80,
+    "line": {
+     "k": "A compass shows the way.",
+     "e": "A compass always points north.",
+     "u": "A compass needle points north, so we can steer our way.",
+     "t": "A magnetic compass points to magnetic north, close to true north here."
+    }
+   }
+  ],
+  "style": "pack",
+  "wrongNum": "Not yet! Find number {n}, the {w}."
+ },
+ "ride": {
+  "view": "pov",
+  "lines": [
+   {
+    "k": "Off we go! Our camel walks over the sand.",
+    "e": "Hold on! Our camel sways over the dunes.",
+    "u": "The caravan sets off across the erg, the sea of dunes.",
+    "t": "The caravan sets off across the erg."
+   }
+  ],
+  "video": "ride-day"
+ },
+ "stops": [
+  {
+   "id": "tent",
+   "name": "Pitch the nomad tent",
+   "bd": {
+    "a": "bd_tent"
+   },
+   "rideVideo": "ride-day",
+   "intro": {
+    "k": "Let us build a tent for shade! Tap a piece, then tap the glowing spot. Poles first!",
+    "e": "Time to pitch a nomad tent. Put the poles up first, then the woven cover, the ropes and the rug.",
+    "u": "Pitch a Tuareg-style tent: poles first, then the woven cover, guy ropes and rug. Then we will test how cool it stays.",
+    "t": "Pitch the tent, then engineer it: orientation, walls and materials, tested against a full day and night."
+   },
+   "ride": [
+    {
+     "k": "Clip clop! The sun is getting hot.",
+     "e": "The sun is climbing. We will need shade soon.",
+     "u": "It is getting hot. Time to find a camp spot.",
+     "t": "Midday heat is building."
+    },
+    {
+     "k": "Here is a good spot for our tent!",
+     "e": "Next stop: pitch the tent!",
+     "u": "Next stop: pitch the nomad tent.",
+     "t": "Next: pitch and test the tent."
+    }
+   ],
+   "act": {
+    "type": "tent",
+    "hintBuild": {
+     "k": "Tap a piece, then tap the glow",
+     "e": "Drag or tap each piece onto the glow (poles first)",
+     "u": "Drag or tap each piece onto the glow (poles first)",
+     "t": "Drag or tap each piece onto the glow (poles first)"
+    },
+    "dropHere": {
+     "k": "Put it on the glowing spot.",
+     "e": "Put it on the glowing outline.",
+     "u": "Place it on the highlighted outline.",
+     "t": "Snap it to the outline."
+    },
+    "polesFirst": {
+     "k": "Poles first! They hold the cover up.",
+     "e": "Poles first! The cover needs something to rest on.",
+     "u": "Poles first! The cover needs something to rest on.",
+     "t": "Poles first! The cover needs something to rest on."
+    },
+    "placedLine": {
+     "poles": {
+      "k": "Poles up!",
+      "e": "The poles are up.",
+      "u": "The poles are up.",
+      "t": "The poles are up."
+     },
+     "cover": {
+      "k": "The cover is on. Shade!",
+      "e": "The woven cover is on. Now we have shade.",
+      "u": "The woven mat cover is on. It blocks the sunlight but lets air through.",
+      "t": "The woven mat cover is on. It blocks the sunlight but lets air through."
+     },
+     "rope": {
+      "k": "Ropes hold it tight.",
+      "e": "Ropes keep it steady in the wind.",
+      "u": "Ropes keep it steady in the wind.",
+      "t": "Ropes keep it steady in the wind."
+     },
+     "rug": {
+      "k": "A soft rug inside.",
+      "e": "A rug to sit on.",
+      "u": "A rug to sit on.",
+      "t": "A rug to sit on."
+     }
+    },
+    "hintOrient": {
+     "k": "Tap the turn buttons",
+     "e": "Turn the tent: back to the sun",
+     "u": "Turn the tent: back to the sun",
+     "t": "Turn the tent: back to the sun"
+    },
+    "orientIntro": {
+     "k": "Oh no, the sun shines right inside! Turn the tent so its back faces the sun.",
+     "e": "The hot afternoon sun and the dusty wind come from that side. Turn the tent so the closed back faces them.",
+     "u": "Turn the tent so the closed back faces the hot afternoon sun and the wind. Watch the thermometer inside.",
+     "t": "Orient the shelter: the closed back should face the hot afternoon sun and prevailing wind. Watch the inside temperature."
+    },
+    "orientHot": {
+     "k": "Ooh, hot! The sun shines in. Keep turning.",
+     "e": "The sun is pouring in through the open side. Keep turning.",
+     "u": "The sun is pouring in through the open side. Keep turning.",
+     "t": "The sun is pouring in through the open side. Keep turning."
+    },
+    "orientOk": {
+     "k": "Yes! The back blocks the sun. Now it is shady and cool inside!",
+     "e": "Yes! The closed back blocks the sun and wind. Look how much cooler it is inside!",
+     "u": "The back now blocks the direct sunlight. The inside is many degrees cooler than outside.",
+     "t": "Correct orientation: the back blocks direct solar radiation, so the inside is far cooler than outside."
+    },
+    "hintFox": "Tap the fox, then tap the shade",
+    "foxIntro": {
+     "k": "Look! A little fennec fox is hot in the sun. Help it into the shade. Tap the fox, then tap the shady spot.",
+     "e": "A fennec fox is hot. Help it into the shade.",
+     "u": "A fennec fox is hot. Help it into the shade.",
+     "t": "A fennec fox is hot. Help it into the shade."
+    },
+    "foxSun": {
+     "k": "That spot is still sunny. Find the cool shade inside the tent.",
+     "e": "Still sunny there. Try the shady spot.",
+     "u": "Still sunny there. Try the shady spot.",
+     "t": "Still sunny there. Try the shady spot."
+    },
+    "foxOk": "Ahh! The fox curls up in the cool shade. Good job!",
+    "predictQ": {
+     "k": "Predict",
+     "e": "Predict",
+     "u": "Predict: at 2 pm, how warm will it be in the tent's shade?",
+     "t": "Predict: at 2 pm, how will the inside compare to outside?"
+    },
+    "predictRight": {
+     "k": "Good thinking!",
+     "e": "Good prediction!",
+     "u": "Good prediction! Let us check:",
+     "t": "Prediction confirmed:"
+    },
+    "predictWrong": {
+     "k": "Let us see!",
+     "e": "Let us test it!",
+     "u": "Let us test it:",
+     "t": "Test result:"
+    },
+    "noWool": {
+     "k": "We did not buy wool walls.",
+     "e": "You did not buy wool walls, so the sides cannot be closed for the night.",
+     "u": "You did not buy wool walls, so the sides cannot be closed for the night.",
+     "t": "You did not buy wool walls, so the sides cannot be closed for the night."
+    },
+    "chipNoon": {
+     "k": "Noon",
+     "e": "Cool at noon",
+     "u": "Noon inside",
+     "t": "2 pm inside"
+    },
+    "chipNight": {
+     "k": "Night",
+     "e": "Warm at midnight",
+     "u": "Midnight inside",
+     "t": "Midnight inside"
+    },
+    "hintTime": {
+     "k": "Slide the sun",
+     "e": "Slide the time, then set the walls",
+     "u": "Slide through the day; set the walls for each target",
+     "t": "Slide through day and night; meet both targets"
+    },
+    "timeIntro": {
+     "k": "Slide the sun across the sky.",
+     "e": "Now slide the time from morning to midnight. At noon the sides should be up for a breeze. At midnight, drop the wool walls to stay warm.",
+     "u": "Slide through the day and night. Meet both targets on the graph: cool at noon, warm enough at midnight. Use the walls button.",
+     "t": "Run the day: keep the inside under the noon target and over the midnight target. Adjust the walls as you go."
+    },
+    "goalNoonOk": {
+     "k": "Cool at noon!",
+     "e": "Cool at noon! The breeze and shade help.",
+     "u": "Noon target met: shade plus a breeze.",
+     "t": "Noon target met."
+    },
+    "goalNightOk": {
+     "k": "Warm at night!",
+     "e": "Warm at midnight! The wool walls hold in the heat.",
+     "u": "Midnight target met: the wool walls slow heat loss.",
+     "t": "Midnight target met."
+    },
+    "hotNoon": {
+     "k": "Too hot inside!",
+     "e": "Too hot inside. Check the tent is turned right.",
+     "u": "Too hot. Check the orientation and the sides.",
+     "t": "Over the noon target. Rethink orientation or airflow."
+    },
+    "hotWalls": {
+     "k": "Too hot! Roll the sides up for a breeze.",
+     "e": "Too hot! Roll the sides up so the breeze can blow through.",
+     "u": "Too hot: with the walls down, no breeze gets through. Roll the sides up.",
+     "t": "Over target: closed walls block convection. Roll the sides up."
+    },
+    "coldNight": {
+     "k": "Brrr, cold!",
+     "e": "Brrr! The desert gets cold at night. Drop the wool walls.",
+     "u": "Too cold: clear desert skies let heat escape. Drop the wool walls.",
+     "t": "Below the midnight target: drop the wool walls to cut heat loss."
+    },
+    "goalNoon": 31,
+    "goalNight": 16,
+    "goalNoonT": 30,
+    "goalNightT": 17,
+    "budget": 10,
+    "free": {
+     "k": "Great tent! Keep playing with it, then tap Done.",
+     "e": "Great work! Try different times and walls, then tap Done.",
+     "u": "Nice engineering. Experiment freely, then tap Done.",
+     "t": "Solved. Experiment with the settings, then tap Done."
+    },
+    "difficulty": {
+     "k": {
+      "input": "tap-or-drag"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can make shade to stay cool.",
+     "e": "I can explain why the desert gets cold at night.",
+     "u": "I can test a shelter design against temperature targets.",
+     "t": "I can explain how my shelter controls heat transfer."
+    },
+    "standards": {
+     "k": "K-PS3-1, K-PS3-2",
+     "e": "3-ESS2-2",
+     "u": "3-5-ETS1-2",
+     "t": "MS-PS3-3"
+    },
+    "journal": "Hot days, cold nights"
+   },
+   "facts": [
+    {
+     "k": "The desert is hot in the day and cold at night.",
+     "e": "Desert days are hot, but nights get cold. Dry air and clear skies let the heat escape fast.",
+     "u": "Sahara days can top 40 °C, and winter nights can fall near freezing. Dry air and clear skies let heat escape fast at night.",
+     "t": "Dry air holds little water vapour and clear skies let heat radiate to space, so desert temperatures swing widely between day and night."
+    },
+    {
+     "k": "Shade keeps us cool.",
+     "e": "Shade and moving air keep you cooler. Wool walls keep you warm at night.",
+     "u": "Shade blocks the Sun's rays, and moving air carries heat away. At night, wool layers slow heat loss.",
+     "t": "Shade blocks radiation, airflow adds convection, and wool's trapped air reduces conduction."
+    },
+    {
+     "k": "Tuareg tents are low and wide.",
+     "e": "Tuareg tents are low and wide, made of hide or woven mats. The sides can go up or down.",
+     "u": "Tuareg tents are low and wide, made of hide or woven mats, and their sides can be raised or lowered.",
+     "t": "Tuareg tents are low and wide, made of hide or woven mats, with sides that can be raised or lowered for the conditions."
+    }
+   ],
+   "done": {
+    "k": "Our tent keeps us cool. Super!",
+    "e": "Our tent is pitched and comfy. Super job!",
+    "u": "Tent pitched and tested. Nice engineering!",
+    "t": "Shelter built and tested."
+   },
+   "q": {
+    "k": {
+     "q": "Where is it coolest at noon?",
+     "o": [
+      {
+       "label": "In the tent's shade",
+       "pic": "tent_open"
+      },
+      {
+       "label": "Out in the sun",
+       "pic": "ans_sun_hot"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Shade keeps us cool.",
+     "hint": "Where does the sun not reach?"
+    },
+    "e": {
+     "q": "Which tent stays coolest at noon?",
+     "o": [
+      {
+       "label": "Cover on, sides rolled up",
+       "pic": "tent_open"
+      },
+      {
+       "label": "All walls down, no breeze",
+       "pic": "tent_closed"
+      },
+      {
+       "label": "Just poles, no cover",
+       "pic": "tent_frame"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Shade from the cover plus a breeze through the sides.",
+     "hint": "You need shade and a breeze."
+    },
+    "u": {
+     "q": "Why does the desert get cold at night?",
+     "o": [
+      {
+       "label": "Dry air and clear skies let heat escape",
+       "pic": "ans_night_cold"
+      },
+      {
+       "label": "The sand turns to ice",
+       "pic": "ans_rocky"
+      },
+      {
+       "label": "The Sun is closer at night",
+       "pic": "ans_sun"
+      },
+      {
+       "label": "Sand soaks up all the heat at night",
+       "pic": "ans_dunes"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! There are few clouds and little water vapour to hold the heat in.",
+     "hint": "Think about the clear sky.",
+     "fact": "Clouds act like a blanket. The desert usually has none."
+    },
+    "t": {
+     "q": "At noon the closed back blocks the Sun's rays. Which kind of heat transfer is it blocking?",
+     "o": [
+      {
+       "label": "Radiation",
+       "pic": "ans_sun"
+      },
+      {
+       "label": "Conduction",
+       "pic": "ans_wool_blanket"
+      },
+      {
+       "label": "Convection",
+       "pic": "ans_wind_sand"
+      },
+      {
+       "label": "Evaporation",
+       "pic": "ans_oasis"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: sunlight reaches us as radiation, and the cover blocks it.",
+     "hint": "How does the Sun's heat cross empty space?",
+     "fact": "Conduction is through touching materials, convection is moving air or water."
+    }
+   },
+   "sticker": "tent_closed",
+   "after": {
+    "k": "Next, a buggy ride over the dunes!",
+    "e": "Next stop: drive a dune buggy!",
+    "u": "Next stop: read the sand in a dune buggy.",
+    "t": "Next: dune buggy."
+   }
+  },
+  {
+   "id": "buggy",
+   "name": "Dune buggy",
+   "bd": {
+    "a": "bd_sky"
+   },
+   "rideVideo": "ride-day",
+   "intro": {
+    "k": "Let us drive to the oasis! Hold Go to drive. Tap the arrows to steer onto the easy way.",
+    "e": "Drive the buggy to the oasis! Hold Gas to go and Brake to slow down. Turn the wheel to steer. Slow down before the top of each dune.",
+    "u": "Drive to the oasis over three dunes. Steer with the wheel or the arrow keys. Climb the gentle windward side, slow down before the crest, and when the way splits, steer onto the low horn.",
+    "t": "Drive to the oasis over three dunes on a fuel budget. Where the way splits, read the ripples and steer onto the gentle line."
+   },
+   "ride": [
+    {
+     "k": "Our camel takes us to the buggy.",
+     "e": "The camel carries us to a big dune field.",
+     "u": "We are heading into a field of dunes.",
+     "t": "Into the dune field."
+    },
+    {
+     "k": "Next stop: the dune buggy!",
+     "e": "Next stop: the dune buggy!",
+     "u": "Next stop: drive the dunes.",
+     "t": "Next: dune-field driving test."
+    }
+   ],
+   "act": {
+    "type": "buggy",
+    "hint": {
+     "k": "Hold Go. Tap an arrow to steer",
+     "e": "Hold Gas. Steer with the wheel",
+     "u": "Steer onto the gentle way; brake before the crest",
+     "t": "Steer onto the gentle line. Watch the fuel"
+    },
+    "start": {
+     "k": "Hold the green Go button. Tap the arrows to steer round the big dune. The map shows where you go.",
+     "e": "Hold Gas to drive. Ease off and brake before the top of the dune, then go down slowly.",
+     "u": "Climb the gentle side, brake before the crest, and never go down a steep slip face fast. Use the tyre button on soft sand.",
+     "t": "Climb the windward side, control your speed over each crest, use soft tyres on soft sand, and save fuel."
+    },
+    "tipped": {
+     "k": "Whoops! A gentle tumble. Let us try again.",
+     "e": "Whoa, a gentle tip-over! We went down the steep side too fast. Let us try again, slower.",
+     "u": "Tipped! Too fast down the steep slip face. Brake before the crest and try again.",
+     "t": "Tip-over: too fast on a 32° slip face. Brake earlier and lean back."
+    },
+    "hintSlow": {
+     "k": "Go slowly",
+     "e": "Brake before the top",
+     "u": "Brake before the crest",
+     "t": "Brake earlier; lean back"
+    },
+    "tooSteep": {
+     "k": "Too steep! The wheels wobble and dig in. Steer round the easy low end.",
+     "e": "Too steep! The wheels just dig in. That side is the steep slip face. Let us take the gentle way.",
+     "u": "Too steep: about 32°, the steepest loose sand can rest at. The wheels dig in. Go round to the gentle windward side.",
+     "t": "The slip face is at the angle of repose, about 32°. No grip. Take the windward line."
+    },
+    "bogged": {
+     "k": "We are stuck in soft sand!",
+     "e": "We are stuck in soft sand!",
+     "u": "Bogged down! Hard tyres dig into soft sand. Let some air out with the tyre button.",
+     "t": "Bogged: lower tyre pressure spreads the load and floats on soft sand."
+    },
+    "fuelOut": {
+     "k": "Out of fuel!",
+     "e": "Out of fuel!",
+     "u": "Out of fuel!",
+     "t": "Out of fuel. Let us restart this dune with gentler throttle."
+    },
+    "tyreLow": {
+     "k": "Soft tyres!",
+     "e": "Soft tyres grip better.",
+     "u": "Softer tyres spread out and float on soft sand.",
+     "t": "Lower pressure: bigger footprint, better flotation."
+    },
+    "forkQ": {
+     "k": "A big dune! The way splits. Tap an arrow to go the easy way.",
+     "e": "A big dune ahead and the way splits! Steer away from the dark steep side, onto the long low end.",
+     "u": "Crescent dune ahead. Ripples lie across the wind and the dark slip face is downwind. Steer into the lane that goes round the long horn.",
+     "t": "Barchan ahead, slip face toward us. Read the wind from the ripples and steer round the long horn."
+    },
+    "hintSteer": {
+     "k": "Tap an arrow to steer round",
+     "e": "Steer round the long low end",
+     "u": "Steer round the long horn",
+     "t": "Steer the windward line round the horn"
+    },
+    "tippedTurn": {
+     "k": "Whoops! A gentle tumble.",
+     "e": "Whoa! Turning on the steep side tipped us. Go straight down it.",
+     "u": "Tipped! Never turn on a steep slip face: drive straight down it.",
+     "t": "Rollover: turning across a slip face tips the buggy. Keep the wheels pointed straight down."
+    },
+    "lineStraight": {
+     "k": "Straight over",
+     "e": "Straight over the top",
+     "u": "Straight up the slip face",
+     "t": "Direct: up the slip face"
+    },
+    "lineHorn": {
+     "k": "Round the low end",
+     "e": "Round the gentle end (the horn)",
+     "u": "Around the horn, up the gentle windward slope",
+     "t": "Around the horn: windward slope"
+    },
+    "forkStraight": {
+     "k": "Straight it is!",
+     "e": "Straight ahead. Watch out, that side looks steep!",
+     "u": "Straight at it. Let us see if the buggy can climb that face.",
+     "t": "Direct line chosen: testing the slip face."
+    },
+    "forkHorn": {
+     "k": "Round the gentle end!",
+     "e": "Good thinking! The low end of the dune is gentle.",
+     "u": "Smart: the horns of a crescent dune are low and gentle.",
+     "t": "Good: the horn route avoids the slip face."
+    },
+    "arrived": {
+     "k": "We made it to the oasis! Yay!",
+     "e": "We made it to the oasis! Great driving!",
+     "u": "Oasis reached! You read the sand like a pro.",
+     "t": "Oasis reached. Clean route."
+    },
+    "kCheckQ": "Which side of the dune is easy to climb? Tap it!",
+    "kCheckHint": "Tap the easy side",
+    "kCheckOk": "Yes! The long gentle side is easy to climb.",
+    "kCheckNo": "That side is very steep. Try the long, gentle side.",
+    "difficulty": {
+     "k": {
+      "input": "tap-or-drag",
+      "assist": true
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can tell the gentle side of a dune from the steep side.",
+     "e": "I can explain how wind shapes dunes.",
+     "u": "I can use ripples to read the wind and plan a safe route.",
+     "t": "I can explain dune formation and choose a low-impact route."
+    },
+    "standards": {
+     "k": "K-ESS2-1",
+     "e": "2-ESS2-2",
+     "u": "4-ESS2-1, 4-ESS2-2",
+     "t": "MS-ESS2-2, MS-ESS3-3"
+    },
+    "journal": "How wind builds dunes"
+   },
+   "facts": [
+    {
+     "k": "The wind makes sand dunes.",
+     "e": "Wind builds dunes. Sand blows up the gentle side and slides down the steep side.",
+     "u": "Wind builds dunes: sand climbs the gentle windward side and slides down the steep slip face.",
+     "t": "Wind moves sand up the windward slope; it avalanches down the lee slip face, so dunes creep downwind."
+    },
+    {
+     "k": "One side of a dune is steep.",
+     "e": "The steep side is called the slip face. It is too steep to drive up.",
+     "u": "The slip face sits at about 30 to 34 degrees, the steepest angle loose sand can rest at. Ripples lie across the wind.",
+     "t": "The slip face sits at the angle of repose, about 30–34°. Ripples form at right angles to the wind."
+    },
+    {
+     "k": "Most of the Sahara is rocks and stones, not sand.",
+     "e": "Most of the Sahara is rocky plateau and gravel plain. Dunes cover only part of it.",
+     "u": "Most of the Sahara is rocky plateau and gravel plain, not sand. Dunes cover only part of it.",
+     "t": "Most of the Sahara is rocky plateau and gravel plain. Off-road driving damages fragile desert soil, so real drivers stay on tracks."
+    }
+   ],
+   "done": {
+    "k": "We drove to the oasis!",
+    "e": "Great driving! We reached the oasis.",
+    "u": "Great driving. You read the dunes well.",
+    "t": "Route complete."
+   },
+   "q": {
+    "k": {
+     "q": "What makes sand dunes?",
+     "o": [
+      {
+       "label": "The wind",
+       "pic": "ans_wind_sand"
+      },
+      {
+       "label": "The rain",
+       "pic": "ans_rain_cloud"
+      },
+      {
+       "label": "Sea waves",
+       "pic": "ans_ocean_waves"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The wind piles up the sand.",
+     "hint": "What blows the sand?"
+    },
+    "e": {
+     "q": "Wind pushes sand up the gentle side of a dune. Where does the sand go next?",
+     "o": [
+      {
+       "label": "It slides down the steep slip face",
+       "pic": "ans_dunes"
+      },
+      {
+       "label": "Into the oasis water",
+       "pic": "ans_oasis"
+      },
+      {
+       "label": "Up into the sky",
+       "pic": "ans_sun_hot"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! It slides down the steep side, so the dune slowly moves with the wind.",
+     "hint": "The steep side is called the slip face."
+    },
+    "u": {
+     "q": "Which route is safest for a dune buggy?",
+     "o": [
+      {
+       "label": "Up the gentle windward side, then slowly down",
+       "pic": "ans_dunes"
+      },
+      {
+       "label": "Straight up the steep slip face",
+       "pic": "ans_wind_sand"
+      },
+      {
+       "label": "Fast over every crest, to save fuel",
+       "pic": "ans_sun_hot"
+      },
+      {
+       "label": "Down the steep side, then up the slip face",
+       "pic": "ans_rocky"
+      }
+     ],
+     "a": 0,
+     "ok": "Right: gentle side up, slow over the crest.",
+     "hint": "Where can the wheels grip?"
+    },
+    "t": {
+     "q": "Most of the Sahara is covered by what?",
+     "o": [
+      {
+       "label": "Rocky plateaus and gravel plains",
+       "pic": "ans_rocky"
+      },
+      {
+       "label": "Sand dunes",
+       "pic": "ans_dunes"
+      },
+      {
+       "label": "Oases",
+       "pic": "ans_oasis"
+      },
+      {
+       "label": "Salt flats",
+       "pic": "ans_night_cold"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: dunes cover only part of the Sahara.",
+     "hint": "Dunes are famous, but are they most of it?",
+     "fact": "Off-road driving damages fragile desert soil, so drivers stay on tracks."
+    }
+   },
+   "sticker": "buggy",
+   "after": {
+    "k": "Next, we find north with the stars!",
+    "e": "Next stop: find north by the sun and stars!",
+    "u": "Next stop: navigate by the sky.",
+    "t": "Next: sky navigation."
+   }
+  },
+  {
+   "id": "skynav",
+   "name": "Find north by the stars",
+   "bd": {
+    "a": "bd_night"
+   },
+   "rideVideo": "ride-dusk",
+   "intro": {
+    "k": "Night is here. Let us find the North Star!",
+    "e": "Night is falling. Caravans used the stars to find north. Let us find the North Star!",
+    "u": "Before dark, the shadow stick shows east and west. Then the stars show north.",
+    "t": "First the Sun, then the stars: find north two ways."
+   },
+   "ride": [
+    {
+     "k": "The sun goes down. The sky turns pink!",
+     "e": "The sun sets and the sky turns orange and pink.",
+     "u": "Dusk. The caravan keeps moving in the cooler air.",
+     "t": "Dusk falls over the erg."
+    },
+    {
+     "k": "Next stop: the stars!",
+     "e": "Next stop: find north!",
+     "u": "Next stop: sky navigation.",
+     "t": "Next: navigation."
+    }
+   ],
+   "act": {
+    "type": "skynav",
+    "lat": 23,
+    "hintK": "Tap the stars 1 to 5",
+    "hintE": {
+     "k": "Tap the 2 pointer stars",
+     "e": "Tap the two pointer stars",
+     "u": "Find the two pointer stars at the end of the bowl",
+     "t": "Locate the pointers (Merak, Dubhe)"
+    },
+    "kIntro": "Look at the stars! Tap them in order: 1, 2, 3, 4, 5.",
+    "kWrong": "Find the next number.",
+    "kTraced": "You traced the Big Dipper to the North Star!",
+    "eIntro": {
+     "k": "Find the Big Dipper.",
+     "e": "Find the Big Dipper: seven bright stars shaped like a ladle. Tap the two stars at the end of its bowl.",
+     "u": "Find the Big Dipper and tap its two pointer stars, at the outer edge of the bowl.",
+     "t": "Locate the Big Dipper and tap the two pointer stars, Merak and Dubhe."
+    },
+    "notPointer": {
+     "k": "That is in the Dipper, but not a pointer.",
+     "e": "That star is part of the Big Dipper, but not a pointer. Try the end of the bowl.",
+     "u": "Part of the Dipper, but not a pointer. Pointers are the two stars at the outer end of the bowl.",
+     "t": "Dipper star, not a pointer: use Merak and Dubhe, the outer edge of the bowl."
+    },
+    "notDipper": {
+     "k": "That is not in the Dipper.",
+     "e": "That star is not in the Big Dipper. Look for the ladle shape.",
+     "u": "That star is not in the Big Dipper. Look for the ladle shape.",
+     "t": "That star is not in the Big Dipper. Look for the ladle shape."
+    },
+    "pointersOk": {
+     "k": "The pointers!",
+     "e": "Great! Follow the line from the pointer stars. Tap the star it points to.",
+     "u": "Follow the pointer line about five times the gap between them. Tap the star there.",
+     "t": "Extend the line about 5 times the pointer spacing and tap the star you reach."
+    },
+    "followLine": {
+     "k": "Follow the line.",
+     "e": "Follow the dotted line to the end.",
+     "u": "Follow the line about five times the gap.",
+     "t": "Not quite. Keep following the line."
+    },
+    "polarisOk": {
+     "k": "The North Star!",
+     "e": "You found Polaris, the North Star!",
+     "u": "That is Polaris, the North Star, right above north.",
+     "t": "Polaris: within one degree of the north celestial pole."
+    },
+    "hintLapse": {
+     "k": "Tap Speed up time",
+     "e": "Tap Speed up time",
+     "u": "Speed up time to watch the sky turn",
+     "t": "Run the time-lapse"
+    },
+    "lapseIntro": {
+     "k": "Tap Speed up time and watch the sky move!",
+     "e": "Tap Speed up time. Watch which star stays still.",
+     "u": "Speed up time and watch the stars circle.",
+     "t": "Run the time-lapse."
+    },
+    "lapseDone": {
+     "k": "See? Everything spins round the North Star.",
+     "e": "See? The stars circle around the North Star, but it stays almost still.",
+     "u": "Every star circled Polaris, which barely moved, because it sits almost above Earth's spin axis.",
+     "t": "All stars circle the celestial pole; Polaris barely moves because it sits close to it."
+    },
+    "hintStill": "Tap the star that stayed still",
+    "stillQ": "The stars moved! Which star stayed still? Tap it.",
+    "stillOk": "Yes! The North Star stays still. It shows us north.",
+    "stillNo": "That one moved. Find the star that stayed still.",
+    "latQ": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Polaris' height above the horizon is about your latitude. How high is it here?"
+    },
+    "latOk": "Correct: we are near 23° N, so Polaris is about 23° up.",
+    "latNo": "Not quite. Look at the dotted line: Polaris is low, but above the horizon.",
+    "hintCompass": {
+     "k": "Turn the compass",
+     "e": "Turn N to the North Star",
+     "u": "Turn N to the North Star",
+     "t": "Turn N to the North Star"
+    },
+    "compassIntro": {
+     "k": "Turn the compass so N points to the North Star.",
+     "e": "Turn the star compass so N points at the North Star.",
+     "u": "Rotate the compass until its N lines up with Polaris.",
+     "t": "Align the compass N with Polaris to set the heading."
+    },
+    "compassOk": {
+     "k": "North! Our camel walks north. Well done!",
+     "e": "North it is! The caravan turns and walks north.",
+     "u": "Compass set. The caravan heads north.",
+     "t": "Heading north."
+    },
+    "hintStick": {
+     "k": "",
+     "e": "",
+     "u": "Tap to plant the stick",
+     "t": "Tap to plant the stick"
+    },
+    "stickIntro": {
+     "k": "",
+     "e": "",
+     "u": "It is 10 in the morning. Plant the shadow stick in the sand.",
+     "t": "10 am: plant the shadow stick."
+    },
+    "hintMark": {
+     "k": "",
+     "e": "",
+     "u": "Tap the tip of the shadow",
+     "t": "Mark the shadow tip"
+    },
+    "markIntro": {
+     "k": "",
+     "e": "",
+     "u": "See the shadow? Tap its tip to mark it.",
+     "t": "Mark the shadow tip."
+    },
+    "waitIntro": {
+     "k": "",
+     "e": "",
+     "u": "Now wait. Tap Speed up time.",
+     "t": "Fast-forward two hours."
+    },
+    "markAgain": {
+     "k": "",
+     "e": "",
+     "u": "The shadow moved! Mark its tip again.",
+     "t": "Mark the new tip."
+    },
+    "lineDone": {
+     "k": "",
+     "e": "",
+     "u": "The line between the marks runs west to east. The first mark is west.",
+     "t": "The tip line runs west-east; the first mark is west."
+    },
+    "northHint": {
+     "k": "",
+     "e": "",
+     "u": "Shadows point away from the Sun. Here at midday they point north.",
+     "t": "Shadows point away from the Sun; at local noon in the northern tropics they point north."
+    },
+    "northOk": {
+     "k": "",
+     "e": "",
+     "u": "Yes! North is at right angles to the line, on the shadow side.",
+     "t": "Correct: north is perpendicular to the line, on the shadow side."
+    },
+    "toNight": {
+     "k": "",
+     "e": "",
+     "u": "Now let us wait for the stars.",
+     "t": "Now the stars."
+    },
+    "difficulty": {
+     "k": {
+      "input": "tap"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can find the star that stays still.",
+     "e": "I can use the Big Dipper to find the North Star.",
+     "u": "I can find north with a shadow stick and with Polaris.",
+     "t": "I can explain why Polaris' height equals my latitude."
+    },
+    "standards": {
+     "k": "1-ESS1-1",
+     "e": "1-ESS1-1",
+     "u": "5-ESS1-2",
+     "t": "MS-ESS1-1"
+    },
+    "journal": "The North Star"
+   },
+   "facts": [
+    {
+     "k": "The North Star stays still. The other stars move around it.",
+     "e": "Polaris, the North Star, stays almost still above north while other stars circle it.",
+     "u": "Polaris stays almost still above north while other stars circle it, because it lies close to Earth's spin axis.",
+     "t": "Polaris lies within one degree of the north celestial pole, so it barely moves as Earth turns."
+    },
+    {
+     "k": "Shadows point away from the Sun.",
+     "e": "A shadow points away from the Sun and moves as Earth turns.",
+     "u": "A shadow points away from the Sun and moves as Earth turns. That is how a shadow stick finds east and west.",
+     "t": "Shadow-tip lines run roughly east–west because the Sun's direction changes as Earth rotates."
+    },
+    {
+     "k": "Long ago, caravans used the stars to find the way.",
+     "e": "Caravans crossing the Sahara used the Sun, the stars, dunes and landmarks to find their way.",
+     "u": "Caravans crossing the Sahara used the Sun, the stars, dunes and landmarks to find their way.",
+     "t": "Saharan caravans navigated by the Sun, stars, dunes and landmarks across hundreds of kilometres."
+    }
+   ],
+   "done": {
+    "k": "We found north! Hooray!",
+    "e": "We found north by the stars!",
+    "u": "North found by sun and stars. Great navigating!",
+    "t": "Navigation complete."
+   },
+   "q": {
+    "k": {
+     "q": "Which star stays still all night?",
+     "o": [
+      {
+       "label": "The North Star",
+       "pic": "ans_polaris"
+      },
+      {
+       "label": "The Sun",
+       "pic": "ans_sun"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The North Star stays still.",
+     "hint": "It is the one at the middle of the circles."
+    },
+    "e": {
+     "q": "The two pointer stars of the Big Dipper point to which star?",
+     "o": [
+      {
+       "label": "The North Star",
+       "pic": "ans_polaris"
+      },
+      {
+       "label": "The Moon",
+       "pic": "ans_moon"
+      },
+      {
+       "label": "The Sun",
+       "pic": "ans_sun"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! They point to Polaris, the North Star.",
+     "hint": "The star that stays still."
+    },
+    "u": {
+     "q": "At midday here a shadow points north. Where will the stick's shadow point at 3 pm?",
+     "o": [
+      {
+       "label": "East-north-east, away from the Sun",
+       "pic": "ans_sun"
+      },
+      {
+       "label": "West, toward the Sun",
+       "pic": "ans_wind_sand"
+      },
+      {
+       "label": "Still exactly north",
+       "pic": "ans_polaris"
+      },
+      {
+       "label": "South, toward the Sun",
+       "pic": "ans_sun_hot"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! In the afternoon the Sun is in the west-south-west, so the shadow points the other way.",
+     "hint": "Shadows point away from the Sun.",
+     "fact": "The Sun moves about 15 degrees across the sky every hour."
+    },
+    "t": {
+     "q": "Why can't people in Australia use Polaris to find north?",
+     "o": [
+      {
+       "label": "It is below their horizon",
+       "pic": "ans_night_cold"
+      },
+      {
+       "label": "It is too faint to see from there",
+       "pic": "ans_polaris"
+      },
+      {
+       "label": "Clouds always cover it",
+       "pic": "ans_rain_cloud"
+      },
+      {
+       "label": "It sits exactly overhead there",
+       "pic": "ans_sun"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: in the southern hemisphere Polaris is below the horizon.",
+     "hint": "Polaris' height equals your latitude. What is it at 25° S?",
+     "fact": "Southern navigators use the Southern Cross instead."
+    }
+   },
+   "sticker": "gear_starchart",
+   "after": {
+    "k": "Next, let us find animal tracks!",
+    "e": "Next stop: the night tracker!",
+    "u": "Next stop: track animals at night.",
+    "t": "Next: night tracking."
+   }
+  },
+  {
+   "id": "tracks",
+   "name": "Night tracker",
+   "bd": {
+    "a": "bd_night"
+   },
+   "rideVideo": "ride-dusk",
+   "intro": {
+    "k": "Shh! Animals come out at night. Let us follow their footprints with our torch.",
+    "e": "Animals come out in the cool night. Use the torch to follow their tracks!",
+    "u": "Use the torch to follow tracks. At forks, compare the print shapes with the field guide.",
+    "t": "Follow the tracks, use the field guide, and read the story in the sand."
+   },
+   "ride": [
+    {
+     "k": "It is dark and cool now.",
+     "e": "The moon is up. The sand is cooling down.",
+     "u": "The night is cool. Desert animals become active.",
+     "t": "Night. The desert wakes up."
+    },
+    {
+     "k": "Next stop: animal tracks!",
+     "e": "Next stop: the night tracker!",
+     "u": "Next stop: night tracker.",
+     "t": "Next: tracking."
+    }
+   ],
+   "act": {
+    "type": "tracks",
+    "hintK": "Tap the glowing print",
+    "hintE": {
+     "k": "Move the torch. Tap the next print",
+     "e": "Move the torch, tap the next print",
+     "u": "Sweep the torch and tap each print in turn",
+     "t": "Light the trail; tap prints in sequence"
+    },
+    "introK": "Footprints! Tap the glowing print, then the next one.",
+    "nextTrail": {
+     "k": {
+      "fennec": "Footprints!",
+      "jerboa": "Jerboa tracks.",
+      "monitor": "Lizard tracks.",
+      "camel": "Camel tracks."
+     },
+     "e": {
+      "fennec": "Let us follow the fox.",
+      "jerboa": "Let us follow a jerboa. It hops on two long back legs, so its prints come in pairs. Move the torch and tap the next print.",
+      "monitor": "Now a desert monitor lizard. Look for a wavy tail line.",
+      "camel": "Now a big camel. Look for big round pads."
+     },
+     "u": {
+      "fennec": "Follow the fox.",
+      "jerboa": "Follow the jerboa: paired prints with long gaps. At the fork, check the field guide.",
+      "monitor": "Follow the desert monitor: small feet beside a tail drag. Check the fork.",
+      "camel": "Follow the dromedary: big two-toed pads."
+     },
+     "t": {
+      "fennec": "Follow the fox.",
+      "jerboa": "Follow the jerboa: paired prints with long gaps. At the fork, check the field guide.",
+      "monitor": "Follow the desert monitor: small feet beside a tail drag. Check the fork.",
+      "camel": "Follow the dromedary: big two-toed pads."
+     }
+    },
+    "forkLine": {
+     "k": "The trail splits!",
+     "e": "The trail splits! Check the print shapes.",
+     "u": "A fork! Compare the prints with the field guide.",
+     "t": "Fork: compare print shapes."
+    },
+    "decoy": {
+     "k": "Those are {x} prints. We are following the {y}.",
+     "e": "Those are {x} prints. We are following the {y}.",
+     "u": "Careful: that trail belongs to a {x}. Stay on the {y} trail.",
+     "t": "Wrong trail: {x} prints. Stay on the {y}."
+    },
+    "skipAhead": {
+     "k": "Follow them in order.",
+     "e": "Follow the prints in order.",
+     "u": "Go print by print, in order.",
+     "t": "One print at a time."
+    },
+    "guideNames": {
+     "k": {
+      "fennec": "Fox",
+      "jerboa": "Jerboa",
+      "monitor": "Lizard",
+      "camel": "Camel"
+     },
+     "e": {
+      "fennec": "Fennec fox",
+      "jerboa": "Jerboa",
+      "monitor": "Desert monitor",
+      "camel": "Dromedary"
+     },
+     "u": {
+      "fennec": "Fennec fox",
+      "jerboa": "Jerboa",
+      "monitor": "Desert monitor",
+      "camel": "Dromedary"
+     },
+     "t": {
+      "fennec": "Fennec fox",
+      "jerboa": "Jerboa",
+      "monitor": "Desert monitor",
+      "camel": "Dromedary"
+     }
+    },
+    "eyes": {
+     "k": "Look! Two shiny eyes!",
+     "e": "Shh! Two eyes shine in the torchlight.",
+     "u": "Shh! Two eyes shine in the torchlight.",
+     "t": "Shh! Two eyes shine in the torchlight."
+    },
+    "found": {
+     "k": {
+      "fennec": "A fennec fox! Look at its big ears!",
+      "jerboa": "A jerboa!",
+      "monitor": "A lizard!",
+      "camel": "A camel!"
+     },
+     "e": {
+      "fennec": "A fennec fox! Its huge ears hear prey under the sand.",
+      "jerboa": "A lesser Egyptian jerboa! It hops on its long back legs.",
+      "monitor": "A desert monitor lizard, hunting in the cool night.",
+      "camel": "A dromedary camel! Its wide padded feet don't sink in sand."
+     },
+     "u": {
+      "fennec": "A fennec fox! Its huge ears hear prey under the sand.",
+      "jerboa": "A lesser Egyptian jerboa! It hops on its long back legs.",
+      "monitor": "A desert monitor lizard, hunting in the cool night.",
+      "camel": "A dromedary camel! Its wide padded feet don't sink in sand."
+     },
+     "t": {
+      "fennec": "A fennec fox! Its huge ears hear prey under the sand.",
+      "jerboa": "A lesser Egyptian jerboa! It hops on its long back legs.",
+      "monitor": "A desert monitor lizard, hunting in the cool night.",
+      "camel": "A dromedary camel! Its wide padded feet don't sink in sand."
+     }
+    },
+    "rulerQ": {
+     "k": "",
+     "e": "",
+     "u": "Stride ruler: two jerboas hopped here. Which one was moving fastest?",
+     "t": "Stride ruler: which jerboa was moving fastest?"
+    },
+    "rulerOk": {
+     "k": "",
+     "e": "",
+     "u": "Yes! Longer gaps mean bigger, faster leaps.",
+     "t": "Correct: stride length rises with speed."
+    },
+    "rulerNo": {
+     "k": "",
+     "e": "",
+     "u": "Look at the gaps between the pairs. Bigger gaps mean bigger leaps.",
+     "t": "Compare the gaps."
+    },
+    "storyQ": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "A fox trail and a jerboa trail. The fox's steps get longer (it ran), then its trail turns away. The jerboa's leaps zig-zag and carry on. What happened?"
+    },
+    "storyOk": "Right: the jerboa escaped.",
+    "storyNo": "Look where each trail ends.",
+    "difficulty": {
+     "k": {
+      "input": "tap"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can match a footprint to an animal.",
+     "e": "I can tell animals apart by their tracks.",
+     "u": "I can use stride length to tell how fast an animal moved.",
+     "t": "I can read a predator–prey story from tracks."
+    },
+    "standards": {
+     "k": "K-ESS3-1",
+     "e": "3-LS4-3",
+     "u": "4-LS1-1",
+     "t": "MS-LS2-2"
+    },
+    "journal": "Night animals"
+   },
+   "facts": [
+    {
+     "k": "Many desert animals come out at night, when it is cool.",
+     "e": "Many Sahara animals are nocturnal: they come out at night to avoid the heat.",
+     "u": "Many Sahara animals are nocturnal, active at night to avoid the daytime heat.",
+     "t": "Being nocturnal is a key desert adaptation: it avoids heat and saves water."
+    },
+    {
+     "k": "A fennec fox has huge ears.",
+     "e": "A fennec fox's huge ears give off heat and hear prey under the sand.",
+     "u": "A fennec fox's huge ears give off heat and hear prey moving under the sand.",
+     "t": "Fennec ears radiate heat and pick up prey moving under the sand."
+    },
+    {
+     "k": "Jerboas hop. Camels have big soft feet.",
+     "e": "Jerboas hop on long back legs. A camel's wide padded feet don't sink in sand.",
+     "u": "Jerboas hop on long back legs. A camel's wide padded feet don't sink in sand.",
+     "t": "Jerboas hop on long hind legs; a camel's wide pads spread its weight on soft sand."
+    }
+   ],
+   "done": {
+    "k": "We found the animals! Great tracking!",
+    "e": "Great tracking! You found every animal.",
+    "u": "Great tracking work.",
+    "t": "Tracking complete."
+   },
+   "q": {
+    "k": {
+     "q": "We followed paw prints with 4 toes. Who made them?",
+     "o": [
+      {
+       "label": "Fennec fox",
+       "pic": "animal_fennec"
+      },
+      {
+       "label": "Camel",
+       "pic": "animal_camel"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The fennec fox.",
+     "hint": "The camel has big round feet."
+    },
+    "e": {
+     "q": "Which animal hops on two long back legs?",
+     "o": [
+      {
+       "label": "Jerboa",
+       "pic": "animal_jerboa"
+      },
+      {
+       "label": "Camel",
+       "pic": "animal_camel"
+      },
+      {
+       "label": "Desert monitor",
+       "pic": "animal_monitor"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The jerboa hops, so its prints come in pairs.",
+     "hint": "Its prints came in pairs."
+    },
+    "u": {
+     "q": "Why are so many Sahara animals out at night?",
+     "o": [
+      {
+       "label": "To avoid the daytime heat",
+       "pic": "ans_night_cold"
+      },
+      {
+       "label": "Their eyes cannot see in daylight",
+       "pic": "ans_sun"
+      },
+      {
+       "label": "To drink from the oasis in the dark",
+       "pic": "ans_oasis"
+      },
+      {
+       "label": "To stay warm",
+       "pic": "ans_wool_blanket"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The night is much cooler.",
+     "hint": "When is the desert coolest?"
+    },
+    "t": {
+     "q": "Fennec foxes hunt jerboas. If jerboas became scarce, what would most likely happen to the foxes?",
+     "o": [
+      {
+       "label": "Fewer foxes, or foxes eating other prey",
+       "pic": "animal_fennec_rest"
+      },
+      {
+       "label": "More foxes",
+       "pic": "animal_fennec"
+      },
+      {
+       "label": "Nothing would change",
+       "pic": "ans_dunes"
+      },
+      {
+       "label": "Jerboas would take over the foxes' dens",
+       "pic": "ans_dunes"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: predator numbers depend on their prey.",
+     "hint": "What do the foxes eat?",
+     "fact": "Fennecs also eat insects, lizards, eggs and plants, so they would switch prey."
+    }
+   },
+   "sticker": "print_jerboa",
+   "after": {
+    "k": "You did it!",
+    "e": "You did it! All four stops done!",
+    "u": "Expedition complete: all four stops done.",
+    "t": "All four field tasks complete."
+   }
+  }
+ ],
+ "finale": {
+  "k": "You are a Desert Navigator! You built a tent, drove the dunes, found north and followed animal tracks!",
+  "e": "You are a Desert Navigator! You pitched a tent, drove the dunes, found north by the stars and tracked desert animals!",
+  "u": "You earned the Desert Navigator badge! Shelter, dunes, stars and tracks: you navigated the Sahara.",
+  "t": "Desert Navigator badge earned: shelter engineering, dune reading, celestial navigation and tracking."
+ },
+ "finaleBd": {
+  "wall": 2,
+  "x": 50
+ },
+ "intro": {
+  "style": "film"
+ }
+}

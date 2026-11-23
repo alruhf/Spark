@@ -1,0 +1,29 @@
+
+const $=id=>document.getElementById(id);const P={Sun:['The star at the center of our solar system.','The Sun gives Earth light and heat.'],Mercury:['The smallest planet.','Mercury is closest to the Sun.'],Venus:['A hot rocky planet.','Venus is the hottest planet.'],Earth:['Our home planet.','Earth has 7 continents and 5 oceans. Tap Earth facts to learn more!'],Mars:['The red planet.','Mars is cold and dusty.'],Jupiter:['The largest planet.','Jupiter is a gas giant with huge storms.'],Saturn:['The ringed planet.','Saturn has rings made of ice and rock.'],Uranus:['An ice giant.','Uranus spins on its side.'],Neptune:['A blue ice giant.','Neptune has extremely fast winds.']};
+const AGE_PROFILES={
+  '4-6':{name:'Explorer',summary:'Look, listen, match, count, sort, and build with simple choices.',mission:'Look • Listen • Choose'},
+  '7-9':{name:'Clue Solver',summary:'Read short clues, grow vocabulary, sequence ideas, calculate, and test.',mission:'Read • Solve • Explain'},
+  '10-12':{name:'Investigator',summary:'Measure, compare evidence, solve multi-step problems, and explain decisions.',mission:'Measure • Compare • Reason'},
+  '13-15':{name:'Systems Analyst',summary:'Analyze data, test explanations, optimize designs, and defend conclusions.',mission:'Analyze • Model • Defend'}
+};
+function ageBandFor(value){const a=Number(value)||6;return a<=6?'4-6':a<=9?'7-9':a<=12?'10-12':'13-15'}
+function ageProfile(){const band=ageBandFor(S?.age||$('age')?.value||6);return{band,...AGE_PROFILES[band]}}
+function renderAgeProfile(){const el=$('ageProfileCard');if(!el)return;const p=ageProfile();el.innerHTML=`<strong>Ages ${p.band} • ${p.name}</strong><span>${p.mission}</span><small>${p.summary} Progress is saved at this learning level, while discoveries and games remain available.</small>`}
+const SPACE_LEARNING={
+  Sun:{family:'star',position:0,yearRatio:0,evidence:'The Sun makes energy in its core and sends light and heat through the solar system.'},
+  Mercury:{family:'rocky planet',position:1,yearRatio:.24,evidence:'Mercury completes one orbit in about 88 Earth days.'},
+  Venus:{family:'rocky planet',position:2,yearRatio:.62,evidence:'Venus has a thick atmosphere that traps heat.'},
+  Earth:{family:'rocky planet',position:3,yearRatio:1,evidence:'Earth has stable liquid water across much of its surface.'},
+  Mars:{family:'rocky planet',position:4,yearRatio:1.88,evidence:'Mars has channels and minerals that are evidence of water in its past.'},
+  Jupiter:{family:'gas giant',position:5,yearRatio:11.9,evidence:'Jupiter is made mostly of hydrogen and helium and has no solid outer surface.'},
+  Saturn:{family:'gas giant',position:6,yearRatio:29.5,evidence:'Saturn is surrounded by rings made mostly of ice particles and rock.'},
+  Uranus:{family:'ice giant',position:7,yearRatio:84,evidence:'Uranus rotates with an extreme tilt, so it appears to spin on its side.'},
+  Neptune:{family:'ice giant',position:8,yearRatio:165,evidence:'Measurements show that Neptune has the fastest planetary winds in the solar system.'}
+};
+const C={'North America':'North America includes Canada, the United States, Mexico, and many other countries.','South America':'South America is home to the Amazon Rainforest and Andes Mountains.','Europe':'Europe has many countries and famous historic cities.','Africa':'Africa is the second-largest continent and includes the Sahara Desert.','Asia':'Asia is the largest continent and has more people than any other continent.','Australia':'Australia is the smallest continent and is also a country.','Antarctica':'Antarctica is the coldest continent and is covered with ice.'};
+const appStore={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:v}catch{return d}},set(k,v){try{localStorage.setItem(k,String(v))}catch{}}};let S={planet:null,step:0,continent:null,voice:appStore.get('sparkVoice','true')!=='false',age:+appStore.get('sparkAge',6)};window.S=S;if(window.SparkAge&&window.SparkAge.v>=2){window.SparkAge.profiles=AGE_PROFILES;window.SparkAge._appProfile=ageProfile}else window.SparkAge={bandFor:ageBandFor,get band(){return ageBandFor(S.age)},get profile(){return ageProfile()},profiles:AGE_PROFILES};
+const MISSION_LEVEL_KEY='sparkMissionLevelProgress';let missionLevelProgress={};try{missionLevelProgress=JSON.parse(localStorage.getItem(MISSION_LEVEL_KEY)||'{}')||{}}catch{missionLevelProgress={}}
+function saveMissionLevelProgress(){try{localStorage.setItem(MISSION_LEVEL_KEY,JSON.stringify(missionLevelProgress))}catch{}}
+const JOURNEY_KEY='sparkLearningJourney';let journeyRecords={};try{journeyRecords=JSON.parse(localStorage.getItem(JOURNEY_KEY)||'{}')||{}}catch{journeyRecords={}}
+function saveJourneyRecords(){try{localStorage.setItem(JOURNEY_KEY,JSON.stringify(journeyRecords))}catch{}}
+function upsertJourney(id,data={}){if(!id)return;journeyRecords[id]={...(journeyRecords[id]||{}),...data,id,updatedAt:Date.now()};saveJourneyRecords()}

@@ -1,0 +1,35 @@
+/* spark13 (Allen, Nov 14 1:43 PM call): the Solar System home, the Earth globe and the continent maps fill the whole screen
+   edge to edge instead of sitting in a rounded, max-width card. Root cause: base.css `main{max-width:1180px;padding:14px}` +
+   `.card` (border, radius 22px) wrapped #home .space / #world .world; `.earthmap{aspect-ratio:1/1}` made the globe a square
+   taller than the screen; continent-maps.css / africa-map.css `aspect-ratio:16/9 (4/5 on phones); border-radius:20px`
+   beat play-clean.css's full-screen rule. Only these three screens change; Parent settings and the 3D areas keep their layout.
+   Loaded last. 100vh first, 100dvh where supported (phone toolbars). Safe-area aware (viewport-fit=cover). */
+body:has(#home.on) main,body:has(#world.on #earthMap:not(.hidden)) main,body:has(#world.on .africa-panel,#world.on .continent-panel) main{max-width:none;margin:0;padding:0!important}
+.top{padding-left:max(10px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right))}
+.spark-companion{right:calc(8px + env(safe-area-inset-right));bottom:calc(8px + env(safe-area-inset-bottom))}
+.earth-toolbar{left:calc(8px + env(safe-area-inset-left))}
+
+/* 1. Solar System home: the space scene is the whole screen; the title floats over it (taps go through to the planets) */
+body #home .space{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;min-height:0;margin:0;border:0;border-radius:0;box-shadow:none;z-index:1}
+body #home .hero{position:fixed;z-index:30;top:calc(60px + env(safe-area-inset-top));left:calc(12px + env(safe-area-inset-left));max-width:min(560px,calc(100vw - 24px));margin:0;padding:10px 16px;
+  background:#08142acc;border-radius:18px;box-shadow:0 8px 24px #0006;pointer-events:none;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+body #home .hero h1{font-size:clamp(22px,3.4vw,38px)}
+body #home .hero p{font-size:14px}
+
+/* 2. Earth: the globe canvas covers the screen; the planet name + hint float top-left */
+#world .world:has(> #earthMap:not(.hidden)){padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+#world .world:has(> #earthMap:not(.hidden)) .worldhead{position:fixed;z-index:6;top:calc(60px + env(safe-area-inset-top));left:calc(12px + env(safe-area-inset-left));right:12px;pointer-events:none}
+#world .world:has(> #earthMap:not(.hidden)) .worldhead h2{font-size:clamp(26px,3.6vw,38px);text-shadow:0 2px 8px #000}
+#world .world:has(> #earthMap:not(.hidden)) .worldhead .facts{text-shadow:0 1px 4px #000;max-width:520px}
+body #earthMap.earthmap{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;min-height:0;max-width:none;aspect-ratio:auto;margin:0;border:0;border-radius:0;z-index:2}
+body #earthMap.earthmap h3{top:auto;bottom:calc(14px + env(safe-area-inset-bottom));left:calc(12px + env(safe-area-inset-left))}
+
+/* 3. Continent maps (Africa + the six continent pages): the map is the whole screen */
+body .africa-map-wrap{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;margin:0;max-width:none;border-radius:0;z-index:2}
+body .africa-panel .africa-continent-map{width:100%;height:100%;max-width:none;min-height:0;aspect-ratio:auto;margin:0;border-radius:0}
+body .continent-panel .continent-map{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-width:none;min-height:0;aspect-ratio:auto;margin:0;border-radius:0;z-index:2}
+/* the globe photo shown for a moment before the 3D globe draws: same size and place as the globe (no giant cropped photo) */
+body #earthMap.earthmap{background-size:min(93vw,calc(86vh - 45px)) auto!important;background-position:center calc(50% + 26px)!important}
+@media (min-width:721px){#world .world:has(> #earthMap:not(.hidden)) .worldhead .facts{max-width:340px}}
+/* phones: the full-width scene is ~30px wider than the old card, so pull the outer planets in a little (Saturn's ring and Neptune stay on screen) */
+@media (max-width:500px){body #home .body{left:calc(50% + var(--x) * .86)}body #home .orbit{width:calc(var(--w) * .86)}}

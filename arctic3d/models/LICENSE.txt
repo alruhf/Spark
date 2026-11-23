@@ -1,0 +1,8 @@
+Arctic 3D models (all stored locally, meshopt-compressed with glTF-Transform; animations trimmed, textures resized to 1024 webp)
+- kid.glb      "Child" (rigged, walk/run) - Grab3D, https://grab3d.com/models/characters/child/ - CC0 1.0
+- trader.glb   "Farmer" (rigged, walk/run) - Grab3D, https://grab3d.com/models/characters/farmer/ - CC0 1.0
+- husky.glb    "Husky" - Quaternius, Ultimate Animated Animal Pack, https://quaternius.com/packs/ultimateanimatedanimals.html - CC0 1.0
+- fox.glb      "Fox"   - Quaternius, Ultimate Animated Animal Pack (same) - CC0 1.0
+- bed_single, table_roundsmall, stool, fireplace, light_floor1, houseplant_3, drawer_1, shelf_small1, carpet_round
+               - Quaternius, Ultimate House Interior Pack, https://quaternius.com/packs/ultimatehomeinterior.html - CC0 1.0
+Code: three.js r170 addons in ../vendor/jsm (MIT, see LICENSE there).

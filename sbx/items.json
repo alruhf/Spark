@@ -1,0 +1,893 @@
+{
+ "v": 1,
+ "note": "Every item in the sandbox. base = coins at its origin; price = base x world.prices[origin]. No real-world prices.",
+ "items": [
+  {
+   "id": "fish",
+   "type": "good",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "fish",
+    "e": "fish",
+    "u": "Arctic char",
+    "t": "Arctic char (Salvelinus alpinus)"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "prop_fish"
+   },
+   "tags": [
+    "food:fish"
+   ],
+   "uses": {
+    "arctic": [
+     "feed:husky",
+     "sell"
+    ]
+   }
+  },
+  {
+   "id": "cocoa",
+   "type": "good",
+   "origin": "arctic",
+   "base": 1,
+   "name": {
+    "k": "cocoa",
+    "u": "hot cocoa"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_cocoa"
+   },
+   "tags": [
+    "drink"
+   ],
+   "uses": {
+    "arctic": [
+     "warm"
+    ]
+   }
+  },
+  {
+   "id": "rug_fur",
+   "type": "part",
+   "origin": "arctic",
+   "base": 3,
+   "slot": "floor",
+   "warm": 1,
+   "name": {
+    "k": "fur rug",
+    "u": "caribou-fur rug"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/rug_fur"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:floor"
+    ]
+   }
+  },
+  {
+   "id": "bed_platform",
+   "type": "part",
+   "origin": "arctic",
+   "base": 4,
+   "slot": "bed",
+   "warm": 3,
+   "name": {
+    "k": "fur bed",
+    "u": "fur sleeping bed"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/bed_platform"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:bed"
+    ]
+   }
+  },
+  {
+   "id": "lamp_oil",
+   "type": "part",
+   "origin": "arctic",
+   "base": 4,
+   "slot": "light",
+   "warm": 6,
+   "name": {
+    "k": "lamp",
+    "e": "oil lamp",
+    "u": "qulliq (seal-oil lamp)"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/lamp_oil"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:light"
+    ]
+   }
+  },
+  {
+   "id": "lantern",
+   "type": "part",
+   "origin": "arctic",
+   "base": 3,
+   "slot": "light",
+   "warm": 3,
+   "name": {
+    "k": "lantern",
+    "u": "oil lantern"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/lantern"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:light"
+    ]
+   }
+  },
+  {
+   "id": "lantern_fox",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 0,
+   "slot": "light",
+   "warm": 6,
+   "reward": true,
+   "name": {
+    "k": "fox lantern",
+    "u": "fox lantern (photo reward)"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/lantern_fox"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "variants": 3,
+   "place": "small"
+  },
+  {
+   "id": "wall_hanging",
+   "type": "part",
+   "origin": "arctic",
+   "base": 3,
+   "slot": "wall",
+   "warm": 0,
+   "name": {
+    "k": "picture",
+    "e": "wall hanging",
+    "u": "felt wall hanging"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/wall_hanging"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:wall"
+    ]
+   }
+  },
+  {
+   "id": "window_ice",
+   "type": "part",
+   "origin": "arctic",
+   "base": 2,
+   "slot": "window",
+   "warm": 0,
+   "name": {
+    "k": "ice window",
+    "u": "clear-ice window"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/window_ice"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:window"
+    ]
+   }
+  },
+  {
+   "id": "flag_red",
+   "type": "part",
+   "origin": "arctic",
+   "base": 1,
+   "slot": "flag",
+   "warm": 0,
+   "name": {
+    "k": "red flag"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/flag_red"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:flag"
+    ]
+   }
+  },
+  {
+   "id": "flag_blue",
+   "type": "part",
+   "origin": "arctic",
+   "base": 1,
+   "slot": "flag",
+   "warm": 0,
+   "name": {
+    "k": "blue flag"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/flag_blue"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:flag"
+    ]
+   }
+  },
+  {
+   "id": "flag_green",
+   "type": "part",
+   "origin": "arctic",
+   "base": 1,
+   "slot": "flag",
+   "warm": 0,
+   "name": {
+    "k": "green flag"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/flag_green"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:flag"
+    ]
+   }
+  },
+  {
+   "id": "flag_explorer",
+   "type": "part",
+   "origin": "arctic",
+   "base": 0,
+   "slot": "flag",
+   "warm": 0,
+   "reward": true,
+   "name": {
+    "k": "explorer flag",
+    "u": "Arctic Explorer flag"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/flag_yellow"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:flag"
+    ]
+   }
+  },
+  {
+   "id": "door_tunnel",
+   "type": "part",
+   "origin": "arctic",
+   "base": 4,
+   "slot": "door",
+   "warm": 5,
+   "name": {
+    "k": "tunnel",
+    "e": "snow tunnel",
+    "u": "cold-trap entrance tunnel"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/door_tunnel"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:door"
+    ]
+   }
+  },
+  {
+   "id": "kennel_straw",
+   "type": "part",
+   "origin": "arctic",
+   "base": 2,
+   "slot": "kstraw",
+   "name": {
+    "k": "straw",
+    "u": "straw bedding"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/kennel_straw"
+   },
+   "uses": {
+    "arctic": [
+     "kennel:straw"
+    ]
+   }
+  },
+  {
+   "id": "kennel_windbreak",
+   "type": "part",
+   "origin": "arctic",
+   "base": 3,
+   "slot": "kwind",
+   "name": {
+    "k": "fence",
+    "e": "wind fence",
+    "u": "windbreak"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/kennel_windbreak"
+   },
+   "uses": {
+    "arctic": [
+     "kennel:wind"
+    ]
+   }
+  },
+  {
+   "id": "brush",
+   "type": "tool",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "brush",
+    "u": "dog brush"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/brush"
+   },
+   "tags": [
+    "tool:brush"
+   ],
+   "uses": {
+    "arctic": [
+     "brush:husky"
+    ]
+   }
+  },
+  {
+   "id": "rod",
+   "type": "tool",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "fishing rod",
+    "u": "jigging rod"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_fishrod"
+   },
+   "uses": {
+    "arctic": [
+     "fish"
+    ]
+   }
+  },
+  {
+   "id": "camera",
+   "type": "tool",
+   "origin": "arctic",
+   "base": 5,
+   "name": {
+    "k": "camera"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/camera"
+   },
+   "uses": {
+    "arctic": [
+     "photo:fox"
+    ]
+   }
+  },
+  {
+   "id": "icedrill",
+   "type": "tool",
+   "origin": "arctic",
+   "base": 4,
+   "name": {
+    "k": "ice drill",
+    "u": "ice auger"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/icedrill"
+   },
+   "uses": {
+    "arctic": [
+     "fish:icecheck"
+    ]
+   }
+  },
+  {
+   "id": "map",
+   "type": "tool",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "map"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_map"
+   },
+   "uses": {
+    "arctic": [
+     "sled"
+    ]
+   }
+  },
+  {
+   "id": "lamp",
+   "type": "tool",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "head lamp",
+    "u": "head torch"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_lamp"
+   },
+   "uses": {}
+  },
+  {
+   "id": "parka",
+   "type": "wear",
+   "origin": "arctic",
+   "base": 4,
+   "name": {
+    "k": "coat",
+    "e": "parka"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_parka"
+   },
+   "uses": {}
+  },
+  {
+   "id": "hat",
+   "type": "wear",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "hat"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_hat"
+   },
+   "uses": {}
+  },
+  {
+   "id": "mittens",
+   "type": "wear",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "mittens"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_mittens"
+   },
+   "uses": {}
+  },
+  {
+   "id": "scarf",
+   "type": "wear",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "scarf"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_scarf"
+   },
+   "uses": {}
+  },
+  {
+   "id": "boots",
+   "type": "wear",
+   "origin": "arctic",
+   "base": 3,
+   "name": {
+    "k": "boots"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_boots"
+   },
+   "uses": {}
+  },
+  {
+   "id": "goggles",
+   "type": "wear",
+   "origin": "arctic",
+   "base": 2,
+   "name": {
+    "k": "goggles",
+    "u": "snow goggles"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_goggles"
+   },
+   "uses": {}
+  },
+  {
+   "id": "dec_rug",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 1,
+   "variants": 3,
+   "name": {
+    "k": "rug",
+    "u": "fur rug"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/rug_fur"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "floor",
+   "fp": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "dec_flag",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 1,
+   "variants": 3,
+   "name": {
+    "k": "flag",
+    "u": "flag"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/flag_red"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "wall"
+  },
+  {
+   "id": "dec_pic",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 2,
+   "variants": 3,
+   "name": {
+    "k": "banner",
+    "u": "felt banner"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/wall_hanging"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "wall"
+  },
+  {
+   "id": "dec_mug",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 2,
+   "variants": 3,
+   "name": {
+    "k": "cocoa cup",
+    "u": "cocoa cup"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "gear_cocoa"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "small"
+  },
+  {
+   "id": "dec_hat",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 3,
+   "variants": 3,
+   "name": {
+    "k": "hat hooks",
+    "u": "wall hooks with a hat"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/hooks_hat"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "wall"
+  },
+  {
+   "id": "dec_lamp",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 3,
+   "variants": 3,
+   "name": {
+    "k": "lantern",
+    "u": "oil lantern"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/lantern"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "small",
+   "warm": 6
+  },
+  {
+   "id": "dec_bed",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 4,
+   "variants": 3,
+   "name": {
+    "k": "fur bed",
+    "u": "fur sleeping bed"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/bed_platform"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "floor",
+   "fp": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "dec_thermos",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 2,
+   "variants": 3,
+   "name": {
+    "k": "thermos",
+    "u": "thermos flask"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/thermos"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "small"
+  },
+  {
+   "id": "dec_huskypic",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 3,
+   "variants": 3,
+   "name": {
+    "k": "husky picture",
+    "u": "husky picture"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/husky_pic"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "wall"
+  },
+  {
+   "id": "dec_shelf",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 3,
+   "variants": 3,
+   "name": {
+    "k": "shelf",
+    "u": "wall shelf"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/shelf"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "wall",
+   "top": 2
+  },
+  {
+   "id": "dec_table",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 2,
+   "variants": 3,
+   "name": {
+    "k": "table",
+    "u": "low table"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/table"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "floor",
+   "fp": [
+    2,
+    1
+   ],
+   "top": 2
+  },
+  {
+   "id": "dec_stool",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 1,
+   "variants": 3,
+   "name": {
+    "k": "snow stool",
+    "u": "snow-block stool"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "build_ice_block"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "floor",
+   "fp": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "fish_rack",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 0,
+   "variants": 3,
+   "name": {
+    "k": "fish rack",
+    "u": "fish drying rack"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/fish_rack"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "floor",
+   "fp": [
+    2,
+    1
+   ],
+   "reward": true
+  },
+  {
+   "id": "dec_stove",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 5,
+   "variants": 3,
+   "name": {
+    "k": "stove",
+    "u": "camp stove"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/stove"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "floor",
+   "fp": [
+    1,
+    1
+   ],
+   "warm": 10,
+   "min": "e",
+   "needs": "vent"
+  },
+  {
+   "id": "dec_plant",
+   "type": "decor",
+   "origin": "arctic",
+   "base": 2,
+   "variants": 3,
+   "name": {
+    "k": "plant",
+    "u": "potted plant"
+   },
+   "pic": {
+    "region": "arctic",
+    "asset": "sbx/plant_pot"
+   },
+   "uses": {
+    "arctic": [
+     "igloo:decor"
+    ]
+   },
+   "place": "small"
+  }
+ ]
+}

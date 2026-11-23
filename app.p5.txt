@@ -1,0 +1,3 @@
+document.addEventListener('pointerdown',e=>{const spark=$('sparkCompanion');if(spark&&!spark.contains(e.target))moveSparkAwayFrom(e.clientX,e.clientY)},{passive:true});
+$('sparkCompanion').onclick=e=>{const under=underlyingInteractiveAt(e.clientX,e.clientY);if(under){const el=$('sparkCompanion');el.classList.toggle('spark-left',!el.classList.contains('spark-left'));setTimeout(()=>under.click(),20);return}if(window.SparkVoice&&SparkVoice.busy()){stopSpark();return}startSparkListening()};
+setSparkState('idle');const requested=new URLSearchParams(location.search).get('planet');if(requested&&P[requested])openPlanet(null,requested);

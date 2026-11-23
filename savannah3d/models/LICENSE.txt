@@ -1,0 +1,21 @@
+Savannah 3D models - all CC0 1.0 (Public Domain). Stored locally, simplified + meshopt-compressed with glTF-Transform (textures 1024 webp).
+elephant.glb <- "Elephant" (light) - Grab3D, https://grab3d.com/models/animals/elephant/ - CC0 1.0
+giraffe.glb  <- "Giraffe" (light)  - Grab3D, https://grab3d.com/models/animals/giraffe/  - CC0 1.0
+hippo.glb    <- "Hippo" (light)    - Grab3D, https://grab3d.com/models/animals/hippo/    - CC0 1.0
+zebra.glb    <- "Zebra" (light) - Grab3D, https://grab3d.com/models/animals/zebra/ - CC0 1.0
+warthog.glb  <- "Pig" (light) - Grab3D, https://grab3d.com/models/animals/pig/ - CC0 1.0 (tinted warthog grey-brown, tusks + mane added in code)
+acacia.glb   <- "Tree from the savanna" by hat_my_guy, https://poly.pizza/m/uLxXsCfYb7 - CC0 1.0
+tent.glb     <- "Tent" by Quaternius, https://poly.pizza/m/5Q7qIrfDxA - CC0 1.0
+campfire.glb <- "Camp Fire Rocks" by reyshapes, https://poly.pizza/m/5sjLUck886 - CC0 1.0
+hut.glb      <- "Hut" by Quaternius, https://poly.pizza/m/4MJWbyd6vw - CC0 1.0
+Kid, trader: shared from ../../arctic3d/models (Grab3D CC0, see that LICENSE.txt). Stall/crate/barrel: shared from ../../reef3d/models (Quaternius CC0).
+Boulders: procedural, textured with ../../arctic3d/tex/rock_* (CC0, see that LICENSE.txt).
+
+# P39b: trader-stall props copied from reef3d/models (same files):
+stall.glb  <- Market Stand by Quaternius  https://poly.pizza/m/DGIM5HGISb  (CC0)
+crate.glb  <- Cube Crate by Quaternius  https://poly.pizza/m/YAghI6GBls  (CC0)
+barrel.glb  <- Barrel by Quaternius  https://poly.pizza/m/ONdghDBByN  (CC0)
+
+# P45 (plan item 4): safari-bus tourists, copied from reef3d/models (same files, renamed):
+tourist.glb  <- reef3d visitor.glb: Quaternius Universal Base Characters (CC0 1.0)
+tourist_anim.glb  <- reef3d visitor_anim.glb: Quaternius Universal Animation Library [Standard] Idle_Loop/Walk_Loop/Sitting_Idle_Loop (CC0 1.0, quaternius.itch.io)

@@ -1,0 +1,1 @@
+Wood textures (CC0 1.0, ambientCG.com): deck=Planks012, dock=WoodFloor041, trim=Wood049 (brightened/warmed, webp).

@@ -1,0 +1,20 @@
+.africa-panel .africa-continent-map{max-width:none;width:100%;min-height:0;aspect-ratio:16/9;background:#020914;border-radius:20px;cursor:grab;touch-action:none;isolation:isolate;user-select:none}
+.africa-panel .africa-continent-map.dragging{cursor:grabbing}
+.africa-panel .africa-continent-map canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.africa-panel .africa-map-hint{position:absolute;top:14px;left:14px;z-index:2;color:#e7eff9;background:#061326dc;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:850;letter-spacing:.03em;pointer-events:none}
+.africa-panel .africa-region{z-index:3;display:flex;align-items:center;flex-direction:column;gap:5px;min-width:0;max-width:145px;padding:0;border:0;background:transparent;box-shadow:none;text-align:center;transform:translate(-50%,-50%);touch-action:none}
+.africa-panel .africa-region:hover{background:transparent;filter:brightness(1.1)}
+.africa-panel .africa-region strong{font-size:12px;line-height:1.15;background:#061426e8;border:1px solid #ffffff35;border-radius:9px;padding:5px 8px;box-shadow:0 3px 10px #0007;max-width:145px}
+.africa-panel .africa-region-icon{display:block;width:56px;height:56px;flex:none;margin:0;border-radius:50%;border:2px solid #d4e7f4;background-image:url('africa-marker-photos.webp');background-size:400% 200%;box-shadow:0 4px 16px #000a}
+.africa-panel .africa-region.playable{background:transparent;border:0;box-shadow:none}
+.africa-panel .africa-region.playable .africa-region-icon{border-color:#83efb0;box-shadow:0 0 0 3px #83efb033,0 4px 16px #000a}
+.africa-panel .africa-region.playable strong{border-color:#83efb0}
+.africa-panel .savannah .africa-region-icon{background-position:0 0}
+.africa-panel .sahara .africa-region-icon{background-position:33.333% 0}
+.africa-panel .congo .africa-region-icon{background-position:66.666% 0}
+.africa-panel .rift .africa-region-icon{background-position:100% 0}
+.africa-panel .rivers .africa-region-icon{background-position:0 100%}
+.africa-panel .coast .africa-region-icon{background-position:33.333% 100%}
+.africa-panel .towns .africa-region-icon{background-position:66.666% 100%}
+.africa-panel .africa-continent-map:focus-visible{outline:2px solid #79efff;outline-offset:3px}
+@media(max-width:720px){.africa-panel .africa-continent-map{aspect-ratio:4/5;min-height:0}.africa-panel .africa-region-icon{width:42px;height:42px}.africa-panel .africa-region strong{font-size:10px;max-width:100px;padding:4px 5px}.africa-panel .africa-map-hint{font-size:9px;padding:6px 8px;top:9px;left:9px}}

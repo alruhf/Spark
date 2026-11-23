@@ -1,0 +1,2 @@
+Textures: Poly Haven (CC0) snow_02, brown_planks_05, rock_boulder_dry, 1k jpg downsized to 512 webp.
+tex/hi: same Poly Haven CC0 sets, 2k jpg -> 1024 webp; top quality tier only.

@@ -1,0 +1,136 @@
+/* Reef 3D: extra UI on top of the Arctic look (a3d.css). Icons only. */
+.r3d .a3d-hudb{background:#0d3b52cc;border:4px solid #fff;color:#fff;display:grid;place-items:center;cursor:pointer;padding:0}
+.r3d .a3d-hudb svg{width:56%;height:56%}
+.r3d-bookb{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:calc(max(14px,env(safe-area-inset-top,0px)) + 66px);width:80px;height:80px;border-radius:50%;border:4px solid #fff;background:#0d3b52cc;display:grid;place-items:center;cursor:pointer;padding:0;transition:transform .2s}
+.r3d-bookb svg{width:60%}.r3d-bookb.pop{transform:scale(1.25)}
+.r3d-hold{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:calc(max(14px,env(safe-area-inset-top,0px)) + 268px);width:72px;height:72px;border-radius:50%;background:#ff7f6ecc;border:4px solid #fff;display:none;place-items:center;animation:r3dPulse 1.2s ease-in-out infinite;pointer-events:none!important;z-index:10}
+.r3d-hold.on{display:grid}.r3d-hold svg{width:62%}
+@keyframes r3dPulse{50%{transform:scale(1.1)}}
+.a3d-coins.pop{transform:scale(1.2);transition:transform .2s}
+.r3d-pin{position:absolute;left:0;top:0;width:76px;height:76px;border-radius:50% 50% 50% 8px;border:4px solid #fff;background:#1f8fb3e6;display:none;place-items:center;padding:0;cursor:pointer;box-shadow:0 6px 14px #0006}
+.r3d-pin svg{width:60%;rotate:45deg}.r3d-pin.on{display:grid}
+.r3d-pin.plant{background:#ff7f6ee6;animation:r3dPulse 1.2s infinite}.r3d-pin.paw{background:#ffb84de6}.r3d-pin.trash{background:#5aa36ae6;width:66px;height:66px}
+@media (max-width:600px){.r3d-pin{width:64px;height:64px}.r3d-pin.trash{width:58px;height:58px}}
+.r3d-done{position:absolute;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));width:110px;height:110px;border-radius:50%;background:#2fbf71;border:5px solid #fff;display:none;place-items:center;cursor:pointer;padding:0;z-index:8;box-shadow:0 6px 16px #0007}
+.r3d-done.on{display:grid}.r3d-done svg{width:60%}
+.r3d-panel{position:absolute;left:50%;bottom:max(20px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:none;gap:16px;padding:14px;border-radius:28px;background:#0d3b52b3;z-index:7;max-width:calc(100vw - 160px);flex-wrap:wrap;justify-content:center}
+.r3d-panel.on{display:flex}
+@media (max-width:600px){.r3d-panel{left:12px;transform:none;bottom:140px;max-width:calc(100vw - 24px)}}
+.r3d-frag,.r3d-choice{width:96px;height:96px;border-radius:24px;border:4px solid #fff;background:#2fb3c2;display:grid;place-items:center;cursor:pointer;padding:6px;position:relative}
+.r3d-frag svg,.r3d-choice svg{width:62%}.r3d-frag.st3{background:#ff7f6e;animation:r3dPulse 1s infinite}
+.r3d-stage{position:absolute;top:6px;left:0;right:0;display:flex;gap:4px;justify-content:center}.r3d-stage i{width:14px;height:14px;border-radius:50%;background:#ffffff55}.r3d-stage i.on{background:#ffe066}
+.r3d-choice.feed{background:#5fbf6a}.r3d-choice.pet{background:#ffb84d}.r3d-choice.photo{background:#3a4a5e}
+.r3d-bcard{width:110px;height:76px;border-radius:16px;background:#ffffff22;border:3px solid #fff6;display:grid;place-items:center;filter:grayscale(1) brightness(.35)}
+.r3d-bcard.got{filter:none;background:#ffffffdd}.r3d-bcard svg{width:84%}
+.r3d-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none!important}.r3d-flash.go{animation:r3dFlash .45s}
+@keyframes r3dFlash{0%{opacity:.85}100%{opacity:0}}
+.r3d-heart{position:absolute;left:0;top:0;color:#ff4f7a;font:900 54px system-ui;text-shadow:0 2px 6px #0006;pointer-events:none!important}
+.r3d-coinfly{position:fixed;width:44px;z-index:300;transition:transform .8s cubic-bezier(.5,-.3,.6,1),opacity .8s;pointer-events:none}
+.r3d .r3d-pin{transition:none!important;animation:none}.r3d .r3d-pin.plant{animation:none;box-shadow:0 0 0 6px #ff7f6e66,0 6px 14px #0006}
+.r3d-root,.r3d,.r3d .a3d-ui{overflow:clip!important}
+/* ---- phase 2: trader, cabin bar, boats */
+.r3d-shop,.r3d-boats{position:absolute;left:50%;top:50%;transform:translate(-50%,-46%);display:none;z-index:7;padding:18px 70px 18px;border-radius:30px;background:#0d3b52d9;gap:18px;align-items:center}
+.r3d-shop.on{display:flex;flex-direction:column}.r3d-boats.on{display:grid;grid-template-columns:repeat(4,1fr)}
+@media (max-width:600px){.r3d-shop,.r3d-boats{padding:14px 52px;width:calc(100vw - 16px);box-sizing:border-box}.r3d-boats.on{grid-template-columns:repeat(2,1fr)}}
+.r3d-tabs{display:flex;gap:14px}.r3d-tab{width:92px;height:72px;border-radius:20px;border:4px solid #ffffff88;background:#1f8fb3;display:grid;place-items:center;padding:8px;cursor:pointer}.r3d-tab svg{height:100%}.r3d-tab.on{border-color:#fff;background:#2fbf71;transform:scale(1.08)}
+.r3d-shoprow{display:flex;gap:18px}
+.r3d-card{position:relative;width:min(200px,36vw);border-radius:24px;background:radial-gradient(circle at 50% 35%,#fff,#dff3f7 70%,#bfe3ec);border:4px solid #fff;display:flex;flex-direction:column;align-items:center;padding:10px;gap:8px;box-shadow:0 6px 16px #0005}
+.r3d-card.shake{animation:r3dShake .4s}@keyframes r3dShake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.r3d-cardimg{width:100%;aspect-ratio:1}.r3d-cardimg svg{width:100%;height:100%}
+.r3d-price{display:flex;flex-wrap:wrap;gap:2px;justify-content:center}.r3d-price i{width:24px;height:24px;opacity:.3}.r3d-price i.on{opacity:1}.r3d-price i.pay{transform:scale(1.4);opacity:.2;transition:.3s}.r3d-price img{width:100%}
+.r3d-buy{width:100%;height:60px;border-radius:18px;border:4px solid #fff;background:#2fbf71;display:flex;align-items:center;justify-content:center;gap:4px;cursor:pointer;padding:6px}.r3d-buy img{height:34px}.r3d-buy svg{height:34px}.r3d-buy.got{background:#1f8fb3}
+.r3d-cnt{position:absolute;top:6px;right:8px;min-width:30px;height:30px;border-radius:15px;background:#ff7f6e;color:#fff;font:800 18px/30px system-ui;text-align:center;border:2px solid #fff}
+.r3d-pg{position:absolute;top:50%;width:56px;height:96px;border-radius:20px;border:4px solid #fff;background:#1f8fb3;cursor:pointer;padding:8px;transform:translateY(-30%)}.r3d-pg.prev{left:8px}.r3d-pg.next{right:8px}
+@media (max-width:600px){.r3d-pg{width:44px;height:80px}.r3d-shoprow{gap:10px}}
+.r3d-boat{position:relative;width:150px;border-radius:22px;background:#ffffffe6;border:4px solid #fff;display:flex;flex-direction:column;align-items:center;padding:8px;gap:6px}.r3d-boat svg{width:100%}.r3d-boat.own{background:#c9f2d9}
+@media (max-width:600px){.r3d-boat{width:auto}}
+.r3d-jar{position:relative;width:70%;height:22px;border-radius:11px;background:#0d3b5233;overflow:hidden;border:2px solid #0d3b52}.r3d-jar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#ffcf3a,#ffe98a);height:100%!important;width:0}.r3d-jar img{position:absolute;right:2px;top:1px;height:18px}
+.r3d-own{width:56px;height:56px;border-radius:50%;background:#2fbf71;border:3px solid #fff;padding:8px}
+.r3d-buy.ready{animation:r3dPulse 1s infinite}
+.r3d-cbar{position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:none;gap:12px;padding:12px;border-radius:26px;background:#0d3b52b3;z-index:7;max-width:calc(100vw - 160px);flex-wrap:wrap;justify-content:center}.r3d-cbar.on{display:flex}
+@media (max-width:600px){.r3d-cbar{left:12px;transform:none;bottom:140px;max-width:calc(100vw - 24px)}}
+.r3d-bagc,.r3d-cshop{position:relative;width:88px;height:88px;border-radius:22px;border:4px solid #fff;background:#fff;padding:6px;cursor:pointer}.r3d-bagc.on{background:#ffe98a;transform:scale(1.1)}.r3d-cshop{background:#2fb3c2}.r3d-bagc svg,.r3d-cshop svg{width:100%;height:100%}
+/* R6 tester round 1 */
+.r3d-packb,.r3d-homeb{position:absolute;width:80px;height:80px;border-radius:50%;border:4px solid #fff;display:grid;place-items:center;cursor:pointer;padding:0;z-index:9;box-shadow:0 6px 14px #0006}
+.r3d-packb{right:max(14px,env(safe-area-inset-right,0px));top:calc(max(14px,env(safe-area-inset-top,0px)) + 156px);background:#0d3b52cc}
+.r3d-homeb{left:max(14px,env(safe-area-inset-left,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));width:104px;height:104px;background:#1f8fb3;animation:r3dHb 2.6s ease-in-out infinite}
+.r3d-packb svg,.r3d-homeb svg{width:64%}
+@keyframes r3dHb{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.r3d-done{z-index:10}.r3d-closet{z-index:8}.r3d-closet .swd-c{pointer-events:auto}
+.r3d-pin.big{width:92px!important;height:92px!important;background:#ff9f1ce6;border-width:5px}
+.r3d-pin.tour{background:#ff4f8be6!important;box-shadow:0 0 0 0 #ff4f8b;animation:r3dTp 1.4s ease-out infinite!important}
+@keyframes r3dTp{0%{box-shadow:0 0 0 0 #ff4f8bcc}100%{box-shadow:0 0 0 26px #ff4f8b00}}
+.r3d-num{font:900 22px/24px system-ui,sans-serif;color:#0d3b52;margin-left:6px;align-self:center}
+.r3d-jar{overflow:visible}.r3d-jar .r3d-num{position:absolute;left:50%;top:-1px;transform:translateX(-50%);font-size:16px;line-height:20px;margin:0;text-shadow:0 0 4px #fff}
+@media(max-width:600px){.r3d-packb{width:64px;height:64px;top:calc(max(14px,env(safe-area-inset-top,0px)) + 152px)}/* R22g: book (top+66, 80px) ended at +146 -> pack at +140 overlapped 6px on phone; now 6px gap */.r3d-hold{width:56px;height:56px;top:calc(max(14px,env(safe-area-inset-top,0px)) + 250px);right:max(14px,env(safe-area-inset-right,0px));margin:0}.r3d-homeb{width:86px;height:86px}.r3d-pin.big{width:78px!important;height:78px!important}}
+.r3d-csleep{position:relative;width:88px;height:88px;border-radius:22px;border:4px solid #fff;background:#24356b;padding:12px;cursor:pointer}.r3d-csleep svg{width:100%;height:100%}
+.r3d-packb.a3d-h{border-radius:24px;background:#1d3a63;padding:12px;animation:none}.r3d-packb.a3d-h img{width:100%;height:100%;object-fit:contain}
+/* R9 (Tester): pins a bit smaller + semi-transparent, still big enough to tap (>=58px) */
+.r3d-pin{width:64px;height:64px;opacity:.86;border-width:3px}
+.r3d-pin:active,.r3d-pin:hover{opacity:1}
+.r3d-pin.big{width:76px!important;height:76px!important;border-width:4px}
+@media (max-width:600px){.r3d-pin{width:58px;height:58px}.r3d-pin.trash{width:56px;height:56px}.r3d-pin.big{width:68px!important;height:68px!important}}
+.r3d-uwtint{position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 50% 30%,#3fb6d855,#0b4f7acc);mix-blend-mode:multiply;z-index:1}
+/* R10: big 'Place here' button while holding coral; planting only happens when it is pressed */
+.r3d-placeb{position:absolute;left:50%;bottom:calc(max(18px,env(safe-area-inset-bottom,0px)) + 8px);transform:translateX(-50%);display:none;align-items:center;gap:10px;padding:12px 26px 12px 16px;min-height:76px;border-radius:40px;border:4px solid #fff;background:#ff7f6e;color:#fff;font:800 24px/1 system-ui,sans-serif;box-shadow:0 8px 18px #0005;z-index:6;cursor:pointer;animation:r3dPulse 1.2s ease-in-out infinite}
+.r3d-placeb.on{display:flex}.r3d-placeb svg{width:48px;height:48px}
+.r3d-holdn{position:absolute;right:-6px;bottom:-6px;background:#fff;color:#ff7f6e;border-radius:14px;padding:2px 6px;font:800 16px/1 system-ui,sans-serif}.r3d-holdn:empty{display:none}
+@media (max-width:600px){.r3d-placeb{font-size:21px;min-height:70px}}
+.r3d-placeb{animation:r3dPulseX 1.2s ease-in-out infinite}
+@keyframes r3dPulseX{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.07)}}
+/* R11 dolphin: big round tap target over the ball (no text) */
+.r3d-dolb{position:absolute;left:0;top:0;width:180px;height:180px;/* R16 bigger invisible hit ring */outline:40px solid transparent;border-radius:50%;border:5px solid #fffc;background:radial-gradient(circle,#ffffff33 0,#ffffff10 60%,transparent 70%);display:none;padding:0;cursor:pointer;z-index:6;touch-action:none;box-shadow:0 0 0 6px #2fb3c255;animation:r3dDolP 1.4s ease-in-out infinite}
+.r3d-dolb.on{display:block}
+@keyframes r3dDolP{50%{box-shadow:0 0 0 14px #2fb3c222}}
+/* R12 nursery feedback: live fill bar, bounce on every tap, sparkle */
+.r3d-frag .r3d-ico{display:grid;place-items:center;width:62%}.r3d-frag .r3d-ico svg{width:100%}
+.r3d-frag .r3d-fill{position:absolute;left:10px;right:10px;bottom:8px;height:10px;border-radius:6px;background:#ffffff55;overflow:hidden}
+.r3d-frag .r3d-fill u{display:block;height:100%;width:0;background:#ffe066;border-radius:6px;transition:width .25s}
+.r3d-frag.st3 .r3d-fill u{background:#fff}
+.r3d-frag.bump{animation:r3dBump .35s ease-out}
+.r3d-frag.st3.bump{animation:r3dBump .35s ease-out,r3dPulse 1s infinite .35s}
+@keyframes r3dBump{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:scale(1)}}
+.r3d-spark{position:absolute;left:50%;top:40%;width:44px;height:44px;margin:-22px;border-radius:50%;background:radial-gradient(circle,#fff 0,#ffe066 35%,transparent 70%);pointer-events:none;animation:r3dSpark .7s ease-out forwards}
+@keyframes r3dSpark{0%{transform:scale(.3);opacity:1}100%{transform:translateY(-46px) scale(1.6);opacity:0}}
+/* R12: bigger invisible hit area around every world pin */
+.r3d-pin::after{content:'';position:absolute;inset:-22px;border-radius:50%}
+
+/* R16: Spark's pointer onto a new pin */
+.r3d-point{position:absolute;left:50%;top:-46px;width:0;height:0;margin-left:-14px;border-left:14px solid transparent;border-right:14px solid transparent;border-top:22px solid #ffcf3a;filter:drop-shadow(0 2px 2px rgba(0,0,0,.35));animation:r3dpt .7s ease-in-out infinite alternate;pointer-events:none}@keyframes r3dpt{from{transform:translateY(-8px)}to{transform:translateY(4px)}}
+.r3d-stagepop{position:absolute;left:50%;top:22%;transform:translateX(-50%);background:#0b4a66e6;color:#fff;padding:12px 22px;border-radius:22px;font:700 22px system-ui;text-align:center;z-index:9;pointer-events:none;animation:r3dsp 1.8s ease-out forwards}.r3d-stagepop span{display:flex;gap:8px;justify-content:center;margin-top:8px}.r3d-stagepop i{width:22px;height:22px;border-radius:50%;background:#ffffff40}.r3d-stagepop i.on{background:#5ee08a;box-shadow:0 0 10px #5ee08a}@keyframes r3dsp{0%{opacity:0;transform:translate(-50%,10px) scale(.8)}15%{opacity:1;transform:translate(-50%,0) scale(1.08)}80%{opacity:1}100%{opacity:0}}
+.r3d-dnb{position:absolute;right:14px;top:300px;width:80px;height:80px;border-radius:50%;border:4px solid #fff;background:#1f3f6e;display:flex;align-items:center;justify-content:center;padding:0;z-index:5;box-shadow:0 4px 12px #0005;cursor:pointer}.r3d-dnb.isn{background:#5ab8e8}
+.r3d-cockpit{position:absolute;inset:0;pointer-events:none;display:none;z-index:2}.r3d-cockpit.on{display:block}.r3d-cockpit svg{width:100%;height:100%;display:block}.r3d-cockpit .ckn{animation:ckn 3s ease-in-out infinite alternate}.r3d-cockpit .n1{animation-duration:2.2s}.r3d-cockpit .n2{animation-duration:4s}@keyframes ckn{from{transform:rotate(-50deg)}to{transform:rotate(50deg)}}
+.r3d-sprout{position:fixed;z-index:30;pointer-events:none;animation:r3dsprout 1.3s ease-out forwards;filter:drop-shadow(0 3px 4px rgba(0,0,0,.3))}
+@keyframes r3dsprout{0%{transform:scale(.2) translateY(30px);opacity:0}25%{transform:scale(1.25) translateY(0);opacity:1}45%{transform:scale(1)}100%{transform:translateY(-36px);opacity:0}}
+.r3d-cueline{position:fixed;left:0;top:0;width:100vw;height:100vh;z-index:40;pointer-events:none;overflow:visible}
+.r3d-point{border-left-width:22px!important;border-right-width:22px!important;border-top-width:34px!important;margin-left:-22px!important;top:-58px!important}
+.r3d-subpad,.r3d-subud{position:absolute;display:none;gap:16px;z-index:12}
+.r3d-subpad.on,.r3d-subud.on{display:flex}
+.r3d-subpad{left:50%;bottom:18px;transform:translateX(-50%)}
+.r3d-subud{flex-direction:column;right:14px;bottom:146px}
+.r3d-sbtn{width:76px;height:76px;border-radius:50%;border:4px solid #c9a24a;background:radial-gradient(circle at 40% 35%,#3fb6e6,#0b6fa0);box-shadow:0 4px 10px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;touch-action:none;-webkit-user-select:none;user-select:none;cursor:pointer;padding:0}
+.r3d-sbtn.on{transform:scale(.92);background:radial-gradient(circle at 40% 35%,#7fe0ff,#1f8fd0);box-shadow:0 0 16px #7fe0ff}
+.r3d-sbtn.f{width:88px;height:88px}
+/* R19: Back-to-boat never overlaps turn-left; Done clear of U/D */
+.r3d.subv .r3d-homeb{display:none!important}
+@media (max-width:620px){/* R19 phone/narrow */
+.r3d-sbtn{width:78px;height:78px}.r3d-sbtn.f{display:none}
+.r3d-subpad{left:14px;transform:none;bottom:28px;gap:28px}
+.r3d-subud{right:14px;bottom:200px;gap:24px}
+.r3d.subv .r3d-done{width:96px;height:96px}}
+.r3d-pin.r3d-guide .r3d-point{border-top-color:#ffe566;filter:drop-shadow(0 0 8px #ffcf3a);animation:r3dpt .5s ease-in-out infinite alternate}
+
+/* R21: Spark rainbow ring must not cover cockpit gauges */
+body:has(.r3d.subv) #sparkCompanion .spark-ring,body:has(.r3d.subv) #sparkCompanion .spark-wave{opacity:.15!important;filter:none!important}
+body:has(.r3d.subv) #sparkCompanion{transform:scale(.68) translate(-6px,-4px);transform-origin:top left}
+
+/* R22: backpack placeables tray (Home bag items after shop buy) */
+.r3d-bagtray{position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;gap:12px;padding:12px;border-radius:26px;background:#0d3b52e6;z-index:9;max-width:calc(100vw - 140px);flex-wrap:wrap;justify-content:center;pointer-events:auto}
+@media(max-width:600px){.r3d-bagtray{left:12px;right:12px;transform:none;bottom:140px;max-width:none}}
+.r3d-closet .r3d-bagtray .r3d-bagc{pointer-events:auto}
+
+/* R22b: empty backpack slots — dimmed, with the coin price */.r3d-bagc.need svg{opacity:.45;filter:grayscale(.5)}.r3d-bagc .r3d-price{background:#f5b301;color:#3a2600}
+.r3d-pin.r3d-guide{animation:r3dgp .7s ease-in-out infinite alternate}@keyframes r3dgp{from{filter:drop-shadow(0 0 2px #ffe566)}to{filter:drop-shadow(0 0 14px #ffe566) brightness(1.15)}}
+.r3d-bagc .r3d-ptag{position:absolute;left:50%;bottom:-12px;transform:translateX(-50%);display:flex;align-items:center;gap:3px;padding:2px 8px 2px 4px;border-radius:14px;background:#fff7d6;border:2px solid #f5b301;font:800 16px/20px system-ui;color:#5a3d00;white-space:nowrap}.r3d-bagc .r3d-ptag img{width:20px;height:20px}
+/* spark17 (Tester 11/16 sw-phone-reef-entry: right button column cramped, moon over the boat): one 60px column with even 16px gaps on phones */
+@media(max-width:600px){.r3d-bookb{width:60px;height:60px;top:calc(max(14px,env(safe-area-inset-top,0px)) + 66px)}.r3d-packb{width:60px;height:60px;top:calc(max(14px,env(safe-area-inset-top,0px)) + 142px)}.r3d-dnb{width:60px;height:60px;top:calc(max(14px,env(safe-area-inset-top,0px)) + 218px)}}

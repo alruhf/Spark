@@ -1,0 +1,429 @@
+{
+"husky_1": {
+"w": 534,
+"h": 900,
+"v": "909a73fb",
+"bytes": 66378,
+"kind": "cut"
+},
+"husky_2": {
+"w": 748,
+"h": 900,
+"v": "7a5e0cd5",
+"bytes": 89018,
+"kind": "cut"
+},
+"husky_3": {
+"w": 776,
+"h": 900,
+"v": "693f5256",
+"bytes": 82126,
+"kind": "cut"
+},
+"husky_sleep": {
+"w": 900,
+"h": 666,
+"v": "5acc17d2",
+"bytes": 110528,
+"kind": "cut"
+},
+"kennel": {
+"w": 900,
+"h": 672,
+"v": "0ca5deae",
+"bytes": 92764,
+"kind": "cut"
+},
+"trading_post": {
+"w": 901,
+"h": 581,
+"v": "7445aa80",
+"bytes": 82628,
+"kind": "cut"
+},
+"trader": {
+"w": 513,
+"h": 900,
+"v": "3199fa36",
+"bytes": 79678,
+"kind": "cut"
+},
+"igloo_interior": {
+"w": 1920,
+"h": 1080,
+"v": "c371e2fa",
+"bytes": 88234,
+"kind": "bd"
+},
+"rug_fur": {
+"w": 900,
+"h": 521,
+"v": "ee82f534",
+"bytes": 94290,
+"kind": "cut"
+},
+"bed_platform": {
+"w": 901,
+"h": 447,
+"v": "cf72340f",
+"bytes": 69020,
+"kind": "cut"
+},
+"lamp_oil": {
+"w": 900,
+"h": 365,
+"v": "dddeff20",
+"bytes": 74436,
+"kind": "cut"
+},
+"lantern": {
+"w": 408,
+"h": 900,
+"v": "7d4a934d",
+"bytes": 76966,
+"kind": "cut"
+},
+"wall_hanging": {
+"w": 900,
+"h": 685,
+"v": "eb1e63a5",
+"bytes": 95884,
+"kind": "cut"
+},
+"window_ice": {
+"w": 900,
+"h": 746,
+"v": "284354a3",
+"bytes": 90796,
+"kind": "cut"
+},
+"flag_red": {
+"w": 529,
+"h": 798,
+"v": "b0165b59",
+"bytes": 20300,
+"kind": "cut"
+},
+"door_tunnel": {
+"w": 900,
+"h": 531,
+"v": "34f14e90",
+"bytes": 70482,
+"kind": "cut"
+},
+"coin": {
+"w": 650,
+"h": 693,
+"v": "0f3cdde2",
+"bytes": 66238,
+"kind": "cut"
+},
+"jar": {
+"w": 545,
+"h": 896,
+"v": "a23fff8d",
+"bytes": 58252,
+"kind": "cut"
+},
+"backpack": {
+"w": 673,
+"h": 900,
+"v": "f2551a7c",
+"bytes": 96982,
+"kind": "cut"
+},
+"name_snowball": {
+"w": 636,
+"h": 633,
+"v": "cb076153",
+"bytes": 62984,
+"kind": "cut"
+},
+"name_star": {
+"w": 892,
+"h": 864,
+"v": "c3d8dca6",
+"bytes": 118120,
+"kind": "cut"
+},
+"name_moon": {
+"w": 671,
+"h": 675,
+"v": "8f2cd72e",
+"bytes": 69318,
+"kind": "cut"
+},
+"name_cloud": {
+"w": 900,
+"h": 515,
+"v": "3a498975",
+"bytes": 62704,
+"kind": "cut"
+},
+"name_pebble": {
+"w": 690,
+"h": 504,
+"v": "cf9318c2",
+"bytes": 56364,
+"kind": "cut"
+},
+"fox_peek": {
+"w": 901,
+"h": 362,
+"v": "c44e1bfa",
+"bytes": 22686,
+"kind": "cut"
+},
+"fox_pounce": {
+"w": 900,
+"h": 596,
+"v": "56089eb0",
+"bytes": 67964,
+"kind": "cut"
+},
+"fox_sit": {
+"w": 630,
+"h": 900,
+"v": "c44d4672",
+"bytes": 74216,
+"kind": "cut"
+},
+"woodpile": {
+"w": 900,
+"h": 375,
+"v": "a1fdfdb0",
+"bytes": 87570,
+"kind": "cut"
+},
+"jobboard": {
+"w": 830,
+"h": 900,
+"v": "e11c3235",
+"bytes": 97250,
+"kind": "cut"
+},
+"parcel": {
+"w": 868,
+"h": 731,
+"v": "48ac49e8",
+"bytes": 61050,
+"kind": "cut"
+},
+"hut": {
+"w": 890,
+"h": 900,
+"v": "b3d6bbfd",
+"bytes": 85948,
+"kind": "cut"
+},
+"postoffice": {
+"w": 900,
+"h": 704,
+"v": "b083f6bc",
+"bytes": 75844,
+"kind": "cut"
+},
+"brush": {
+"w": 900,
+"h": 581,
+"v": "89ff6b16",
+"bytes": 78766,
+"kind": "cut"
+},
+"camera": {
+"w": 703,
+"h": 535,
+"v": "c8832588",
+"bytes": 52800,
+"kind": "cut"
+},
+"icedrill": {
+"w": 242,
+"h": 900,
+"v": "f862ca70",
+"bytes": 33992,
+"kind": "cut"
+},
+"kennel_straw": {
+"w": 900,
+"h": 531,
+"v": "e9f515bf",
+"bytes": 163192,
+"kind": "cut"
+},
+"kennel_windbreak": {
+"w": 900,
+"h": 516,
+"v": "2784e82a",
+"bytes": 112164,
+"kind": "cut"
+},
+"sign_blank": {
+"w": 900,
+"h": 734,
+"v": "09ad5394",
+"bytes": 85410,
+"kind": "cut"
+},
+"bd_trail": {
+"w": 1920,
+"h": 1080,
+"v": "af1b1acb",
+"bytes": 83100,
+"kind": "bd"
+},
+"bd_fishhole": {
+"w": 1920,
+"h": 1080,
+"v": "92b25271",
+"bytes": 234498,
+"kind": "bd"
+},
+"sled_empty": {
+"w": 547,
+"h": 335,
+"v": "386c78fd",
+"bytes": 65138,
+"kind": "cut"
+},
+"flag_blue": {
+"w": 529,
+"h": 798,
+"v": "0809d879",
+"bytes": 22540,
+"kind": "cut"
+},
+"flag_green": {
+"w": 529,
+"h": 798,
+"v": "d803a8b5",
+"bytes": 21538,
+"kind": "cut"
+},
+"flag_yellow": {
+"w": 529,
+"h": 798,
+"v": "cde6a8c0",
+"bytes": 22232,
+"kind": "cut"
+},
+"lantern_fox": {
+"w": 641,
+"h": 862,
+"v": "f89358e5",
+"bytes": 104016,
+"kind": "cut"
+},
+"sled_rear": {
+"w": 757,
+"h": 851,
+"v": "9840b3b0",
+"bytes": 109300,
+"kind": "cut"
+},
+"pup": {
+"w": 631,
+"h": 900,
+"v": "406d253c",
+"bytes": 89526,
+"kind": "cut"
+},
+"fox_kits": {
+"w": 901,
+"h": 433,
+"v": "cbf1ac32",
+"bytes": 43180,
+"kind": "cut"
+},
+"fishcamp": {
+"w": 901,
+"h": 345,
+"v": "096a72ff",
+"bytes": 58716,
+"kind": "cut"
+},
+"den_hill": {
+"w": 901,
+"h": 393,
+"v": "b54ec0f5",
+"bytes": 68422,
+"kind": "cut"
+},
+"shelf": {
+"w": 901,
+"h": 311,
+"v": "04fd63fb",
+"bytes": 34764,
+"kind": "cut"
+},
+"table": {
+"w": 900,
+"h": 574,
+"v": "3df8ecbd",
+"bytes": 82676,
+"kind": "cut"
+},
+"fish_rack": {
+"w": 900,
+"h": 766,
+"v": "7f45c065",
+"bytes": 151386,
+"kind": "cut"
+},
+"stove": {
+"w": 679,
+"h": 900,
+"v": "61420168",
+"bytes": 68686,
+"kind": "cut"
+},
+"plant_pot": {
+"w": 742,
+"h": 864,
+"v": "76cbef1a",
+"bytes": 117036,
+"kind": "cut"
+},
+"thermos": {
+"w": 333,
+"h": 900,
+"v": "83b65c47",
+"bytes": 18078,
+"kind": "cut"
+},
+"husky_pic": {
+"w": 520,
+"h": 620,
+"v": "e665cf14",
+"bytes": 15562,
+"kind": "comp"
+},
+"hooks_hat": {
+"w": 700,
+"h": 410,
+"v": "3512fa92",
+"bytes": 37526,
+"kind": "comp"
+},
+"kit_one": {
+"w": 252,
+"h": 402,
+"v": "3f03c276",
+"bytes": 18434,
+"kind": "crop"
+},
+"kit_two": {
+"w": 561,
+"h": 402,
+"v": "e3e50430",
+"bytes": 30832,
+"kind": "crop"
+},
+"kits_all": {
+"w": 871,
+"h": 402,
+"v": "56fd5457",
+"bytes": 43284,
+"kind": "crop"
+}
+}

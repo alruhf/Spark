@@ -1,0 +1,1 @@
+Textures from ambientCG (CC0 1.0, https://ambientcg.com): ground* = Ground037, mud* = Ground048, plaster* = Plaster001. Resized to 512 webp.

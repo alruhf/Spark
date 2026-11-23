@@ -1,0 +1,12 @@
+  ];
+  if(level==='10-12'){const modelDistance=d.position*12,compare=d.yearRatio===0?'not a planetary year like':d.yearRatio===1?'about the same length as':d.yearRatio<1?'shorter than':'longer than';return[
+    {type:'Evidence Check',skill:'Reading • Scientific Evidence',q:`Which evidence card belongs in a report about ${name}?`,a:d.evidence,c:[d.evidence,`${name} is a country on Earth.`,`${name} produces weather for every planet.`],hint:'Choose the statement that can be observed or measured in space science.',explanation:d.evidence},
+    {type:'Scale Model',skill:'Math • Modeling',q:`A model places each orbit position 12 centimeters farther out. How far from the center is position ${d.position}?`,a:`${modelDistance} centimeters`,c:numberChoices(modelDistance,12).map(x=>`${x} centimeters`),hint:'Multiply the position number by 12 centimeters.',explanation:`Position ${d.position} is ${modelDistance} centimeters from the center in this model.`},
+    {type:'Compare Data',skill:'Math • Science',q:`Compared with Earth's year, ${name}'s orbital period is best described as…`,a:`${compare} Earth's year`,c:[`${compare} Earth's year`,`always exactly ten Earth years`,`unrelated to its motion around the Sun`],hint:'Compare the orbital-period clue with one Earth year.',explanation:`The data show an orbital period ${compare} Earth's year.`}
+  ]}
+  const ratio=d.yearRatio===0?'not measured as a planetary year':d.yearRatio===1?'about 1 Earth year':`about ${d.yearRatio} Earth years`;return[
+    {type:'Analyze Evidence',skill:'Science • Reasoning',q:`Which claim about ${name} is directly supported by the evidence?`,a:d.evidence,c:[d.evidence,`${name} has exactly the same system as Earth.`,`${name}'s appearance proves every condition below its clouds.`],hint:'Direct support means the claim stays within what the evidence actually says.',explanation:d.evidence},
+    {type:'Quantitative Model',skill:'Math • Data Interpretation',q:`Which value best represents ${name}'s orbital period in Earth-year units?`,a:ratio,c:[ratio,'exactly 10 Earth years','exactly 1 Earth day'],hint:'Use the orbital-period comparison, and keep the unit in Earth years.',explanation:`The model value is ${ratio}.`},
+    {type:'Systems Classification',skill:'Science • Systems',q:`Which classification should be used when comparing ${name} with other solar-system bodies?`,a:d.family,c:familyChoices,hint:'Classification should be based on structure and composition, not only color or name.',explanation:`${name} is classified as a ${d.family}.`}
+  ]
+}

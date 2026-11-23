@@ -1,0 +1,21 @@
+All models in this folder are CC0 1.0 (Public Domain), downloaded from Poly Pizza on 2026-10-21.
+
+fish_clown.glb  <- Clownfish - Free Model By Quaternius  https://poly.pizza/m/769fHo3eEB  (CC0)
+fish_tang.glb  <- Blue Tang - Free Model By Quaternius  https://poly.pizza/m/TQaMo8GTJl  (CC0)
+fish_yellow.glb  <- Yellow Tang - Free Model By Quaternius  https://poly.pizza/m/CrDlkPLon0  (CC0)
+fish_butter.glb  <- Butterfly Fish - Free Model By Quaternius  https://poly.pizza/m/s2MkBeSzGy  (CC0)
+fish_zebra.glb  <- Zebra Clown Fish - Free Model By Quaternius  https://poly.pizza/m/6jO6q4uCdh  (CC0)
+fish_mandarin.glb  <- Mandarin Fish - Free Model By Quaternius  https://poly.pizza/m/h6M5zlF5Yx  (CC0)
+ray.glb  <- Manta ray - Free Model By Quaternius  https://poly.pizza/m/yzD8b7ZHZm  (CC0)
+coral_set.glb  <- Coral Reef Set - Free Model By MiniPoly  https://poly.pizza/m/74GL45Fvdh  (CC0)
+seaweed.glb  <- Seaweed - Free Model By Mohabins  https://poly.pizza/m/oYxUdpyc4u  (CC0)
+star.glb  <- Star - Free Model By Quaternius  https://poly.pizza/m/Tyau1aS2r0  (CC0)
+urchin.glb  <- Sea Urchin Open - Free Model By Quaternius  https://poly.pizza/m/LdYoJyw4pQ  (CC0)
+mussel.glb  <- Mussel Open - Free Model By Kenney  https://poly.pizza/m/eWHAc3Pq8z  (CC0)
+stall.glb  <- Market Stand by Quaternius  https://poly.pizza/m/DGIM5HGISb  (CC0)
+crate.glb  <- Cube Crate by Quaternius  https://poly.pizza/m/YAghI6GBls  (CC0)
+barrel.glb  <- Barrel by Quaternius  https://poly.pizza/m/ONdghDBByN  (CC0)
+
+visitor.glb: Quaternius Universal Base Characters (CC0 1.0). visitor_anim.glb: Quaternius Universal Animation Library [Standard] Idle_Loop/Walk_Loop/Sitting_Idle_Loop (CC0 1.0, quaternius.itch.io).
+
+dolphin.glb - 'Dolphin' by Quaternius, https://poly.pizza/m/3LzFgI3GLO - CC0 (Public Domain)

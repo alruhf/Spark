@@ -1,0 +1,2234 @@
+{
+ "schema": 1,
+ "shuffleOptions": true,
+ "readAloud": true,
+ "levels": {
+  "lo": "age 6 and under",
+  "mid": "ages 7-9",
+  "hi": "age 10 and up"
+ },
+ "area": {
+  "id": "arctic",
+  "continent": "North America",
+  "env": "Arctic",
+  "title": "Arctic",
+  "subtitle": "Land of ice and aurora",
+  "badge": {
+   "id": "arctic_explorer",
+   "name": "Arctic Explorer",
+   "c1": "#bfe9ff",
+   "c2": "#3a8fd6",
+   "glyph": "snowflake"
+  }
+ },
+ "narration": {
+  "welcome": {
+   "lo": "Brrr! Welcome to the Arctic! It is icy and snowy here. I am Spark. Let's visit the ice camp!",
+   "mid": "Welcome to the Arctic! It is a frozen ocean with ice and snow all around. I am Spark. Let's explore our ice camp and meet the animals.",
+   "hi": "Welcome to the Arctic, the frozen ocean around the North Pole. I am Spark, your guide. Explore our ice camp and learn how animals and people live in the cold."
+  },
+  "sceneHelp": {
+   "lo": "Drag to look around. Tap the glowing things!",
+   "mid": "Drag to look all the way around the ice camp. Tap the glowing things to answer a question.",
+   "hi": "Drag or use the arrow keys to look around the ice camp. Tap each glowing spot to answer a question about the Arctic."
+  },
+  "allDone": {
+   "lo": "You answered them all! Tap Go to fish and feed the animals!",
+   "mid": "You answered every question! Tap Go. It is time to fish and feed the animals.",
+   "hi": "You have answered every question. Tap Go. We will fish through the ice and feed the hungry Arctic animals."
+  },
+  "notYet": {
+   "lo": "Find a few more glowing things first.",
+   "mid": "Find a few more glowing things first, then we can go fishing.",
+   "hi": "Answer a few more questions first, then we can go fishing."
+  },
+  "activityIntro": {
+   "lo": "Let's go fishing! Tap when the float goes down. Then feed the animals!",
+   "mid": "Let's go fishing through the ice! Tap when the float dips under the water. Then we feed the hungry animals.",
+   "hi": "We will fish through a hole in the ice. Tap when the float dips under the water. Then feed the animals the right food. Each animal eats different things."
+  },
+  "replay": {
+   "lo": "Welcome back! Let's play again.",
+   "mid": "Welcome back to the Arctic! Let's play again.",
+   "hi": "Welcome back to the Arctic. Let's try again."
+  },
+  "badge": {
+   "lo": "You did it! You fed the animals and earned the Arctic Explorer badge!",
+   "mid": "You did it! You caught fish, fed the animals and earned the Arctic Explorer badge!",
+   "hi": "Well done! You caught fish, matched the right food to each animal, and earned the Arctic Explorer badge."
+  }
+ },
+ "hotspots": [
+  {
+   "id": "bear",
+   "kind": "sprite",
+   "asset": "animal_polarbear",
+   "label": "Polar bear",
+   "wall": 1,
+   "x": 45,
+   "y": 72,
+   "size": 620,
+   "lead": {
+    "lo": "A polar bear!",
+    "mid": "Shh, a polar bear on the ice!",
+    "hi": "A polar bear, the largest bear on Earth, out on the sea ice."
+   }
+  },
+  {
+   "id": "seal",
+   "kind": "sprite",
+   "asset": "animal_seal",
+   "label": "Ringed seal",
+   "wall": 3,
+   "x": 30,
+   "y": 80,
+   "size": 360,
+   "lead": {
+    "lo": "A seal by a hole in the ice.",
+    "mid": "A ringed seal resting by its breathing hole.",
+    "hi": "A ringed seal, resting beside a breathing hole it keeps open in the ice."
+   }
+  },
+  {
+   "id": "fox",
+   "kind": "sprite",
+   "asset": "animal_fox",
+   "label": "Arctic fox",
+   "wall": 0,
+   "x": 75,
+   "y": 78,
+   "size": 330,
+   "lead": {
+    "lo": "A fluffy white fox!",
+    "mid": "An Arctic fox in its thick coat.",
+    "hi": "An Arctic fox. Its coat changes with the seasons."
+   }
+  },
+  {
+   "id": "walrus",
+   "kind": "sprite",
+   "asset": "animal_walrus",
+   "label": "Walrus",
+   "wall": 3,
+   "x": 70,
+   "y": 76,
+   "size": 520,
+   "lead": {
+    "lo": "A walrus with long tusks!",
+    "mid": "A big walrus with long tusks.",
+    "hi": "A walrus, a heavy animal with long tusks."
+   }
+  },
+  {
+   "id": "sky",
+   "kind": "zone",
+   "label": "Northern lights",
+   "icon": "aurora",
+   "wall": 2,
+   "x": 52,
+   "y": 22,
+   "size": 380,
+   "lead": {
+    "lo": "Look up! Colorful lights!",
+    "mid": "Look up at the sky! The lights are dancing.",
+    "hi": "Look at the sky. Those moving ribbons of light are the aurora."
+   }
+  },
+  {
+   "id": "sun",
+   "kind": "zone",
+   "label": "Low Sun",
+   "icon": "sun",
+   "wall": 2,
+   "x": 14,
+   "y": 50,
+   "size": 300,
+   "lead": {
+    "lo": "The Sun is very low.",
+    "mid": "The Sun sits low on the horizon.",
+    "hi": "The Sun hangs low on the horizon here."
+   }
+  },
+  {
+   "id": "ice",
+   "kind": "zone",
+   "label": "Melting ice",
+   "icon": "ice",
+   "wall": 3,
+   "x": 88,
+   "y": 84,
+   "size": 300,
+   "lead": {
+    "lo": "Look at the water near the ice.",
+    "mid": "There is open water at the edge of the ice.",
+    "hi": "There is open water at the edge of the ice, where the ice is thin."
+   }
+  },
+  {
+   "id": "hole",
+   "kind": "sprite",
+   "asset": "act_ice_hole",
+   "label": "Fishing hole",
+   "wall": 0,
+   "x": 34,
+   "y": 82,
+   "size": 360,
+   "role": "go",
+   "lead": {
+    "lo": "Our fishing hole! Tap Go when you are ready.",
+    "mid": "Our fishing hole. Tap Go when you are ready to fish.",
+    "hi": "Our fishing hole in the ice. Tap Go when you are ready to fish."
+   }
+  }
+ ],
+ "challenges": [
+  {
+   "id": "c1",
+   "hs": "bear",
+   "levels": {
+    "lo": {
+     "q": "What keeps a polar bear warm?",
+     "o": [
+      {
+       "label": "Thick fur",
+       "pic": "ans_bear_fur"
+      },
+      {
+       "label": "Ice",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "Snow",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Thick fur keeps the bear warm.",
+     "hint": "Bears have something furry on their bodies.",
+     "fact": "A polar bear also has a thick layer of fat."
+    },
+    "mid": {
+     "q": "A polar bear swims in icy water and stays warm. What helps most?",
+     "o": [
+      {
+       "label": "A thick layer of fat",
+       "pic": "ans_bear_swim"
+      },
+      {
+       "label": "A coat of ice",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "A pile of snow",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A thick layer of fat, with thick fur, keeps it warm.",
+     "hint": "Think about what is inside the bear, under its fur.",
+     "fact": "A polar bear's fat layer can be about ten centimeters thick."
+    },
+    "hi": {
+     "q": "Polar bears have a thick layer of fat called blubber. What is it for?",
+     "o": [
+      {
+       "label": "Keeping warm and storing energy",
+       "pic": "ans_bear_swim"
+      },
+      {
+       "label": "Making the bear faster on land",
+       "pic": "ans_snowfield"
+      },
+      {
+       "label": "Helping the bear see in the dark",
+       "pic": "ans_polar_night"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Blubber keeps the bear warm and is a store of energy.",
+     "hint": "Think about cold water and about days without food.",
+     "fact": "A polar bear's skin is black under its fur, which helps it soak up warmth from the Sun."
+    }
+   }
+  },
+  {
+   "id": "c2",
+   "hs": "bear",
+   "levels": {
+    "lo": {
+     "q": "What does a polar bear like to eat most?",
+     "o": [
+      {
+       "label": "Seals",
+       "pic": "animal_seal"
+      },
+      {
+       "label": "Berries",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Cookies",
+       "pic": "prop_cookie"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Polar bears eat seals.",
+     "hint": "Polar bears are hunters of the sea.",
+     "fact": "Polar bears are great swimmers, too."
+    },
+    "mid": {
+     "q": "Where does a polar bear wait to catch a seal?",
+     "o": [
+      {
+       "label": "By a hole in the ice",
+       "pic": "ans_seal_hole"
+      },
+      {
+       "label": "In a snowy cave",
+       "pic": "ans_snowfield"
+      },
+      {
+       "label": "At the bottom of the sea",
+       "pic": "ans_seabed_clams"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Seals must come up to breathe, and the bear waits by the hole.",
+     "hint": "Seals need to breathe air. Where do they come up?",
+     "fact": "A bear can wait very still for hours."
+    },
+    "hi": {
+     "q": "Why do polar bears need sea ice?",
+     "o": [
+      {
+       "label": "To hunt seals from",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "To grow berries on",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "To hide from the Sun",
+       "pic": "ans_midnight_sun"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Bears hunt seals from the ice, so they need it to eat.",
+     "hint": "Where do seals come up to breathe, and where does the bear stand?",
+     "fact": "That is why melting sea ice is a problem for polar bears."
+    }
+   }
+  },
+  {
+   "id": "c3",
+   "hs": "seal",
+   "levels": {
+    "lo": {
+     "q": "Where does a seal come up to breathe air?",
+     "o": [
+      {
+       "label": "A hole in the ice",
+       "pic": "ans_seal_hole"
+      },
+      {
+       "label": "The bottom of the sea",
+       "pic": "ans_seabed_clams"
+      },
+      {
+       "label": "A snowy mountain",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A seal comes up at a hole in the ice.",
+     "hint": "Seals need air. Where is the air?",
+     "fact": "The seal makes the hole with its claws."
+    },
+    "mid": {
+     "q": "A ringed seal keeps breathing holes open in the ice. What does it use?",
+     "o": [
+      {
+       "label": "Strong claws on its flippers",
+       "pic": "ans_seal_hole"
+      },
+      {
+       "label": "Long tusks",
+       "pic": "ans_tusks"
+      },
+      {
+       "label": "Sharp pieces of ice",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! It scratches the ice with strong claws.",
+     "hint": "The seal uses a part of its own body.",
+     "fact": "Walruses have tusks, but ringed seals do not."
+    },
+    "hi": {
+     "q": "Ringed seals eat mostly what?",
+     "o": [
+      {
+       "label": "Fish and small sea animals",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "Berries and grass",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Cookies",
+       "pic": "prop_cookie"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Ringed seals hunt fish and small sea animals.",
+     "hint": "Seals live in the sea. What lives in the sea?",
+     "fact": "Polar bears eat ringed seals, so seals are a key link in the Arctic food chain."
+    }
+   }
+  },
+  {
+   "id": "c4",
+   "hs": "fox",
+   "levels": {
+    "lo": {
+     "q": "What color is an Arctic fox in winter?",
+     "o": [
+      {
+       "label": "White",
+       "pic": "ans_fox_white"
+      },
+      {
+       "label": "Brown",
+       "pic": "ans_fox_brown"
+      },
+      {
+       "label": "Green",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! In winter the fox is white.",
+     "hint": "Look at all the snow!",
+     "fact": "In summer it turns brown or grey."
+    },
+    "mid": {
+     "q": "Why does an Arctic fox's coat turn white in winter?",
+     "o": [
+      {
+       "label": "To hide in the snow",
+       "pic": "ans_fox_white"
+      },
+      {
+       "label": "To hide in summer grass",
+       "pic": "ans_fox_brown"
+      },
+      {
+       "label": "To glow like the lights",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! White fur blends in with the snow.",
+     "hint": "What color is the ground in winter?",
+     "fact": "A fox that is hard to see can sneak up on prey and hide from enemies."
+    },
+    "hi": {
+     "q": "In summer an Arctic fox's coat turns brown or grey. Why is that useful?",
+     "o": [
+      {
+       "label": "It blends in with rocks and plants",
+       "pic": "ans_fox_brown"
+      },
+      {
+       "label": "It helps melt the snow",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "It keeps the fox warmer",
+       "pic": "ans_fox_white"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The summer coat matches the bare ground.",
+     "hint": "The ground is not white in summer.",
+     "fact": "Camouflage helps in every season, so the fox changes its coat twice a year."
+    }
+   }
+  },
+  {
+   "id": "c5",
+   "hs": "fox",
+   "levels": {
+    "lo": {
+     "q": "Which of these can an Arctic fox eat?",
+     "o": [
+      {
+       "label": "Berries",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Cookies",
+       "pic": "prop_cookie"
+      },
+      {
+       "label": "Ice cubes",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Foxes eat berries in summer.",
+     "hint": "Look for something that grows.",
+     "fact": "Arctic foxes also eat small animals, eggs and fish."
+    },
+    "mid": {
+     "q": "An Arctic fox has small, round ears. How do small ears help it?",
+     "o": [
+      {
+       "label": "They lose less heat",
+       "pic": "ans_fox_white"
+      },
+      {
+       "label": "They catch snowflakes",
+       "pic": "ans_snowfield"
+      },
+      {
+       "label": "They glow in the dark",
+       "pic": "ans_polar_night"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Small ears lose less body heat in the cold.",
+     "hint": "Think about warmth in a cold place.",
+     "fact": "Small round ears lose very little heat, so the Arctic fox stays warm in the snow."
+    },
+    "hi": {
+     "q": "Arctic foxes often follow polar bears. Why?",
+     "o": [
+      {
+       "label": "To eat the food the bear leaves behind",
+       "pic": "animal_polarbear"
+      },
+      {
+       "label": "To hide from the Sun",
+       "pic": "ans_midnight_sun"
+      },
+      {
+       "label": "To learn to swim",
+       "pic": "ans_bear_swim"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Foxes scavenge scraps left by polar bears.",
+     "hint": "Think about who finishes a big meal.",
+     "fact": "Scavenging helps the fox in winter, when food is hard to find."
+    }
+   }
+  },
+  {
+   "id": "c6",
+   "hs": "walrus",
+   "levels": {
+    "lo": {
+     "q": "Which animal has two long tusks?",
+     "o": [
+      {
+       "label": "Walrus",
+       "pic": "animal_walrus"
+      },
+      {
+       "label": "Arctic fox",
+       "pic": "animal_fox"
+      },
+      {
+       "label": "Seal",
+       "pic": "animal_seal"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A walrus has long tusks.",
+     "hint": "Look for the big animal with long white teeth.",
+     "fact": "Walrus tusks keep growing all their lives."
+    },
+    "mid": {
+     "q": "A walrus digs on the sea floor with its whiskers and flippers. What does it find to eat?",
+     "o": [
+      {
+       "label": "Clams",
+       "pic": "ans_seabed_clams"
+      },
+      {
+       "label": "Berries",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Cookies",
+       "pic": "prop_cookie"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Walruses eat clams and other animals from the sea floor.",
+     "hint": "Walruses look for food under the water.",
+     "fact": "Walrus whiskers are very good at feeling for food in the mud."
+    },
+    "hi": {
+     "q": "How do a walrus's tusks help it?",
+     "o": [
+      {
+       "label": "They help it haul its heavy body onto the ice",
+       "pic": "ans_tusks"
+      },
+      {
+       "label": "They dig up berries",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "They light up the aurora",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A walrus uses its tusks like ice picks to pull itself out of the water.",
+     "hint": "Tusks are strong teeth. Think about climbing out of the water.",
+     "fact": "Tusks also show how strong an adult walrus is."
+    }
+   }
+  },
+  {
+   "id": "c7",
+   "hs": "sky",
+   "levels": {
+    "lo": {
+     "q": "What are the colorful lights in the Arctic sky called?",
+     "o": [
+      {
+       "label": "Northern lights",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "Icebergs",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! They are the northern lights.",
+     "hint": "They dance in the dark sky at night.",
+     "fact": "People also call them the aurora."
+    },
+    "mid": {
+     "q": "Where do the tiny particles that make the northern lights come from?",
+     "o": [
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "The ocean",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "The ice",
+       "pic": "ans_melting_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Tiny particles from the Sun hit the air high above us and make the lights glow.",
+     "hint": "Something far away in space sends them.",
+     "fact": "Earth's magnetic field guides the particles to the poles."
+    },
+    "hi": {
+     "q": "Which color is the aurora most often, made when particles hit oxygen high in the air?",
+     "o": [
+      {
+       "label": "Green",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "Orange",
+       "pic": "ans_midnight_sun"
+      },
+      {
+       "label": "Black",
+       "pic": "ans_polar_night"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Oxygen high in the air glows green most often.",
+     "hint": "Think of the picture of the lights in the sky.",
+     "fact": "Higher up, oxygen can glow red, and nitrogen can make blue or purple edges."
+    }
+   }
+  },
+  {
+   "id": "c8",
+   "hs": "sun",
+   "levels": {
+    "lo": {
+     "q": "Which picture shows the Arctic in the long dark winter?",
+     "o": [
+      {
+       "label": "Dark winter sky",
+       "pic": "ans_polar_night"
+      },
+      {
+       "label": "Sunny summer midnight",
+       "pic": "ans_midnight_sun"
+      },
+      {
+       "label": "Melting ice",
+       "pic": "ans_melting_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! In winter it is dark for a long time.",
+     "hint": "Look for the picture with stars and a dark sky.",
+     "fact": "In summer the Sun can shine all night."
+    },
+    "mid": {
+     "q": "In summer in the far north the Sun does not set for weeks. What do we call this?",
+     "o": [
+      {
+       "label": "The midnight sun",
+       "pic": "ans_midnight_sun"
+      },
+      {
+       "label": "The northern lights",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "The polar night",
+       "pic": "ans_polar_night"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! It is the midnight sun.",
+     "hint": "Midnight and Sun go together here.",
+     "fact": "In winter, the opposite happens: the Sun stays below the horizon for weeks."
+    },
+    "hi": {
+     "q": "Far north, there is a polar night in winter when the Sun stays below the horizon. Why?",
+     "o": [
+      {
+       "label": "Earth is tilted away from the Sun",
+       "pic": "ans_polar_night"
+      },
+      {
+       "label": "The Sun burns out for the winter",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "Thick clouds cover the sky for months",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Earth is tilted, so in winter the Arctic leans away from the Sun.",
+     "hint": "It is about how Earth is tilted, not about the Sun itself.",
+     "fact": "In summer the Arctic leans toward the Sun, which gives the midnight sun."
+    }
+   }
+  },
+  {
+   "id": "c9",
+   "hs": "ice",
+   "levels": {
+    "lo": {
+     "q": "What happens to ice when it gets warm?",
+     "o": [
+      {
+       "label": "It melts",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "It gets bigger",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "It turns into sand",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Warm ice melts into water.",
+     "hint": "Think about an ice cube in the Sun.",
+     "fact": "Melted ice is water."
+    },
+    "mid": {
+     "q": "Why is melting sea ice a problem for polar bears?",
+     "o": [
+      {
+       "label": "They have less ice to hunt seals from",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "They have too much food",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "They cannot see the lights",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Less ice means fewer places to hunt seals.",
+     "hint": "Where does a polar bear stand to hunt?",
+     "fact": "We can help by saving energy at home."
+    },
+    "hi": {
+     "q": "As the Arctic warms, what happens to the area covered by summer sea ice?",
+     "o": [
+      {
+       "label": "It gets smaller",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "It gets bigger",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "It stays exactly the same",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Summer sea ice has been shrinking, so there is less ice for ice-hunting animals.",
+     "hint": "Warmer air and water melt more ice.",
+     "fact": "Using less energy helps slow warming."
+    }
+   }
+  }
+ ],
+ "activity": {
+  "type": "feed",
+  "title": "Fish and Feed",
+  "bg": "bd_ice_floe",
+  "fishing": {
+   "prop": "act_ice_hole",
+   "need": {
+    "lo": 3,
+    "mid": 4,
+    "hi": 5
+   },
+   "biteWindowMs": {
+    "lo": 3200,
+    "mid": 2200,
+    "hi": 1600
+   },
+   "narr": {
+    "start": {
+     "lo": "Tap when the float goes under!",
+     "mid": "Watch the float. Tap when it dips under the water.",
+     "hi": "Watch the float on the line. Tap the moment it dips under the water."
+    },
+    "bite": {
+     "lo": "Now!",
+     "mid": "A bite! Tap now!",
+     "hi": "A bite! Tap now!"
+    },
+    "caught": [
+     {
+      "lo": "A fish! Yum!",
+      "mid": "You caught a fish!",
+      "hi": "Nice catch."
+     },
+     {
+      "lo": "Another fish!",
+      "mid": "Another one!",
+      "hi": "You have another."
+     },
+     {
+      "lo": "Great fishing!",
+      "mid": "Great fishing!",
+      "hi": "Well done."
+     }
+    ],
+    "missed": {
+     "lo": "It got away. Try again!",
+     "mid": "It got away. Wait for the next bite.",
+     "hi": "It got away. Wait for the next bite."
+    },
+    "early": {
+     "lo": "Wait for the float to go down.",
+     "mid": "Too early. Wait until the float dips.",
+     "hi": "Too early. Wait until the float dips."
+    },
+    "done": {
+     "lo": "That is enough fish! Now let's feed the animals!",
+     "mid": "That is enough fish. Now let's feed the animals!",
+     "hi": "That is enough fish. Now we can feed the animals."
+    }
+   }
+  },
+  "feed": {
+   "need": {
+    "lo": 1,
+    "mid": 1,
+    "hi": 2
+   },
+   "animals": [
+    {
+     "id": "polarbear",
+     "asset": "animal_polarbear",
+     "name": "Polar bear",
+     "x": 22,
+     "y": 70,
+     "size": 0.46,
+     "eats": [
+      "fish"
+     ]
+    },
+    {
+     "id": "seal",
+     "asset": "animal_seal",
+     "name": "Seal",
+     "x": 52,
+     "y": 78,
+     "size": 0.28,
+     "eats": [
+      "fish"
+     ]
+    },
+    {
+     "id": "fox",
+     "asset": "animal_fox",
+     "name": "Arctic fox",
+     "x": 76,
+     "y": 72,
+     "size": 0.22,
+     "eats": [
+      "fish",
+      "berries"
+     ]
+    },
+    {
+     "id": "walrus",
+     "asset": "animal_walrus",
+     "name": "Walrus",
+     "x": 88,
+     "y": 82,
+     "size": 0.34,
+     "eats": [
+      "clams"
+     ]
+    }
+   ],
+   "foods": [
+    {
+     "id": "fish",
+     "asset": "prop_fish",
+     "name": "Fish"
+    },
+    {
+     "id": "clams",
+     "asset": "prop_clams",
+     "name": "Clams"
+    },
+    {
+     "id": "berries",
+     "asset": "prop_berries",
+     "name": "Berries"
+    },
+    {
+     "id": "cookie",
+     "asset": "prop_cookie",
+     "name": "Cookie"
+    }
+   ],
+   "intro": {
+    "lo": "Here are the hungry animals! Drag a food to an animal.",
+    "mid": "Here come the hungry animals. Drag a food to an animal. Each one eats different things.",
+    "hi": "These animals are hungry. Drag a food to an animal. Each one eats different things, so think about what lives in the Arctic."
+   },
+   "react": {
+    "polarbear_fish": {
+     "lo": "Chomp! The bear loves fish.",
+     "mid": "Chomp! The bear eats the fish. Polar bears mostly hunt seals, but they will eat fish too.",
+     "hi": "Chomp! Polar bears mostly hunt seals, but they will eat fish when they find it."
+    },
+    "seal_fish": {
+     "lo": "Gulp! Seals love fish.",
+     "mid": "Gulp! Seals eat fish and small sea animals.",
+     "hi": "Gulp! Ringed seals eat fish and small sea animals."
+    },
+    "fox_fish": {
+     "lo": "Nibble! The fox likes fish.",
+     "mid": "Nibble! Arctic foxes eat fish when they can find it.",
+     "hi": "Nibble! Arctic foxes eat fish, eggs, small animals and berries."
+    },
+    "fox_berries": {
+     "lo": "Yum! Berries for the fox!",
+     "mid": "Yum! Arctic foxes eat berries in summer.",
+     "hi": "Yum! In summer Arctic foxes add berries to their food."
+    },
+    "walrus_clams": {
+     "lo": "Slurp! The walrus loves clams.",
+     "mid": "Slurp! Walruses eat clams from the sea floor.",
+     "hi": "Slurp! Clams and other sea-floor animals are the walrus's main food."
+    }
+   },
+   "wrong": {
+    "walrus_fish": {
+     "lo": "Walruses eat clams. Try clams!",
+     "mid": "Walruses mostly eat clams from the sea floor. Try the clams!",
+     "hi": "Walruses feed on clams and other animals on the sea floor. Try the clams."
+    },
+    "walrus_berries": {
+     "lo": "Walruses eat clams. Try clams!",
+     "mid": "Walruses live in the sea and eat clams. Try the clams!",
+     "hi": "Walruses live in the sea and eat clams. Try the clams."
+    },
+    "polarbear_clams": {
+     "lo": "Bears eat seals and fish. Try fish!",
+     "mid": "Polar bears hunt seals and eat fish, not clams. Try fish!",
+     "hi": "Polar bears hunt seals and take fish. Clams are for the walrus. Try fish."
+    },
+    "polarbear_berries": {
+     "lo": "Bears eat seals and fish. Try fish!",
+     "mid": "Polar bears eat meat, mainly seals. Try fish!",
+     "hi": "Polar bears are mainly meat eaters. Try fish."
+    },
+    "seal_clams": {
+     "lo": "Seals like fish. Try fish!",
+     "mid": "This seal likes fish. Clams are for the walrus.",
+     "hi": "Ringed seals mostly eat fish and small shrimp-like animals. Try fish."
+    },
+    "seal_berries": {
+     "lo": "Seals eat fish, not berries.",
+     "mid": "Seals live in the sea and eat fish, not berries.",
+     "hi": "Seals are sea hunters. They eat fish, not berries."
+    },
+    "fox_clams": {
+     "lo": "The fox likes fish or berries.",
+     "mid": "The fox likes fish or berries. Clams are for the walrus.",
+     "hi": "Clams are not usual fox food. Try fish or berries."
+    },
+    "cookie": {
+     "lo": "Cookies are not good for wild animals. Try a different food!",
+     "mid": "Cookies are not good for wild animals. Try fish, clams or berries!",
+     "hi": "Human snacks like cookies are not healthy for wild animals. Pick fish, clams or berries."
+    }
+   },
+   "done": {
+    "lo": "Everyone is full and happy!",
+    "mid": "Everyone is full and happy!",
+    "hi": "Every animal has been fed the right food."
+   }
+  }
+ },
+ "assets": {
+  "wall0_camp": {
+   "kind": "wall",
+   "w": 1920,
+   "h": 1080,
+   "bytes": 0,
+   "v": "",
+   "alpha": false,
+   "wall": 0,
+   "inStrip": true
+  },
+  "wall1_ridges": {
+   "kind": "wall",
+   "w": 1920,
+   "h": 1080,
+   "bytes": 0,
+   "v": "",
+   "alpha": false,
+   "wall": 1,
+   "inStrip": true
+  },
+  "wall2_aurora": {
+   "kind": "wall",
+   "w": 1920,
+   "h": 1080,
+   "bytes": 0,
+   "v": "",
+   "alpha": false,
+   "wall": 2,
+   "inStrip": true
+  },
+  "wall3_shore": {
+   "kind": "wall",
+   "w": 1920,
+   "h": 1080,
+   "bytes": 0,
+   "v": "",
+   "alpha": false,
+   "wall": 3,
+   "inStrip": true
+  },
+  "bd_ice_floe": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 67884,
+   "v": "8921c0d2",
+   "kind": "backdrop",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 177938,
+    "v": "870424aa",
+    "file": "bd_ice_floe.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "animal_polarbear": {
+   "w": 1080,
+   "h": 553,
+   "bytes": 109358,
+   "v": "8b763156",
+   "kind": "animal",
+   "alpha": true,
+   "facing": "right",
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1106,
+    "bytes": 116946,
+    "v": "38d51ba2",
+    "file": "animal_polarbear.4k.webp"
+   },
+   "native": [
+    1080,
+    553
+   ],
+   "hdFringePct": 0.0
+  },
+  "animal_seal": {
+   "w": 1080,
+   "h": 453,
+   "bytes": 66752,
+   "v": "a73d965c",
+   "kind": "animal",
+   "alpha": true,
+   "facing": "right",
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 906,
+    "bytes": 113634,
+    "v": "424246b6",
+    "file": "animal_seal.4k.webp"
+   },
+   "native": [
+    1080,
+    453
+   ],
+   "hdFringePct": 0.0
+  },
+  "animal_fox": {
+   "w": 1080,
+   "h": 681,
+   "bytes": 90014,
+   "v": "ff0dc1e7",
+   "kind": "animal",
+   "alpha": true,
+   "facing": "right",
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1362,
+    "bytes": 104122,
+    "v": "72de88d2",
+    "file": "animal_fox.4k.webp"
+   },
+   "native": [
+    1080,
+    681
+   ],
+   "hdFringePct": 0.0
+  },
+  "animal_walrus": {
+   "w": 1139,
+   "h": 490,
+   "bytes": 95238,
+   "v": "bfa3b1b8",
+   "kind": "animal",
+   "alpha": true,
+   "facing": "right",
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2278,
+    "h": 980,
+    "bytes": 160858,
+    "v": "5bd68b36",
+    "file": "animal_walrus.4k.webp"
+   },
+   "native": [
+    1139,
+    490
+   ],
+   "hdFringePct": 0.0
+  },
+  "prop_fish": {
+   "w": 1080,
+   "h": 389,
+   "bytes": 97058,
+   "v": "8f49feb2",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 778,
+    "bytes": 161232,
+    "v": "33e12b11",
+    "file": "prop_fish.4k.webp"
+   },
+   "native": [
+    1080,
+    389
+   ],
+   "hdFringePct": 0.0
+  },
+  "prop_clams": {
+   "w": 1080,
+   "h": 607,
+   "bytes": 93450,
+   "v": "77abce49",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1214,
+    "bytes": 123826,
+    "v": "5e5a672d",
+    "file": "prop_clams.4k.webp"
+   },
+   "native": [
+    1080,
+    607
+   ],
+   "hdFringePct": 0.0
+  },
+  "prop_berries": {
+   "w": 1080,
+   "h": 812,
+   "bytes": 98868,
+   "v": "5ee9dd9b",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1624,
+    "bytes": 113398,
+    "v": "04d0d1dd",
+    "file": "prop_berries.4k.webp"
+   },
+   "native": [
+    1080,
+    812
+   ],
+   "hdFringePct": 0.0
+  },
+  "prop_cookie": {
+   "w": 1080,
+   "h": 1067,
+   "bytes": 184476,
+   "v": "4c75e5d2",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 2134,
+    "bytes": 283800,
+    "v": "1245a767",
+    "file": "prop_cookie.4k.webp"
+   },
+   "native": [
+    1080,
+    1067
+   ],
+   "hdFringePct": 0.0
+  },
+  "act_ice_hole": {
+   "w": 1080,
+   "h": 837,
+   "bytes": 51898,
+   "v": "dcd69f43",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1675,
+    "bytes": 117792,
+    "v": "d942670c",
+    "file": "act_ice_hole.4k.webp"
+   },
+   "native": [
+    717,
+    556
+   ],
+   "src": "gen2/icehole"
+  },
+  "ans_bear_fur": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 96378,
+   "v": "1915eb4c",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 272362,
+    "v": "e8532448",
+    "file": "ans_bear_fur.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_bear_swim": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 139934,
+   "v": "22549293",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 382114,
+    "v": "d12ce218",
+    "file": "ans_bear_swim.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_seal_hole": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 145626,
+   "v": "b15f313d",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 300180,
+    "v": "e01821e0",
+    "file": "ans_seal_hole.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_sea_ice": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 188534,
+   "v": "d1b63409",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 603752,
+    "v": "36e9bbc9",
+    "file": "ans_sea_ice.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_snowfield": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 94462,
+   "v": "c8573610",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 195926,
+    "v": "f542498b",
+    "file": "ans_snowfield.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_midnight_sun": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 103788,
+   "v": "83d1e723",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 299328,
+    "v": "a2188aeb",
+    "file": "ans_midnight_sun.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_polar_night": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 145514,
+   "v": "257e8401",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 269862,
+    "v": "6a8c7fed",
+    "file": "ans_polar_night.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_melting_ice": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 117470,
+   "v": "2dcab1ac",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 264854,
+    "v": "73c72d94",
+    "file": "ans_melting_ice.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_fox_white": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 32338,
+   "v": "9f4a3506",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 69926,
+    "v": "c2311267",
+    "file": "ans_fox_white.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_fox_brown": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 225514,
+   "v": "075659f1",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 812238,
+    "v": "bf544adc",
+    "file": "ans_fox_brown.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_tusks": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 126118,
+   "v": "07746d42",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 404932,
+    "v": "7d02e153",
+    "file": "ans_tusks.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_seabed_clams": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 193442,
+   "v": "31022def",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 643670,
+    "v": "e68e14e7",
+    "file": "ans_seabed_clams.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_aurora": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 71702,
+   "v": "6b84ee9b",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 171162,
+    "v": "bfa6fdc7",
+    "file": "ans_aurora.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "ans_sun_flare": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 75296,
+   "v": "54ddfc12",
+   "kind": "answer",
+   "alpha": false,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 181968,
+    "v": "ae6526a9",
+    "file": "ans_sun_flare.4k.webp"
+   },
+   "native": [
+    1920,
+    1080
+   ]
+  },
+  "gear_parka": {
+   "w": 906,
+   "h": 1080,
+   "bytes": 68514,
+   "v": "1ca28b23",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.784,
+   "hd": {
+    "w": 1813,
+    "h": 2160,
+    "bytes": 151752,
+    "v": "12f9c703",
+    "file": "gear_parka.4k.webp"
+   },
+   "native": [
+    595,
+    709
+   ],
+   "src": "gen2/g_parka"
+  },
+  "gear_boots": {
+   "w": 1080,
+   "h": 872,
+   "bytes": 63998,
+   "v": "40e2f1ba",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1745,
+    "bytes": 149488,
+    "v": "5e1d2deb",
+    "file": "gear_boots.4k.webp"
+   },
+   "native": [
+    728,
+    588
+   ],
+   "src": "gen2/g_boots"
+  },
+  "gear_rod": {
+   "w": 800,
+   "h": 545,
+   "bytes": 29888,
+   "v": "fe561d33",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 1600,
+    "h": 1090,
+    "bytes": 37082,
+    "v": "5ea0ea8c",
+    "file": "gear_rod.4k.webp"
+   },
+   "native": [
+    800,
+    545
+   ],
+   "hdFringePct": 0.0
+  },
+  "gear_goggles": {
+   "w": 1080,
+   "h": 592,
+   "bytes": 36596,
+   "v": "54336a85",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1184,
+    "bytes": 81896,
+    "v": "575dfdc7",
+    "file": "gear_goggles.4k.webp"
+   },
+   "native": [
+    828,
+    454
+   ],
+   "src": "gen2/g_goggles"
+  },
+  "build_ice_block": {
+   "w": 1080,
+   "h": 723,
+   "bytes": 37374,
+   "v": "da6bc793",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1447,
+    "bytes": 89960,
+    "v": "e01e38b1",
+    "file": "build_ice_block.4k.webp"
+   },
+   "native": [
+    866,
+    580
+   ],
+   "src": "gen2/snowblock34"
+  },
+  "build_igloo_door": {
+   "w": 1080,
+   "h": 635,
+   "bytes": 35622,
+   "v": "d6a1e8eb",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1270,
+    "bytes": 82950,
+    "v": "22a0237a",
+    "file": "build_igloo_door.4k.webp"
+   },
+   "native": [
+    1036,
+    609
+   ],
+   "src": "gen2/tunnel"
+  },
+  "ride_sled": {
+   "w": 1400,
+   "h": 423,
+   "bytes": 131664,
+   "v": "911313ff",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "facing": "right",
+   "hd": {
+    "w": 2800,
+    "h": 846,
+    "bytes": 184162,
+    "v": "c713856a",
+    "file": "ride_sled.4k.webp"
+   },
+   "native": [
+    1400,
+    423
+   ],
+   "hdFringePct": 0.011
+  },
+  "build_igloo_done": {
+   "w": 1000,
+   "h": 731,
+   "bytes": 130322,
+   "v": "72e6eef9",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0
+  },
+  "gear_hat": {
+   "w": 846,
+   "h": 1079,
+   "bytes": 91516,
+   "v": "c5dff585",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.011,
+   "hd": {
+    "w": 1693,
+    "h": 2160,
+    "bytes": 200262,
+    "v": "0363c730",
+    "file": "gear_hat.4k.webp"
+   },
+   "native": [
+    522,
+    666
+   ],
+   "src": "gen2/g_hat"
+  },
+  "gear_mittens": {
+   "w": 1080,
+   "h": 890,
+   "bytes": 55034,
+   "v": "5a3aa222",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.063,
+   "hd": {
+    "w": 2160,
+    "h": 1781,
+    "bytes": 124712,
+    "v": "d980918c",
+    "file": "gear_mittens.4k.webp"
+   },
+   "native": [
+    752,
+    620
+   ],
+   "src": "gen2/g_mittens"
+  },
+  "gear_scarf": {
+   "w": 1080,
+   "h": 768,
+   "bytes": 127262,
+   "v": "4796dfe8",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 3.006,
+   "hd": {
+    "w": 2160,
+    "h": 1537,
+    "bytes": 280816,
+    "v": "b41e6531",
+    "file": "gear_scarf.4k.webp"
+   },
+   "native": [
+    932,
+    663
+   ],
+   "src": "gen2/g_scarf"
+  },
+  "gear_map": {
+   "w": 1080,
+   "h": 581,
+   "bytes": 75844,
+   "v": "10ee649e",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.016,
+   "hd": {
+    "w": 2160,
+    "h": 1163,
+    "bytes": 177880,
+    "v": "cadca8dd",
+    "file": "gear_map.4k.webp"
+   },
+   "native": [
+    1007,
+    542
+   ],
+   "src": "gen2/g_map"
+  },
+  "gear_lamp": {
+   "w": 1080,
+   "h": 749,
+   "bytes": 47098,
+   "v": "f19b88cd",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1498,
+    "bytes": 108784,
+    "v": "207bec42",
+    "file": "gear_lamp.4k.webp"
+   },
+   "native": [
+    636,
+    441
+   ],
+   "src": "gen2/g_lamp"
+  },
+  "gear_cocoa": {
+   "w": 1078,
+   "h": 1080,
+   "bytes": 58922,
+   "v": "d1c42de4",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.015,
+   "hd": {
+    "w": 2157,
+    "h": 2160,
+    "bytes": 180134,
+    "v": "304832fd",
+    "file": "gear_cocoa.4k.webp"
+   },
+   "native": [
+    658,
+    659
+   ],
+   "src": "gen2/g_cocoa"
+  },
+  "ride_dogs": {
+   "w": 1080,
+   "h": 1045,
+   "bytes": 161058,
+   "v": "88322bc0",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 2090,
+    "bytes": 210196,
+    "v": "e2e55279",
+    "file": "ride_dogs.4k.webp"
+   },
+   "native": [
+    1080,
+    1045
+   ],
+   "hdFringePct": 0.043
+  },
+  "ride_pov": {
+   "w": 1920,
+   "h": 1080,
+   "bytes": 147864,
+   "v": "f6d254be",
+   "kind": "foreground",
+   "alpha": true,
+   "greenFringePct": 0.073,
+   "topFrac": 0.455,
+   "hd": {
+    "w": 3840,
+    "h": 2160,
+    "bytes": 299834,
+    "v": "b2251a2d",
+    "file": "ride_pov.4k.webp"
+   },
+   "native": [
+    1280,
+    720
+   ],
+   "src": "gen2/ride_pov"
+  },
+  "ride_snow": {
+   "w": 2048,
+   "h": 2048,
+   "bytes": 174146,
+   "v": "6ae03e11",
+   "kind": "texture",
+   "alpha": false,
+   "greenFringePct": 0.0
+  },
+  "gear_fishrod": {
+   "w": 1080,
+   "h": 927,
+   "bytes": 37366,
+   "v": "a38c2b0d",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.156,
+   "hd": {
+    "w": 2160,
+    "h": 1855,
+    "bytes": 92302,
+    "v": "3d38d34e",
+    "file": "gear_fishrod.4k.webp"
+   },
+   "native": [
+    694,
+    596
+   ],
+   "src": "gen2/g_rod"
+  },
+  "act_ice_patch": {
+   "w": 1080,
+   "h": 727,
+   "bytes": 73170,
+   "v": "a439a1c7",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1454,
+    "bytes": 155860,
+    "v": "7d54666b",
+    "file": "act_ice_patch.4k.webp"
+   },
+   "native": [
+    866,
+    583
+   ],
+   "src": "gen2/icepatch"
+  },
+  "prop_bobber": {
+   "w": 666,
+   "h": 1081,
+   "bytes": 25068,
+   "v": "0e5c239e",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.141,
+   "hd": {
+    "w": 1331,
+    "h": 2160,
+    "bytes": 60204,
+    "v": "1c6acdb5",
+    "file": "prop_bobber.4k.webp"
+   },
+   "native": [
+    371,
+    602
+   ],
+   "src": "gen2/bobber"
+  },
+  "prop_bucket": {
+   "w": 1080,
+   "h": 941,
+   "bytes": 57782,
+   "v": "e05e3d61",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1882,
+    "bytes": 135092,
+    "v": "60959232",
+    "file": "prop_bucket.4k.webp"
+   },
+   "native": [
+    645,
+    562
+   ],
+   "src": "gen2/bucket"
+  },
+  "build_igloo_door_lit": {
+   "w": 1080,
+   "h": 635,
+   "bytes": 33690,
+   "v": "7da575ec",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 2160,
+    "h": 1270,
+    "bytes": 86286,
+    "v": "2c6b577c",
+    "file": "build_igloo_door_lit.4k.webp"
+   },
+   "native": [
+    1036,
+    609
+   ],
+   "src": "build_igloo_door + lamplight"
+  },
+  "build_snowface_1": {
+   "w": 320,
+   "h": 160,
+   "bytes": 10162,
+   "v": "92ec0dd1",
+   "kind": "texture",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 640,
+    "h": 320,
+    "bytes": 21310,
+    "v": "31939c8c",
+    "file": "build_snowface_1.4k.webp"
+   },
+   "native": [
+    500,
+    250
+   ],
+   "src": "gen2/snow_tex (2x Real-ESRGAN) + block mask/bevel"
+  },
+  "build_snowface_2": {
+   "w": 320,
+   "h": 160,
+   "bytes": 10884,
+   "v": "ec0aa23e",
+   "kind": "texture",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 640,
+    "h": 320,
+    "bytes": 23014,
+    "v": "079fdb20",
+    "file": "build_snowface_2.4k.webp"
+   },
+   "native": [
+    500,
+    250
+   ],
+   "src": "gen2/snow_tex (2x Real-ESRGAN) + block mask/bevel"
+  },
+  "build_snowface_3": {
+   "w": 320,
+   "h": 160,
+   "bytes": 9386,
+   "v": "eee2f6ff",
+   "kind": "texture",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 640,
+    "h": 320,
+    "bytes": 19602,
+    "v": "70719213",
+    "file": "build_snowface_3.4k.webp"
+   },
+   "native": [
+    500,
+    250
+   ],
+   "src": "gen2/snow_tex (2x Real-ESRGAN) + block mask/bevel"
+  },
+  "build_snowface_4": {
+   "w": 320,
+   "h": 160,
+   "bytes": 10298,
+   "v": "d83e8418",
+   "kind": "texture",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 640,
+    "h": 320,
+    "bytes": 21596,
+    "v": "2466b85e",
+    "file": "build_snowface_4.4k.webp"
+   },
+   "native": [
+    500,
+    250
+   ],
+   "src": "gen2/snow_tex (2x Real-ESRGAN) + block mask/bevel"
+  },
+  "build_snowface_5": {
+   "w": 320,
+   "h": 160,
+   "bytes": 9788,
+   "v": "b408be62",
+   "kind": "texture",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 640,
+    "h": 320,
+    "bytes": 20402,
+    "v": "f2727d09",
+    "file": "build_snowface_5.4k.webp"
+   },
+   "native": [
+    500,
+    250
+   ],
+   "src": "gen2/snow_tex (2x Real-ESRGAN) + block mask/bevel"
+  },
+  "build_snowface_6": {
+   "w": 320,
+   "h": 160,
+   "bytes": 9888,
+   "v": "45072511",
+   "kind": "texture",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 640,
+    "h": 320,
+    "bytes": 21136,
+    "v": "30bdab0a",
+    "file": "build_snowface_6.4k.webp"
+   },
+   "native": [
+    500,
+    250
+   ],
+   "src": "gen2/snow_tex (2x Real-ESRGAN) + block mask/bevel"
+  },
+  "build_snowcap": {
+   "w": 320,
+   "h": 160,
+   "bytes": 7974,
+   "v": "4fb07124",
+   "kind": "texture",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 640,
+    "h": 320,
+    "bytes": 17626,
+    "v": "b0083fe8",
+    "file": "build_snowcap.4k.webp"
+   },
+   "native": [
+    640,
+    320
+   ],
+   "src": "gen2/snow_tex (2x Real-ESRGAN) + key-block mask"
+  },
+  "badge_medal": {
+   "w": 452,
+   "h": 640,
+   "bytes": 48484,
+   "v": "12641a6e",
+   "kind": "prop",
+   "alpha": true,
+   "greenFringePct": 0.0,
+   "hd": {
+    "w": 989,
+    "h": 1400,
+    "bytes": 124920,
+    "v": "a94c3693",
+    "file": "badge_medal.4k.webp"
+   },
+   "native": [
+    477,
+    675
+   ],
+   "src": "gen2/badge_medal"
+  }
+ },
+ "missing": [],
+ "strip": {
+  "file": "strip.webp",
+  "w": 6720,
+  "h": 1080,
+  "bytes": 401104,
+  "v": "daa3f62c",
+  "wallW": 1920,
+  "overlap": 240,
+  "seams": [
+   [
+    0,
+    1,
+    13.6,
+    1.0
+   ],
+   [
+    1,
+    2,
+    34.3,
+    1.12
+   ],
+   [
+    2,
+    3,
+    35.3,
+    1.19
+   ],
+   [
+    3,
+    0,
+    57.3,
+    0.83
+   ]
+  ],
+  "hd": {
+   "w": 13440,
+   "h": 2160,
+   "bytes": 679046,
+   "v": "45121041",
+   "file": "strip-4k.webp"
+  }
+ },
+ "video": {
+  "intro-4k.mp4": {
+   "bytes": 29971682,
+   "v": "f15a4a92"
+  },
+  "intro-1080.mp4": {
+   "bytes": 12516842,
+   "v": "b688fb04"
+  },
+  "poster.jpg": {
+   "bytes": 314185,
+   "v": "f6273526"
+  },
+  "ride-day-1080.mp4": {
+   "bytes": 3842102,
+   "v": "74326873"
+  },
+  "ride-day-4k.mp4": {
+   "bytes": 10922033,
+   "v": "80755465"
+  },
+  "ride-day.jpg": {
+   "bytes": 103843,
+   "v": "a9d2c47e"
+  },
+  "ride-aurora-1080.mp4": {
+   "bytes": 3042314,
+   "v": "b72ddca0"
+  },
+  "ride-aurora.jpg": {
+   "bytes": 52359,
+   "v": "c4e4e52d"
+  },
+  "ride-aurora-4k.mp4": {
+   "bytes": 8702752,
+   "v": "fc8f3cf3"
+  }
+ },
+ "totalImageBytes": 4924868
+}

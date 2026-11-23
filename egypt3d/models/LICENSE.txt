@@ -1,0 +1,14 @@
+Sahara 3D models - all CC0 1.0 (Public Domain). Stored locally (unchanged files); low-poly meshes are softened at load with creased normals.
+camel.glb       <- "Camel" - Pixor library, https://pixor.art/library/desert/camel/ - CC0 1.0 (rigged, Walk clip)
+turtle.glb      <- "Turtle" - Pixor library, https://pixor.art/library/creatures/turtle/ - CC0 1.0 (tinted desert-tortoise tan in code)
+scarab.glb      <- "Scarab" - Pixor library, https://pixor.art/library/desert/scarab/ - CC0 1.0
+lizard.glb      <- "Lizard" - Pixor library, https://pixor.art/library/desert/lizard/ - CC0 1.0 (reserved for phase 3 uromastyx)
+palm-tree.glb   <- "Palm tree" - Pixor library, https://pixor.art/library/nature/palm-tree/ - CC0 1.0 (Sway clip)
+palm-small.glb  <- "Palm small" - Pixor library, https://pixor.art/library/trees/palm-small/ - CC0 1.0 (seedling + young palm stages)
+desert-tent.glb <- "Desert tent" - Pixor library, https://pixor.art/library/desert/desert-tent/ - CC0 1.0 (canvas colour swapped in code)
+desert-well.glb <- "Desert well" - Pixor library, https://pixor.art/library/desert/desert-well/ - CC0 1.0
+water-jar.glb   <- "Water jar" - Pixor library, https://pixor.art/library/desert/water-jar/ - CC0 1.0
+campfire.glb    <- "Camp Fire Rocks" by reyshapes, https://poly.pizza/m/5sjLUck886 - CC0 1.0
+Kid, trader, fox (fennec base, sandy tint + big ears added in code): shared from ../../arctic3d/models (Grab3D CC0, see that LICENSE.txt).
+Stall/crate/barrel: shared from ../../reef3d/models (Quaternius CC0). Hoopoe, date basket, sign, story stones, camel post, mud-brick pieces: procedural (rounded geometry).
+Sand + ripple maps are drawn procedurally at load. Rocks use ../../arctic3d/tex/rock_* (CC0).

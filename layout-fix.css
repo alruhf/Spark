@@ -1,0 +1,11 @@
+/* layout fixes (tester pass, Oct 2026): page headings start below the fixed header, and the Back button sits under the
+   header instead of on top of the Spark Studio logo. Savannah, Station and the region areas keep their own layouts. */
+body:not(.spark-savannah):not(.spark-area):not(.spark-safari):not(.spark-station) main{padding-top:64px}
+body:not(.spark-savannah):not(.spark-area):not(.spark-safari):not(.spark-station) main:has(.earth-toolbar){padding-top:116px}
+body:not(.spark-savannah):not(.spark-station) .earth-toolbar{top:60px}
+body:not(.spark-savannah):not(.spark-station) .earth-back{min-height:44px}
+/* ages 4-6: every map pin is a 76 px target */
+body.sg-bk .continent-panel .continent-region,body.sg-bk .africa-region{min-width:76px;min-height:76px}
+html{scroll-padding-top:64px}
+/* band k (ages 4-6): Home and Back are full-size touch targets */
+body.sg-bk #homeBtn,body.sg-bk:not(.x1):not(.x2):not(.x3) .earth-back,body.sg-bk .earth-back{min-width:96px;min-height:76px;font-size:18px;padding:10px 18px;display:inline-flex;align-items:center;justify-content:center}

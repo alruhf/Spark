@@ -1,0 +1,671 @@
+{
+ "v": 1,
+ "region": "arctic",
+ "title": "Arctic ice camp",
+ "start": {
+  "spot": 0,
+  "x": 50
+ },
+ "prices": {
+  "local": 1.0,
+  "arctic": 1.0,
+  "sahara": 2.5,
+  "reef": 2.0
+ },
+ "ents": [
+  {
+   "id": "woodpile",
+   "type": "woodpile",
+   "pos": {
+    "spot": 0,
+    "x": 12.5,
+    "xn": 3,
+    "y": 66,
+    "h": 0.09
+   },
+   "sprite": {
+    "asset": "sbx/woodpile"
+   },
+   "label": {
+    "k": "Wood pile"
+   }
+  },
+  {
+   "id": "igloo",
+   "type": "igloo",
+   "pos": {
+    "spot": 0,
+    "x": 25.5,
+    "xn": 17,
+    "y": 67,
+    "h": 0.2
+   },
+   "sprite": {
+    "asset": "build_igloo_done"
+   },
+   "label": {
+    "k": "The igloo"
+   },
+   "init": {
+    "built": false,
+    "blocks": 0,
+    "slots": {}
+   }
+  },
+  {
+   "id": "kennel",
+   "type": "kennel",
+   "pos": {
+    "spot": 0,
+    "x": 37.5,
+    "xn": 30,
+    "y": 74,
+    "h": 0.16
+   },
+   "sprite": {
+    "asset": "sbx/kennel"
+   },
+   "label": {
+    "k": "The dog house"
+   },
+   "init": {
+    "straw": false,
+    "wind": false,
+    "colour": null
+   }
+  },
+  {
+   "id": "brush",
+   "type": "tool",
+   "pos": {
+    "spot": 0,
+    "x": 31,
+    "xn": 31,
+    "y": 93,
+    "h": 0.07,
+    "z": 5
+   },
+   "sprite": {
+    "asset": "sbx/brush"
+   },
+   "label": {
+    "k": "Dog brush"
+   },
+   "tool": "brush"
+  },
+  {
+   "id": "husky1",
+   "type": "husky",
+   "pos": {
+    "spot": 0,
+    "x": 46,
+    "xn": 38,
+    "y": 90,
+    "h": 0.3
+   },
+   "sprite": {
+    "asset": "sbx/husky_1"
+   },
+   "label": {
+    "k": "A husky dog"
+   },
+   "animal": {
+    "species": "husky",
+    "kind": "companion",
+    "he": true,
+    "names": [
+     "snowball",
+     "star",
+     "moon"
+    ],
+    "q": "name_q"
+   },
+   "init": {
+    "name": null,
+    "mood": "happy",
+    "hunger": 1,
+    "tired": false,
+    "brushed": 0
+   }
+  },
+  {
+   "id": "husky2",
+   "type": "husky",
+   "pos": {
+    "spot": 0,
+    "x": 57,
+    "xn": 56,
+    "y": 93,
+    "h": 0.27
+   },
+   "sprite": {
+    "asset": "sbx/husky_2"
+   },
+   "label": {
+    "k": "A husky dog"
+   },
+   "animal": {
+    "species": "husky",
+    "kind": "companion",
+    "he": false,
+    "names": [
+     "cloud",
+     "pebble",
+     "berry"
+    ],
+    "q": "name_q2"
+   },
+   "init": {
+    "name": null,
+    "mood": "happy",
+    "hunger": 0,
+    "tired": false,
+    "brushed": 0
+   }
+  },
+  {
+   "id": "husky3",
+   "type": "husky",
+   "pos": {
+    "spot": 0,
+    "x": 68,
+    "xn": 66,
+    "y": 89,
+    "h": 0.27
+   },
+   "sprite": {
+    "asset": "sbx/husky_3"
+   },
+   "label": {
+    "k": "A husky dog"
+   },
+   "animal": {
+    "species": "husky",
+    "kind": "companion",
+    "he": true,
+    "names": [
+     "star",
+     "pebble",
+     "moon",
+     "snowball",
+     "cloud",
+     "berry"
+    ],
+    "q": "name_q3"
+   },
+   "init": {
+    "name": null,
+    "mood": "happy",
+    "hunger": 0,
+    "tired": false,
+    "brushed": 0
+   }
+  },
+  {
+   "id": "bucket",
+   "type": "bucket",
+   "pos": {
+    "spot": 0,
+    "x": 76.5,
+    "xn": 47,
+    "y": 95,
+    "h": 0.12,
+    "z": 6
+   },
+   "sprite": {
+    "asset": "prop_bucket"
+   },
+   "label": {
+    "k": "Fish bucket"
+   }
+  },
+  {
+   "id": "fishhole",
+   "type": "fishhole",
+   "pos": {
+    "spot": 0,
+    "x": 84,
+    "xn": 76,
+    "y": 84,
+    "h": 0.14
+   },
+   "sprite": {
+    "asset": "act_ice_hole"
+   },
+   "label": {
+    "k": "Fishing hole"
+   },
+   "tap": {
+    "opens": "fish",
+    "sfx": "splash"
+   }
+  },
+  {
+   "id": "sled",
+   "type": "sled",
+   "pos": {
+    "spot": 0,
+    "x": 104,
+    "xn": 88,
+    "y": 80,
+    "h": 0.15
+   },
+   "sprite": {
+    "asset": "sbx/sled_empty"
+   },
+   "label": {
+    "k": "The dog sled"
+   },
+   "tap": {
+    "opens": "sled",
+    "sfx": "whoosh"
+   }
+  },
+  {
+   "id": "trader",
+   "type": "trader",
+   "pos": {
+    "spot": 0,
+    "x": 115,
+    "xn": 98,
+    "y": 86,
+    "h": 0.3
+   },
+   "sprite": {
+    "asset": "sbx/trader"
+   },
+   "label": {
+    "k": "The trader"
+   },
+   "tap": {
+    "opens": "post",
+    "sfx": "happy"
+   }
+  },
+  {
+   "id": "post",
+   "type": "post",
+   "pos": {
+    "spot": 0,
+    "x": 127.5,
+    "xn": 108,
+    "y": 64,
+    "h": 0.15
+   },
+   "sprite": {
+    "asset": "sbx/trading_post"
+   },
+   "label": {
+    "k": "The trading post"
+   },
+   "tap": {
+    "opens": "post",
+    "sfx": "click"
+   }
+  },
+  {
+   "id": "jobboard",
+   "type": "jobboard",
+   "pos": {
+    "spot": 1,
+    "x": 56,
+    "xn": 30,
+    "y": 80,
+    "h": 0.28
+   },
+   "sprite": {
+    "asset": "sbx/jobboard"
+   },
+   "label": {
+    "k": "The job board"
+   },
+   "tap": {
+    "opens": "sled",
+    "sfx": "click"
+   }
+  },
+  {
+   "id": "fox_camp",
+   "type": "fox",
+   "pos": {
+    "spot": 0,
+    "x": 13,
+    "xn": 4,
+    "y": 55,
+    "h": 0.07,
+    "z": -1
+   },
+   "sprite": {
+    "asset": "sbx/fox_peek"
+   },
+   "label": {
+    "k": "A fox"
+   },
+   "init": {
+    "trust": 0,
+    "near": 0
+   }
+  },
+  {
+   "id": "fox_den",
+   "type": "foxden",
+   "pos": {
+    "spot": 2,
+    "x": 46,
+    "xn": 46,
+    "y": 71,
+    "h": 0.1
+   },
+   "sprite": {
+    "asset": "sbx/fox_sit"
+   },
+   "label": {
+    "k": "A fox"
+   },
+   "tap": {
+    "opens": "photo",
+    "sfx": "pop"
+   }
+  },
+  {
+   "id": "seal1",
+   "type": "seal",
+   "pos": {
+    "spot": 3,
+    "x": 58,
+    "xn": 58,
+    "y": 74,
+    "h": 0.09
+   },
+   "sprite": {
+    "asset": "animal_seal"
+   },
+   "label": {
+    "k": "A seal"
+   }
+  },
+  {
+   "id": "seal2",
+   "type": "seal",
+   "pos": {
+    "spot": 3,
+    "x": 70,
+    "xn": 66,
+    "y": 79,
+    "h": 0.11
+   },
+   "sprite": {
+    "asset": "animal_seal"
+   },
+   "label": {
+    "k": "A seal"
+   }
+  },
+  {
+   "id": "pup_camp",
+   "type": "pup",
+   "pos": {
+    "spot": 1,
+    "x": 42,
+    "xn": 24,
+    "y": 86,
+    "h": 0.15
+   },
+   "sprite": {
+    "asset": "sbx/pup"
+   },
+   "label": {
+    "k": "The pup"
+   }
+  },
+  {
+   "id": "rack_camp",
+   "type": "rack",
+   "pos": {
+    "spot": 1,
+    "x": 80,
+    "xn": 62,
+    "y": 74,
+    "h": 0.2
+   },
+   "sprite": {
+    "asset": "sbx/fish_rack"
+   },
+   "label": {
+    "k": "Fish rack"
+   }
+  },
+  {
+   "id": "kits_camp",
+   "type": "kits",
+   "pos": {
+    "spot": 2,
+    "x": 64,
+    "xn": 70,
+    "y": 78,
+    "h": 0.12
+   },
+   "sprite": {
+    "asset": "sbx/kits_all"
+   },
+   "label": {
+    "k": "The fox kits"
+   }
+  }
+ ],
+ "shop": [
+  "dec_bed",
+  "dec_lamp",
+  "dec_thermos",
+  "dec_pic",
+  "dec_huskypic",
+  "dec_shelf",
+  "dec_plant",
+  "dec_hat",
+  "dec_rug",
+  "dec_stove",
+  "kennel_straw",
+  "kennel_windbreak",
+  "hat",
+  "mittens",
+  "cocoa"
+ ],
+ "startKit": {
+  "brush": 1,
+  "rod": 1,
+  "camera": 1,
+  "icedrill": 1
+ },
+ "warmth": {
+  "outside": -30,
+  "shell": -14,
+  "people": 4,
+  "note": "Still air in snow walls insulates; a sunken tunnel traps cold air; a lamp adds heat."
+ },
+ "jobs": [
+  {
+   "id": "hut",
+   "dest": "hut",
+   "word": "HUT",
+   "parcel": "parcel",
+   "kg": 20,
+   "pay": {
+    "k": 3,
+    "e": 4,
+    "u": 5,
+    "t": 5
+   },
+   "routes": {
+    "short": {
+     "min": 12,
+     "thin": true
+    },
+    "ridge": {
+     "min": 20
+    }
+   }
+  },
+  {
+   "id": "post",
+   "dest": "postoffice",
+   "word": "POST",
+   "parcel": "parcel",
+   "kg": 35,
+   "pay": {
+    "k": 3,
+    "e": 4,
+    "u": 6,
+    "t": 8
+   },
+   "routes": {
+    "short": {
+     "min": 15,
+     "thin": false
+    },
+    "ridge": {
+     "min": 26
+    }
+   }
+  }
+ ],
+ "sparks": {
+  "fish": {
+   "difficulty": {
+    "k": {
+     "order": 3,
+     "first": 1
+    },
+    "e": {
+     "order": 4
+    },
+    "u": {
+     "order": 3,
+     "holes": [
+      6,
+      14,
+      22
+     ]
+    },
+    "t": {
+     "order": 3,
+     "holes": [
+      8,
+      12,
+      25
+     ]
+    },
+    "tierScale": {
+     "easy": 0.67,
+     "stretch": 1.34,
+     "knobs": [
+      "order"
+     ]
+    }
+   }
+  },
+  "sled": {
+   "difficulty": {
+    "k": {
+     "len": 22,
+     "bumps": 4
+    },
+    "e": {
+     "len": 26,
+     "bumps": 5
+    },
+    "u": {
+     "len": 28,
+     "bumps": 6
+    },
+    "t": {
+     "len": 30,
+     "bumps": 7
+    }
+   }
+  },
+  "post": {
+   "difficulty": {
+    "k": {
+     "perPage": 2
+    },
+    "e": {
+     "perPage": 3
+    },
+    "u": {
+     "perPage": 4
+    },
+    "t": {
+     "perPage": 4
+    }
+   }
+  },
+  "igloo": {
+   "difficulty": {
+    "k": {
+     "blocks": 6
+    },
+    "e": {
+     "blocks": 8
+    },
+    "u": {
+     "blocks": 10
+    },
+    "t": {
+     "blocks": 12
+    }
+   }
+  },
+  "photo": {
+   "difficulty": {
+    "k": {
+     "stillMs": 3000
+    },
+    "e": {
+     "stillMs": 3000
+    },
+    "u": {
+     "stillMs": 3000
+    },
+    "t": {
+     "stillMs": 3000
+    }
+   }
+  }
+ },
+ "chatIdeas": [
+  {
+   "skill": "math.count.10",
+   "text": "At dinner, count something together: \"How many peas are on your plate? Let's count them one by one.\""
+  },
+  {
+   "skill": "sci.insulation",
+   "text": "Ask: \"Why do you think a blanket keeps you warm? What would make the igloo warmer?\""
+  },
+  {
+   "skill": "econ.choice",
+   "text": "Ask: \"If you could only buy one thing today, which would you pick, and why?\""
+  },
+  {
+   "skill": "read.decode.cvc",
+   "text": "Find a short word on a sign or a box and sound it out together: h-u-t, hut."
+  },
+  {
+   "skill": "care.patience",
+   "text": "Ask: \"How did you get the fox to come closer?\" (Waiting quietly is a real wildlife-watching skill.)"
+  },
+  {
+   "skill": "sci.ice.thickness",
+   "text": "Ask: \"How did you know the ice was safe?\" Real ice fishers check the thickness first."
+  }
+ ],
+ "video": {
+  "intro-8s-1080.mp4": {
+   "v": "9aca40a0",
+   "dur": 7.29
+  },
+  "intro-8s-4k.mp4": {
+   "v": "59178811",
+   "dur": 7.29
+  }
+ }
+}

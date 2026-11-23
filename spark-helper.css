@@ -1,0 +1,75 @@
+/* Allen 11/13: the top-bar Ask button is removed; keep the rule hidden if an old build leaves one in the DOM */
+#sparkAskBtn,.spk-btn{display:none!important}
+/* Spark step 1: green playable rings, Spark highlight glow, guide placeholder. Locked places get NO styles here (they look as today). */
+a.body.spark-green{outline:3px solid #3ee07a;outline-offset:5px}
+.africa-panel .africa-region.spark-green .africa-region-icon,.continent-panel .continent-region.spark-green .continent-region-icon{outline:3px solid #3ee07a;outline-offset:2px}
+.spark-green[data-spark="playable"] strong{box-shadow:0 0 0 2px #3ee07a}
+@keyframes spkGlow{0%,100%{box-shadow:0 0 0 3px #fff6,0 0 12px 4px #ffe46b}50%{box-shadow:0 0 0 6px #fff9,0 0 28px 12px #ffe46b}}
+@keyframes spkTag{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+.spark-glow{animation:spkGlow 1.1s ease-in-out infinite;z-index:30}
+a.body.spark-glow{border-radius:50%}
+.cont.spark-glow{outline:3px solid #ffe46b;border-radius:8px}
+.spark-glow .africa-region-icon,.spark-glow .continent-region-icon{animation:spkGlow 1.1s ease-in-out infinite}
+.africa-panel .africa-region.spark-glow,.continent-panel .continent-region.spark-glow{animation:none;box-shadow:none}
+.spark-glow strong{animation:spkTag .9s ease-in-out infinite;display:inline-block}
+.spk-btn{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:140;height:34px;padding:0 11px 0 7px;border-radius:17px;border:2px solid #fff;background:#1f9d5c;color:#fff;font:800 14px/1 system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;align-items:center;gap:4px;box-shadow:0 2px 8px #0007;cursor:pointer;touch-action:manipulation}
+.spk-btn[aria-expanded="true"]{background:#13703f}
+.spk-paw{font-size:16px}
+.spk-cap[hidden]{display:none}
+.spk-cap{position:fixed;top:46px;left:50%;transform:translateX(-50%);z-index:2147483000;max-width:min(360px,calc(100vw - 24px));background:#0f2238ee;color:#fff;border:2px solid #3ee07a;border-radius:12px;padding:7px 11px;font:600 14px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;pointer-events:none;box-shadow:0 6px 18px #0008}
+.spk-cap b{color:#8ff0b3;margin-right:6px}
+.tools .spk-btn.in-bar{position:relative;top:auto;left:auto;transform:none;z-index:auto;height:32px;padding:0 10px 0 6px;border:2px solid #fff;border-radius:16px;background:#1f9d5c;align-self:center}
+.tools .spk-btn.in-bar[aria-expanded="true"]{background:#13703f}
+@media(max-width:480px){.tools .spk-btn.in-bar{width:34px;height:34px;padding:0;justify-content:center}.tools .spk-btn.in-bar .spk-lbl{display:none}}
+/* spark34: in Egypt never show the #sparkSay / .spk-cap texting window (Ava + a short .eg3d-bub is enough).
+   Elsewhere keep the compact caption; on phones <=390px spark-voice.js also suppresses it. */
+#sparkSay[hidden],.spk-cap[hidden]{display:none}
+body:has(.eg3d-root:not([hidden])) #sparkSay,
+body:has(.eg3d-root:not([hidden])) .spk-cap{display:none!important}
+/* spark35: Arctic Ask me captions stay visible at desktop widths */
+body.sbx-on:not(:has(.eg3d-root:not([hidden]))) #sparkSay:not([hidden]),
+body.sbx-on:not(:has(.eg3d-root:not([hidden]))) .spk-cap:not([hidden]){display:block!important;z-index:2147483000}
+@media(max-width:390px){
+  #sparkSay,.spk-cap{display:none}
+  #sparkSay[hidden],.spk-cap[hidden]{display:none}
+}
+/* Spark step 2: the 3D challenge beacon (spark-level.js). Soft gold, slow pulse, never blocks a tap. Anchored to the challenge's 3D spot. */
+.spk-beacon{position:fixed;left:0;top:0;z-index:120;pointer-events:none;width:0;height:0;will-change:transform}
+.spk-beacon>*{position:absolute;pointer-events:none}
+.spk-bcol{left:-15px;bottom:0;width:30px;height:124px;border-radius:15px 15px 6px 6px;background:linear-gradient(to top,#fffbe0,#ffd23f 55%,#ffd23f00);box-shadow:0 0 0 3px #6b3d00b0,0 0 22px 6px #ffd23fcc;animation:spkCol 1.6s ease-in-out infinite;transform-origin:50% 100%}
+.spk-bring{left:-44px;top:-15px;width:88px;height:30px;border-radius:50%;border:5px solid #ffd23f;box-shadow:0 0 0 3px #4a2a00c0,0 0 18px 6px #ffd23fcc,inset 0 0 10px #fff8;animation:spkRing 1.6s ease-out infinite}
+.spk-bring.r2{animation-delay:.8s}
+.spk-bstar{left:-24px;top:-176px;width:48px;height:48px;border-radius:50%;box-sizing:border-box;border:4px solid #ffd23f;background:#10243ee6;font-size:28px;line-height:40px;text-align:center;box-shadow:0 0 0 3px #fff8,0 0 18px 6px #ffd23f;animation:spkBob 1.6s ease-in-out infinite}
+.spk-barrow{display:none}
+@keyframes spkCol{0%,100%{opacity:.8;transform:scaleY(.92)}50%{opacity:1;transform:scaleY(1.05)}}
+@keyframes spkRing{0%{opacity:1;transform:scale(.6)}70%{opacity:.7}100%{opacity:0;transform:scale(1.5)}}
+@keyframes spkBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes spkEdge{0%,100%{box-shadow:0 0 0 3px #fff8,0 0 12px 4px #ffe46b}50%{box-shadow:0 0 0 6px #fffa,0 0 26px 12px #ffe46b}}
+/* off screen: a gold disc on the screen edge with an arrow toward the spot */
+.spk-beacon.edge .spk-bcol,.spk-beacon.edge .spk-bring.r2{display:none}
+.spk-beacon.edge .spk-bring{left:-30px;top:-30px;width:60px;height:60px;border:4px solid #ffe46b;background:#10243ee0;animation:spkEdge 1.4s ease-in-out infinite}
+.spk-beacon.edge .spk-bstar{left:-18px;top:-18px;width:36px;height:36px;border:0;background:none;box-shadow:none;font-size:28px;line-height:36px;animation:none}
+.spk-beacon.edge .spk-barrow{display:block;left:-13px;top:-56px;width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-bottom:20px solid #ffe46b;transform-origin:13px 56px;transform:rotate(var(--ang,0deg));filter:drop-shadow(0 0 4px #000a)}
+.spk-hubglow{animation:spkGlow 1.1s ease-in-out infinite!important;border-radius:16px}
+@media(max-width:480px){.spk-bcol{height:96px;width:24px;left:-12px}.spk-bring{left:-34px;top:-12px;width:68px;height:24px}.spk-bstar{left:-20px;top:-140px;width:40px;height:40px;font-size:22px;line-height:32px}
+  .spk-beacon.edge .spk-bring{left:-25px;top:-25px;width:50px;height:50px}.spk-beacon.edge .spk-barrow{top:-50px;transform-origin:13px 50px}}
+@media(prefers-reduced-motion:reduce){.spk-bcol,.spk-bring,.spk-bstar{animation:none}.spk-bring.r2{display:none}}
+/* Spark talk: the "Ask me" tag next to Spark (no Ask panel since spark16, Allen 11/15 10:20 PM) */
+.spk-askme{position:fixed;z-index:152;pointer-events:auto;/* spark23: the badge itself must receive the tap (pointer-events:none let taps miss Spark and do nothing) */border:2px solid #fff;border-radius:16px;background:#1f9d5c;color:#fff;font:800 13px/1 system-ui,sans-serif;padding:6px 10px;box-shadow:0 2px 8px #0007;cursor:pointer;white-space:nowrap}
+.spk-askme[hidden]{display:none}
+.spark-companion.spk-cheer{animation:spkCheer 1.3s ease-in-out}
+@keyframes spkCheer{0%,100%{transform:translateY(0)}20%{transform:translateY(-18px) rotate(-6deg)}40%{transform:translateY(0)}60%{transform:translateY(-12px) rotate(6deg)}80%{transform:translateY(0)}}
+@media(max-width:480px){.spk-askme{font-size:12px;padding:5px 8px}}
+@media(prefers-reduced-motion:reduce){.spark-companion.spk-cheer{animation:none}}
+
+/* Allen 11/13: hide leftover top Ask button */
+#sparkAskBtn,.spk-btn{display:none!important}
+
+/* spark17 (Tester 11/16): on the Earth globe Spark's caption sits top-left under the "Earth" text, not over the top of the globe */
+@media(min-width:391px){body:has(#world.on):has(#earthMap:not(.hidden)) .spk-cap{left:16px;top:170px;transform:none;max-width:min(300px,max(180px,calc(50vw - 200px)))}}
+
+/* spark17 (Tester: phone Solar home - Saturn's ring covered the Venus label, only "nus" showed): on phones Venus sits above Saturn and its label goes over the planet */
+@media (max-width:600px){#home .body.venus{z-index:22}#home .body.venus:after{top:auto;bottom:calc(100% + 6px)}}
+
+/* s39: Ask me sat on the Let's go button on the 390 avatar setup (badge z-index was above the overlay) */
+body:has(.ks-ov) .spk-askme{display:none!important}

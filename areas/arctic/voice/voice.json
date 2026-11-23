@@ -1,0 +1,1008 @@
+{
+ "v": 1,
+ "voice": "placeholder sample A (edge-tts en-US-AvaNeural -10%)",
+ "lines": {
+  "who_playing": {
+   "k": {
+    "file": "k/who_playing.mp3",
+    "text": "Who is playing? Tap your animal!",
+    "dur": 2.38
+   }
+  },
+  "hi_dogs": {
+   "k": {
+    "file": "k/hi_dogs.mp3",
+    "text": "Hi! I'm Spark. The dogs want to say hi!",
+    "dur": 3.91
+   },
+   "e": {
+    "text": "Hi! I'm Spark. The dogs want to say hi! Tap a dog."
+   }
+  },
+  "likes_you": {
+   "k": {
+    "file": "k/likes_you.mp3",
+    "text": "He likes you!",
+    "dur": 1.08
+   }
+  },
+  "likes_you_f": {
+   "k": {
+    "file": "k/likes_you_f.mp3",
+    "text": "She likes you!",
+    "dur": 1.22
+   }
+  },
+  "name_q": {
+   "k": {
+    "file": "k/name_q.mp3",
+    "text": "What's his name? Snowball, Star, or Moon?",
+    "dur": 3.86
+   }
+  },
+  "name_q2": {
+   "k": {
+    "file": "k/name_q2.mp3",
+    "text": "What's her name? Cloud, Pebble, or Berry?",
+    "dur": 3.6
+   }
+  },
+  "name_q3": {
+   "k": {
+    "file": "k/name_q3.mp3",
+    "text": "What's his name? You pick!",
+    "dur": 2.38
+   }
+  },
+  "hungry_fish": {
+   "k": {
+    "file": "k/hungry_fish.mp3",
+    "text": "Your dog is hungry. Let's catch a fish!",
+    "dur": 3.14
+   },
+   "e": {
+    "text": "Your dog is hungry. Let's catch a fish! Tap the fishing hole."
+   }
+  },
+  "tap_hole": {
+   "k": {
+    "file": "k/tap_hole.mp3",
+    "text": "Tap the hole to fish!",
+    "dur": 1.49
+   }
+  },
+  "tap_now": {
+   "k": {
+    "file": "k/tap_now.mp3",
+    "text": "A bite! Tap now!",
+    "dur": 1.94
+   }
+  },
+  "one_fish": {
+   "k": {
+    "file": "k/one_fish.mp3",
+    "text": "One fish!",
+    "dur": 1.01
+   }
+  },
+  "order_fish": {
+   "k": {
+    "file": "k/order_fish.mp3",
+    "text": "Catch the fish in the picture!",
+    "dur": 1.75
+   },
+   "e": {
+    "text": "Catch the fish on the order card. Tap the word to hear it."
+   }
+  },
+  "count_more": {
+   "k": {
+    "file": "k/count_more.mp3",
+    "text": "Let's count. We need more fish!",
+    "dur": 2.59
+   }
+  },
+  "order_match": {
+   "k": {
+    "file": "k/order_match.mp3",
+    "text": "That's just right!",
+    "dur": 1.1
+   }
+  },
+  "fish_fact_k": {
+   "k": {
+    "file": "k/fish_fact_k.mp3",
+    "text": "Arctic char fish live under the ice.",
+    "dur": 2.78
+   },
+   "u": {
+    "text": "Arctic char live in cold water under the ice all winter."
+   },
+   "fact": true
+  },
+  "give_fish": {
+   "k": {
+    "file": "k/give_fish.mp3",
+    "text": "Give your dog the fish!",
+    "dur": 1.51
+   },
+   "e": {
+    "text": "Give your dog the fish! Drag it from the bucket."
+   }
+  },
+  "yum": {
+   "k": {
+    "file": "k/yum.mp3",
+    "text": "Yum! Thank you!",
+    "dur": 1.97
+   }
+  },
+  "trader_wants": {
+   "k": {
+    "file": "k/trader_wants.mp3",
+    "text": "The trader wants fish too!",
+    "dur": 1.7
+   }
+  },
+  "look_fox": {
+   "k": {
+    "file": "k/look_fox.mp3",
+    "text": "Look! A fox is peeking!",
+    "dur": 2.5
+   }
+  },
+  "fox_wait": {
+   "k": {
+    "file": "k/fox_wait.mp3",
+    "text": "Shh. Hold still. The fox is coming closer.",
+    "dur": 3.79
+   }
+  },
+  "fox_photo": {
+   "k": {
+    "file": "k/fox_photo.mp3",
+    "text": "Tap the camera to take a photo!",
+    "dur": 2.06
+   }
+  },
+  "photo_yes": {
+   "k": {
+    "file": "k/photo_yes.mp3",
+    "text": "Click! A fox photo!",
+    "dur": 2.33
+   }
+  },
+  "photo_again": {
+   "k": {
+    "file": "k/photo_again.mp3",
+    "text": "You have that one! Wait for something new.",
+    "dur": 2.76
+   }
+  },
+  "fox_shy": {
+   "k": {
+    "file": "k/fox_shy.mp3",
+    "text": "Oops, too fast. The fox hid. Let's wait quietly.",
+    "dur": 4.32
+   }
+  },
+  "fox_lantern": {
+   "k": {
+    "file": "k/fox_lantern.mp3",
+    "text": "All the fox photos! A fox lantern for your igloo!",
+    "dur": 3.96
+   }
+  },
+  "fox_fact": {
+   "k": {
+    "file": "k/fox_fact.mp3",
+    "text": "Arctic foxes are white in winter.",
+    "dur": 2.5
+   },
+   "e": {
+    "text": "Arctic foxes have white fur in winter and brown fur in summer."
+   },
+   "u": {
+    "text": "Arctic foxes grow a thick white coat for winter and moult to brown for summer."
+   },
+   "fact": true
+  },
+  "seal_shy": {
+   "k": {
+    "file": "k/seal_shy.mp3",
+    "text": "The seal is shy. It slides into the water. It will come back.",
+    "dur": 4.8
+   }
+  },
+  "igloo_tap": {
+   "k": {
+    "file": "k/igloo_tap.mp3",
+    "text": "Tap to add a snow block!",
+    "dur": 1.85
+   }
+  },
+  "igloo_fact": {
+   "k": {
+    "file": "k/igloo_fact.mp3",
+    "text": "The Inuit people invented the igloo.",
+    "dur": 2.42
+   },
+   "u": {
+    "text": "Inuit people invented the igloo; packed snow traps still air, which keeps heat in."
+   },
+   "fact": true
+  },
+  "igloo_done": {
+   "k": {
+    "file": "k/igloo_done.mp3",
+    "text": "You built an igloo! Tap it to go inside.",
+    "dur": 3.05
+   }
+  },
+  "igloo_in": {
+   "k": {
+    "file": "k/igloo_in.mp3",
+    "text": "Inside your igloo!",
+    "dur": 1.37
+   }
+  },
+  "decorate": {
+   "k": {
+    "file": "k/decorate.mp3",
+    "text": "Make it cozy! Tap a thing, then tap where it goes.",
+    "dur": 3.94
+   }
+  },
+  "warm_up": {
+   "k": {
+    "file": "k/warm_up.mp3",
+    "text": "Cozy and warm!",
+    "dur": 1.44
+   }
+  },
+  "looks_nice": {
+   "k": {
+    "file": "k/looks_nice.mp3",
+    "text": "That looks nice!",
+    "dur": 1.22
+   }
+  },
+  "moved_it": {
+   "k": {
+    "file": "k/moved_it.mp3",
+    "text": "Back in your bag!",
+    "dur": 1.2
+   }
+  },
+  "sleep": {
+   "k": {
+    "file": "k/sleep.mp3",
+    "text": "Good night, igloo!",
+    "dur": 1.27
+   }
+  },
+  "sleep_hint": {
+   "k": {
+    "file": "k/sleep_hint.mp3",
+    "text": "Tap the moon to go to sleep.",
+    "dur": 1.75
+   }
+  },
+  "morning": {
+   "k": {
+    "file": "k/morning.mp3",
+    "text": "Good morning! A new day!",
+    "dur": 2.16
+   }
+  },
+  "pick_parcel": {
+   "k": {
+    "file": "k/pick_parcel.mp3",
+    "text": "A parcel for the hut! Tap it to load the sled.",
+    "dur": 3.34
+   },
+   "e": {
+    "text": "A parcel for the hut! Tap the word to hear it, then tap the parcel."
+   }
+  },
+  "harness": {
+   "k": {
+    "file": "k/harness.mp3",
+    "text": "Put the dogs on the sled! Tap each dog.",
+    "dur": 3.19
+   }
+  },
+  "dog_rest": {
+   "k": {
+    "file": "k/dog_rest.mp3",
+    "text": "This dog is sleepy. Let him rest.",
+    "dur": 2.86
+   }
+  },
+  "sled_go": {
+   "k": {
+    "file": "k/sled_go.mp3",
+    "text": "Mush! Let's go!",
+    "dur": 1.97
+   }
+  },
+  "lanes": {
+   "k": {
+    "file": "k/lanes.mp3",
+    "text": "Tap a side to steer!",
+    "dur": 1.46
+   }
+  },
+  "bumpy": {
+   "k": {
+    "file": "k/bumpy.mp3",
+    "text": "Bumpy!",
+    "dur": 0.72
+   }
+  },
+  "arrived": {
+   "k": {
+    "file": "k/arrived.mp3",
+    "text": "We made it!",
+    "dur": 0.86
+   }
+  },
+  "coins_for_you": {
+   "k": {
+    "file": "k/coins_for_you.mp3",
+    "text": "Coins for you!",
+    "dur": 1.06
+   }
+  },
+  "dog_tired": {
+   "k": {
+    "file": "k/dog_tired.mp3",
+    "text": "The dogs are tired and hungry. Give them a fish!",
+    "dur": 3.74
+   }
+  },
+  "sell_fish": {
+   "k": {
+    "file": "k/sell_fish.mp3",
+    "text": "Give a fish to the trader. Tap a fish!",
+    "dur": 3.1
+   }
+  },
+  "sold_all": {
+   "k": {
+    "file": "k/sold_all.mp3",
+    "text": "All sold! Look at your coins!",
+    "dur": 2.57
+   }
+  },
+  "shop_pick": {
+   "k": {
+    "file": "k/shop_pick.mp3",
+    "text": "What do you want? Tap it!",
+    "dur": 1.9
+   }
+  },
+  "its_yours": {
+   "k": {
+    "file": "k/its_yours.mp3",
+    "text": "It's yours!",
+    "dur": 1.01
+   }
+  },
+  "need_more": {
+   "k": {
+    "file": "k/need_more.mp3",
+    "text": "You need more coins. Let's save them in your jar!",
+    "dur": 3.29
+   }
+  },
+  "wish_ready": {
+   "k": {
+    "file": "k/wish_ready.mp3",
+    "text": "You have enough coins now!",
+    "dur": 1.51
+   }
+  },
+  "coins_look": {
+   "k": {
+    "file": "k/coins_look.mp3",
+    "text": "Your coins!",
+    "dur": 0.98
+   }
+  },
+  "kennel": {
+   "k": {
+    "file": "k/kennel.mp3",
+    "text": "Make the dog house cozy!",
+    "dur": 1.63
+   }
+  },
+  "kennel_cozy": {
+   "k": {
+    "file": "k/kennel_cozy.mp3",
+    "text": "So cozy for the dogs!",
+    "dur": 1.87
+   }
+  },
+  "kennel_shop": {
+   "k": {
+    "file": "k/kennel_shop.mp3",
+    "text": "You can get that at the trading post.",
+    "dur": 1.99
+   }
+  },
+  "brush_dog": {
+   "k": {
+    "file": "k/brush_dog.mp3",
+    "text": "Brush, brush! So soft!",
+    "dur": 2.64
+   }
+  },
+  "brush_where": {
+   "k": {
+    "file": "k/brush_where.mp3",
+    "text": "Now tap a dog to brush it.",
+    "dur": 1.97
+   }
+  },
+  "badge_look": {
+   "k": {
+    "file": "k/badge_look.mp3",
+    "text": "Your Arctic badge! Fill all the parts.",
+    "dur": 2.9
+   }
+  },
+  "journal_look": {
+   "k": {
+    "file": "k/journal_look.mp3",
+    "text": "Your animal photos!",
+    "dur": 1.44
+   }
+  },
+  "bag_empty": {
+   "k": {
+    "file": "k/bag_empty.mp3",
+    "text": "Nothing here yet!",
+    "dur": 1.15
+   }
+  },
+  "try_fish": {
+   "k": {
+    "file": "k/try_fish.mp3",
+    "text": "Want to fish? Tap the hole!",
+    "dur": 2.28
+   }
+  },
+  "try_sled": {
+   "k": {
+    "file": "k/try_sled.mp3",
+    "text": "Want a sled ride? Tap the sled!",
+    "dur": 2.64
+   }
+  },
+  "try_igloo": {
+   "k": {
+    "file": "k/try_igloo.mp3",
+    "text": "Let's build an igloo! Tap the snow blocks.",
+    "dur": 3.17
+   }
+  },
+  "try_inside": {
+   "k": {
+    "file": "k/try_inside.mp3",
+    "text": "Tap your igloo to go inside.",
+    "dur": 1.8
+   }
+  },
+  "try_trade": {
+   "k": {
+    "file": "k/try_trade.mp3",
+    "text": "Tap the trader to sell your fish.",
+    "dur": 2.02
+   }
+  },
+  "try_kennel": {
+   "k": {
+    "file": "k/try_kennel.mp3",
+    "text": "Tap the dog house to make it cozy.",
+    "dur": 2.33
+   }
+  },
+  "try_dogs": {
+   "k": {
+    "file": "k/try_dogs.mp3",
+    "text": "Tap a dog to say hi!",
+    "dur": 1.7
+   }
+  },
+  "welcome_back": {
+   "k": {
+    "file": "k/welcome_back.mp3",
+    "text": "Welcome back! The dogs missed you.",
+    "dur": 2.86
+   }
+  },
+  "job_board": {
+   "k": {
+    "file": "k/job_board.mp3",
+    "text": "The job board has work for your dogs.",
+    "dur": 2.38
+   },
+   "u": {
+    "text": "Good morning, musher. Your three huskies are ready. The job board has delivery work, or try the fishing hole."
+   },
+   "t": {
+    "text": "Morning. Three huskies, a job board with deliveries, and a fishing hole. Your call."
+   }
+  },
+  "nm_snowball": {
+   "k": {
+    "file": "k/nm_snowball.mp3",
+    "text": "Snowball?",
+    "dur": 0.79
+   }
+  },
+  "hi_snowball": {
+   "k": {
+    "file": "k/hi_snowball.mp3",
+    "text": "Hi, Snowball!",
+    "dur": 1.1
+   }
+  },
+  "nm_star": {
+   "k": {
+    "file": "k/nm_star.mp3",
+    "text": "Star?",
+    "dur": 0.77
+   }
+  },
+  "hi_star": {
+   "k": {
+    "file": "k/hi_star.mp3",
+    "text": "Hi, Star!",
+    "dur": 0.91
+   }
+  },
+  "nm_moon": {
+   "k": {
+    "file": "k/nm_moon.mp3",
+    "text": "Moon?",
+    "dur": 0.72
+   }
+  },
+  "hi_moon": {
+   "k": {
+    "file": "k/hi_moon.mp3",
+    "text": "Hi, Moon!",
+    "dur": 0.84
+   }
+  },
+  "nm_cloud": {
+   "k": {
+    "file": "k/nm_cloud.mp3",
+    "text": "Cloud?",
+    "dur": 0.65
+   }
+  },
+  "hi_cloud": {
+   "k": {
+    "file": "k/hi_cloud.mp3",
+    "text": "Hi, Cloud!",
+    "dur": 0.96
+   }
+  },
+  "nm_pebble": {
+   "k": {
+    "file": "k/nm_pebble.mp3",
+    "text": "Pebble?",
+    "dur": 0.6
+   }
+  },
+  "hi_pebble": {
+   "k": {
+    "file": "k/hi_pebble.mp3",
+    "text": "Hi, Pebble!",
+    "dur": 0.94
+   }
+  },
+  "nm_berry": {
+   "k": {
+    "file": "k/nm_berry.mp3",
+    "text": "Berry?",
+    "dur": 0.58
+   }
+  },
+  "hi_berry": {
+   "k": {
+    "file": "k/hi_berry.mp3",
+    "text": "Hi, Berry!",
+    "dur": 0.91
+   }
+  },
+  "count_1": {
+   "k": {
+    "file": "k/count_1.mp3",
+    "text": "One!",
+    "dur": 0.65
+   }
+  },
+  "count_2": {
+   "k": {
+    "file": "k/count_2.mp3",
+    "text": "Two!",
+    "dur": 0.62
+   }
+  },
+  "count_3": {
+   "k": {
+    "file": "k/count_3.mp3",
+    "text": "Three!",
+    "dur": 0.72
+   }
+  },
+  "count_4": {
+   "k": {
+    "file": "k/count_4.mp3",
+    "text": "Four!",
+    "dur": 0.58
+   }
+  },
+  "count_5": {
+   "k": {
+    "file": "k/count_5.mp3",
+    "text": "Five!",
+    "dur": 0.79
+   }
+  },
+  "count_6": {
+   "k": {
+    "file": "k/count_6.mp3",
+    "text": "Six!",
+    "dur": 0.82
+   }
+  },
+  "count_7": {
+   "k": {
+    "file": "k/count_7.mp3",
+    "text": "Seven!",
+    "dur": 0.79
+   }
+  },
+  "count_8": {
+   "k": {
+    "file": "k/count_8.mp3",
+    "text": "Eight!",
+    "dur": 0.58
+   }
+  },
+  "count_9": {
+   "k": {
+    "file": "k/count_9.mp3",
+    "text": "Nine!",
+    "dur": 0.82
+   }
+  },
+  "count_10": {
+   "k": {
+    "file": "k/count_10.mp3",
+    "text": "Ten!",
+    "dur": 0.62
+   }
+  },
+  "ride_fish": {
+   "k": {
+    "file": "k/ride_fish.mp3",
+    "text": "A fish! Into the basket!",
+    "dur": 2.38
+   }
+  },
+  "fork_hut": {
+   "k": {
+    "file": "k/fork_hut.mp3",
+    "text": "Which way to the hut? Steer to the hut picture!",
+    "dur": 3.12
+   }
+  },
+  "fork_post": {
+   "k": {
+    "file": "k/fork_post.mp3",
+    "text": "Which way to the post office? Steer to its picture!",
+    "dur": 3.38
+   }
+  },
+  "fork_other": {
+   "k": {
+    "file": "k/fork_other.mp3",
+    "text": "Oops, that's the other place! Let's turn around.",
+    "dur": 3.79
+   }
+  },
+  "fork_good": {
+   "k": {
+    "file": "k/fork_good.mp3",
+    "text": "This way! Good steering!",
+    "dur": 2.23
+   }
+  },
+  "dec_place": {
+   "k": {
+    "file": "k/dec_place.mp3",
+    "text": "Now tap where it goes!",
+    "dur": 1.56
+   }
+  },
+  "dec_colour": {
+   "k": {
+    "file": "k/dec_colour.mp3",
+    "text": "Tap a colour you like!",
+    "dur": 1.42
+   }
+  },
+  "bought_it": {
+   "k": {
+    "file": "k/bought_it.mp3",
+    "text": "It's yours! It's in your bag.",
+    "dur": 2.42
+   }
+  },
+  "photo_more2": {
+   "k": {
+    "file": "k/photo_more2.mp3",
+    "text": "Great photo! Two more to go!",
+    "dur": 2.4
+   }
+  },
+  "photo_more1": {
+   "k": {
+    "file": "k/photo_more1.mp3",
+    "text": "Great photo! One more!",
+    "dur": 2.14
+   }
+  },
+  "photo_all": {
+   "k": {
+    "file": "k/photo_all.mp3",
+    "text": "You got all three fox photos!",
+    "dur": 2.26
+   }
+  },
+  "fox_snap": {
+   "k": {
+    "file": "k/fox_snap.mp3",
+    "text": "Tap the fox to take a photo!",
+    "dur": 2.02
+   }
+  },
+  "not_hungry": {
+   "k": {
+    "file": "k/not_hungry.mp3",
+    "text": "Not hungry right now. Find a dog with a fish bubble!",
+    "dur": 3.79
+   }
+  },
+  "igloo_grid_k": {
+   "k": {
+    "file": "k/igloo_grid_k.mp3",
+    "text": "Tap the blue squares to build your igloo! The yellow one is the door.",
+    "dur": 4.54
+   }
+  },
+  "igloo_grid": {
+   "k": {
+    "file": "k/igloo_grid.mp3",
+    "text": "Tap the snow to place a block. Tap the top or side of a block to add the next one.",
+    "dur": 5.47
+   }
+  },
+  "igloo_more": {
+   "k": {
+    "file": "k/igloo_more.mp3",
+    "text": "Add more blocks, or go inside!",
+    "dur": 2.4
+   }
+  },
+  "igloo_ready": {
+   "k": {
+    "file": "k/igloo_ready.mp3",
+    "text": "Your igloo is ready! Let's go inside!",
+    "dur": 2.98
+   }
+  },
+  "warm_tunnel": {
+   "k": {
+    "file": "k/warm_tunnel.mp3",
+    "text": "The low tunnel keeps the cold out. It's warmer inside now!",
+    "dur": 4.2
+   }
+  },
+  "room_in": {
+   "k": {
+    "file": "k/room_in.mp3",
+    "text": "Welcome home! Tap a thing in your bag, then tap where it goes.",
+    "dur": 4.54
+   }
+  },
+  "room_place": {
+   "k": {
+    "file": "k/room_place.mp3",
+    "text": "Now tap where it goes!",
+    "dur": 1.56
+   }
+  },
+  "room_bad": {
+   "k": {
+    "file": "k/room_bad.mp3",
+    "text": "That spot is taken. Try a green spot!",
+    "dur": 3.07
+   }
+  },
+  "room_moved": {
+   "k": {
+    "file": "k/room_moved.mp3",
+    "text": "Moved it!",
+    "dur": 0.77
+   }
+  },
+  "room_sel_k": {
+   "k": {
+    "file": "k/room_sel_k.mp3",
+    "text": "Tap a colour, turn it, move it, or put it back in your bag.",
+    "dur": 4.27
+   }
+  },
+  "room_sel": {
+   "k": {
+    "file": "k/room_sel.mp3",
+    "text": "Pick a colour, turn it, move it, or put it back in your bag.",
+    "dur": 4.1
+   }
+  },
+  "room_paint": {
+   "k": {
+    "file": "k/room_paint.mp3",
+    "text": "Pick a colour, then tap a wall or the floor.",
+    "dur": 3.12
+   }
+  },
+  "stove_vent": {
+   "k": {
+    "file": "k/stove_vent.mp3",
+    "text": "A stove needs a vent for fresh air. Add a vent to the roof first.",
+    "dur": 4.46
+   }
+  },
+  "sled_map": {
+   "k": {
+    "file": "k/sled_map.mp3",
+    "text": "Where shall we go? Tap a place on the map!",
+    "dur": 2.76
+   }
+  },
+  "fork_fish": {
+   "k": {
+    "file": "k/fork_fish.mp3",
+    "text": "A fork! Steer to the fishing camp sign!",
+    "dur": 3.34
+   }
+  },
+  "fork_pup": {
+   "k": {
+    "file": "k/fork_pup.mp3",
+    "text": "A fork! Steer to the puppy sign!",
+    "dur": 2.81
+   }
+  },
+  "fork_den": {
+   "k": {
+    "file": "k/fork_den.mp3",
+    "text": "A fork! Steer to the fox den sign!",
+    "dur": 3.31
+   }
+  },
+  "bumpy_way": {
+   "k": {
+    "file": "k/bumpy_way.mp3",
+    "text": "This way is long and bumpy. We will still get there!",
+    "dur": 3.7
+   }
+  },
+  "fishcamp_sell": {
+   "k": {
+    "file": "k/fishcamp_sell.mp3",
+    "text": "The fishing camp! Let's count the fish. Each fish gets coins.",
+    "dur": 4.9
+   }
+  },
+  "fishcamp_none": {
+   "k": {
+    "file": "k/fishcamp_none.mp3",
+    "text": "The fishing camp! Catch fish on the trail next time, and they will give you coins.",
+    "dur": 5.62
+   }
+  },
+  "fishcamp_rack": {
+   "k": {
+    "file": "k/fishcamp_rack.mp3",
+    "text": "And a fish rack for your igloo!",
+    "dur": 1.94
+   }
+  },
+  "pup_found": {
+   "k": {
+    "file": "k/pup_found.mp3",
+    "text": "Look! A lost puppy! Tap the puppy.",
+    "dur": 3.58
+   }
+  },
+  "pup_join": {
+   "k": {
+    "file": "k/pup_join.mp3",
+    "text": "The puppy is coming home with us!",
+    "dur": 1.9
+   }
+  },
+  "pup_visit": {
+   "k": {
+    "file": "k/pup_visit.mp3",
+    "text": "The puppy is safe at camp now. This is where we found it!",
+    "dur": 4.25
+   }
+  },
+  "den_shy": {
+   "k": {
+    "file": "k/den_shy.mp3",
+    "text": "The foxes are shy. Bring a fish or your fox lantern next time.",
+    "dur": 4.97
+   }
+  },
+  "den_bring": {
+   "k": {
+    "file": "k/den_bring.mp3",
+    "text": "The fox den! What can we give the foxes?",
+    "dur": 3.14
+   }
+  },
+  "den_kits": {
+   "k": {
+    "file": "k/den_kits.mp3",
+    "text": "The fox kits came out! You can take their photos now.",
+    "dur": 3.7
+   }
+  },
+  "den_again": {
+   "k": {
+    "file": "k/den_again.mp3",
+    "text": "The kits are happy to see you!",
+    "dur": 1.61
+   }
+  },
+  "pup_home": {
+   "k": {
+    "file": "k/pup_home.mp3",
+    "text": "Look! The puppy lives at camp now.",
+    "dur": 2.83
+   }
+  },
+  "kits_home": {
+   "k": {
+    "file": "k/kits_home.mp3",
+    "text": "The fox kits came to visit camp!",
+    "dur": 2.04
+   }
+  },
+  "rack_home": {
+   "k": {
+    "file": "k/rack_home.mp3",
+    "text": "Your fish rack is here in camp.",
+    "dur": 2.09
+   }
+  },
+  "pup_happy": {
+   "k": {
+    "file": "k/pup_happy.mp3",
+    "text": "The puppy is happy!",
+    "dur": 1.39
+   }
+  }
+ }
+}

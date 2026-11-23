@@ -1,0 +1,23 @@
+window.SparkJourney={upsert:upsertJourney,all:()=>Object.values(journeyRecords).sort((a,b)=>(b.updatedAt||0)-(a.updatedAt||0))};
+function recordMissionJourney(){if(!S.planet)return;const total=questions().length,completed=Math.min(total,S.step+1),level=ageBandFor(S.age),key=`${S.planet}:${level}`;missionLevelProgress[key]={completed,total,updatedAt:Date.now()};saveMissionLevelProgress();const practiced=[...new Set(Object.keys(missionLevelProgress).filter(x=>x.startsWith(`${S.planet}:`)).map(x=>x.split(':')[1]))];upsertJourney(`solar-${S.planet.toLowerCase()}`,{label:`${S.planet} Mission`,path:'Solar System',completed,total,status:completed>=total?`Ages ${level} complete`:`${completed} of ${total} challenges completed at ages ${level}`,skills:S.planet==='Earth'?['Reading','Geography','Science']:['Reading','Vocabulary','Science','Math'],details:{'Current level':`Ages ${level} • ${AGE_PROFILES[level].name}`,Challenges:`${completed}/${total}`,'Levels practiced':practiced.join(', '),Mission:completed>=total?'Complete':'In progress'}})}
+function show(v){['home','world','parent'].forEach(x=>$(x).classList.toggle('on',x===v));updateSparkContext({view:v});setSparkState('idle');if(v==='parent')window.renderParentLearningJourney?.()}
+function returnToSolarSystemHome(opts={}){
+  const announce=!!opts.announce;
+  try{window.EarthEngine?.exitEarth?.()}catch{}
+  try{window.EarthEngine?.worldMap?.()}catch{}
+  S.planet=null;S.step=0;S.continent=null;
+  try{history.replaceState(null,'',location.pathname)}catch{}
+  updateSparkContext({view:'home',planet:null,continent:null,environment:null,selectedObject:null,challenge:null,challengeData:null,childAnswer:null,answerCorrect:null,build:null,hypothesis:null,evidence:[],worldState:{}});
+  show('home');
+  if(announce)speak('Back to the Solar System.');
+  return true;
+}
+window.returnToSolarSystemHome=returnToSolarSystemHome;
+function goPlatformHome(){return returnToSolarSystemHome()}
+const SparkContext={view:'home',planet:null,continent:null,environment:null,selectedObject:null,challenge:null,challengeData:null,childAnswer:null,answerCorrect:null,build:null,hypothesis:null,evidence:[],worldState:{}};
+let sparkState='idle',recognition=null,lastSpoken='';
+function setSparkState(state,label=''){sparkState=state;const el=$('sparkCompanion');if(el)el.dataset.state=state;const s=$('sparkStatus');if(s)s.textContent=label||({idle:'Spark',speaking:'Speaking…',listening:'Listening…',thinking:'Thinking…',unsure:'Not sure yet',realisation:'I found something!',celebration:'Nice work!',concern:'Let’s check that'}[state]||'Spark')}
+function updateSparkContext(patch={}){Object.assign(SparkContext,patch);window.dispatchEvent(new CustomEvent('spark:context',{detail:{...SparkContext}}));return SparkContext}
+function preferredVoice(){return null;const voices=[];const prefer=['Samantha','Ava','Google US English','Microsoft Aria Online','Microsoft Jenny Online','Daniel','Karen'];for(const n of prefer){const v=voices.find(x=>x.name.includes(n));if(v)return v}return voices.find(v=>/^en[-_]/i.test(v.lang))||voices[0]||null}
+function speak(t,opts={}){lastSpoken=String(t||'');if(!lastSpoken)return;window.dispatchEvent(new CustomEvent('spark:say',{detail:{text:lastSpoken,context:{...SparkContext}}}));/* spark12: Spark speaks only through SparkVoice (Ava clip or caption; never the browser voice) */if(!S.voice||!window.SparkVoice){setSparkState(opts.state||'idle');return}SparkVoice.say(lastSpoken,{kind:'companion',after:opts.after||'idle'})}
+function stopSpark(){try{window.SparkVoice&&SparkVoice.stop()}catch{};try{recognition?.abort()}catch{};recognition=null;setSparkState('idle')}

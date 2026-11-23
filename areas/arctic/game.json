@@ -1,0 +1,2064 @@
+{
+ "area": {
+  "title": "Arctic",
+  "badge": {
+   "name": "Arctic Explorer",
+   "c1": "#bfeaff",
+   "c2": "#3a8fd6",
+   "pic": "badge_medal"
+  }
+ },
+ "shuffleOptions": true,
+ "camp": {
+  "title": "Ice camp",
+  "walls": [
+   "Ice camp",
+   "Frozen ridges",
+   "Aurora plain",
+   "Open water"
+  ],
+  "welcome": {
+   "lo": "Brrr! Welcome to our ice camp! Let us pack warm gear for the trip. Tap number 1, the parka.",
+   "mid": "Brrr, welcome to our Arctic ice camp! Tap each piece of gear and it jumps into the backpack.",
+   "hi": "Welcome to our Arctic ice camp! Tap each piece of gear to pack it into the backpack.",
+   "k": "Brrr! Welcome to our ice camp! Let us pack warm gear for the trip. Tap number 1, the parka.",
+   "e": "Brrr, welcome to our Arctic ice camp! Tap each piece of gear and it jumps into the backpack.",
+   "u": "Welcome to our Arctic ice camp. Out on the sea ice, staying warm and safe is the whole job, so pack the gear in any order. I will tell you what each piece does.",
+   "t": "Field base, 78 degrees north. Before we cross the sea ice, load the kit list: every item has a job in keeping heat in and risk down."
+  },
+  "welcomeAgain": {
+   "lo": "Back at the ice camp! Let us pack again. Tap number 1, the parka.",
+   "mid": "Back at the ice camp! Tap the gear to pack it.",
+   "hi": "Back at the ice camp! Tap the gear to pack it.",
+   "k": "Back at the ice camp! Let us pack again. Tap number 1, the parka.",
+   "e": "Back at the ice camp! Tap the gear to pack it.",
+   "u": "Back at the ice camp. Pack the rest of the expedition gear.",
+   "t": "Back at the field base. Finish loading the expedition kit."
+  },
+  "back": {
+   "lo": "Welcome back! Let us keep packing.",
+   "mid": "Welcome back! Let us keep packing.",
+   "hi": "Welcome back! Let us keep packing.",
+   "k": "Welcome back! Let us keep packing.",
+   "e": "Welcome back to the ice camp! Pack the rest of the gear.",
+   "u": "Back at camp. Your gear list is where you left it.",
+   "t": "Field base again. The kit list is waiting where you left it."
+  },
+  "prompt": {
+   "lo": "Tap number 1",
+   "mid": "Tap a piece of gear",
+   "hi": "Tap a piece of gear",
+   "k": "Tap number 1",
+   "e": "Tap a piece of gear",
+   "u": "Tap any gear to pack it",
+   "t": "Select the next kit item"
+  },
+  "readyPrompt": {
+   "lo": "All packed! Tap Go!",
+   "mid": "All packed! Tap Go!",
+   "hi": "All packed! Tap Go!",
+   "k": "All packed! Tap Go!",
+   "e": "All packed! Tap Go!",
+   "u": "Gear packed. Tap Go!",
+   "t": "Kit check complete. Launch with Go."
+  },
+  "readyAgain": {
+   "lo": "Everything is packed! Tap Go!",
+   "mid": "Everything is packed. Tap Go!",
+   "hi": "Everything is packed. Tap Go when you are ready!",
+   "k": "Everything is packed! Tap Go!",
+   "e": "Everything is packed. Tap Go!",
+   "u": "All the gear is packed. Tap Go when you are ready to leave.",
+   "t": "The kit check is complete. Launch whenever the team is set."
+  },
+  "goBubble": {
+   "lo": "Ready? Go!",
+   "mid": "Ready to ride? Go!",
+   "hi": "Ready to ride? Go!",
+   "k": "Ready? Go!",
+   "e": "Ready to ride? Go!",
+   "u": "Gear packed. Head out?",
+   "t": "Kit loaded. Launch?"
+  },
+  "finish": {
+   "lo": "You did it! The backpack is full. Tap Go and the dogs will pull our sled onto the ice!",
+   "mid": "You did it! All ten things are packed. Tap Go and the husky dogs will pull our sled onto the ice!",
+   "hi": "Everything is packed! Tap Go and our husky team will pull the sled out across the sea ice.",
+   "k": "You did it! The backpack is full. Tap Go and the dogs will pull our sled onto the ice!",
+   "e": "You did it! All ten things are packed. Tap Go and the husky dogs will pull our sled onto the ice!",
+   "u": "All ten pieces packed. Tap Go, and the husky team will pull the sled out onto the frozen Arctic Ocean.",
+   "t": "Kit check complete. Press Go: the husky team will haul the sledge onto the frozen Arctic Ocean."
+  },
+  "gear": [
+   {
+    "id": "parka",
+    "word": "Parka",
+    "pic": {
+     "a": "gear_parka"
+    },
+    "wall": 0,
+    "x": 30,
+    "y": 70,
+    "line": {
+     "lo": "A big warm coat.",
+     "mid": "A puffy parka keeps us warm.",
+     "hi": "A puffy parka traps warm air next to our body.",
+     "k": "A big warm coat.",
+     "e": "A puffy parka keeps us warm.",
+     "u": "The parka's fluffy filling traps still air, and still air slows heat leaving your body.",
+     "t": "Parka: down and synthetic fill trap still air, a poor heat conductor, so far less body heat escapes."
+    }
+   },
+   {
+    "id": "hat",
+    "word": "Hat",
+    "pic": {
+     "a": "gear_hat"
+    },
+    "wall": 0,
+    "x": 45,
+    "y": 74,
+    "line": {
+     "lo": "A hat for our ears.",
+     "mid": "A wool hat keeps our head warm.",
+     "hi": "A wool hat stops heat escaping from our head.",
+     "k": "A hat for our ears.",
+     "e": "A wool hat keeps our head warm.",
+     "u": "A lot of heat escapes from an uncovered head, so a wool hat makes a big difference.",
+     "t": "Hat: any bare skin sheds heat; covering head and ears cuts that loss sharply."
+    }
+   },
+   {
+    "id": "mittens",
+    "word": "Mittens",
+    "pic": {
+     "a": "gear_mittens"
+    },
+    "wall": 0,
+    "x": 80,
+    "y": 72,
+    "line": {
+     "lo": "Mittens for cozy hands.",
+     "mid": "Mittens keep fingers warm together.",
+     "hi": "Mittens keep fingers together, so they stay warmer than gloves.",
+     "k": "Mittens for cozy hands.",
+     "e": "Mittens keep fingers warm together.",
+     "u": "Mittens keep your fingers together, sharing warmth, so they stay warmer than gloves.",
+     "t": "Mittens: fingers share warmth in one pocket with less surface exposed than gloves."
+    }
+   },
+   {
+    "id": "scarf",
+    "word": "Scarf",
+    "pic": {
+     "a": "gear_scarf"
+    },
+    "wall": 1,
+    "x": 32,
+    "y": 72,
+    "line": {
+     "lo": "A snuggly scarf.",
+     "mid": "A scarf keeps the cold wind off our neck.",
+     "hi": "A scarf blocks the icy wind from our neck and face.",
+     "k": "A snuggly scarf.",
+     "e": "A scarf keeps the cold wind off our neck.",
+     "u": "Wind blows warm air away from your skin. That is wind chill. A scarf blocks it.",
+     "t": "Scarf: wind strips the warm air layer off skin (wind chill); a scarf shields neck and face."
+    }
+   },
+   {
+    "id": "boots",
+    "word": "Boots",
+    "pic": {
+     "a": "gear_boots"
+    },
+    "wall": 1,
+    "x": 64,
+    "y": 74,
+    "line": {
+     "lo": "Boots for warm toes.",
+     "mid": "Snow boots keep our toes warm and dry.",
+     "hi": "Snow boots have thick soles so the cold ice cannot reach our toes.",
+     "k": "Boots for warm toes.",
+     "e": "Snow boots keep our toes warm and dry.",
+     "u": "Thick soles slow the heat flowing from your feet into the ice.",
+     "t": "Boots: insulated soles slow conduction, the heat flow from feet into the ice."
+    }
+   },
+   {
+    "id": "goggles",
+    "word": "Goggles",
+    "pic": {
+     "a": "gear_goggles"
+    },
+    "wall": 2,
+    "x": 30,
+    "y": 70,
+    "line": {
+     "lo": "Goggles for bright snow.",
+     "mid": "Goggles keep the bright snow out of our eyes.",
+     "hi": "Goggles protect our eyes from sunlight bouncing off the snow.",
+     "k": "Goggles for bright snow.",
+     "e": "Goggles keep the bright snow out of our eyes.",
+     "u": "Snow reflects most of the sunlight, which can burn your eyes. Goggles stop snow blindness.",
+     "t": "Goggles: fresh snow reflects up to 80 percent of UV light, which can burn the eye (snow blindness)."
+    }
+   },
+   {
+    "id": "map",
+    "word": "Map",
+    "pic": {
+     "a": "gear_map"
+    },
+    "wall": 2,
+    "x": 68,
+    "y": 74,
+    "line": {
+     "lo": "A map, so we do not get lost.",
+     "mid": "A map shows us the way across the ice.",
+     "hi": "A map helps us find our way across the sea ice.",
+     "k": "A map, so we do not get lost.",
+     "e": "A map shows us the way across the ice.",
+     "u": "Sea ice drifts and cracks, so explorers check the map and change their route.",
+     "t": "Map: sea ice drifts and cracks open into leads, so routes are checked and re-planned."
+    }
+   },
+   {
+    "id": "lamp",
+    "word": "Headlamp",
+    "pic": {
+     "a": "gear_lamp"
+    },
+    "wall": 3,
+    "x": 20,
+    "y": 70,
+    "line": {
+     "lo": "A lamp for the dark night.",
+     "mid": "A head lamp lights the way at night.",
+     "hi": "A head lamp helps in the long Arctic night.",
+     "k": "A headlamp for the dark night.",
+     "e": "A head lamp lights the way at night.",
+     "u": "A headlamp keeps both hands free. In Arctic winter the Sun can stay down for weeks.",
+     "t": "Headlamp: hands stay free, and north of the Arctic Circle winter brings days when the Sun never rises."
+    }
+   },
+   {
+    "id": "rod",
+    "word": "Rod",
+    "pic": {
+     "a": "gear_fishrod"
+    },
+    "wall": 3,
+    "x": 40,
+    "y": 74,
+    "line": {
+     "lo": "A rod to catch fish.",
+     "mid": "A fishing rod, to fish through the ice.",
+     "hi": "A fishing rod, to fish through a hole in the ice.",
+     "k": "A rod to catch fish.",
+     "e": "A fishing rod, to fish through the ice.",
+     "u": "People in the Arctic have fished through holes in the ice for thousands of years.",
+     "t": "Rod and line: jigging through an ice hole is a traditional Inuit way to catch Arctic char and cod."
+    }
+   },
+   {
+    "id": "cocoa",
+    "word": "Cocoa",
+    "pic": {
+     "a": "gear_cocoa"
+    },
+    "wall": 0,
+    "x": 13,
+    "y": 74,
+    "line": {
+     "lo": "Hot cocoa! Yum!",
+     "mid": "Hot cocoa to warm us up. Yum!",
+     "hi": "Hot cocoa in a flask stays warm for hours. Yum!",
+     "k": "Hot cocoa! Yum!",
+     "e": "Hot cocoa to warm us up. Yum!",
+     "u": "A vacuum flask has an empty gap in its walls, so heat cannot escape and the cocoa stays hot.",
+     "t": "Vacuum flask: the empty gap between its walls blocks conduction and convection, so drinks stay hot."
+    }
+   }
+  ],
+  "style": "pack",
+  "wrongNum": {
+   "lo": "Not yet! Find number {n}, the {w}.",
+   "mid": "Not yet! Find number {n}, the {w}.",
+   "hi": "Not yet! Find number {n}, the {w}.",
+   "k": "Not yet! Find number {n}, the {w}.",
+   "e": "Not that one yet. Find number {n}, the {w}.",
+   "u": "Pack item {n} next, the {w}.",
+   "t": "Order matters on a kit list: find item {n}, the {w}."
+  }
+ },
+ "ride": {
+  "view": "pov",
+  "veh": {
+   "a": "ride_sled",
+   "svg": "sled"
+  },
+  "fg": {
+   "a": "ride_pov"
+  },
+  "dogs": {
+   "a": "ride_dogs"
+  },
+  "ground": "ride_snow",
+  "prop": "build_ice_block",
+  "lines": [
+   {
+    "lo": "Mush! Off we go!",
+    "mid": "Hold on tight! Off we go!",
+    "hi": "Hold on tight! The huskies are off!",
+    "k": "Mush! Off we go!",
+    "e": "Hold on tight! Off we go!",
+    "u": "Hold on! The husky team pulls the sled out onto the sea ice.",
+    "t": "Sledge away! The dogs settle into a steady trot over the sea ice."
+   }
+  ],
+  "video": "ride-day"
+ },
+ "stops": [
+  {
+   "id": "igloo",
+   "name": "Build an igloo",
+   "bd": {
+    "wall": 1,
+    "x": 25
+   },
+   "intro": {
+    "lo": "First stop! Let us build a real igloo from snow blocks. Drag or tap each block to the glowing place.",
+    "mid": "First stop! Let us build an igloo the real way: snow blocks in a spiral that leans in. Drag or tap each block to the glowing place.",
+    "hi": "First stop! Real igloos are built from cut blocks of packed snow, laid in a spiral that leans inward. Drag or tap each block to the glowing place.",
+    "k": "First stop! Let us build a real igloo from snow blocks. Drag or tap each block to the glowing place.",
+    "e": "First stop! Let us build an igloo the real way: snow blocks in a spiral that leans in. Drag or tap each block to the glowing place.",
+    "u": "First stop: shelter. Igloo builders cut blocks from packed snow and lay them in a spiral that leans inward, so the dome holds itself up. Drag or tap each block to its glowing place.",
+    "t": "Shelter first. Igloo blocks are cut from wind-packed snow and laid in a rising spiral, each one leaning in on the last. Place every block on its glowing slot."
+   },
+   "ride": [
+    {
+     "lo": "Hold on tight! The dogs are running!",
+     "mid": "Hold on tight! The husky dogs are running fast!",
+     "hi": "Hold on! The huskies run across the snow.",
+     "k": "Hold on tight! The dogs are running!",
+     "e": "Hold on tight! The husky dogs are running fast!",
+     "u": "The snow here is packed hard by the wind, perfect for cutting blocks.",
+     "t": "The team crosses wind-packed snow, ideal for cutting blocks."
+    },
+    {
+     "lo": "First stop: let us build an igloo!",
+     "mid": "First stop: time to build an igloo!",
+     "hi": "First stop: we will build an igloo.",
+     "k": "First stop: let us build an igloo!",
+     "e": "First stop: time to build an igloo!",
+     "u": "Stop 1: build a snow shelter.",
+     "t": "Stop 1: engineer a snow shelter."
+    }
+   ],
+   "act": {
+    "type": "igloo",
+    "padAspect": 1.9,
+    "hint": {
+     "lo": "Tap a snow block, then tap the glow",
+     "mid": "Drag or tap the snow block to the glowing place",
+     "hi": "Drag or tap each snow block to the glowing place",
+     "k": "Tap a snow block, then tap the glow",
+     "e": "Drag or tap the snow block to the glowing place",
+     "u": "Drag or tap each block to its glowing place",
+     "t": "Place each block on its glowing slot"
+    },
+    "groups": {
+     "lo": 8,
+     "mid": 12,
+     "hi": 16
+    },
+    "dome": {
+     "courses": [
+      14,
+      13,
+      12,
+      10,
+      8,
+      5
+     ],
+     "thetaMax": 84,
+     "elev": 9,
+     "squash": 1.06
+    },
+    "tiles": [
+     "build_snowface_1",
+     "build_snowface_2",
+     "build_snowface_3",
+     "build_snowface_4",
+     "build_snowface_5",
+     "build_snowface_6"
+    ],
+    "block": {
+     "a": "build_ice_block",
+     "svg": "iceblock"
+    },
+    "blockLabel": "Snow block",
+    "tunnel": {
+     "a": "build_igloo_door",
+     "svg": "igloodoor"
+    },
+    "tunnelLit": {
+     "a": "build_igloo_door_lit"
+    },
+    "tunnelLabel": "Tunnel",
+    "tunnelSay": {
+     "lo": "The dome is done! Now add the tunnel door.",
+     "mid": "The dome is closed with a key block on top! Now add the entry tunnel.",
+     "hi": "The key block closes the top of the dome. Now add the low entry tunnel, which keeps the cold wind out.",
+     "k": "The dome is done! Now add the tunnel door.",
+     "e": "The dome is closed with a key block on top! Now add the entry tunnel.",
+     "u": "The key block locks the top of the dome. Now add the entry tunnel. It sits low, so cold air sinks into it instead of into the igloo.",
+     "t": "The key block locks the dome. Now the entry tunnel: it sits low, so dense cold air sinks into it and stays out of the living space."
+    },
+    "factsAt": [
+     3,
+     7
+    ],
+    "alive": {
+     "snow": true,
+     "actors": [
+      {
+       "pic": "animal_fox",
+       "x": 80,
+       "y": 97,
+       "w": 16,
+       "from": "right"
+      }
+     ],
+     "line": {
+      "lo": "The igloo is done! It glows inside. An Arctic fox peeks out!",
+      "mid": "The igloo is finished! It glows warm inside. An Arctic fox came to look!",
+      "hi": "The igloo is finished! It glows warm inside. An Arctic fox came to look!",
+      "k": "The igloo is done! It glows inside. An Arctic fox peeks out!",
+      "e": "The igloo is finished! It glows warm inside. An Arctic fox came to look!",
+      "u": "The igloo is finished! Body heat and one small lamp can keep it far warmer than the air outside. An Arctic fox came to check it out.",
+      "t": "Dome complete. Body heat and a lamp can keep it tens of degrees warmer than the air outside. An Arctic fox is investigating."
+     },
+     "hold": 1800
+    },
+    "tunnelHint": {
+     "lo": "Drag or tap the tunnel to the glowing place",
+     "mid": "Drag or tap the tunnel to the glowing place",
+     "hi": "Drag or tap the entry tunnel to the glowing place",
+     "k": "Drag or tap the tunnel to the glowing place",
+     "e": "Drag or tap the tunnel to the glowing place",
+     "u": "Drag or tap the entry tunnel to its glowing place",
+     "t": "Place the entry tunnel on its glowing slot"
+    },
+    "capTile": "build_snowcap",
+    "difficulty": {
+     "k": {
+      "groups": 8,
+      "input": "tap-or-drag"
+     },
+     "e": {
+      "groups": 12
+     },
+     "u": {
+      "groups": 16
+     },
+     "t": {
+      "groups": 16
+     }
+    }
+   },
+   "facts": [
+    {
+     "lo": "Real igloos are made of packed snow blocks.",
+     "mid": "Real igloos are made of packed snow blocks.",
+     "hi": "Real igloos are made of packed snow blocks.",
+     "k": "Real igloos are made of packed snow blocks.",
+     "e": "Real igloos are made from blocks of packed snow, cut with a snow knife.",
+     "u": "Igloo blocks are cut from snow that the wind has packed firm.",
+     "t": "Igloo blocks come from wind-packed snow, firm enough to cut and stack."
+    },
+    {
+     "lo": "Snow holds tiny bits of air. That keeps the warmth inside.",
+     "mid": "Snow holds tiny bits of air. That keeps the warmth inside.",
+     "hi": "Snow holds tiny bits of air. That keeps the warmth inside.",
+     "k": "Snow holds tiny bits of air. That keeps the warmth inside.",
+     "e": "Snow is full of tiny air pockets, and air keeps the warmth in.",
+     "u": "Packed snow is still mostly trapped air, and trapped air is a great insulator.",
+     "t": "Even packed snow is mostly air, and trapped air is an excellent insulator."
+    },
+    {
+     "lo": "Inside an igloo can feel warm, even when it is freezing outside.",
+     "mid": "Inside an igloo can feel warm, even when it is freezing outside.",
+     "hi": "Inside an igloo can feel warm, even when it is freezing outside.",
+     "k": "Inside an igloo can feel warm, even when it is freezing outside.",
+     "e": "An igloo can be warm inside even when it is very cold outside.",
+     "u": "Warm air rises, so people sleep on a raised platform above the low tunnel.",
+     "t": "With the tunnel below floor level, warm air stays up where people sleep."
+    }
+   ],
+   "done": {
+    "lo": "You built an igloo!",
+    "mid": "You built an igloo! How cozy!",
+    "hi": "You built an igloo! How cozy!",
+    "k": "You built an igloo!",
+    "e": "You built an igloo! How cozy!",
+    "u": "Shelter built: a dome of snow that holds itself up.",
+    "t": "Shelter engineered: a self-supporting dome of snow."
+   },
+   "q": {
+    "lo": {
+     "q": "A friend came to see our igloo! Who is it?",
+     "o": [
+      {
+       "label": "Arctic fox",
+       "pic": "animal_fox"
+      },
+      {
+       "label": "Walrus",
+       "pic": "animal_walrus"
+      },
+      {
+       "label": "Seal",
+       "pic": "animal_seal"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A little Arctic fox came to say hi.",
+     "hint": "Look for the small white animal with a fluffy tail."
+    },
+    "mid": {
+     "q": "What did we build our igloo with?",
+     "o": [
+      {
+       "label": "Snow blocks",
+       "pic": "build_ice_block"
+      },
+      {
+       "label": "Melting ice",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "Northern lights",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! We stacked blocks of packed snow.",
+     "hint": "Think about what you dragged onto the glowing places."
+    },
+    "hi": {
+     "q": "Why can an igloo built of snow feel warm inside?",
+     "o": [
+      {
+       "label": "Snow traps air, which keeps heat in",
+       "pic": "ans_snowfield"
+      },
+      {
+       "label": "Melting ice makes heat",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "The northern lights warm it",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Snow holds lots of tiny pockets of air, and that air keeps the heat in.",
+     "hint": "Think about what snow is full of.",
+     "fact": ""
+    },
+    "k": {
+     "q": "A friend came to see our igloo! Who is it?",
+     "o": [
+      {
+       "label": "Arctic fox",
+       "pic": "animal_fox"
+      },
+      {
+       "label": "Walrus",
+       "pic": "animal_walrus"
+      },
+      {
+       "label": "Seal",
+       "pic": "animal_seal"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A little Arctic fox came to say hi.",
+     "hint": "Look for the small white animal with a fluffy tail."
+    },
+    "e": {
+     "q": "What did we build our igloo with?",
+     "o": [
+      {
+       "label": "Snow blocks",
+       "pic": "build_ice_block"
+      },
+      {
+       "label": "Melting ice",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "Northern lights",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! We stacked blocks of packed snow.",
+     "hint": "Think about what you dragged onto the glowing places."
+    },
+    "u": {
+     "q": "Why can an igloo made of snow feel warm inside?",
+     "o": [
+      {
+       "label": "Snow traps air, which keeps heat in",
+       "pic": "ans_snowfield"
+      },
+      {
+       "label": "Melting ice gives off heat",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "The northern lights warm it",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "Sunlight shines through the walls",
+       "pic": "ans_midnight_sun"
+      }
+     ],
+     "a": 0,
+     "ok": "Right. Snow is mostly trapped air, and air slows heat escaping.",
+     "hint": "Think about what fills the gaps between snow crystals."
+    },
+    "t": {
+     "q": "Why does a shelter made of snow stay warm inside?",
+     "o": [
+      {
+       "label": "Air trapped in the snow slows heat loss",
+       "pic": "ans_snowfield"
+      },
+      {
+       "label": "Melting snow gives off heat",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "The aurora heats the dome",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "Sunlight passing through the ice walls",
+       "pic": "ans_midnight_sun"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct. Snow is mostly trapped air, a poor conductor, so body heat leaks out slowly.",
+     "hint": "Think about what fills the gaps between snow crystals.",
+     "fact": "Melting actually takes heat in, so a melting wall would cool the igloo."
+    }
+   },
+   "sticker": "animal_fox",
+   "after": {
+    "lo": "Next, let us go fishing!",
+    "mid": "Next stop: fishing through the ice!",
+    "hi": "Next stop: fishing through the ice!",
+    "k": "Next, let us go fishing!",
+    "e": "Next stop: fishing through the ice!",
+    "u": "Next stop: ice fishing.",
+    "t": "Next stop: fishing through sea ice."
+   }
+  },
+  {
+   "id": "fish",
+   "name": "Fish through the ice",
+   "bd": {
+    "wall": 3,
+    "x": 70
+   },
+   "intro": {
+    "lo": "Tap the ice to crack a hole!",
+    "mid": "It is time to fish! Tap the ice to crack open a fishing hole.",
+    "hi": "It is time to fish! Tap the ice to crack open a fishing hole.",
+    "k": "Tap the ice to crack a hole!",
+    "e": "It is time to fish! Tap the ice to crack open a fishing hole.",
+    "u": "Next, food. Before anyone walks out, we test the ice, then drill a hole and read the fish finder to decide how deep to fish.",
+    "t": "Food next. Test the ice first, then drill through, read the sonar and set the line where the fish actually are."
+   },
+   "ride": [
+    {
+     "lo": "Whoosh! Over the snow we go!",
+     "mid": "Whoosh! The sled slides over the ice!",
+     "hi": "The sled glides over the sea ice.",
+     "k": "Whoosh! Over the snow we go!",
+     "e": "Whoosh! The sled slides over the ice!",
+     "u": "Under the sled, the sea ice floats on water that is colder than zero degrees.",
+     "t": "Under the runners, the ice floats on seawater colder than zero degrees Celsius."
+    },
+    {
+     "lo": "Next stop: fishing!",
+     "mid": "Next stop: fishing through the ice!",
+     "hi": "Next stop: ice fishing.",
+     "k": "Next stop: fishing!",
+     "e": "Next stop: fishing through the ice!",
+     "u": "Stop 2: fishing through the ice.",
+     "t": "Stop 2: ice fishing."
+    }
+   ],
+   "act": {
+    "type": "fish",
+    "hole": "act_ice_hole",
+    "rod": {
+     "a": "gear_rod",
+     "svg": "rod"
+    },
+    "float": {
+     "a": "prop_bobber",
+     "svg": "float"
+    },
+    "bucket": {
+     "a": "prop_bucket",
+     "svg": "bucket"
+    },
+    "fish": "prop_fish",
+    "need": {
+     "lo": 2,
+     "mid": 3,
+     "hi": 4
+    },
+    "biteMs": {
+     "lo": 3600,
+     "mid": 3000,
+     "hi": 2600
+    },
+    "hintCrack": {
+     "lo": "Tap the ice 3 times",
+     "mid": "Tap the ice to crack it",
+     "hi": "Tap the ice to crack it",
+     "k": "Tap the ice 3 times",
+     "e": "Tap the ice to crack it",
+     "u": "Strike the ice three times to drill a fishing hole",
+     "t": "Drill through: three strikes"
+    },
+    "hintFish": {
+     "lo": "Watch the float. When it dips, tap it!",
+     "mid": "Wait for the float to dip, then tap!",
+     "hi": "Wait for the float to dip, then tap!",
+     "k": "Watch the float. When it dips, tap it!",
+     "e": "Wait for the float to dip, then tap!",
+     "u": "Watch the float closely and strike the instant it dips",
+     "t": "Strike the moment the float dips"
+    },
+    "opened": {
+     "lo": "A hole! Now wait for a bite.",
+     "mid": "You made a hole! Now wait quietly for a bite.",
+     "hi": "You made a hole! Now wait quietly for a bite.",
+     "k": "A hole! Now wait for a bite.",
+     "e": "You made a hole! Now wait quietly for a bite.",
+     "u": "The hole is open. Stay still: footsteps and moving shadows travel through the ice and scare the fish.",
+     "t": "The hole is open. Stay still: noise and shadows scare fish away."
+    },
+    "early": [
+     {
+      "lo": "Not yet. Watch the float.",
+      "mid": "Too soon! Wait until the float dips.",
+      "hi": "Too soon! Wait until the float dips.",
+      "k": "Not yet. Watch the float.",
+      "e": "Too soon! Wait until the float dips.",
+      "u": "Not yet. No fish is biting until the float dips.",
+      "t": "Too early: no fish has taken the bait yet. Watch the float."
+     }
+    ],
+    "bite": [
+     {
+      "lo": "Bite! Tap now!",
+      "mid": "The float dipped! Tap now!",
+      "hi": "The float dipped! Tap now!",
+      "k": "Bite! Tap now!",
+      "e": "The float dipped! Tap now!",
+      "u": "The float dipped, so a fish has taken the bait. Strike now!",
+      "t": "Float down: strike now!"
+     }
+    ],
+    "missed": [
+     {
+      "lo": "Oops, it swam away. Wait again.",
+      "mid": "It got away! Wait for the next bite.",
+      "hi": "It got away! Wait for the next bite.",
+      "k": "Oops, it swam away. Wait again.",
+      "e": "It got away! Wait for the next bite.",
+      "u": "Too slow: the fish let go of the bait. Wait for the next dip.",
+      "t": "Missed: the fish spat the hook. Reset and wait."
+     }
+    ],
+    "caught": [
+     [
+      {
+       "lo": "You caught a fish!",
+       "mid": "You caught a fish!",
+       "hi": "You caught a fish!",
+       "k": "You caught a fish!",
+       "e": "You caught an Arctic char!",
+       "u": "First catch: an Arctic char, a cold-water cousin of salmon.",
+       "t": "Catch one: an Arctic cod, the small fish much of the Arctic food web runs on."
+      }
+     ],
+     [
+      {
+       "lo": "Another fish! Super!",
+       "mid": "Another fish! Super!",
+       "hi": "Another fish! Super!",
+       "k": "Another fish! Super!",
+       "e": "Another fish! Great timing!",
+       "u": "Second fish. Your reaction time is getting quicker.",
+       "t": "Catch two. Good timing."
+      }
+     ],
+     [
+      {
+       "lo": "Wow, you are a great fisher!",
+       "mid": "Wow, you are a great fisher!",
+       "hi": "Wow, you are a great fisher!",
+       "k": "Wow, you are a great fisher!",
+       "e": "Three fish! You are a real ice fisher!",
+       "u": "Third fish. You are reading the float like an experienced Inuit fisher.",
+       "t": "Catch three. Your strike timing is sharp."
+      }
+     ],
+     [
+      {
+       "lo": "That is all the fish we need!",
+       "mid": "That is all the fish we need!",
+       "hi": "That is all the fish we need!",
+       "k": "That is all the fish we need!",
+       "e": "That is enough fish. We only take what we need.",
+       "u": "Four fish: enough for the camp. Taking only what we need keeps the fish population healthy.",
+       "t": "Catch four: quota reached. Sustainable fishing means leaving the rest to breed."
+      }
+     ]
+    ],
+    "icePatch": {
+     "a": "act_ice_patch"
+    },
+    "difficulty": {
+     "k": {
+      "need": 2,
+      "biteMs": 3600,
+      "input": "tap-or-drag"
+     },
+     "e": {
+      "need": 3,
+      "biteMs": 3000
+     },
+     "u": {
+      "need": 4,
+      "biteMs": 2600
+     },
+     "t": {
+      "need": 4,
+      "biteMs": 2200
+     }
+    },
+    "deep": {
+     "u": {
+      "ice": {
+       "tag": "SAFETY CHECK",
+       "q": "The drill shows the sea ice here is 18 cm thick. Rule of thumb for solid ice: 15 cm for one person on foot, 20 cm for a group, 25 cm for a snowmobile. What is safe?",
+       "say": "Before we step out, a safety check. The drill shows 18 centimetres of ice. The rule of thumb is 15 centimetres for one person on foot, 20 for a group, and 25 for a snowmobile. What is safe here?",
+       "o": [
+        "One person on foot",
+        "A snowmobile and sled",
+        "A group of ten people",
+        "Nothing: ice is never safe under 50 cm"
+       ],
+       "a": 0,
+       "ok": "Right. 18 is more than 15, so one person can walk out, but it is less than 20, so no group and no snowmobile.",
+       "hint": "Compare 18 with each number in the rule. Which ones is it bigger than?",
+       "fact": "Lake ice can hold one walker at about 10 cm, but sea ice is salty and full of brine pockets, so Arctic guides want more. Ice strength also changes with temperature, snow cover and currents, so people drill and check again as they go."
+      },
+      "finder": {
+       "tag": "PREDICT BEFORE THE CATCH",
+       "q": "The fish finder counted fish at four depths. Where should we lower the line to get bites fastest?",
+       "unit": "fish",
+       "rows": [
+        [
+         "3 m",
+         1
+        ],
+        [
+         "12 m",
+         2
+        ],
+        [
+         "25 m",
+         8
+        ],
+        [
+         "40 m",
+         3
+        ]
+       ],
+       "o": [
+        "3 m",
+        "12 m",
+        "25 m",
+        "40 m"
+       ],
+       "a": 2,
+       "ok": "Good prediction. Most fish showed at 25 metres, so that is where we drop the bait.",
+       "hint": "Read the bars: which depth has the biggest count?",
+       "good": "Line at 25 metres. With eight fish down there, bites should come quickly. Watch the float.",
+       "slow": "Line at 25 metres now, but your first guess would have been slow fishing. Watch how long the first bite takes.",
+       "chipGood": "Line: 25 m · 8 fish on the finder",
+       "chipSlow": "Line: 25 m · checking the fish count",
+       "moved": "Bites are coming faster now that the line sits in the busiest layer."
+      },
+      "seal": {
+       "tag": "NUMBERS",
+       "q": "A ringed seal eats about 60 small Arctic cod a day. How many is that in one week?",
+       "o": [
+        "420",
+        "67",
+        "360",
+        "600"
+       ],
+       "a": 0,
+       "ok": "Yes: 60 times 7 is 420 cod. And one polar bear eats a seal every few days, so the bear depends on all of those fish.",
+       "hint": "A week has 7 days. Multiply 60 by 7.",
+       "fact": "Polar bears eat mostly seals. Seals eat mostly fish such as Arctic cod, so the cod sit at the base of the bear's food chain."
+      }
+     },
+     "t": {
+      "ice": {
+       "tag": "SAFETY CHECK",
+       "q": "Three drill readings: 22 cm, 31 cm and 19 cm. Towing the sled needs at least 25 cm everywhere. Using the thinnest reading, how much more ice would we need?",
+       "say": "Three drill readings: 22, 31 and 19 centimetres. Towing the sled needs at least 25 centimetres everywhere. Using the thinnest reading, how much more ice would we need?",
+       "o": [
+        "6 cm",
+        "3 cm",
+        "9 cm",
+        "None: the average is over 25 cm"
+       ],
+       "a": 0,
+       "ok": "Correct: 25 minus 19 is 6 centimetres. The average does not matter; the thinnest spot is where you break through. We walk out and leave the snowmobile on shore.",
+       "hint": "Safety depends on the weakest spot, not the average. Subtract the thinnest reading from 25.",
+       "fact": "Sea ice is weaker than lake ice of the same thickness because it holds pockets of salty brine."
+      },
+      "finder": {
+       "tag": "PREDICT BEFORE THE CATCH",
+       "q": "The finder logged echoes in 30 seconds at each depth. Which depth gives the most fish per minute, and what is that rate?",
+       "unit": "per 30 s",
+       "rows": [
+        [
+         "3 m",
+         4
+        ],
+        [
+         "12 m",
+         18
+        ],
+        [
+         "25 m",
+         9
+        ],
+        [
+         "40 m",
+         2
+        ]
+       ],
+       "o": [
+        "12 m, 36 per minute",
+        "12 m, 18 per minute",
+        "25 m, 9 per minute",
+        "3 m, 8 per minute"
+       ],
+       "a": 0,
+       "ok": "Right: 18 echoes in 30 seconds doubles to 36 per minute at 12 metres. That layer is where the bait goes.",
+       "hint": "Find the biggest count, then turn 30 seconds into a full minute.",
+       "good": "Line set at 12 metres, the busiest layer. Strike the moment the float dips.",
+       "slow": "Line set at 12 metres. Your first estimate missed, so watch how long the first strike takes; that is the cost of a poor read.",
+       "chipGood": "Line: 12 m · 36 echoes/min",
+       "chipSlow": "Line: 12 m · re-reading the finder",
+       "moved": "The strike rate is up now that the line is in the 12 metre layer."
+      },
+      "seal": {
+       "tag": "NUMBERS",
+       "q": "A ringed seal eats about 3 kg of fish a day, and an Arctic cod weighs about 50 g. How many cod does one seal eat in 30 days?",
+       "o": [
+        "1800",
+        "60",
+        "180",
+        "18000"
+       ],
+       "a": 0,
+       "ok": "Correct: 3 kg is 3000 g, divided by 50 g is 60 cod a day, times 30 is 1800. Multiply that by every seal a polar bear eats.",
+       "hint": "Change 3 kg to grams first. Then cod per day, then times 30.",
+       "fact": "Polar bears eat mostly seals, so a bear's food really comes from millions of small fish lower in the web."
+      }
+     }
+    }
+   },
+   "facts": [
+    {
+     "lo": "People fish through holes in the ice. They wait very still.",
+     "mid": "People fish through holes in the ice. They wait very still.",
+     "hi": "People fish through holes in the ice. They wait very still.",
+     "k": "People fish through holes in the ice. They wait very still.",
+     "e": "People in the Arctic fish through holes in the ice and wait very quietly.",
+     "u": "Some Arctic fish have a natural antifreeze in their blood.",
+     "t": "Arctic fish make antifreeze proteins that stop ice crystals growing in their blood."
+    },
+    {
+     "lo": "Seals use holes in the ice to breathe.",
+     "mid": "Seals use holes in the ice to breathe.",
+     "hi": "Seals use holes in the ice to breathe.",
+     "k": "Seals use holes in the ice to breathe.",
+     "e": "Seals keep holes open in the ice so they can come up to breathe.",
+     "u": "Ringed seals keep breathing holes open all winter by scratching the ice with their claws.",
+     "t": "Ringed seals scratch breathing holes open with their claws all winter long."
+    },
+    {
+     "lo": "Fish swim under the ice even when it is freezing.",
+     "mid": "Fish swim under the ice even when it is freezing.",
+     "hi": "Fish swim under the ice even when it is freezing.",
+     "k": "Fish swim under the ice even when it is freezing.",
+     "e": "Fish swim under the ice all winter, in water below freezing.",
+     "u": "Salty sea water freezes at about minus 2 degrees, so the fish live in water below zero.",
+     "t": "Sea water freezes at about minus 1.8 degrees Celsius, so fish live in water below zero."
+    }
+   ],
+   "done": {
+    "lo": "Our bucket is full of fish!",
+    "mid": "What a fine catch! Our bucket is full.",
+    "hi": "What a fine catch! Our bucket is full.",
+    "k": "Our bucket is full of fish!",
+    "e": "What a catch! Four fish in the bucket.",
+    "u": "Four fish in the bucket. We stop there, so plenty are left for the seals and for next season.",
+    "t": "Quota reached: four fish, and the hole left for the seals."
+   },
+   "q": {
+    "lo": {
+     "q": "What did we catch?",
+     "o": [
+      {
+       "label": "Fish",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "A cookie",
+       "pic": "prop_cookie"
+      },
+      {
+       "label": "Berries",
+       "pic": "prop_berries"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! We caught fish!",
+     "hint": "It swims in the water under the ice."
+    },
+    "mid": {
+     "q": "Where does a seal come up to breathe air?",
+     "o": [
+      {
+       "label": "A hole in the ice",
+       "pic": "ans_seal_hole"
+      },
+      {
+       "label": "The bottom of the sea",
+       "pic": "ans_seabed_clams"
+      },
+      {
+       "label": "A snowy mountain",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A seal comes up at a hole in the ice.",
+     "hint": "Seals need air. Where is the air?",
+     "fact": "The seal makes the hole with its claws."
+    },
+    "hi": {
+     "q": "Ringed seals eat mostly what?",
+     "o": [
+      {
+       "label": "Fish and small sea animals",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "Berries and grass",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Cookies",
+       "pic": "prop_cookie"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Ringed seals hunt fish and small sea animals.",
+     "hint": "Seals live in the sea. What lives in the sea?",
+     "fact": "Polar bears eat ringed seals, so seals are a key link in the Arctic food chain."
+    },
+    "k": {
+     "q": "What did we catch?",
+     "o": [
+      {
+       "label": "Fish",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "A cookie",
+       "pic": "prop_cookie"
+      },
+      {
+       "label": "Berries",
+       "pic": "prop_berries"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! We caught fish!",
+     "hint": "It swims in the water under the ice."
+    },
+    "e": {
+     "q": "Where does a seal come up to breathe air?",
+     "o": [
+      {
+       "label": "A hole in the ice",
+       "pic": "ans_seal_hole"
+      },
+      {
+       "label": "The bottom of the sea",
+       "pic": "ans_seabed_clams"
+      },
+      {
+       "label": "A snowy mountain",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A seal comes up at a hole in the ice.",
+     "hint": "Seals need air. Where is the air?",
+     "fact": "The seal makes the hole with its claws."
+    },
+    "u": {
+     "q": "What do ringed seals mainly eat?",
+     "o": [
+      {
+       "label": "Arctic cod and small sea animals",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "Clams dug from the sea floor",
+       "pic": "prop_clams"
+      },
+      {
+       "label": "Polar bears",
+       "pic": "animal_polarbear"
+      },
+      {
+       "label": "Seaweed growing under the ice",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Right. Seals catch fish under the ice, and then polar bears hunt the seals.",
+     "hint": "Seals hunt while swimming under the ice."
+    },
+    "t": {
+     "q": "Ringed seals are a key link in the Arctic food web. What do they mainly eat?",
+     "o": [
+      {
+       "label": "Arctic cod and small crustaceans",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "Berries and grasses",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Clams from the sea floor",
+       "pic": "prop_clams"
+      },
+      {
+       "label": "Lemmings on the tundra",
+       "pic": "animal_fox"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct. Seals turn fish and crustaceans into the energy polar bears depend on.",
+     "hint": "Seals hunt under the ice.",
+     "fact": "Fewer seals would mean less food for polar bears higher up the food web."
+    }
+   },
+   "sticker": "animal_seal",
+   "after": {
+    "lo": "Next, some hungry friends!",
+    "mid": "Next stop: hungry Arctic animals!",
+    "hi": "Next stop: hungry Arctic animals!",
+    "k": "Next, some hungry animals!",
+    "e": "Next stop: who eats what?",
+    "u": "Next stop: who eats what in the Arctic.",
+    "t": "Next stop: the Arctic food web."
+   }
+  },
+  {
+   "id": "feed",
+   "name": "Who eats what?",
+   "bd": {
+    "wall": 1,
+    "x": 80
+   },
+   "intro": {
+    "lo": "Hungry animals! Drag or tap food to the animals.",
+    "mid": "Some hungry Arctic animals came to say hello. Drag or tap the food to them!",
+    "hi": "Some hungry Arctic animals came to say hello. Drag or tap the food to them!",
+    "k": "Hungry animals! Give each one the food it eats. Drag it, or tap the food, then tap the animal.",
+    "e": "Four hungry Arctic animals! Each one eats a different food. Drag or tap each food to the animal that eats it.",
+    "u": "At the edge of the ice, four hungry animals are waiting. Each one eats something different. Pick a food and give it to the animal that really eats it.",
+    "t": "At the floe edge, four animals are waiting. Match each food to the animal whose diet is built around it, and trace the food web as you go."
+   },
+   "ride": [
+    {
+     "k": "Look! Animals at the water!",
+     "e": "Look ahead! Arctic animals at the water!",
+     "u": "Ahead, the ice meets open water. That is where Arctic animals find food.",
+     "t": "Floe edge ahead: where ice meets open water, the food web is busiest."
+    },
+    {
+     "lo": "Third stop: dinner time!",
+     "mid": "Third stop: dinner time for the animals!",
+     "hi": "Third stop: dinner time for the animals!",
+     "k": "Third stop: who eats what?",
+     "e": "Third stop: who eats what?",
+     "u": "Stop 3: who eats what?",
+     "t": "Stop 3: who eats what?"
+    }
+   ],
+   "act": {
+    "type": "feed",
+    "need": {
+     "k": 4,
+     "e": 4,
+     "u": 4,
+     "t": 4
+    },
+    "hint": {
+     "k": "Drag a food to an animal, or tap the food, then the animal",
+     "e": "Drag or tap each food to the animal that eats it",
+     "u": "Drag or tap each food to the animal whose diet depends on it",
+     "t": "Match each food to the animal that eats it"
+    },
+    "full": {
+     "k": "That one is full! Try another animal.",
+     "e": "That animal has eaten. Pick another one.",
+     "u": "That animal already has its food. Choose another.",
+     "t": "That animal has already been matched."
+    },
+    "wrongAny": {
+     "k": "Hmm, not that one. Try another animal!",
+     "e": "Not that one. Think about what this animal eats.",
+     "u": "Not a match. Think about where this animal finds its food.",
+     "t": "Not a match. Consider where this animal feeds."
+    },
+    "animals": [
+     {
+      "id": "bear",
+      "name": "Polar bear",
+      "pic": "animal_polarbear",
+      "h": 0.8,
+      "mouth": [
+       85,
+       35
+      ]
+     },
+     {
+      "id": "seal",
+      "name": "Ringed seal",
+      "pic": "animal_seal",
+      "h": 0.5,
+      "mouth": [
+       85,
+       45
+      ]
+     },
+     {
+      "id": "walrus",
+      "name": "Walrus",
+      "pic": "animal_walrus",
+      "h": 0.75,
+      "mouth": [
+       85,
+       40
+      ]
+     },
+     {
+      "id": "fox",
+      "name": "Arctic fox",
+      "pic": "animal_fox",
+      "h": 0.55,
+      "mouth": [
+       85,
+       35
+      ]
+     }
+    ],
+    "foods": [
+     {
+      "id": "seal",
+      "label": {
+       "k": "Seal",
+       "e": "Seal",
+       "u": "Seal",
+       "t": "Seal"
+      },
+      "pic": "ans_seal_hole",
+      "ok": [
+       "bear"
+      ],
+      "react": {
+       "bear": {
+        "k": "Yes! Polar bears eat seals. Seals are their main food.",
+        "e": "Yes! A polar bear's main food is seals. It waits for them at holes in the ice.",
+        "u": "Correct. Polar bears mostly hunt ringed and bearded seals, waiting beside breathing holes in the sea ice.",
+        "t": "Correct. Polar bears are hypercarnivores: ringed and bearded seals, hunted at breathing holes, are most of their diet."
+       }
+      },
+      "wrong": {
+       "any": {
+        "k": "Hmm, not that one. Who is big enough to hunt seals?",
+        "e": "Not that one. Seals are hunted by the biggest Arctic hunter.",
+        "u": "Not a match. Which top predator depends on seals?",
+        "t": "Not a match. Which predator sits at the top of this food web?"
+       },
+       "seal": {
+        "k": "A seal does not eat seals! Who hunts them?",
+        "e": "Seals do not eat other seals. Who hunts them?",
+        "u": "Seals are prey here. Which predator hunts them?",
+        "t": "Seals are the prey in this link. Find the predator."
+       }
+      }
+     },
+     {
+      "id": "fish",
+      "label": {
+       "k": "Fish",
+       "e": "Fish",
+       "u": "Arctic cod",
+       "t": "Arctic cod"
+      },
+      "pic": "prop_fish",
+      "ok": [
+       "seal"
+      ],
+      "react": {
+       "seal": {
+        "k": "Yes! Seals eat fish.",
+        "e": "Yes! Ringed seals catch fish under the ice.",
+        "u": "Correct. Ringed seals hunt Arctic cod and small shrimp-like animals under the ice.",
+        "t": "Correct. Ringed seals feed mainly on Arctic cod and crustaceans, turning them into blubber."
+       }
+      },
+      "wrong": {
+       "any": {
+        "k": "Hmm, not that one. Who swims and catches fish?",
+        "e": "Not that one. Who swims under the ice catching fish?",
+        "u": "Not a match. Which animal hunts fish under the ice?",
+        "t": "Not a match. Which animal feeds under the ice on cod?"
+       },
+       "bear": {
+        "k": "Polar bears mostly eat seals, not fish. Who eats the fish?",
+        "e": "Polar bears eat mostly seals. Who eats the fish?",
+        "u": "Polar bears rarely eat fish. Their main food is seals. Who eats the cod?",
+        "t": "Fish are a rare snack for polar bears; seals are their staple. Who depends on cod?"
+       }
+      }
+     },
+     {
+      "id": "clams",
+      "label": {
+       "k": "Clams",
+       "e": "Clams",
+       "u": "Clams",
+       "t": "Clams"
+      },
+      "pic": "prop_clams",
+      "ok": [
+       "walrus"
+      ],
+      "react": {
+       "walrus": {
+        "k": "Crunch! Walruses love clams.",
+        "e": "Yes! A walrus finds clams on the sea floor with its whiskers.",
+        "u": "Correct. A walrus feels for clams on the sea floor with its sensitive whiskers, then sucks them out of the shell.",
+        "t": "Correct. Walruses locate clams with hundreds of vibrissae and suck the soft parts out of the shell."
+       }
+      },
+      "wrong": {
+       "any": {
+        "k": "Hmm, not that one. Who has whiskers and big tusks?",
+        "e": "Not that one. Who digs on the sea floor?",
+        "u": "Not a match. Which animal feeds on the sea floor?",
+        "t": "Not a match. Which animal forages on the sea floor?"
+       }
+      }
+     },
+     {
+      "id": "berries",
+      "label": {
+       "k": "Berries",
+       "e": "Berries",
+       "u": "Berries",
+       "t": "Summer berries"
+      },
+      "pic": "prop_berries",
+      "ok": [
+       "fox"
+      ],
+      "react": {
+       "fox": {
+        "k": "Yum! Arctic foxes eat berries in summer.",
+        "e": "Yes! In summer, Arctic foxes eat berries as well as small animals.",
+        "u": "Correct. Arctic foxes mostly hunt lemmings, but in summer they eat berries too.",
+        "t": "Correct. Arctic foxes are omnivores: mainly lemmings and birds, plus berries in summer."
+       }
+      },
+      "wrong": {
+       "any": {
+        "k": "Hmm, not that one. Which little animal eats berries?",
+        "e": "Not that one. Which animal eats plants as well as meat?",
+        "u": "Not a match. Which of these animals also eats plants?",
+        "t": "Not a match. Which of these is an omnivore?"
+       }
+      }
+     },
+     {
+      "id": "cookie",
+      "label": {
+       "k": "Cookie",
+       "e": "Cookie",
+       "u": "Cookie",
+       "t": "Cookie"
+      },
+      "pic": {
+       "a": "prop_cookie",
+       "svg": "cookie"
+      },
+      "ok": [],
+      "bands": [
+       "k",
+       "e"
+      ],
+      "wrong": {
+       "any": {
+        "k": "No thank you! Wild animals do not eat cookies.",
+        "e": "A cookie is people food. People food can make wild animals sick.",
+        "u": "",
+        "t": ""
+       }
+      }
+     }
+    ],
+    "difficulty": {
+     "k": {
+      "input": "tap-or-drag"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    },
+    "hintTap": {
+     "k": "Now tap the animal",
+     "e": "Now tap the animal that eats it",
+     "u": "Now tap the animal that eats it",
+     "t": "Now tap the animal it belongs to"
+    },
+    "pickFirst": {
+     "k": "Pick a food first!",
+     "e": "Pick a food first, then tap the animal.",
+     "u": "Pick a food first, then tap the animal that eats it.",
+     "t": "Select a food first, then the animal."
+    },
+    "deep": {
+     "u": [
+      {
+       "tag": "FOOD WEB NUMBERS",
+       "q": "A polar bear needs about 2 kg of seal fat a day. One ringed seal gives it about 20 kg of fat. Roughly how many days does one seal last the bear?",
+       "say": "Here is a food web puzzle. A polar bear needs about 2 kilograms of seal fat a day, and one ringed seal gives it about 20 kilograms. Roughly how many days does one seal last?",
+       "o": [
+        "About 10 days",
+        "About 2 days",
+        "About 20 days",
+        "About 40 days"
+       ],
+       "a": 0,
+       "ok": "Right: 20 divided by 2 is 10 days. That is why a bear needs to catch a seal every week or so.",
+       "hint": "Divide the fat in one seal by the fat the bear needs each day.",
+       "fact": "Polar bears hunt seals from the sea ice. When the ice melts early, they can go months with little food."
+      }
+     ],
+     "t": [
+      {
+       "tag": "PREDICT THE FOOD WEB",
+       "q": "The sea ice melts 3 weeks earlier than usual. Ringed seals raise their pups in snow dens on the ice. Which effect would you predict first?",
+       "say": "Make a prediction. The sea ice melts three weeks earlier than usual, and ringed seals raise their pups in snow dens on that ice. Which effect would you expect first?",
+       "o": [
+        "Fewer seal pups survive, so polar bears have less to hunt",
+        "Polar bears switch to eating clams",
+        "Arctic cod disappear before the seals are affected",
+        "Nothing changes because seals can breed on land"
+       ],
+       "a": 0,
+       "ok": "Good prediction. Seal pups need stable ice, and polar bears need seals, so the shock moves up the food web from the ice to the top predator.",
+       "hint": "Start with the animal that needs the ice directly, then follow the arrow to whoever eats it.",
+       "fact": "Scientists have measured that in years with early ice break-up, ringed seal pup survival drops and polar bears in those regions lose body weight."
+      }
+     ]
+    }
+   },
+   "facts": [
+    {
+     "k": "Polar bears are the biggest land hunters in the world.",
+     "e": "Polar bears are the biggest hunters that live on land.",
+     "u": "The polar bear is the largest land predator on Earth.",
+     "t": "The polar bear is the largest land carnivore on Earth."
+    },
+    {
+     "k": "A walrus finds clams with its whiskers.",
+     "e": "A walrus has hundreds of whiskers to feel for clams.",
+     "u": "Walrus whiskers are so sensitive they can tell a clam from a pebble in the dark.",
+     "t": "Walrus whiskers can sort clams from pebbles in total darkness."
+    },
+    {
+     "k": "Arctic foxes grow a white coat in winter.",
+     "e": "Arctic foxes turn white in winter and brown in summer.",
+     "u": "Arctic foxes change from a white winter coat to a brown summer coat.",
+     "t": "Arctic foxes moult from a white winter coat to a brown summer coat."
+    }
+   ],
+   "done": {
+    "lo": "Everyone is full!",
+    "mid": "Everyone has a full tummy!",
+    "hi": "Everyone has a full tummy!",
+    "k": "You fed everyone the right food!",
+    "e": "You fed everyone the right food!",
+    "u": "Food web solved: fish feed the seals, seals feed the polar bear, and clams and berries feed the walrus and the fox.",
+    "t": "Food web complete: Arctic cod feed ringed seals, seals feed polar bears, and clams and summer berries feed the walrus and the fox."
+   },
+   "q": {
+    "lo": {
+     "q": "Which animal has two long tusks?",
+     "o": [
+      {
+       "label": "Walrus",
+       "pic": "animal_walrus"
+      },
+      {
+       "label": "Arctic fox",
+       "pic": "animal_fox"
+      },
+      {
+       "label": "Seal",
+       "pic": "animal_seal"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A walrus has long tusks.",
+     "hint": "Look for the big animal with long white teeth.",
+     "fact": "Walrus tusks keep growing all their lives."
+    },
+    "mid": {
+     "q": "What does a walrus like to munch?",
+     "o": [
+      {
+       "label": "Clams",
+       "pic": "prop_clams"
+      },
+      {
+       "label": "Berries",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Cookies",
+       "pic": "prop_cookie"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Walruses eat clams and other animals from the sea floor.",
+     "hint": "Walruses look for food under the water.",
+     "fact": "Walrus whiskers are very good at feeling for food in the mud."
+    },
+    "hi": {
+     "q": "How do a walrus's tusks help it?",
+     "o": [
+      {
+       "label": "They help it haul its heavy body onto the ice",
+       "pic": "ans_tusks"
+      },
+      {
+       "label": "They dig up berries",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "They light up the aurora",
+       "pic": "ans_aurora"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A walrus uses its tusks like ice picks to pull itself out of the water.",
+     "hint": "Tusks are strong teeth. Think about climbing out of the water.",
+     "fact": "Tusks also show how strong an adult walrus is."
+    },
+    "k": {
+     "q": "Which animal has two long tusks?",
+     "o": [
+      {
+       "label": "Walrus",
+       "pic": "animal_walrus"
+      },
+      {
+       "label": "Arctic fox",
+       "pic": "animal_fox"
+      },
+      {
+       "label": "Seal",
+       "pic": "animal_seal"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A walrus has long tusks.",
+     "hint": "Look for the big animal with long white teeth.",
+     "fact": "Walrus tusks keep growing all their lives."
+    },
+    "e": {
+     "q": "What does a walrus like to munch?",
+     "o": [
+      {
+       "label": "Clams",
+       "pic": "prop_clams"
+      },
+      {
+       "label": "Berries",
+       "pic": "prop_berries"
+      },
+      {
+       "label": "Cookies",
+       "pic": "prop_cookie"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Walruses eat clams and other animals from the sea floor.",
+     "hint": "Walruses look for food under the water.",
+     "fact": "Walrus whiskers are very good at feeling for food in the mud."
+    },
+    "u": {
+     "q": "How does a walrus use its tusks?",
+     "o": [
+      {
+       "label": "To haul its heavy body out onto the ice",
+       "pic": "ans_tusks"
+      },
+      {
+       "label": "To catch fish",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "To break open clams",
+       "pic": "prop_clams"
+      },
+      {
+       "label": "To dig snow caves",
+       "pic": "ans_snowfield"
+      }
+     ],
+     "a": 0,
+     "ok": "Right. Its scientific name means tooth-walker.",
+     "hint": "Picture a walrus climbing out of the water."
+    },
+    "t": {
+     "q": "How does a walrus use its tusks?",
+     "o": [
+      {
+       "label": "To haul its heavy body out onto the ice",
+       "pic": "ans_tusks"
+      },
+      {
+       "label": "To spear fish underwater",
+       "pic": "prop_fish"
+      },
+      {
+       "label": "To crack open clams",
+       "pic": "prop_clams"
+      },
+      {
+       "label": "To dig breathing holes in ice",
+       "pic": "ans_seal_hole"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct. Its scientific name, Odobenus, means tooth-walker.",
+     "hint": "Tusks are long, strong teeth. Picture the walrus climbing out of the water.",
+     "fact": "Walruses also use tusks in displays to show strength."
+    }
+   },
+   "sticker": "animal_walrus",
+   "after": {
+    "lo": "Last stop: the sky!",
+    "mid": "Last stop: the dancing sky!",
+    "hi": "Last stop: the dancing sky!",
+    "k": "Last stop: the sky!",
+    "e": "Last stop: the dancing sky!",
+    "u": "Last stop: the northern lights.",
+    "t": "Final stop: the aurora."
+   }
+  },
+  {
+   "id": "aurora",
+   "name": "Paint the northern lights",
+   "bd": {
+    "wall": 2,
+    "x": 50
+   },
+   "intro": {
+    "lo": "The sky is dark. Tap or swipe to draw the lights!",
+    "mid": "The sky is dark and still. Paint the northern lights! Pick a color, then swipe or tap the sky.",
+    "hi": "The sky is dark and still. Paint the northern lights! Pick a color, then swipe or tap the sky.",
+    "k": "Look! The lights are coming! Tap or swipe the sky to make more.",
+    "e": "Look, the northern lights are starting to glow! Pick a colour, then swipe or tap the sky to make them dance.",
+    "u": "Faint green lights are already glowing over the ice. Make them stronger: pick a colour, then swipe or tap the sky.",
+    "t": "A faint aurora is already showing. Build it into a storm: choose a gas colour, then sweep or tap the sky."
+   },
+   "ride": [
+    {
+     "lo": "It is getting dark.",
+     "mid": "It is getting dark, and the stars come out.",
+     "hi": "It is getting dark, and the stars come out.",
+     "k": "It is getting dark.",
+     "e": "It is getting dark, and the stars come out.",
+     "u": "The Sun goes down and the first stars come out over the ice.",
+     "t": "Darkness falls and the first stars appear above the ice."
+    },
+    {
+     "lo": "Last stop: paint the lights!",
+     "mid": "Last stop: let us paint the northern lights!",
+     "hi": "Last stop: let us paint the northern lights!",
+     "k": "Last stop: paint the lights!",
+     "e": "Last stop: let us paint the northern lights!",
+     "u": "Stop 4: paint the northern lights.",
+     "t": "Stop 4: model the aurora."
+    }
+   ],
+   "act": {
+    "type": "paint",
+    "ribbons": {
+     "lo": 3,
+     "mid": 4,
+     "hi": 5
+    },
+    "hint": {
+     "lo": "Tap or swipe the sky",
+     "mid": "Pick a color, then swipe or tap the sky",
+     "hi": "Pick a color, then swipe or tap the sky",
+     "k": "Tap or swipe the sky",
+     "e": "Pick a color, then swipe or tap the sky",
+     "u": "Pick a colour, then swipe or tap the sky",
+     "t": "Choose a colour, then sweep or tap the sky"
+    },
+    "colors": [
+     {
+      "name": "Green",
+      "css": "#3dffa0",
+      "oct": 1
+     },
+     {
+      "name": "Blue",
+      "css": "#38c8ff",
+      "oct": 1.25
+     },
+     {
+      "name": "Purple",
+      "css": "#b57bff",
+      "oct": 1.5
+     },
+     {
+      "name": "Pink",
+      "css": "#ff7ad9",
+      "oct": 2
+     }
+    ],
+    "praise": [
+     {
+      "lo": "Beautiful!",
+      "mid": "Beautiful!",
+      "hi": "Beautiful!",
+      "k": "Beautiful!",
+      "e": "Beautiful green!",
+      "u": "Green, like glowing oxygen.",
+      "t": "Oxygen green."
+     },
+     {
+      "lo": "More colors!",
+      "mid": "More colors!",
+      "hi": "More colors!",
+      "k": "More colors!",
+      "e": "It is getting brighter!",
+      "u": "Brighter and brighter.",
+      "t": "More energy, more glow."
+     },
+     {
+      "lo": "The sky is waking up!",
+      "mid": "The sky is waking up!",
+      "hi": "The sky is waking up!",
+      "k": "The sky is waking up!",
+      "e": "The lights are spreading across the sky!",
+      "u": "The lights are spreading.",
+      "t": "The display is building."
+     },
+     {
+      "lo": "Wow!",
+      "mid": "Wow!",
+      "hi": "Wow!",
+      "k": "Wow!",
+      "e": "What a show!",
+      "u": "A huge aurora!",
+      "t": "A full auroral storm!"
+     }
+    ],
+    "done": {
+     "lo": "The northern lights are dancing! You made them!",
+     "mid": "Look! The northern lights are dancing, and you painted them!",
+     "hi": "Look! The northern lights are dancing, and you painted them!",
+     "k": "The northern lights are dancing! You made them!",
+     "e": "Look! The northern lights are dancing, and you painted them!",
+     "u": "Your northern lights are complete: particles from the Sun making the air high above us glow.",
+     "t": "Your aurora is complete: charged particles from the Sun lighting up the upper atmosphere."
+    },
+    "difficulty": {
+     "k": {
+      "ribbons": 3,
+      "input": "tap-or-drag"
+     },
+     "e": {
+      "ribbons": 4
+     },
+     "u": {
+      "ribbons": 5
+     },
+     "t": {
+      "ribbons": 5
+     }
+    }
+   },
+   "facts": [
+    {
+     "lo": "The northern lights come from tiny bits that fly from the Sun.",
+     "mid": "The northern lights come from tiny bits that fly from the Sun.",
+     "hi": "The northern lights come from tiny bits that fly from the Sun.",
+     "k": "The northern lights come from tiny bits that fly from the Sun.",
+     "e": "The northern lights start with tiny bits that fly to Earth from the Sun.",
+     "u": "The northern lights begin with the solar wind, tiny charged particles streaming from the Sun.",
+     "t": "The aurora starts with the solar wind, a stream of charged particles from the Sun."
+    },
+    {
+     "lo": "They glow green high up in the sky.",
+     "mid": "They glow green high up in the sky.",
+     "hi": "They glow green high up in the sky.",
+     "k": "They glow green high up in the sky.",
+     "e": "Most northern lights glow green, high up in the sky.",
+     "u": "Oxygen high in the sky glows green. Nitrogen adds blue and purple.",
+     "t": "Oxygen about 100 to 250 kilometres up glows green; nitrogen adds blue and purple."
+    },
+    {
+     "lo": "In the polar night the Sun does not come up for weeks.",
+     "mid": "In the polar night the Sun does not come up for weeks.",
+     "hi": "In the polar night the Sun does not come up for weeks.",
+     "k": "In the polar night the Sun does not come up for weeks.",
+     "e": "In Arctic winter, the Sun does not come up for weeks.",
+     "u": "Near the North Pole, the winter Sun stays below the horizon for weeks or even months.",
+     "t": "Near the North Pole the Sun stays below the horizon for months in winter."
+    }
+   ],
+   "done": {
+    "lo": "Beautiful lights!",
+    "mid": "What a sky!",
+    "hi": "What a sky!",
+    "k": "Beautiful lights!",
+    "e": "What a sky!",
+    "u": "Northern lights made.",
+    "t": "Aurora modelled."
+   },
+   "q": {
+    "lo": {
+     "q": "What did we paint in the sky?",
+     "o": [
+      {
+       "label": "Northern lights",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "Icebergs",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! We painted the northern lights!",
+     "hint": "Look for the glowing green sky."
+    },
+    "mid": {
+     "q": "What are the colorful lights in the Arctic sky called?",
+     "o": [
+      {
+       "label": "Northern lights",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "Icebergs",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! They are the northern lights.",
+     "hint": "They dance in the dark sky at night.",
+     "fact": "People also call them the aurora."
+    },
+    "hi": {
+     "q": "Where do the tiny particles that make the northern lights come from?",
+     "o": [
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "The ocean",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "The ice",
+       "pic": "ans_melting_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Tiny particles from the Sun hit the air high above us and make the lights glow.",
+     "hint": "Something far away in space sends them.",
+     "fact": "Earth's magnetic field guides the particles to the poles."
+    },
+    "k": {
+     "q": "What did we paint in the sky?",
+     "o": [
+      {
+       "label": "Northern lights",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "Icebergs",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! We painted the northern lights!",
+     "hint": "Look for the glowing green sky."
+    },
+    "e": {
+     "q": "What are the colorful lights in the Arctic sky called?",
+     "o": [
+      {
+       "label": "Northern lights",
+       "pic": "ans_aurora"
+      },
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "Icebergs",
+       "pic": "ans_sea_ice"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! They are the northern lights.",
+     "hint": "They dance in the dark sky at night.",
+     "fact": "People also call them the aurora."
+    },
+    "u": {
+     "q": "Where do the particles that make the northern lights come from?",
+     "o": [
+      {
+       "label": "The Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "The ocean",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "Melting ice",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "The Moon",
+       "pic": "ans_polar_night"
+      }
+     ],
+     "a": 0,
+     "ok": "Right. The solar wind carries charged particles from the Sun, and Earth's magnetic field steers them to the poles.",
+     "hint": "The source is far away in space, and very hot."
+    },
+    "t": {
+     "q": "What starts the chain of events that makes the aurora?",
+     "o": [
+      {
+       "label": "Charged particles from the Sun",
+       "pic": "ans_sun_flare"
+      },
+      {
+       "label": "Light reflected off the ocean",
+       "pic": "ans_sea_ice"
+      },
+      {
+       "label": "Melting ice",
+       "pic": "ans_melting_ice"
+      },
+      {
+       "label": "Moonlight on clouds",
+       "pic": "ans_polar_night"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct. Earth's magnetic field steers solar wind particles toward the poles, where they make oxygen and nitrogen glow.",
+     "hint": "The source is far away in space.",
+     "fact": "Strong solar storms can push the aurora much farther from the poles."
+    }
+   },
+   "sticker": "animal_polarbear",
+   "after": "",
+   "rideVideo": "ride-aurora"
+  }
+ ],
+ "finale": {
+  "lo": "You are an Arctic Explorer! You built an igloo, caught fish, fed animals and painted the lights!",
+  "mid": "You are an Arctic Explorer! You built an igloo, fished through the ice, fed hungry animals and painted the northern lights!",
+  "hi": "You earned the Arctic Explorer badge! You built an igloo, fished through the ice, fed Arctic animals and painted the northern lights.",
+  "k": "You are an Arctic Explorer! You built an igloo, caught fish, fed animals and painted the lights!",
+  "e": "You are an Arctic Explorer! You built an igloo, fished through the ice, fed hungry animals and painted the northern lights!",
+  "u": "You earned the Arctic Explorer badge! You built a snow shelter, fished through the ice, solved an Arctic food web and made the northern lights.",
+  "t": "Arctic Explorer badge earned. You engineered a snow shelter, fished sustainably through sea ice, mapped an Arctic food web and modelled the aurora."
+ },
+ "finaleBd": {
+  "wall": 2,
+  "x": 50
+ },
+ "intro": {
+  "style": "film"
+ }
+}

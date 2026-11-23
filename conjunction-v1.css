@@ -1,0 +1,27 @@
+.conjunction-deck{margin-top:14px;padding:14px;border:1px solid #4ddfff33;border-radius:20px;background:linear-gradient(#0c1c33,#07111f)}
+.conjunction-deck h3{margin:0;font-size:26px}
+.conjunction-kicker{margin:0 0 4px;color:#7feeff;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.conjunction-lead{margin:6px 0 12px;color:#c7d4ea}
+.conjunction-stage{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(220px,.7fr);gap:12px}
+.conjunction-sky{position:relative;min-height:280px;border-radius:16px;overflow:hidden;background:#07111f;border:1px solid #ffffff18}
+.conjunction-sky canvas{display:block;width:100%;height:320px}
+.conjunction-readout{padding:12px;border-radius:16px;background:#071522;border:1px solid #ffffff14}
+.conjunction-readout .gap{margin:0;font-size:42px;font-weight:950;line-height:1}
+.conjunction-readout .label{margin:4px 0 0;color:#9eb4cc;font-size:13px;font-weight:800}
+.conjunction-readout .observed{margin:10px 0 0;color:#ffd27a;font-weight:850}
+.conjunction-readout .plain{margin:8px 0 0;color:#d5e4f2}
+.conjunction-film{display:flex;gap:8px;overflow:auto;padding:10px 0 2px}
+.conjunction-film button{flex:0 0 auto;min-width:132px;padding:10px 12px;border-radius:14px;border:1px solid #365078;background:#0b1830;color:#f4f7ff;text-align:left;cursor:pointer}
+.conjunction-film button strong{display:block;font-size:28px;line-height:1}
+.conjunction-film button span{display:block;margin-top:4px;color:#9ef6ff;font-weight:850}
+.conjunction-film button small{display:block;margin-top:4px;color:#c5d4e6;font-weight:650}
+.conjunction-film button.on{border-color:#7feeff;background:#12324a}
+.conjunction-ask{margin-top:12px;padding-top:10px;border-top:1px solid #ffffff14}
+.conjunction-ask p{margin:0 0 8px;font-size:18px;font-weight:800}
+.conjunction-choices{display:grid;grid-template-columns:1fr;gap:8px}
+.conjunction-choices button{padding:12px;border-radius:14px;border:1px solid #ffffff20;background:#142640;color:#fff;text-align:left;font-weight:800;cursor:pointer}
+.conjunction-choices button.correct{border-color:#6af0ab;background:#164a38}
+.conjunction-choices button.wrong{border-color:#ff7f94;background:#492432}
+.conjunction-note{margin:8px 0 0;color:#9eb4cc;font-size:13px}
+@media(max-width:720px){.conjunction-stage{grid-template-columns:1fr}.conjunction-sky canvas{height:240px}.conjunction-readout .gap{font-size:34px}}
+@media(prefers-reduced-motion:reduce){.conjunction-deck *{animation:none!important}}

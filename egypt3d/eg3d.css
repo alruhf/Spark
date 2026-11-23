@@ -1,0 +1,513 @@
+/* Ancient Egypt 3D UI: builds on a3d.css + sh3d.css. Icons only, no outlines, targets >= 76px; only scale changes per screen. */
+.eg3d{--eg:#1f5f8a;--egd:#123a5acc;--sand:#f4e2c0}
+.eg3d .a3d-hudb,.eg3d .a3d-coins,.eg3d .sh3d-hb{background:var(--egd)}
+:root{--egT:max(14px,env(safe-area-inset-top,0px));--egR:max(14px,env(safe-area-inset-right,0px));--egL:max(14px,env(safe-area-inset-left,0px));--egB:max(14px,env(safe-area-inset-bottom,0px))}
+.eg3d-mktb{top:calc(var(--egT) + 70px);background:#e8913a!important}
+.eg3d-packb{top:calc(var(--egT) + 162px)}
+.eg3d-buildb{top:calc(var(--egT) + 254px);background:#c07a4a!important}
+.eg3d .eg3d-gear{top:calc(var(--egT) + 346px)}
+.eg3d-goods{position:absolute;left:var(--egL);top:calc(var(--egT) + 96px);display:flex;flex-direction:column;gap:8px;pointer-events:none;z-index:5}
+.eg3d-goods i{position:relative;width:62px;height:62px;border-radius:50%;background:var(--egd);border:3px solid #fff;display:grid;place-items:center}
+.eg3d-goods i svg{width:60%}.eg3d-goods b{position:absolute;right:-8px;bottom:-6px;background:#fff;color:#123a5a;border-radius:12px;padding:0 7px;font:900 18px system-ui}
+.eg3d-rideb{position:absolute;right:calc(var(--egR) + 110px);bottom:var(--egB);width:88px;height:88px;border-radius:50%;border:4px solid #fff;background:#8a6a4a;display:none;place-items:center;padding:0;cursor:pointer;z-index:6;box-shadow:0 6px 14px #0006}
+.eg3d-rideb.on{display:grid}.eg3d-rideb svg{width:64%}.eg3d-rideb.riding{background:#5fbf6a;box-shadow:0 0 0 6px #ffd23a}
+.eg3d-hold{position:absolute;left:50%;bottom:calc(var(--egB) + 20px);transform:translateX(-50%);width:140px;height:140px;border-radius:50%;border:6px solid #fff;background:#3fa7c9;display:none;place-items:center;padding:0;cursor:pointer;z-index:9;box-shadow:0 8px 20px #0006;touch-action:none}
+.eg3d-hold.on{display:grid}.eg3d-hold svg{width:58%}.eg3d-hold.down{background:#2f8fb0;transform:translateX(-50%) scale(.94);box-shadow:0 0 0 10px #ffd23a88}
+.eg3d-req{position:absolute;left:0;top:0;display:none}
+.eg3d-reqpic{width:64px;height:64px;border-radius:50%;background:#fff8e8;border:4px solid #fff;padding:6px;box-shadow:0 4px 10px #0005}.eg3d-reqpic svg{width:100%;height:100%}
+.eg3d-fade{position:absolute;inset:0;background:#f4e2c0;z-index:30;animation:egfade .8s ease both;pointer-events:none}
+@keyframes egfade{0%{opacity:0}35%,60%{opacity:1}100%{opacity:0}}
+.eg3d-papyrus{background:#f1dfb0!important;border-color:#fff!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.eg3d-ppic{width:62%;height:62%}.eg3d-ppic svg{width:100%;height:100%}
+.eg3d-cart{min-height:44px;display:flex;gap:4px;align-items:center;justify-content:center;padding:2px 12px;border-radius:22px;background:#fff6;font:900 34px Andika,Lexend,system-ui;color:#123a5a}
+.eg3d-cart svg{width:36px;height:36px}
+.eg3d-gtile{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:0;background:#2f6fb8!important}
+.eg3d-gl{width:62px;height:62px;display:block}.eg3d-gl svg{width:100%;height:100%}.eg3d-lt{font-size:46px;line-height:1}
+.eg3d-stamp[data-tier=pre] .eg3d-lt{display:none}.eg3d-stamp[data-tier=pre] .eg3d-gl{width:84px;height:84px}
+.eg3d-mapgrid{grid-template-columns:repeat(4,minmax(90px,160px))!important}
+.eg3d-dist{background:#f1dfb0!important}.eg3d-dist svg{width:100%;height:100%}
+.eg3d-dn{position:absolute;left:0;right:0;bottom:6px;font:900 17px Andika,Lexend,system-ui;color:#123a5a;text-align:center}
+.eg3d-story{background:#123a5ad9!important}
+.eg3d-scard{width:min(60vmin,360px);aspect-ratio:1;border-radius:34px;background:#f1dfb0;border:6px solid #fff;overflow:hidden;box-shadow:0 10px 30px #0006}.eg3d-scard svg{width:100%;height:100%}
+.eg3d-next{position:absolute;left:50%;bottom:calc(var(--egB) + 10px);transform:translateX(-50%);width:110px;height:110px;border-radius:50%;border:5px solid #fff;background:#5fbf6a;display:grid;place-items:center;padding:0;cursor:pointer}.eg3d-next svg{width:60%}
+.eg3d-pbox{background:#fff8e8;border-radius:26px;padding:20px 24px;max-width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 40px);overflow:auto;color:#123a5a;font:600 18px system-ui}
+.eg3d-prow2{margin:0 0 14px}.eg3d-prow2 h4{margin:0 0 8px;font:800 18px system-ui}
+.eg3d-popts{display:flex;flex-wrap:wrap;gap:8px}
+.eg3d-popt{min-height:52px;padding:0 16px;border-radius:26px;border:3px solid #123a5a33;background:#fff;color:#123a5a;font:700 17px system-ui;cursor:pointer}.eg3d-popt.sel{background:#2f6fb8;color:#fff;border-color:#2f6fb8}
+.eg3d-pin-drum{background:#c0503ae6}.eg3d-pin-sow,.eg3d-pin-cut{background:#5fa04ae6}.eg3d-pin-water{background:#3fa7c9e6}.eg3d-pin-thresh,.eg3d-pin-mill{background:#c9a050e6}.eg3d-pin-oven{background:#d0703ae6}
+.eg3d-pin-stamp{background:#2f6fb8e6}.eg3d-pin-map{background:#8a6a4ae6}.eg3d-pin-story{background:#9a5ab8e6}.eg3d-pin-stable{background:#8a6a4ae6}.eg3d-pin-build{background:#c07a4ae6}
+.eg3d-tray{z-index:9}.eg3d-tshop{background:#e8913a!important}.eg3d-tshop svg{width:100%;height:100%}.eg3d .sh3d-tcard svg{width:100%;height:100%}
+.eg3d-acts{bottom:240px}.eg3d-done{position:absolute;right:var(--egR);bottom:130px;display:none;z-index:8}.eg3d-done.on{display:block}
+.eg3d-mov.on{background:#ffd23a}
+.eg3d-rows{position:absolute;left:50%;top:var(--egT);transform:translateX(-50%);display:none;align-items:center;gap:10px;padding:8px 16px;border-radius:26px;background:var(--egd);color:#fff;font:900 26px Andika,Lexend,system-ui;z-index:5;pointer-events:none}
+.eg3d-rows.on{display:flex}.eg3d-rows span{display:flex;flex-direction:column-reverse;align-items:center;gap:2px}.eg3d-rows i{font-style:normal;font-size:18px;background:#e0c58a;color:#5a3410;border-radius:6px;padding:0 6px}.eg3d-rows b{font-size:34px}
+.eg3d-sellc .sh3d-cardimg{background:#5fbf6a22;border-radius:18px}
+.eg3d-load{position:fixed;inset:0;z-index:99;transition:opacity .5s}
+@media (max-width:600px){.eg3d-mapgrid{grid-template-columns:repeat(2,130px)!important}.eg3d-goods i{width:52px;height:52px}.eg3d-hold{width:120px;height:120px}.eg3d-acts{bottom:230px}}
+/* r2: grown-ups gear is clearly visible + a 3 s fill ring; the farm's next step glows */
+.eg3d .eg3d-gear{width:76px;height:76px;opacity:.95;background:#123a5acc;border:3px solid #fff;overflow:visible}
+.eg3d .eg3d-gear>svg{width:46%;margin-top:-14px}
+.eg3d-gearlab{position:absolute;left:0;right:0;bottom:6px;font:800 10px/1.05 system-ui;color:#fff;text-align:center;pointer-events:none}
+.eg3d-ring{position:absolute;inset:-7px;border-radius:50%;background:conic-gradient(#ffd23a var(--p,0%),transparent 0);-webkit-mask:radial-gradient(circle,transparent 62%,#000 63%);mask:radial-gradient(circle,transparent 62%,#000 63%);pointer-events:none;opacity:0}
+.eg3d .eg3d-gear.hold{animation:none}.eg3d-gear.hold .eg3d-ring{opacity:1;animation:egring 3s linear forwards}
+@property --p{syntax:'<percentage>';inherits:false;initial-value:0%}
+@keyframes egring{to{--p:100%}}
+.eg3d-pin.glow{width:112px;height:112px;background:#ffcf3a!important;box-shadow:0 0 0 8px #fff,0 0 36px 16px #ffd23acc;animation:egglow 1.2s ease-in-out infinite;z-index:8}.eg3d-pin.glow::after{border-width:12px 12px 16px 12px;bottom:-18px;margin-left:-12px}
+@keyframes egglow{50%{box-shadow:0 0 0 10px #fff6,0 0 40px 18px #ffd23a}}
+/* field mode Done + bucket dots on the shaduf button */
+.eg3d-fdone{position:absolute;right:var(--egR);bottom:130px;display:none;z-index:9}.eg3d-fdone.on{display:block}
+.eg3d-hold[data-b]::after{content:"";position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);width:66px;height:16px;background:radial-gradient(circle,#fff 6px,transparent 7px) 0 0/22px 16px repeat-x;opacity:.5}
+.eg3d-hold[data-b="1"]::after{background:radial-gradient(circle,#3fa7c9 6px,transparent 7px) 0 0/22px 16px no-repeat,radial-gradient(circle,#fff 6px,transparent 7px) 0 0/22px 16px repeat-x;opacity:1}
+.eg3d-hold[data-b="2"]::after{background:radial-gradient(circle,#3fa7c9 6px,transparent 7px) 0 0/44px 16px no-repeat,radial-gradient(circle,#3fa7c9 6px,transparent 7px) 22px 0/22px 16px no-repeat,radial-gradient(circle,#fff 6px,transparent 7px) 0 0/22px 16px repeat-x;opacity:1}
+/* Moses mission */
+.eg3d-tabs{position:absolute;top:calc(10px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);display:none;gap:4px;z-index:6;pointer-events:none}
+.eg3d-tabs.on{display:flex}
+.eg3d-tab{width:clamp(18px,2.6vw,28px);height:clamp(24px,3.4vw,36px);border-radius:6px 6px 4px 4px;background:#8a6a4a;color:#e9dcc0;font:700 clamp(10px,1.4vw,14px)/clamp(24px,3.4vw,36px) system-ui;text-align:center;font-style:normal;box-shadow:inset 0 -3px 0 #6b4f34;opacity:.75}
+.eg3d-tab.lit{background:#f4d27a;color:#6b4a10;opacity:1;box-shadow:0 0 12px #ffd76a,inset 0 -3px 0 #c99a3e}
+.eg3d-hg{position:absolute;top:calc(56px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);display:none;align-items:center;gap:6px;background:rgba(40,28,14,.6);color:#fff;border-radius:20px;padding:4px 12px;font:700 15px system-ui;z-index:6;pointer-events:none}
+.eg3d-hg.on{display:flex}.eg3d-hg b{animation:eghg 2s linear infinite}@keyframes eghg{50%{transform:rotate(180deg)}}
+.eg3d-dlg{position:absolute;left:0;right:0;bottom:calc(16px + env(safe-area-inset-bottom));display:flex;justify-content:center;align-items:flex-end;gap:10px;z-index:8;pointer-events:none;padding:0 10px}
+.eg3d-dbox{pointer-events:auto;background:rgba(255,248,232,.96);border-radius:18px;padding:10px 16px;max-width:min(560px,70vw);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.eg3d-dbox h5{margin:0 0 2px;font:800 14px system-ui;color:#8a5a20}.eg3d-dbox[data-who=Pharaoh] h5{color:#1f4f7a}.eg3d-dbox[data-who=You] h5{color:#2f8f86}
+.eg3d-dbox p{margin:0;font:600 clamp(16px,2vw,21px)/1.3 system-ui;color:#3a2a18}
+.eg3d-dnext{pointer-events:auto;width:64px;height:64px;border-radius:50%;border:0;background:#f4b23a;color:#fff;font:900 30px system-ui;box-shadow:0 4px 0 #c98a1a}
+.eg3d-dskip{pointer-events:auto;height:40px;padding:0 14px;border-radius:20px;border:0;background:rgba(40,28,14,.65);color:#fff;font:700 15px system-ui}
+/* M4: Skip sits above the Home button (never on it) */.eg3d-askip{position:absolute;right:calc(22px + env(safe-area-inset-right));bottom:calc(128px + env(safe-area-inset-bottom));z-index:8}
+.eg3d-staffb{position:absolute;left:50%;bottom:calc(26px + env(safe-area-inset-bottom));transform:translateX(-50%);width:92px;height:92px;border-radius:50%;border:0;background:#7a5230;color:#fff;z-index:8;display:flex;flex-direction:column;align-items:center;justify-content:center;font:800 14px system-ui;box-shadow:0 0 0 0 #ffe9a8;animation:egpulse 1.4s infinite}
+.eg3d-staffb svg{width:44px;height:44px}.eg3d-staffb.used{animation:none;opacity:.5}
+@keyframes egpulse{50%{box-shadow:0 0 0 12px rgba(255,233,168,.5)}}
+.eg3d-bub{position:absolute;transform:translate(-50%,-100%);background:#fff8e8;border-radius:14px;padding:6px 12px;font:600 15px system-ui;color:#3a2a18;z-index:7;pointer-events:none;box-shadow:0 3px 10px rgba(0,0,0,.2);max-width:240px;text-align:center}
+.eg3d-bub b{color:#8a5a20}
+.eg3d-bub.spark{left:50%;top:calc(96px + env(safe-area-inset-top));transform:translateX(-50%);max-width:min(480px,80vw)}
+.eg3d-cnt{top:calc(56px + env(safe-area-inset-top))}.eg3d-hg.eg3d-cnt{font:800 22px/1.15 system-ui,sans-serif;padding:8px 18px;background:rgba(28,18,8,.92);color:#fff8e6;border:2px solid #ffd76a;letter-spacing:.03em;z-index:9;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.eg3d-fade{position:absolute;inset:0;background:#0a0f22;opacity:0;pointer-events:none;transition:opacity 1.6s;z-index:9}.eg3d-fade.on{opacity:1}
+.eg3d-tamb{left:auto;right:calc(126px + env(safe-area-inset-right));transform:none;background:#b5562f}
+.eg3d-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff8e8;border-radius:22px;padding:20px 26px;text-align:center;z-index:10;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:min(420px,86vw);display:flex;flex-direction:column;align-items:center;gap:6px}
+.eg3d-badge h4{margin:0;font:800 22px system-ui;color:#8a5a20}.eg3d-badge p{margin:0;font:600 15px system-ui;color:#3a2a18}
+.eg3d-medal{width:74px;height:74px;border-radius:50%;background:radial-gradient(#ffe28a,#d9a93e);font:900 36px/74px system-ui;color:#7a4a10;box-shadow:0 0 20px #ffd76a}
+.eg3d-pin-cut{z-index:6}
+
+/* v8: backpack/build tray as obvious as Reef bag tray; pack icon matches HUD; snappier hold */
+.eg3d .sh3d-tray.eg3d-tray,.eg3d .sh3d-tray.eg3d-packitems{gap:12px;padding:12px 14px;border-radius:26px;background:#5a3410e8;box-shadow:0 10px 28px #0007;border:3px solid #ffd23a88;z-index:12}
+.eg3d .sh3d-tray .sh3d-tcard{width:92px;height:92px;border-radius:22px;border:4px solid #fff;background:#fff8e8;box-shadow:0 4px 0 #0003}
+.eg3d .sh3d-tray .sh3d-tcard.on{background:#ffe98a;border-color:#ffd23a;transform:scale(1.08);box-shadow:0 0 0 4px #ffd23a88}
+.eg3d .sh3d-tray .sh3d-tcard b{font:900 20px/1 system-ui;color:#5a3410;background:#ffd23a;border-radius:10px;padding:2px 7px;right:4px;bottom:4px}
+.eg3d .sh3d-packb{background:var(--sh3dd,#7a4a1c)}.eg3d .sh3d-packb svg{width:58%}
+.eg3d-hold{transition:transform .08s,background .08s}
+@media(max-width:600px){
+  .eg3d .sh3d-tray.eg3d-tray{left:10px;right:10px;transform:none;max-width:none;bottom:128px;justify-content:center;flex-wrap:wrap}
+  .eg3d .sh3d-tray .sh3d-tcard{width:78px;height:78px}
+  .eg3d-hold{width:132px;height:132px;bottom:calc(var(--egB) + 28px)}
+}
+
+/* v9: soft pack img, sow drag cue, build acts more obvious */
+.eg3d .sh3d-packb img{width:72%;height:72%;object-fit:contain;display:block;pointer-events:none}
+.eg3d-sowcue{position:absolute;left:50%;bottom:210px;transform:translateX(-50%);display:none;z-index:12;padding:12px 18px;border-radius:22px;background:#5fa04aee;color:#fff;font:900 18px/1.2 system-ui;border:3px solid #fff;box-shadow:0 8px 20px #0006;pointer-events:none;text-align:center;max-width:86vw}
+.eg3d-sowcue.on{display:block;animation:egSowPulse 1.2s ease-in-out infinite}
+@keyframes egSowPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.04)}}
+.eg3d-acts{bottom:250px;gap:14px;z-index:14}.eg3d-acts.on{display:flex}.eg3d-acts .sh3d-hbtn{width:78px;height:78px;border:4px solid #fff;box-shadow:0 6px 16px #0006;background:#e8913a}
+.eg3d-acts .eg3d-rot{background:#3fa7c9}.eg3d-acts .eg3d-mov{background:#c9a050}.eg3d-acts .eg3d-bagb{background:#5fa04a}
+.eg3d-pin-pyr{background:#e8b84ae6}
+@media (max-width:600px){.eg3d-sowcue{bottom:200px;font-size:16px;padding:10px 14px}.eg3d-acts{bottom:240px}.eg3d-acts .sh3d-hbtn{width:68px;height:68px}}
+/* M4: after buying a building piece the hammer glows until building starts; with nothing in hand the tray glows when the ground is tapped */
+.eg3d-buildb.eg3d-glow{animation:egpulse 1.2s infinite;box-shadow:0 0 0 0 #ffe9a8}
+.eg3d-tray.eg3d-tglow .sh3d-tcard[data-piece]{animation:egpulse 1s 3}
+/* M4: on phones the story talk (box, Continue, Skip) sits above the Home button and Spark's corner, never under them */
+@media (max-width:760px){.eg3d-dlg{bottom:calc(124px + env(safe-area-inset-bottom))}}
+/* ===== M5: Arctic HUD parity. Shared buttons use Arctic's own a3d.css rules untouched; Egypt-only buttons sit in Arctic's slots ===== */
+.eg3d .a3d-coins.sh3d-coins{background:#10243ecc}
+.eg3d .a3d-coins.sh3d-coins img{width:40px;height:auto}
+.eg3d .eg3d-hub .a3d-h{position:static;right:auto;top:auto;bottom:auto;box-shadow:none}
+.eg3d .eg3d-hub .eg3d-mktb,.eg3d .eg3d-hub .eg3d-buildb{background:#1d3a63!important}
+.eg3d .eg3d-hub .eg3d-mktb{background:#b7791f!important}
+.eg3d .eg3d-hub .a3d-h.sh3d-homeb{background:#2e7d4f;width:96px;height:96px;border-radius:24px;border:4px solid #fff;padding:12px;z-index:auto}
+.eg3d .eg3d-hub .eg3d-rideb{display:none;background:#8a6a4a}
+.eg3d .eg3d-hub .eg3d-rideb.on{display:grid}
+.eg3d .eg3d-hub .eg3d-rideb.riding{background:#2e9d5a;box-shadow:0 0 0 4px #f6c44588}
+.eg3d .eg3d-hub .eg3d-packb{background:#1d3a63}
+.eg3d .eg3d-hub .a3d-h img,.eg3d .eg3d-hub .a3d-h svg{width:100%;height:100%}
+.eg3d[data-mode]:not([data-mode="walk"]) .eg3d-hub{display:none}
+/* grown-ups gear: Arctic's grown-up age-chip look, in Arctic's item-chip slot under the coins */
+.eg3d .eg3d-gear{position:absolute;left:auto;bottom:auto;right:max(14px,env(safe-area-inset-right,0px));top:calc(max(14px,env(safe-area-inset-top,0px)) + 64px);width:auto;height:44px;min-width:52px;padding:0 12px 0 8px;border-radius:22px;border:2px solid #ffffff55;background:#10243ecc;display:flex;align-items:center;gap:6px;opacity:.85;overflow:visible;z-index:12}/* spark30: stays above narration bubbles so Grown-ups stays clear and tappable */
+.eg3d .eg3d-gear>svg{width:26px;height:26px;margin:0}
+.eg3d .eg3d-gearlab{position:static;font:800 14px/1 system-ui;color:#fffc}
+.eg3d .eg3d-gear .eg3d-ring{border-radius:22px}
+.eg3d[data-mode]:not([data-mode="walk"]):not([data-mode="build"]) .eg3d-gear{display:none}
+/* carried goods: under the gear chip on the right (Arctic keeps its catch chip top-right) */
+.eg3d .eg3d-goods{left:auto;right:max(14px,env(safe-area-inset-right,0px));top:calc(max(14px,env(safe-area-inset-top,0px)) + 120px);align-items:flex-end}
+.eg3d .eg3d-goods i{width:52px;height:52px;background:#10243ecc}
+/* build: Arctic build bar (bottom centre, 96/80 tiles), hub hidden; picked-piece buttons in Arctic's selection-bar slot */
+.eg3d .sh3d-tray.eg3d-tray{left:50%;right:auto;transform:translateX(-50%);bottom:max(14px,env(safe-area-inset-bottom,0px));max-width:calc(100vw - 20px);flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;gap:14px;padding:10px;border-radius:30px;background:#0b1a30aa;border:0;box-shadow:none}
+.eg3d .sh3d-tray.eg3d-tray .sh3d-tcard{width:96px;height:96px;border-radius:24px;border:4px solid #fff;background:#10243ecc;box-shadow:0 6px 18px #0006;transform:none}
+.eg3d .sh3d-tray.eg3d-tray .sh3d-tcard.on{background:#2e9d5a;border-color:#f6c445;box-shadow:0 0 0 4px #f6c44588;transform:none}
+.eg3d .eg3d-done{right:auto;left:auto;bottom:auto;position:static;flex:0 0 auto;width:96px;height:96px;border-radius:24px;border:4px solid #fff;background:#2e9d5a;padding:14px}
+.eg3d .eg3d-acts{position:absolute;right:auto;left:50%;transform:translateX(-50%);bottom:140px;flex-direction:row;gap:12px;padding:10px;border-radius:26px;background:#0b1a30cc}
+.eg3d .eg3d-acts .sh3d-hbtn{width:80px;height:80px;box-shadow:none}
+/* field Done: Arctic's "Done fishing" slot (bottom-left, green pill) */
+.eg3d .eg3d-fdone{right:auto;left:max(14px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));width:96px;height:96px;border-radius:30px;border:5px solid #fff;background:#2e9d5a}
+/* story: Shake! in Arctic's action-button look (bottom centre, the hub's place); Skip in Arctic's Skip slot (bottom-right) */
+.eg3d .eg3d-staffb{left:50%;right:auto;transform:translateX(-50%);bottom:max(14px,env(safe-area-inset-bottom,0px));width:92px;height:92px;border:4px solid #fff;box-shadow:0 6px 18px #0004}
+.eg3d .eg3d-tamb{left:50%;right:auto;transform:translateX(-50%);background:#b7791fee}
+.eg3d .eg3d-askip{right:max(12px,env(safe-area-inset-right,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));min-width:84px;height:84px;border-radius:42px;border:3px solid #ffffffcc;background:#10243ecc;color:#fff;font:800 20px system-ui}
+@media (orientation:portrait){
+.eg3d .eg3d-hub .a3d-h.sh3d-homeb{width:60px;height:60px;padding:7px;border-radius:16px;border-width:3px}
+.eg3d .sh3d-tray.eg3d-tray{gap:8px}
+.eg3d .sh3d-tray.eg3d-tray .sh3d-tcard,.eg3d .eg3d-done{width:80px;height:80px}
+.eg3d .eg3d-acts{bottom:130px}
+.eg3d .eg3d-staffb{width:80px;height:80px}
+.eg3d .eg3d-fdone{width:78px;height:78px}
+}
+
+/* M5 gate: Arctic desktop puts "Hear Spark again" 4px over Spark; slide it 8px right so nothing overlaps */
+@media(min-width:701px) and (min-height:501px){.eg3d .a3d-sparkre{left:calc(max(10px,env(safe-area-inset-left,0px)) + 108px)}}
+/* M5 gate: piece actions (turn / move / bag) as a column at the left middle, so they never sit on the build spot in the middle of the view */
+@media(min-width:701px){.eg3d .eg3d-acts{left:max(14px,env(safe-area-inset-left,0px));right:auto;top:50%;bottom:auto;transform:translateY(-50%);flex-direction:column}}
+/* M12: inside a family home - world pins hidden, a big bright doorway button to step back out, the family's welcome caption */
+.eg3d[data-mode="home"] .eg3d-pin{display:none!important}
+.eg3d .eg3d-homeleave{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:8;min-width:88px;min-height:88px;border-radius:22px;border:4px solid #fff;background:#8a5a32;color:#fff;font:700 18px/1 system-ui;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.eg3d .eg3d-homecap{position:absolute;left:50%;top:calc(70px + env(safe-area-inset-top,0px));transform:translateX(-50%);max-width:min(560px,86vw);z-index:7}
+/* M14: inside the Great Pyramid - pins hidden, room buttons along the passageways, a "Way out" door button, the room caption */
+.eg3d[data-mode="tomb"] .eg3d-pin{display:none!important}
+.eg3d .eg3d-tombbar{position:absolute;left:max(12px,env(safe-area-inset-left,0px));right:130px;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:8;display:flex;flex-wrap:wrap;gap:10px}
+.eg3d .eg3d-tombgo{min-height:64px;min-width:120px;padding:8px 14px;border-radius:18px;border:4px solid #fff;background:#a0763c;color:#fff;font:700 17px/1.1 system-ui;box-shadow:0 4px 12px rgba(0,0,0,.35)}
+.eg3d .eg3d-tombgo.here{background:#2e7d4f}.eg3d .eg3d-tombgo:disabled{opacity:.6}
+.eg3d .eg3d-tombleave{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:8;min-width:88px;min-height:88px;border-radius:22px;border:4px solid #fff;background:#6a4a30;color:#fff;font:700 18px/1 system-ui;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.eg3d .eg3d-tombcap{position:absolute;left:50%;top:calc(70px + env(safe-area-inset-top,0px));transform:translateX(-50%);max-width:min(560px,86vw);z-index:7}
+@media (max-width:600px){.eg3d .eg3d-tombbar{gap:8px}.eg3d .eg3d-tombgo{min-width:0;flex:1 1 40%;min-height:52px;padding:6px 8px;font-size:14px}}
+.eg3d-pyrgo{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:42%;z-index:8;min-width:96px;min-height:80px;border-radius:22px;border:4px solid #fff;background:#8a6a3a;color:#fff;font:700 17px/1.1 system-ui;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 6px 18px rgba(0,0,0,.35);animation:egpyrpulse 1.6s ease-in-out infinite}@keyframes egpyrpulse{50%{transform:scale(1.06)}}
+
+/* M14c */.eg3d-tfade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .35s;z-index:12}.eg3d-tfade.on{opacity:1}
+.eg3d-joy{position:absolute;left:18px;bottom:96px;width:112px;height:112px;border-radius:50%;background:rgba(30,20,10,.35);border:3px solid rgba(255,235,200,.6);z-index:8;touch-action:none}.eg3d-joy i{position:absolute;left:50%;top:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:rgba(255,230,190,.85);box-shadow:0 2px 6px rgba(0,0,0,.4);pointer-events:none}
+@media (max-aspect-ratio:1/1){.eg3d-joy{bottom:210px;width:96px;height:96px}}
+/* M14f #3 */
+.eg3d-sellhint{border:3px dashed #ffd23a!important}.eg3d-chain{display:flex;align-items:center;justify-content:center;gap:2px}.eg3d-chain svg{width:30px;height:30px}
+/* M14f #12: phone - the Go-inside button docks bottom-right just above the tool bar (it floated mid-screen over the play area) */
+@media (max-width:600px){.eg3d-pyrgo{top:auto;bottom:calc(104px + env(safe-area-inset-bottom,0px));min-width:72px;min-height:64px;border-radius:18px}}
+/* M14f #23: real letters always visible (pre-readers too): glyph on top, big letter under it */
+.eg3d-stamp[data-tier=pre] .eg3d-lt{display:block!important;font-size:44px}.eg3d-stamp[data-tier=pre] .eg3d-gl{width:58px;height:58px}
+.eg3d-lt{font:800 40px/1 system-ui;color:#fff;letter-spacing:1px}
+.eg3d-gwrap{display:inline-flex;flex-direction:column;align-items:center;margin:0 2px}.eg3d-gwrap svg{width:44px;height:44px}.eg3d-glt{font:800 20px/1 system-ui;color:#2a1e16}
+/* M14f #14: phone tomb bar - one slim row (two rows + stick covered a fifth of the screen) */
+@media (max-width:600px){.eg3d .eg3d-tombbar{flex-wrap:nowrap!important;gap:5px!important;right:96px!important}.eg3d .eg3d-tombgo{flex:1 1 0!important;min-height:44px!important;padding:4px 4px!important;font-size:11.5px!important;border-width:3px!important;border-radius:12px!important}}
+.eg3d .sh3d-tray.eg3d-tray .eg3d-undo{background:#c0503a}.eg3d .eg3d-undo svg{width:100%;height:100%}
+.eg3d .eg3d-sellhint .eg3d-chain{gap:4px;flex-wrap:nowrap}.eg3d .eg3d-sellhint .eg3d-chain svg{width:46px!important;height:46px!important;flex:0 0 46px}@media(max-width:600px){.eg3d .eg3d-sellhint .eg3d-chain svg{width:36px!important;height:36px!important;flex-basis:36px}}
+/* M14f #23: stamp tiles - glyph on a papyrus chip, the real letter under it, nothing clipped */
+.eg3d-stamp .sh3d-tile.eg3d-gtile{height:auto!important;min-height:0!important;padding:10px 16px 8px!important;gap:6px!important;overflow:visible}
+.eg3d-stamp .eg3d-gtile .eg3d-gl{width:70px!important;height:70px!important;background:#f6ead0;border-radius:14px;padding:6px;box-sizing:border-box}
+.eg3d-stamp .eg3d-gtile .eg3d-lt{display:block!important;font:800 34px/1.05 system-ui!important;color:#fff}
+@media(max-width:600px){.eg3d-stamp .eg3d-gtile .eg3d-gl{width:58px!important;height:58px!important}.eg3d-stamp .eg3d-gtile .eg3d-lt{font-size:30px!important}}
+.eg3d-stamp .eg3d-gtile .eg3d-gl{display:block!important;flex:none!important}.eg3d-stamp .eg3d-gtile .eg3d-gl svg{display:block!important;width:100%!important;height:100%!important;min-width:40px;min-height:40px}
+
+/* M14g G4: bread guide */
+.eg3d .eg3d-bguide{position:absolute;inset:6% 5%;z-index:30;background:#f3e2b8;border:4px solid #8a5a2b;border-radius:18px;padding:14px 16px 70px;box-shadow:0 8px 30px #0008;color:#3a2412;font:600 16px/1.2 system-ui,sans-serif;overflow:auto}
+.eg3d .eg3d-bguide h4{margin:0 0 8px;font-size:20px;text-align:center}
+.eg3d .eg3d-bguide ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.eg3d .eg3d-bguide li{background:#fff6dc;border-radius:12px;padding:6px;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+.eg3d .eg3d-bguide li b{position:absolute;left:6px;top:4px;background:#8a5a2b;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:13px}
+.eg3d .eg3d-bguide .ic{width:52px;height:52px;display:block;background:#5a3a1e;border-radius:10px;padding:4px}.eg3d .eg3d-bguide .ic svg{width:100%!important;height:100%!important;position:static!important}
+.eg3d .eg3d-bguide .tx{text-align:center;font-size:14px}
+.eg3d .eg3d-bgo{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);background:#2f8a3a;color:#fff;border:0;border-radius:24px;padding:10px 18px;font:700 16px system-ui;display:flex;align-items:center;gap:6px;white-space:nowrap}.eg3d .eg3d-bgo svg{width:20px;height:20px}
+.eg3d .eg3d-bx{position:absolute;right:8px;top:8px;width:40px;height:40px;border-radius:50%;border:0;background:#8a5a2b;padding:8px}.eg3d .eg3d-bx svg{width:100%;height:100%}
+@media(max-width:600px){.eg3d .eg3d-bguide ol{grid-template-columns:repeat(2,1fr)}.eg3d .eg3d-bguide .ic{width:44px;height:44px}}
+/* M14g: on a phone the 5 shop tabs overflowed (Sell cut off, Close X on top of a tab) */
+@media (max-width:600px){.sh3d-tabs{gap:6px;padding-right:52px;justify-content:flex-start;max-width:100%;box-sizing:border-box}.sh3d-tab{width:52px;height:52px;padding:7px;border-radius:15px;border-width:3px;flex:0 0 auto}}
+
+/* M14g R2-3/R2-4 */.eg3d-tombgo .sm{display:none}@media (max-width:600px){.eg3d-tombgo .lg{display:none}.eg3d-tombgo .sm{display:inline;white-space:nowrap}.eg3d .eg3d-tombbar .eg3d-tombgo{flex:1 1 0;min-width:0;min-height:52px;font-size:15px;padding:6px 4px}.sh3d-tabs{padding-right:90px!important;gap:5px!important}.sh3d-tab{width:50px!important;height:50px!important}}
+/* M14g R2-10: phones - build tray wraps to two rows (Arctic 80px tiles kept) so Done is never off-screen */@media (max-width:600px){.eg3d-tray{flex-wrap:wrap!important;justify-content:center!important;overflow:visible!important;width:max-content;max-width:calc(100vw - 20px)}}
+@media (max-width:600px){.eg3d .eg3d-acts{bottom:214px!important}}
+/* M14g R3-1: bubble keeps its own width near the screen edge (was squeezed to one word per line) */.eg3d-bub{width:max-content;max-width:min(240px,calc(100vw - 16px))}
+/* M14g R3-2: phones - backpack/shop X sat on top of the coin counter; drop it below the coins */@media (max-width:600px){.eg3d .sh3d-shopx.sh3d-closex{top:max(76px,calc(env(safe-area-inset-top,0px) + 76px))!important}}
+/* M14g R3-3: phones - the 10-tablet counter ran under the coin pill (9 and 10 hidden); two rows of 5 fit between Back and coins */@media (max-width:600px){.eg3d-tabs.on{flex-wrap:wrap;width:128px;left:110px;transform:none;justify-content:center;gap:4px}.eg3d-tab{width:22px;height:26px;font-size:12px;line-height:26px}}
+/* M14g T3-B2: objective arrow at the screen edge toward the glowing next step */.eg3d .eg3d-obja{position:absolute;left:0;top:0;width:72px;height:72px;display:none;z-index:11;border:0;background:none;padding:0;cursor:pointer}.eg3d .eg3d-obja.on{display:block}.eg3d-objr{position:absolute;inset:0;display:block;filter:drop-shadow(0 3px 6px #0008);animation:egobj 1.2s ease-in-out infinite}.eg3d-objr svg{width:72px;height:72px}.eg3d-objic{position:absolute;left:18px;top:18px;width:36px;height:36px;border-radius:50%;background:#1d6fb8;border:3px solid #fff;display:flex;align-items:center;justify-content:center;overflow:hidden}.eg3d-objic svg{width:26px;height:26px}@keyframes egobj{50%{opacity:.75}}
+.eg3d-maph{position:absolute;top:18px;left:0;right:0;text-align:center;font:900 20px Andika,Lexend,system-ui;color:#fff;text-shadow:0 2px 3px #0008;pointer-events:none;z-index:2}
+.eg3d-back1{animation:egback .5s ease-out 2}@keyframes egback{50%{transform:scale(1.18)}}
+.eg3d-plus1{position:absolute;top:-6px;right:-4px;font:900 20px Andika,Lexend,system-ui;font-style:normal;color:#fff;background:#2e9a4a;border-radius:12px;padding:0 6px;animation:egplus 1.4s ease-out forwards;pointer-events:none}@keyframes egplus{to{transform:translateY(-34px);opacity:0}}
+/* T6-11 (Tester): taps on the toolbar strip between/around buttons reach the world (were swallowed by the hub panel) */.eg3d .eg3d-hub{pointer-events:none}.eg3d .eg3d-hub>*{pointer-events:auto}
+/* W5-1 (phone walkthrough): on a phone the map title and close button sat on the first row of places and the last row was cut off - the grid starts below them and scrolls */
+@media (max-width:600px){.eg3d-map .eg3d-mapgrid{margin-top:78px!important;max-height:calc(100% - 96px)!important;overflow-y:auto!important;align-content:start!important;grid-auto-rows:120px!important;-webkit-overflow-scrolling:touch}.eg3d-map .eg3d-maph{font-size:16px!important;left:84px!important;right:84px!important;top:14px!important;white-space:normal;line-height:1.2}}
+/* W5-2 (phone walkthrough): the room buttons ran under the exit button (Hall covered, 'Deep room' clipped) - two rows of two that end before the exit */
+@media (max-width:600px){.eg3d .eg3d-tombbar{right:116px!important;flex-wrap:wrap!important;gap:6px!important}.eg3d .eg3d-tombgo{flex:1 1 40%!important;min-height:42px!important;font-size:13px!important;white-space:nowrap}}
+/* M14h #1: one continuous story narration panel (no speaker cards, no Continue) */
+.eg3d-dlg.eg3d-narr{align-items:center}
+.eg3d-nbox{position:relative;width:min(620px,78vw);max-width:none;padding:10px 18px 14px;overflow:hidden}
+.eg3d-nbox h5.eg3d-nhd{margin:0 0 4px;font:800 12px system-ui;letter-spacing:.08em;text-transform:uppercase;color:#8a5a20}
+.eg3d-nlines p.eg3d-nl{margin:0;font:600 clamp(16px,2vw,21px)/1.32 system-ui;color:#3a2a18;transition:opacity .4s,font-size .4s}
+.eg3d-nlines p.eg3d-nl.old{opacity:.45;font-size:clamp(13px,1.5vw,16px);font-weight:500}
+.eg3d-nlines p.eg3d-nl[data-who=Pharaoh]{color:#1f4f7a}.eg3d-nlines p.eg3d-nl[data-who=Pharaoh].old{color:#3a2a18}
+.eg3d-nbar{position:absolute;left:0;bottom:0;height:4px;background:#f4b23a;transition:width .5s;width:0}
+@media (max-width:600px){.eg3d-nbox{width:calc(100vw - 110px);padding:8px 12px 12px}}
+.eg3d-tab.cur{opacity:1;background:#a07a52;color:#fff;box-shadow:0 0 0 2px #ffd76a,0 0 10px rgba(255,215,106,.8);animation:eg3dTabCur 1.4s ease-in-out infinite}
+@keyframes eg3dTabCur{50%{box-shadow:0 0 0 2px #ffd76a,0 0 2px rgba(255,215,106,.3)}}
+/* M14h (Allen 11/9): stamp booth = English letters only (no hieroglyph pictures) - big clean letter tiles, slots and cart chips */
+.eg3d-stamp .sh3d-tile.eg3d-gtile{min-width:104px;min-height:96px!important;padding:12px 18px!important;justify-content:center}
+.eg3d-stamp .eg3d-gtile .eg3d-lt.eg3d-lonly,.eg3d-stamp[data-tier=pre] .eg3d-lt.eg3d-lonly{display:block!important;font:800 60px/1 Andika,Lexend,system-ui!important;color:#fff;letter-spacing:2px;text-shadow:0 2px 0 rgba(0,0,0,.25)}
+.eg3d-lchip{display:inline-flex;align-items:center;justify-content:center;min-width:52px;height:46px;padding:0 8px;margin:0 2px;border-radius:12px;background:#f6ead0;box-shadow:inset 0 -3px 0 #d9c39a;font:800 32px/1 Andika,Lexend,system-ui;color:#2a1e16;box-sizing:border-box}
+.sh3d-slots i .eg3d-lchip{min-width:0;width:100%;height:100%;font-size:40px;padding:0;margin:0;background:transparent;box-shadow:none;color:#5a3410}
+@media(max-width:600px){.eg3d-stamp .sh3d-tile.eg3d-gtile{min-width:84px;min-height:80px!important;padding:10px 12px!important}.eg3d-stamp .eg3d-gtile .eg3d-lt.eg3d-lonly,.eg3d-stamp[data-tier=pre] .eg3d-lt.eg3d-lonly{font-size:46px!important}.eg3d-lchip{min-width:42px;height:38px;font-size:26px}}
+/* M14h #4: visible success toast for farm / build results */
+.eg3d-toast{position:absolute;left:50%;top:calc(96px + env(safe-area-inset-top));transform:translate(-50%,-10px);z-index:12;pointer-events:none;opacity:0;transition:opacity .25s,transform .25s;background:#2f7d3a;color:#fff;font:800 clamp(15px,1.8vw,19px)/1.25 system-ui;padding:10px 18px;border-radius:22px;box-shadow:0 6px 18px rgba(0,0,0,.28);max-width:min(560px,86vw);text-align:center}
+.eg3d-toast.on{opacity:1;transform:translate(-50%,0)}.eg3d-toast.bad{background:#8a5a20}.eg3d-toast b{font-size:1.15em}
+.eg3d-fcnt{display:inline-block;margin-left:8px;padding:1px 9px;border-radius:12px;background:#fff;color:#2f7d3a;font-weight:900}
+@media (max-width:600px){.eg3d-toast{top:calc(150px + env(safe-area-inset-top))}}
+/* M14j J1 (P21): on a phone the turn/move/bag bar sat right on top of the block just placed and the next build cells (lower-left) - put it in a slim column on the right edge, clear of the build spot */
+@media (max-width:700px){.eg3d .eg3d-acts{left:auto!important;right:max(8px,env(safe-area-inset-right,0px))!important;top:190px!important;bottom:auto!important;transform:none!important;flex-direction:column!important;padding:8px!important;gap:10px!important}.eg3d .eg3d-acts .sh3d-hbtn{width:62px!important;height:62px!important}}
+/* M14j J3 (G38/P22): on a phone the home/pyramid room caption sat over the Back button and Spark - move it to the right of Spark, under the coin counter */
+@media (max-width:600px){.eg3d .eg3d-homecap,.eg3d .eg3d-tombcap{left:auto!important;right:max(8px,env(safe-area-inset-right,0px))!important;transform:none!important;top:calc(108px + env(safe-area-inset-top,0px))!important;max-width:calc(100vw - 150px)!important}}
+
+/* M14l #5: the wait banner carries Spark's invite (bake bread / pyramid treasure) */.eg3d-hg{max-width:min(92vw,560px)}.eg3d-hg em{font-style:normal;font-weight:600;font-size:14px;line-height:1.25;white-space:normal}.eg3d-hg em i{font-style:normal;font-weight:800;color:#ffd76a}.eg3d-hg.eg3d-cnt em{display:none}@media (max-width:600px){.eg3d-hg:not(.eg3d-cnt){top:calc(128px + env(safe-area-inset-top));left:140px;right:10px;transform:none;max-width:none;padding:5px 10px;border-radius:14px}.eg3d-hg em{font-size:13px}}/* phone: in the free band right of Spark, under the Grown-ups button */
+/* spark17 (Tester 11/16 sw-phone-egypt-outfit-shop: the 80%-height shop hid the kid): a compact bottom tray leaves the upper scene/player visible on phones; four tap cards still fit, close and paging stay >=48px */
+@media(max-width:600px){.eg3d .sh3d-shop{top:auto;bottom:12px;transform:translateX(-50%);padding:10px 8px 62px;gap:8px;border-radius:24px;max-height:420px}.eg3d .sh3d-shoprow{grid-template-columns:repeat(2,minmax(110px,1fr));gap:6px;width:100%}.eg3d .sh3d-card{min-height:95px;padding:5px;gap:2px;border-radius:16px}.eg3d .sh3d-cardimg{width:62px;height:62px}.eg3d .sh3d-price{height:23px;gap:5px}.eg3d .sh3d-dots i{width:10px;height:10px}.eg3d .sh3d-num{font-size:23px}.eg3d .sh3d-arrow,.eg3d .sh3d-shopx{width:50px;height:50px;padding:9px;border-width:3px}.eg3d .sh3d-arrow{bottom:7px}.eg3d .sh3d-tab{width:46px;height:46px;padding:6px}.eg3d .sh3d-shopx{top:8px;right:8px}.eg3d .sh3d-tabs{padding-right:51px;gap:5px}}
+@media(max-width:600px){body.sbx-on .a3d.eg3d[data-mode="shop"] .spark-companion.a3d-spark{top:calc(max(14px,env(safe-area-inset-top,0px)) + 100px)!important;bottom:auto!important}body.sbx-on .a3d.eg3d[data-mode="shop"] .a3d-sparkre{top:calc(max(14px,env(safe-area-inset-top,0px)) + 100px);bottom:auto;left:84px}}/* spark17: with the shop as a bottom tray Spark stays top-left (the Arctic rule moved it under the tray) */
+/* spark17 (Tester 11/16 sw-phone-egypt-P3-after-bubble / P4-pharaoh-thinking: on phones Spark's bubble and the "Pharaoh is thinking" banner sat over the Spark badge, the Grown-ups pill and the story chips, and stacked on each other): on phones both sit below the top HUD, the bubble under the banner */
+@media(max-width:600px){.eg3d .eg3d-bub.spark{top:calc(150px + env(safe-area-inset-top));max-width:calc(100vw - 24px);z-index:7}.eg3d .eg3d-hg{top:calc(150px + env(safe-area-inset-top));max-width:calc(100vw - 24px)}.eg3d .eg3d-hg.on~.eg3d-bub.spark{top:calc(222px + env(safe-area-inset-top))}}/* spark30: JS also pushes the bubble below Grown-ups / Spark */
+/* spark19 (Tester sw-phone-egypt-walk-wall: the 1-10 story chips were tiny and not tappable): real tap targets - 44x50 on desktop, 52x52 on phones.
+   A tap bounces the chip and Spark says its number. Phones fold the bar into one 52 px story chip; a tap opens the ten big chips for 6 s. */
+.eg3d-tabs.on{pointer-events:none;gap:5px}
+.eg3d-tab{pointer-events:auto;cursor:pointer;width:44px;height:50px;font:800 18px/50px system-ui;border-radius:9px 9px 6px 6px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.eg3d-tab.pop{animation:eg3dTabPop .45s ease-out}
+.eg3d-tab.cur.pop{animation:eg3dTabPop .45s ease-out,eg3dTabCur 1.4s ease-in-out .45s infinite}
+@keyframes eg3dTabPop{0%{transform:scale(1)}35%{transform:scale(1.28) translateY(-4px)}100%{transform:scale(1)}}
+.eg3d-tabpill{display:none}
+@media (max-width:600px){
+ .eg3d-tabs.on{display:block;position:absolute;left:0;right:0;top:0;width:auto;height:0;transform:none;gap:0}
+ .eg3d-tabpill{display:flex;pointer-events:auto;cursor:pointer;position:absolute;left:108px;top:calc(18px + env(safe-area-inset-top));width:min(136px,calc(100vw - 252px));min-width:100px;height:56px;box-sizing:border-box;padding:4px 8px 0;border-radius:16px;background:#8a6a4a;box-shadow:inset 0 -4px 0 #6b4f34,0 2px 8px rgba(0,0,0,.3);color:#fff;font:800 22px/30px system-ui;align-items:flex-start;justify-content:center;gap:2px;flex-wrap:wrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+ .eg3d-tpi{width:18px;height:24px;margin:3px 4px 0 0;border-radius:5px 5px 3px 3px;background:#f4d27a;box-shadow:inset 0 -3px 0 #c99a3e;font-style:normal}
+ .eg3d-tpd{font-size:16px;opacity:.85}
+ .eg3d-tpl{display:flex;gap:2px;width:100%;justify-content:center;text-decoration:none}
+ .eg3d-tpl s{width:7px;height:7px;border-radius:50%;background:#5d4329;text-decoration:none}
+ .eg3d-tpl s.lit{background:#ffd76a;box-shadow:0 0 4px #ffd76a}.eg3d-tpl s.cur{background:#fff3c4;outline:1px solid #ffd76a}
+ .eg3d-tabs .eg3d-tab{display:none}
+ .eg3d-tabs.open{z-index:60}
+ .eg3d-tabs.open::before{content:'';position:absolute;left:50%;transform:translateX(-50%);top:calc(82px + env(safe-area-inset-top));width:316px;height:132px;border-radius:20px;background:rgba(40,26,12,.72);pointer-events:auto}
+ .eg3d-tabs.open .eg3d-tab{display:block;position:absolute;width:52px;height:52px;font:800 22px/52px system-ui;top:calc(94px + env(safe-area-inset-top));left:calc(50% - 146px)}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(1){margin-left:0px;margin-top:0px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(2){margin-left:60px;margin-top:0px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(3){margin-left:120px;margin-top:0px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(4){margin-left:180px;margin-top:0px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(5){margin-left:240px;margin-top:0px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(6){margin-left:0px;margin-top:60px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(7){margin-left:60px;margin-top:60px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(8){margin-left:120px;margin-top:60px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(9){margin-left:180px;margin-top:60px}
+ .eg3d-tabs.open .eg3d-tab:nth-of-type(10){margin-left:240px;margin-top:60px}
+}
+/* spark19: the planting check refuses while the bed is not full - it shakes and the seed counter pops ("Plant 4 more!") */
+.eg3d-fdone.nope{animation:eg3dNope .5s ease-in-out}
+@keyframes eg3dNope{0%,100%{translate:0 0}20%,60%{translate:-10px 0}40%,80%{translate:10px 0}}
+.eg3d-sowcue.more .eg3d-fcnt{display:inline-block;animation:eg3dMore .7s ease-out;color:#ffe14a}
+@keyframes eg3dMore{0%{scale:1}35%{scale:1.6}100%{scale:1}}
+/* spark20 (Tester: Spark bubble, "Pharaoh is thinking" and the scribe card covered the story chips): the chips sit above talk bubbles, and step aside while a full-screen activity card (scribe stamp, shop, map, grown-ups) is open */
+.eg3d-tabs{z-index:8}
+body:has(.eg3d-stamp) .eg3d-tabs,body:has(.eg3d-parent) .eg3d-tabs,body:has(.eg3d-hg.on) .eg3d-tabs{visibility:hidden}
+
+/* spark20: a full bed - the check button pulses until tapped */
+.eg3d-fdone.ready{animation:eg3dReady 1s ease-in-out infinite;box-shadow:0 0 0 6px rgba(120,230,120,.55)}
+@keyframes eg3dReady{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+
+/* spark31: shrink Egypt Back so a mid-play tap in the top-left is hard to hit by accident; confirm before leaving the world */
+.eg3d .a3d-back,.eg3d .sh3d-back{width:48px;height:48px;left:max(8px,env(safe-area-inset-left,0px));top:max(8px,env(safe-area-inset-top,0px));z-index:12}
+.eg3d-leaveq{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:80;background:#14283cf2;color:#fff;border:3px solid #ffe46b;border-radius:18px;padding:18px 20px 16px;text-align:center;min-width:min(280px,86vw);box-shadow:0 12px 40px #0008;font:700 18px/1.3 system-ui,sans-serif}
+.eg3d-leaveq p{margin:0 0 14px}
+.eg3d-leaveq button{margin:0 6px;border:0;border-radius:14px;padding:12px 22px;font:800 18px/1 system-ui,sans-serif;cursor:pointer}
+.eg3d-leavestay{background:#3ee07a;color:#0b2414;min-width:140px}
+.eg3d-leavego{background:#ffffff22;color:#fff;border:2px solid #fff8!important}
+/* Always-visible Threshing / Quern labels under the farm pins */
+.eg3d-pin-thresh,.eg3d-pin-mill{overflow:visible}
+.eg3d-pinlab{position:absolute;left:50%;bottom:calc(100% + 4px);transform:translateX(-50%);background:#3a2410ee;color:#fff8e6;border:2px solid #fff;border-radius:8px;padding:2px 7px;font:800 11px/1.1 system-ui,sans-serif;white-space:nowrap;pointer-events:none;z-index:5;box-shadow:0 2px 8px #0007}
+
+/* spark32: countdown banner and Spark story bubble must not cover Spark / Ask me, or each other, at 390x844 or 1280x715 */
+@media(min-width:601px){
+  .eg3d .eg3d-hg:not(.eg3d-cnt){top:calc(56px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:8}
+  .eg3d .eg3d-bub.spark{top:calc(96px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:8}
+  .eg3d:has(.eg3d-hg.on) .eg3d-bub.spark{top:calc(108px + env(safe-area-inset-top,0px))}
+}
+@media(max-width:600px){
+  .eg3d .eg3d-hg:not(.eg3d-cnt){
+    top:calc(118px + env(safe-area-inset-top,0px))!important;
+    left:118px!important;right:12px!important;transform:none!important;
+    max-width:none!important;z-index:8;padding:5px 10px;border-radius:14px
+  }
+  .eg3d .eg3d-bub.spark{
+    left:118px!important;right:12px!important;
+    top:calc(118px + env(safe-area-inset-top,0px))!important;
+    transform:none!important;max-width:none!important;width:auto!important;z-index:8
+  }
+  .eg3d:has(.eg3d-hg.on) .eg3d-bub.spark,
+  .eg3d .eg3d-hg.on ~ .eg3d-bub.spark{
+    top:calc(198px + env(safe-area-inset-top,0px))!important
+  }
+  .eg3d-hg.eg3d-cnt{left:50%!important;right:auto!important;transform:translateX(-50%)!important;top:calc(58px + env(safe-area-inset-top,0px))!important;font-size:16px!important;padding:6px 12px!important}
+  /* story / end-card: don't let a leftover Spark bubble sit under the companion */
+  .eg3d:has(.eg3d-dlg.eg3d-narr) .eg3d-bub.spark{display:none!important}
+}
+
+/* spark37: desktop only — pin the plague countdown to one fixed screen position.
+   On a phone the later unqualified !important rules sat the banner on Grown-ups / the speaker. */
+@media(min-width:601px){
+.eg3d .eg3d-hg,
+.eg3d .eg3d-hg.on,
+.eg3d .eg3d-hg.eg3d-cnt,
+.eg3d .eg3d-hg:not(.eg3d-cnt){
+  position:absolute !important;
+  top:calc(56px + env(safe-area-inset-top, 0px)) !important;
+  left:50% !important;
+  right:auto !important;
+  transform:translateX(-50%) !important;
+}
+}
+.eg3d .eg3d-hg span{
+  display:inline-block;
+  min-width:3.2ch;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+
+/* s39-390: Skip sits above Shake/Staff (~95px+ clear of the action button); end-card hides leftover Spark bubbles; phone story cards stay short; no house arrow over the joystick */
+.eg3d:has(.eg3d-badge) .eg3d-bub{display:none!important}
+.eg3d[data-mode="home"] .eg3d-obja{display:none!important}
+@media(max-width:600px){
+  .eg3d .eg3d-askip{
+    bottom:calc(124px + env(safe-area-inset-bottom,0px))!important;
+    height:48px!important;min-width:72px!important;border-radius:24px!important;
+    font:800 16px system-ui!important
+  }
+  .eg3d-dlg.eg3d-narr{align-items:flex-end}
+  .eg3d-nbox{width:min(620px,94vw);padding:8px 12px 10px;max-height:28vh}
+  .eg3d-nlines .eg3d-nl,.eg3d-nlines p{font-size:15px;line-height:1.25;margin:0 0 4px}
+}
+
+
+/* s47c-390: reserved bands — compact countdown under Grown-ups, captions ≤3 lines
+   right of the speaker, Skip mid-right away from Staff and story-card buttons. */
+@media(max-width:600px){
+  /* Grown-ups sits at top ≈78–122px. Chip is a compact pill just under it, top-right. */
+  .eg3d .eg3d-hg:not(.eg3d-cnt){
+    top:calc(128px + env(safe-area-inset-top,0px))!important;
+    left:auto!important;
+    right:max(10px, env(safe-area-inset-right,0px))!important;
+    transform:none!important;
+    max-width:92px!important;
+    width:auto!important;
+    padding:4px 8px!important;
+    border-radius:16px!important;
+    z-index:11;
+    gap:4px;
+  }
+  .eg3d .eg3d-hg:not(.eg3d-cnt) em{display:none!important}
+  /* Captions live in a reserved band below Grown-ups + chip, right of Spark/speaker. */
+  .eg3d .eg3d-bub.spark,
+  .eg3d:has(.eg3d-hg.on) .eg3d-bub.spark,
+  .eg3d .eg3d-hg.on ~ .eg3d-bub.spark{
+    left:108px!important;
+    right:12px!important;
+    top:calc(172px + env(safe-area-inset-top,0px))!important;
+    transform:none!important;
+    max-width:none!important;
+    z-index:8;
+  }
+  .eg3d .eg3d-bub.spark #sparkSay,
+  .eg3d .eg3d-bub.spark .say,
+  .eg3d .eg3d-bub.spark p,
+  .eg3d .eg3d-bub.spark{
+    display:-webkit-box!important;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    line-clamp:3;
+    overflow:hidden;
+    max-height:calc(3 * 1.3em + 14px);
+  }
+  /* Skip: mid-right edge, well clear of Staff (bottom centre) and story cards (bottom). */
+  .eg3d .eg3d-askip{
+    top:46%!important;
+    bottom:auto!important;
+    right:max(10px, env(safe-area-inset-right,0px))!important;
+    left:auto!important;
+    height:44px!important;
+    min-width:72px!important;
+    border-radius:22px!important;
+    font:800 16px system-ui!important;
+    z-index:12;
+    transform:none!important;
+  }
+  /* Passover / story cards: 3 lines or fewer, parked at the bottom above the tray. */
+  .eg3d-dlg.eg3d-narr{align-items:flex-end}
+  .eg3d-nbox{width:min(620px,94vw);padding:8px 12px 10px;max-height:22vh}
+  .eg3d-nlines{max-height:calc(3 * 1.3em + 8px);overflow:hidden}
+  .eg3d-nlines .eg3d-nl,.eg3d-nlines p{font-size:15px;line-height:1.25;margin:0 0 4px;
+    display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+}
+
+/* s47c-390: Shake sits above the bottom tray, not on Home */
+@media(max-width:600px){
+  .eg3d .eg3d-tamb{
+    bottom:calc(124px + env(safe-area-inset-bottom,0px))!important;
+    left:50%!important;
+    right:auto!important;
+    transform:translateX(-50%)!important;
+  }
+}
+
+
+/* s48-390: Doors chip sits under Grown-ups with a real gap; Stay/Leave stacked with 22px;
+   story cards fully above the tray; end card parks in the upper third so the kid stays visible;
+   Shake button transform stays centered (inner .eg3d-tambspin rotates). */
+.eg3d-tambspin{display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.eg3d-leaveq{display:flex;flex-direction:column;align-items:center;gap:22px}
+.eg3d-leaveq p{margin:0}
+.eg3d-leaveq button{margin:0!important}
+/* s48b: top:22% + a 312px card still covered the kid at mid-frame. Park the badge
+   under the HUD and keep it compact so the kid stays visible below it at 390 and 1280. */
+.eg3d .eg3d-badge{
+  top:calc(72px + env(safe-area-inset-top,0px))!important;
+  left:50%;
+  transform:translate(-50%,0)!important;
+  max-height:34vh;
+  overflow:auto;
+  padding:12px 16px;
+  gap:4px;
+}
+.eg3d .eg3d-badge .eg3d-medal{width:56px;height:56px;font:900 28px/56px system-ui;box-shadow:0 0 12px #ffd76a}
+@media(max-width:600px){
+  .eg3d-hg.eg3d-cnt{
+    top:calc(140px + env(safe-area-inset-top,0px))!important;
+    left:auto!important;
+    right:max(10px, env(safe-area-inset-right,0px))!important;
+    transform:none!important;
+    max-width:148px!important;
+    z-index:11;
+  }
+  .eg3d-dlg{
+    bottom:calc(136px + env(safe-area-inset-bottom,0px))!important;
+  }
+  .eg3d-nbox{max-height:20vh;overflow:hidden}
+  .eg3d .eg3d-badge{
+    top:calc(64px + env(safe-area-inset-top,0px))!important;
+    transform:translate(-50%,0)!important;
+    max-height:26vh;
+    padding:8px 12px!important;
+    gap:2px;
+    width:min(280px,80vw);
+  }
+  .eg3d .eg3d-badge h4{font-size:18px}
+  .eg3d .eg3d-badge p{font-size:12px}
+  .eg3d .eg3d-badge .eg3d-medal{width:44px;height:44px;font:900 22px/44px system-ui;box-shadow:0 0 10px #ffd76a}
+}
+/* drum circle (Allen 11/22): five big tuned drum pads, tap only, multi-touch */
+.eg3d-drums{position:absolute;inset:0;z-index:40;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:0 8px calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,rgba(30,18,6,.55),rgba(30,18,6,0) 46%);pointer-events:auto}
+.eg3d-drow{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:12px;max-width:760px}
+.eg3d-dpad{--s:min(26vw,15vh,128px);position:relative;width:var(--s);height:var(--s);border-radius:50%;border:0;padding:0;background:radial-gradient(circle at 50% 46%,#fbedd2 0 38%,#e3c99a 45%,#ffcf5a 46% 50%,var(--dc) 51% 100%);box-shadow:0 6px 0 rgba(0,0,0,.35),inset 0 -8px 0 rgba(0,0,0,.18);cursor:pointer;touch-action:none;-webkit-tap-highlight-color:transparent;transition:transform .08s ease-out,filter .08s;outline:none}
+.eg3d-dpad0{--s:min(30vw,17vh,148px)}.eg3d-dpad1{--s:min(28vw,16vh,138px)}.eg3d-dpad3{--s:min(24vw,14vh,118px)}.eg3d-dpad4{--s:min(22vw,13vh,108px)}
+.eg3d-dpad .eg3d-dskin{position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(255,255,255,0) 70%);opacity:0;transition:opacity .25s}
+.eg3d-dpad .eg3d-dring{position:absolute;inset:-4px;border-radius:50%;border:4px solid var(--dc);opacity:0;pointer-events:none}
+.eg3d-dpad.hit{transform:scale(.9);filter:brightness(1.18)}
+.eg3d-dpad.hit .eg3d-dskin{opacity:1;transition:none}
+.eg3d-dpad.hit .eg3d-dring{animation:eg3dDring .45s ease-out}
+.eg3d-dpad.lit{box-shadow:0 0 0 6px #fff,0 0 26px 10px var(--dc),0 6px 0 rgba(0,0,0,.35)}
+.eg3d-dpad.lit .eg3d-dskin{opacity:1}
+.eg3d-dpad.win{animation:eg3dDwin .9s ease-out}
+@keyframes eg3dDring{from{opacity:.95;transform:scale(1)}to{opacity:0;transform:scale(1.45)}}
+@keyframes eg3dDwin{0%{box-shadow:0 0 0 0 #ffd54a}40%{box-shadow:0 0 0 10px #ffd54a,0 0 30px 14px #ffe58a}100%{box-shadow:0 6px 0 rgba(0,0,0,.35),inset 0 -8px 0 rgba(0,0,0,.18)}}
+.eg3d-dbar{display:flex;gap:14px;align-items:center;justify-content:center;margin-top:12px}
+.eg3d-dcopy{display:flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;border-radius:26px;border:0;background:#2b6cb0;color:#fff;font:800 17px system-ui,sans-serif;box-shadow:0 4px 0 rgba(0,0,0,.3);touch-action:manipulation}
+.eg3d-dcopy:disabled{opacity:.55}
+.a3d-wrap[data-mode="drums"] .eg3d-pin,[data-mode="drums"] .eg3d-pin{display:none!important}

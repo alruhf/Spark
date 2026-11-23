@@ -1,0 +1,2115 @@
+{
+ "area": {
+  "title": "Reef",
+  "badge": {
+   "name": "Reef Guardian",
+   "c1": "#8ff2e6",
+   "c2": "#f26b8a",
+   "pic": "badge_medal"
+  }
+ },
+ "shuffleOptions": true,
+ "camp": {
+  "title": "Research boat",
+  "walls": [
+   "Boat deck",
+   "Reef edge",
+   "Lagoon",
+   "Sand cay"
+  ],
+  "welcome": {
+   "k": "Welcome aboard our boat! Let us pack for the reef. Tap number 1, the mask.",
+   "e": "Welcome aboard our research boat on the Great Barrier Reef! Tap each thing we need to pack it.",
+   "u": "Welcome aboard! We are joining a reef survey team today. Tap each item to pack it.",
+   "t": "Welcome aboard the research boat. Today's job: survey, restore and protect a reef. Tap each item to pack it."
+  },
+  "welcomeAgain": {
+   "k": "Back on the boat! Let us pack again. Tap number 1, the mask.",
+   "e": "Back on the boat! Tap the things to pack them.",
+   "u": "Back on the boat! Tap the things to pack them.",
+   "t": "Back on the boat! Tap the things to pack them."
+  },
+  "back": {
+   "k": "Welcome back! Let us keep packing.",
+   "e": "Welcome back! Let us finish packing.",
+   "u": "Welcome back. A few things still need packing.",
+   "t": "Back on deck. Finish the kit list."
+  },
+  "prompt": {
+   "k": "Tap number 1",
+   "e": "Tap something we need",
+   "u": "Tap something we need",
+   "t": "Tap something we need"
+  },
+  "readyPrompt": {
+   "k": "All packed! Tap Go!",
+   "e": "All packed! Tap Go!",
+   "u": "Kit complete. Tap Go when ready.",
+   "t": "Kit complete. Go when ready."
+  },
+  "readyAgain": {
+   "k": "Everything is packed! Tap Go!",
+   "e": "Everything is packed. Tap Go!",
+   "u": "The kit is already complete. Tap Go to dive in.",
+   "t": "Kit already complete. Dive in."
+  },
+  "goBubble": {
+   "k": "Ready? Go!",
+   "e": "Ready to dive? Go!",
+   "u": "Ready to dive in?",
+   "t": "Set? Dive."
+  },
+  "finish": {
+   "k": "You did it! The bag is full. Tap Go and we will jump in the water!",
+   "e": "You did it! All ten things are packed. Tap Go and we will glide over the reef!",
+   "u": "Everything is packed! Tap Go and we will slip into the water.",
+   "t": "Packed. Tap Go to start the survey."
+  },
+  "gear": [
+   {
+    "id": "mask",
+    "word": "Dive mask",
+    "pic": {
+     "a": "gear_mask"
+    },
+    "wall": 0,
+    "x": 22,
+    "y": 78,
+    "line": {
+     "k": "A mask to see under water.",
+     "e": "A dive mask lets us see clearly under water.",
+     "u": "A mask keeps a pocket of air in front of our eyes, so we can see clearly under water.",
+     "t": "The mask's air space lets your eyes focus under water; water alone blurs everything."
+    }
+   },
+   {
+    "id": "snorkel",
+    "word": "Snorkel",
+    "pic": {
+     "a": "gear_snorkel"
+    },
+    "wall": 0,
+    "x": 44,
+    "y": 80,
+    "line": {
+     "k": "A snorkel to breathe.",
+     "e": "A snorkel lets us breathe while we look down.",
+     "u": "A snorkel lets us breathe at the surface while our face is in the water.",
+     "t": "A snorkel lets you breathe at the surface without lifting your face, so you stay calm and still."
+    }
+   },
+   {
+    "id": "fins",
+    "word": "Fins",
+    "pic": {
+     "a": "gear_fins"
+    },
+    "wall": 0,
+    "x": 68,
+    "y": 82,
+    "line": {
+     "k": "Fins to swim fast.",
+     "e": "Fins help us swim without kicking the coral.",
+     "u": "Fins push lots of water with slow kicks, so we stay high above the coral.",
+     "t": "Fins give thrust with slow kicks; good buoyancy keeps your fins well clear of the coral."
+    }
+   },
+   {
+    "id": "suit",
+    "word": "Stinger suit",
+    "pic": {
+     "a": "gear_suit"
+    },
+    "wall": 1,
+    "x": 26,
+    "y": 78,
+    "line": {
+     "k": "A suit for the water.",
+     "e": "A stinger suit protects us from jellyfish and sun.",
+     "u": "A thin lycra stinger suit protects against jellyfish stings and sunburn.",
+     "t": "Lycra stinger suits block box-jellyfish stings in summer and replace most sunscreen."
+    }
+   },
+   {
+    "id": "sunscreen",
+    "word": "Reef-safe sunscreen",
+    "pic": {
+     "a": "gear_sunscreen"
+    },
+    "wall": 1,
+    "x": 50,
+    "y": 82,
+    "line": {
+     "k": "Sun cream for our skin.",
+     "e": "Reef-safe sunscreen protects us and the coral.",
+     "u": "Some sunscreen chemicals can harm coral, so we choose reef-safe sunscreen.",
+     "t": "Ingredients such as oxybenzone can harm coral larvae; mineral, reef-safe sunscreen is the better choice."
+    }
+   },
+   {
+    "id": "camera",
+    "word": "Camera",
+    "pic": {
+     "a": "gear_camera"
+    },
+    "wall": 1,
+    "x": 74,
+    "y": 80,
+    "line": {
+     "k": "A camera for photos.",
+     "e": "A camera to take photos of the fish.",
+     "u": "A camera records each survey photo for the scientists.",
+     "t": "Survey photos let scientists compare coral cover from year to year."
+    }
+   },
+   {
+    "id": "slate",
+    "word": "Dive slate",
+    "pic": {
+     "a": "gear_slate"
+    },
+    "wall": 2,
+    "x": 28,
+    "y": 80,
+    "line": {
+     "k": "A board to draw on.",
+     "e": "A dive slate: we can write on it under water.",
+     "u": "A dive slate is a plastic board you can write on with a pencil under water.",
+     "t": "A dive slate lets you tally fish under water. Pencil works on wet plastic."
+    }
+   },
+   {
+    "id": "idcard",
+    "word": "Fish ID card",
+    "pic": {
+     "a": "gear_idcard"
+    },
+    "wall": 2,
+    "x": 52,
+    "y": 82,
+    "line": {
+     "k": "A card with fish pictures.",
+     "e": "A fish ID card shows us which fish is which.",
+     "u": "A fish ID card helps us name each fish we count.",
+     "t": "ID cards keep species counts consistent between divers."
+    }
+   },
+   {
+    "id": "bottle",
+    "word": "Water bottle",
+    "pic": {
+     "a": "gear_bottle"
+    },
+    "wall": 3,
+    "x": 30,
+    "y": 80,
+    "line": {
+     "k": "Water to drink.",
+     "e": "A water bottle. Snorkelling in the sun is thirsty work.",
+     "u": "Sun, salt and wind dry us out, so we bring a refillable bottle.",
+     "t": "Salt water and sun dehydrate you quickly; a refillable bottle also means no plastic waste."
+    }
+   },
+   {
+    "id": "mooring",
+    "word": "Mooring line",
+    "pic": {
+     "a": "gear_mooring"
+    },
+    "wall": 3,
+    "x": 58,
+    "y": 80,
+    "line": {
+     "k": "A rope for the boat.",
+     "e": "A mooring line ties our boat to a buoy, not the coral.",
+     "u": "We tie up to a public mooring buoy, so no anchor ever drops on the coral.",
+     "t": "Public moorings stop anchors and chains from smashing coral."
+    }
+   }
+  ],
+  "style": "pack",
+  "wrongNum": "Not yet! Find number {n}, the {w}."
+ },
+ "ride": {
+  "view": "pov",
+  "lines": [
+   {
+    "k": "Splash! Let us glide over the reef.",
+    "e": "We glide over the reef. Look at all the colours!",
+    "u": "We glide over the reef flat. Keep your fins up off the coral.",
+    "t": "Gliding over the reef flat at the surface."
+   }
+  ],
+  "video": "ride-glide"
+ },
+ "stops": [
+  {
+   "id": "survey",
+   "name": "Snorkel survey",
+   "bd": {
+    "a": "bd_survey"
+   },
+   "rideVideo": "ride-glide",
+   "intro": {
+    "k": "Let us count fish! Tap each fish you see.",
+    "e": "Time for a fish survey! Swim along the yellow tape and tap each fish to count it on the slate.",
+    "u": "Run a fish survey along the transect tape. Tap each fish inside your view ring to record it. Don't touch the coral!",
+    "t": "Run a belt-transect survey: record each fish inside your view ring, by species, without touching the coral."
+   },
+   "ride": [
+    {
+     "k": "Look down! Fish!",
+     "e": "Look down at all the fish!",
+     "u": "Below us: the reef slope.",
+     "t": "Reef slope below."
+    },
+    {
+     "k": "Here is our survey spot!",
+     "e": "Next stop: the fish survey!",
+     "u": "Next stop: the fish survey.",
+     "t": "Next: transect survey."
+    }
+   ],
+   "act": {
+    "type": "swim",
+    "names": {
+     "k": {
+      "clown": "Clownfish",
+      "tang": "Blue fish",
+      "parrot": "Parrotfish",
+      "wrasse": "Big wrasse",
+      "turtle": "Turtle"
+     },
+     "e": {
+      "clown": "Clownfish",
+      "tang": "Blue tang",
+      "parrot": "Parrotfish",
+      "wrasse": "Maori wrasse",
+      "turtle": "Green turtle"
+     },
+     "u": {
+      "clown": "Clownfish",
+      "tang": "Blue tang",
+      "parrot": "Parrotfish",
+      "wrasse": "Maori wrasse",
+      "turtle": "Green turtle"
+     },
+     "t": {
+      "clown": "Clownfish",
+      "tang": "Blue tang",
+      "parrot": "Parrotfish",
+      "wrasse": "Maori wrasse",
+      "turtle": "Green turtle"
+     }
+    },
+    "slateTitle": {
+     "k": "My fish",
+     "e": "Fish count",
+     "u": "Survey slate",
+     "t": "Transect tally"
+    },
+    "touchedLabel": {
+     "k": "Coral bumps",
+     "e": "Coral touched",
+     "u": "Coral touched",
+     "t": "Coral contacts"
+    },
+    "again": {
+     "k": "We counted that one!",
+     "e": "Already counted that one.",
+     "u": "Already on the slate.",
+     "t": "Already recorded."
+    },
+    "closer": {
+     "k": "Swim closer!",
+     "e": "Swim closer, it is outside your mask view.",
+     "u": "Too far: only count fish inside your view ring.",
+     "t": "Outside the belt: only record fish inside the ring."
+    },
+    "counted": {
+     "k": {
+      "clown": "A clownfish!",
+      "tang": "A blue fish!",
+      "parrot": "A parrotfish!",
+      "wrasse": "A big wrasse!",
+      "turtle": "A turtle!"
+     },
+     "e": {
+      "clown": "Clownfish, counted!",
+      "tang": "Blue tang, counted!",
+      "parrot": "Parrotfish, counted!",
+      "wrasse": "A Maori wrasse!",
+      "turtle": "A green turtle!"
+     },
+     "u": {
+      "clown": "Clownfish.",
+      "tang": "Blue tang.",
+      "parrot": "Parrotfish: a grazer.",
+      "wrasse": "Maori wrasse.",
+      "turtle": "Green turtle!"
+     },
+     "t": {
+      "clown": "Clownfish.",
+      "tang": "Blue tang.",
+      "parrot": "Parrotfish (grazer).",
+      "wrasse": "Maori wrasse (endangered).",
+      "turtle": "Green turtle."
+     }
+    },
+    "touch": {
+     "k": "Oops! Gentle, the coral is alive.",
+     "e": "Careful! Coral is alive. Fin up, away from it.",
+     "u": "Contact! Coral polyps are living animals. Keep your fins clear.",
+     "t": "Coral contact recorded. Polyps damage easily: keep clear."
+    },
+    "turtle": {
+     "k": "Shh, stay still... a turtle!",
+     "e": "You stayed still and a green turtle came close!",
+     "u": "Staying still paid off: a green turtle swam in.",
+     "t": "Patience: a green turtle approached."
+    },
+    "hintK": "Tap the clownfish",
+    "hintE": {
+     "k": "",
+     "e": "Swim along the tape. Tap each fish",
+     "u": "Tap each fish inside the ring",
+     "t": "Record fish inside the ring"
+    },
+    "mostQ": {
+     "k": "",
+     "e": "Which fish did we count most?",
+     "u": "Which species did we count most?",
+     "t": "Most common species?"
+    },
+    "mostOk": {
+     "k": "",
+     "e": "Yes! That bar is the tallest.",
+     "u": "Yes, that is the tallest bar.",
+     "t": "Correct."
+    },
+    "mostNo": {
+     "k": "",
+     "e": "Look for the tallest bar.",
+     "u": "Check which bar is tallest.",
+     "t": "Re-read the tally."
+    },
+    "siteB": {
+     "k": "",
+     "e": "",
+     "u": "Now site B, a damaged patch of reef. Count again.",
+     "t": "Site B: a rubble patch. Repeat the transect."
+    },
+    "hintB": {
+     "k": "",
+     "e": "",
+     "u": "Count the fish at site B",
+     "t": "Record site B"
+    },
+    "chartTitle": {
+     "k": "Fish",
+     "e": "Our fish",
+     "u": "Site A vs site B",
+     "t": "Site comparison"
+    },
+    "compareQ": {
+     "k": "",
+     "e": "",
+     "u": "Which site has more fish?",
+     "t": "Which site supports more fish?"
+    },
+    "siteALabel": {
+     "k": "",
+     "e": "",
+     "u": "Site A, the living coral",
+     "t": "Site A: live coral"
+    },
+    "siteBLabel": {
+     "k": "",
+     "e": "",
+     "u": "Site B, the rubble",
+     "t": "Site B: rubble"
+    },
+    "compareOk": {
+     "k": "",
+     "e": "",
+     "u": "Yes! Living coral gives fish food and hiding places.",
+     "t": "Correct: live coral gives shelter and food, so it supports more fish."
+    },
+    "compareNo": {
+     "k": "",
+     "e": "",
+     "u": "Look at the two bars again.",
+     "t": "Check the totals."
+    },
+    "healthQ": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "What do the site B counts tell you about that patch?"
+    },
+    "healthOk": "Right: few fish and no grazers means the patch is in poor shape.",
+    "healthNo": "Counts are evidence. What do few fish and no parrotfish suggest?",
+    "difficulty": {
+     "k": {
+      "input": "tap",
+      "auto": true
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can count the fish I see.",
+     "e": "I can record a fish survey and read a bar chart.",
+     "u": "I can compare two reef sites using fish counts.",
+     "t": "I can use survey data as evidence about reef health."
+    },
+    "standards": {
+     "k": "K-LS1-1",
+     "e": "2-LS4-1",
+     "u": "3-LS4-3",
+     "t": "MS-LS2-1"
+    },
+    "journal": "Counting reef fish"
+   },
+   "facts": [
+    {
+     "k": "Lots of fish live on the reef.",
+     "e": "The Great Barrier Reef is home to more than 1,500 kinds of fish.",
+     "u": "The Great Barrier Reef has over 1,500 fish species and about 400 kinds of hard coral.",
+     "t": "The Great Barrier Reef holds over 1,500 fish species and about 400 hard coral species across about 3,000 reefs."
+    },
+    {
+     "k": "Coral is alive. Do not touch it.",
+     "e": "Coral is made of tiny living animals called polyps. A touch can hurt them.",
+     "u": "Coral is a colony of tiny animals called polyps. Touching it can damage them and spread disease.",
+     "t": "Corals are colonies of polyps with algae partners inside; contact strips their protective mucus."
+    },
+    {
+     "k": "Scientists count fish to see if the reef is healthy.",
+     "e": "Scientists swim along a tape and count fish to check on the reef.",
+     "u": "Scientists swim a set path, a transect, and count fish to compare reefs over time.",
+     "t": "Repeating the same transect each year lets scientists measure change, not just guess."
+    }
+   ],
+   "done": {
+    "k": "We counted the fish! Great job!",
+    "e": "Great survey! The scientists can use our counts.",
+    "u": "Survey complete. Good data!",
+    "t": "Transect complete. Data recorded."
+   },
+   "q": {
+    "k": {
+     "q": "Is coral alive?",
+     "o": [
+      {
+       "label": "Yes, coral is alive",
+       "pic": "ans_coral_polyps"
+      },
+      {
+       "label": "No, it is a rock",
+       "pic": "ans_algae_rock"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Coral is made of tiny animals.",
+     "hint": "It has tiny animals called polyps."
+    },
+    "e": {
+     "q": "Why should we not touch coral?",
+     "o": [
+      {
+       "label": "It is alive and can get hurt",
+       "pic": "ans_coral_polyps"
+      },
+      {
+       "label": "It is too cold",
+       "pic": "ans_warm_water"
+      },
+      {
+       "label": "It will float away",
+       "pic": "ans_coral_float"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Coral polyps are living animals.",
+     "hint": "Coral is alive."
+    },
+    "u": {
+     "q": "Your survey found 9 fish on the 20 metre tape at Site A and 3 at Site B. What is the best conclusion?",
+     "o": [
+      {
+       "label": "Site A probably has a healthier reef",
+       "pic": "ans_healthy_reef"
+      },
+      {
+       "label": "Site B probably has a healthier reef",
+       "pic": "ans_algae_rock"
+      },
+      {
+       "label": "Both sites are the same",
+       "pic": "ans_same"
+      },
+      {
+       "label": "Fish counts tell us nothing",
+       "pic": "ans_tape"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes. Three times as many fish usually means more food and shelter, though one survey is only a first clue.",
+     "hint": "Fish need food and hiding places."
+    },
+    "t": {
+     "q": "Why do scientists swim the same transect every year?",
+     "o": [
+      {
+       "label": "To measure change over time",
+       "pic": "ans_healthy_reef"
+      },
+      {
+       "label": "To count fish more quickly",
+       "pic": "animal_clownfish"
+      },
+      {
+       "label": "Because the tape must stay in one place",
+       "pic": "ans_tape"
+      },
+      {
+       "label": "To prove the reef never changes",
+       "pic": "ans_algae_rock"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: repeat surveys show trends.",
+     "hint": "What does comparing years let you see?"
+    }
+   },
+   "sticker": "animal_clownfish",
+   "after": {
+    "k": "Next, let us plant coral!",
+    "e": "Next stop: the coral nursery!",
+    "u": "Next stop: grow and plant coral.",
+    "t": "Next: coral restoration."
+   }
+  },
+  {
+   "id": "nursery",
+   "name": "Coral nursery",
+   "bd": {
+    "a": "bd_nursery"
+   },
+   "rideVideo": "ride-glide",
+   "intro": {
+    "k": "Let us help the coral grow! First, snip a little piece.",
+    "e": "Scientists grow baby corals on underwater trees. Snip a piece of healthy coral to start.",
+    "u": "Restore the reef: snip healthy fragments, hang them on the coral tree, clean the frame, grow them, then plant them out.",
+    "t": "Run a coral-gardening cycle: fragment, hang, maintain, grow, outplant, on a budget."
+   },
+   "ride": [
+    {
+     "k": "Look! A coral tree!",
+     "e": "Look at the coral tree under the boat!",
+     "u": "Below us: the coral nursery.",
+     "t": "Nursery site below."
+    },
+    {
+     "k": "Next stop: the coral nursery!",
+     "e": "Next stop: grow coral!",
+     "u": "Next stop: the nursery.",
+     "t": "Next: restoration."
+    }
+   ],
+   "act": {
+    "type": "nursery",
+    "bleachedPick": {
+     "k": "Not that white one. Pick a colourful piece.",
+     "e": "That piece is bleached and weak. Pick a healthy, coloured piece.",
+     "u": "Bleached fragments are stressed and rarely survive. Choose healthy colour.",
+     "t": "Bleached tissue has lost its algae; choose healthy fragments only."
+    },
+    "snipped": {
+     "k": "Snip! A little coral piece.",
+     "e": "Snip! A small piece can grow into a whole new coral.",
+     "u": "Fragment collected. Each piece can grow into a new colony.",
+     "t": "Fragment collected."
+    },
+    "hintSnipK": "Tap a coral tip",
+    "hintSnip": {
+     "k": "",
+     "e": "Tap a healthy coral tip",
+     "u": "Snip healthy tips",
+     "t": "Collect healthy fragments"
+    },
+    "clipIntro": {
+     "k": "Now hang it on the tree.",
+     "e": "Now hang the pieces on the coral tree.",
+     "u": "Hang the fragments on the tree, spaced out so water flows.",
+     "t": "Hang the fragments with spacing for water flow."
+    },
+    "hintClipK": "Tap a piece, then a branch",
+    "hintClip": {
+     "k": "",
+     "e": "Drag or tap each piece onto a branch",
+     "u": "Drag each fragment to a branch",
+     "t": "Place each fragment"
+    },
+    "clipped": {
+     "k": "On the tree!",
+     "e": "Hung on the tree!",
+     "u": "Hung on the tree.",
+     "t": "Placed."
+    },
+    "tendIntro": {
+     "k": "Brush the green algae off the tree.",
+     "e": "Algae is growing on the tree. Brush it off, but not the coral!",
+     "u": "Algae competes with the coral. Brush the frame clean, but don't scrub the coral.",
+     "t": "Maintenance: brush algae off the frame, not the coral tissue."
+    },
+    "hintTendK": "Rub off the green algae",
+    "hintTend": {
+     "k": "",
+     "e": "Brush the green algae off the frame",
+     "u": "Brush the frame clean",
+     "t": "Clean the frame"
+    },
+    "notCoral": {
+     "k": "Gently! Not the coral.",
+     "e": "Careful, that is coral. Brush the frame instead.",
+     "u": "Not the coral: brushing damages the tissue.",
+     "t": "Avoid the coral tissue."
+    },
+    "cleanOk": {
+     "k": "Clean! Well done.",
+     "e": "Clean! Now the coral gets the light it needs.",
+     "u": "Clean frame: more light and water flow for the coral.",
+     "t": "Frame clean."
+    },
+    "tempBtn": {
+     "k": "Check the water",
+     "e": "Check the water temperature",
+     "u": "Check the water temperature",
+     "t": "Log the water temperature"
+    },
+    "hintTemp": {
+     "k": "",
+     "e": "Tap the thermometer",
+     "u": "Check the temperature",
+     "t": "Log the temperature"
+    },
+    "tempOk": {
+     "k": "",
+     "e": "The water is just right for coral: about 26 °C.",
+     "u": "26 °C: inside the coral comfort zone (about 23 to 29 °C).",
+     "t": "26 °C, within the 23–29 °C optimum. Above about 30 °C, bleaching starts."
+    },
+    "growIntro": {
+     "k": "Tap Grow to watch the coral get bigger!",
+     "e": "Now let the corals grow. Tap Grow one month at a time.",
+     "u": "Time-lapse: grow the corals month by month and watch who moves in.",
+     "t": "Grow the fragments month by month; note when fish arrive."
+    },
+    "hintGrowK": "Tap Grow",
+    "hintGrow": {
+     "k": "",
+     "e": "Tap Grow",
+     "u": "Grow month by month",
+     "t": "Advance the months"
+    },
+    "growBtn": {
+     "k": "Grow!",
+     "e": "Grow one month",
+     "u": "Grow one month",
+     "t": "+1 month"
+    },
+    "monthsLabel": {
+     "k": "{n} months",
+     "e": "Month {n}",
+     "u": "Month {n}",
+     "t": "Month {n}"
+    },
+    "fishCame": {
+     "k": [
+      "A little fish came!",
+      "More fish!"
+     ],
+     "e": [
+      "Look, little fish are moving in!",
+      "More fish! The coral gives them a home."
+     ],
+     "u": [
+      "Small damselfish are sheltering in the branches.",
+      "More fish arrive as the coral gives shelter."
+     ],
+     "t": [
+      "Damselfish recruit to the branches.",
+      "Fish numbers rise with habitat."
+     ]
+    },
+    "grownLine": {
+     "k": "The coral is big now!",
+     "e": "The corals have grown big and strong!",
+     "u": "Ten months later, the fragments are ready to plant out.",
+     "t": "Fragments ready for outplanting."
+    },
+    "plantIntroU": {
+     "k": "",
+     "e": "",
+     "u": "Plant the corals onto the rubble. Mix the types.",
+     "t": "Outplant: mix branching and boulder corals."
+    },
+    "plantIntro": {
+     "k": "",
+     "e": "Plant the corals onto the broken rubble.",
+     "u": "Plant the corals onto the rubble.",
+     "t": "Outplant onto the rubble."
+    },
+    "hintPlantU": {
+     "k": "",
+     "e": "",
+     "u": "Plant a mix of coral types",
+     "t": "Outplant a mix"
+    },
+    "hintPlant": {
+     "k": "",
+     "e": "Drag or tap each coral onto the rubble",
+     "u": "Plant on the rubble",
+     "t": "Outplant"
+    },
+    "mixHint": {
+     "k": "",
+     "e": "",
+     "u": "Mix it up! Different corals cope with different stresses.",
+     "t": "Diversify: mixed types spread the risk."
+    },
+    "plantedU": {
+     "k": "",
+     "e": "",
+     "u": "A mixed patch: much stronger against storms and heat.",
+     "t": "Mixed outplant complete."
+    },
+    "planted": {
+     "k": "",
+     "e": "Planted! The rubble is coming back to life.",
+     "u": "Planted! The rubble is coming back to life.",
+     "t": "Outplant complete."
+    },
+    "budgetQ": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Budget $100: which order gives the best chance if a heatwave comes?"
+    },
+    "budgetOk": "Good: a mix spreads the risk and stays on budget.",
+    "budgetOver": "That is over the budget.",
+    "budgetRisk": "All one type is risky: one heatwave or disease could take them all.",
+    "difficulty": {
+     "k": {
+      "input": "tap-or-drag"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can help a coral grow.",
+     "e": "I can explain how people help coral grow back.",
+     "u": "I can describe how a coral nursery restores a reef.",
+     "t": "I can evaluate a reef restoration plan."
+    },
+    "standards": {
+     "k": "K-ESS3-3",
+     "e": "3-LS4-4",
+     "u": "5-ESS3-1",
+     "t": "MS-LS2-5"
+    },
+    "journal": "Growing coral"
+   },
+   "facts": [
+    {
+     "k": "A tiny piece of coral can grow into a big one.",
+     "e": "A small coral piece can grow into a whole new coral.",
+     "u": "A small fragment can grow into a new coral colony, because every polyp can divide.",
+     "t": "Corals grow clonally: a fragment's polyps divide to form a new colony."
+    },
+    {
+     "k": "Coral needs clean, sunny water.",
+     "e": "Coral needs sunlight and clean water. Algae can smother it.",
+     "u": "Coral needs light for the algae living inside it. Too much algae on top can smother it.",
+     "t": "Corals host symbiotic algae that need light; fleshy algae compete for space and light."
+    },
+    {
+     "k": "People plant coral to help the reef.",
+     "e": "People grow corals on underwater trees and plant them on broken reef.",
+     "u": "Coral gardeners grow fragments on frames and plant them on damaged reef.",
+     "t": "Restoration helps locally, but it cannot keep pace with reef loss unless the causes are fixed."
+    }
+   ],
+   "done": {
+    "k": "We grew coral! Hooray!",
+    "e": "Great gardening! New coral for the reef.",
+    "u": "Nursery cycle complete. Great restoring!",
+    "t": "Restoration cycle complete."
+   },
+   "q": {
+    "k": {
+     "q": "What does coral need to grow?",
+     "o": [
+      {
+       "label": "Clean, sunny water",
+       "pic": "ans_healthy_reef"
+      },
+      {
+       "label": "Plastic bags",
+       "pic": "ans_plastic_bag"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Sunlight and clean water.",
+     "hint": "Think of the sunny blue water."
+    },
+    "e": {
+     "q": "Which coral piece should we pick to grow?",
+     "o": [
+      {
+       "label": "A colourful, healthy piece",
+       "pic": "ans_coral_polyps"
+      },
+      {
+       "label": "A white, bleached piece",
+       "pic": "ans_bleached"
+      },
+      {
+       "label": "A broken rock",
+       "pic": "ans_algae_rock"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Healthy pieces grow best.",
+     "hint": "Bleached coral is weak."
+    },
+    "u": {
+     "q": "Why do we plant a mix of coral types?",
+     "o": [
+      {
+       "label": "Different types cope with different problems",
+       "pic": "ans_healthy_reef"
+      },
+      {
+       "label": "Mixed colours look nicer to divers",
+       "pic": "prop_braincoral"
+      },
+      {
+       "label": "One fast-growing type is always best",
+       "pic": "ans_bleached"
+      },
+      {
+       "label": "So the fish have more to eat",
+       "pic": "ans_coral_polyps"
+      }
+     ],
+     "a": 0,
+     "ok": "Right: a mix spreads the risk.",
+     "hint": "What if one heatwave hit one type?"
+    },
+    "t": {
+     "q": "Can coral gardens alone save the reef?",
+     "o": [
+      {
+       "label": "No: the causes of damage also need fixing",
+       "pic": "ans_warm_water"
+      },
+      {
+       "label": "Yes, if we plant enough",
+       "pic": "prop_tree"
+      },
+      {
+       "label": "Yes, planted coral never bleaches",
+       "pic": "ans_coral_polyps"
+      },
+      {
+       "label": "No, because planted coral cannot grow",
+       "pic": "ans_bleached"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: restoration buys time; it doesn't remove the causes.",
+     "hint": "What keeps damaging the reef?"
+    }
+   },
+   "sticker": "prop_tree",
+   "after": {
+    "k": "Next, you drive the boat!",
+    "e": "Next stop: captain the boat!",
+    "u": "Next stop: captain the research boat.",
+    "t": "Next: boat handling."
+   }
+  },
+  {
+   "id": "boat",
+   "name": "Captain the boat",
+   "bd": {
+    "a": "bd_clean"
+   },
+   "rideVideo": "ride-lagoon",
+   "intro": {
+    "k": "You are the captain! Tap the water to drive the boat to the yellow buoy.",
+    "e": "You are the captain! Steer the boat to the mooring buoy. Keep off the brown reef and go slow near turtles.",
+    "u": "Captain the research boat to the public mooring. Read the chart colours, allow for the current, and slow down in the turtle zone.",
+    "t": "Navigate to the public mooring: read the chart, correct for current and a wind shift, respect the go-slow zone, and watch the fuel."
+   },
+   "ride": [
+    {
+     "k": "Back to the boat!",
+     "e": "Back on board. Time to move the boat.",
+     "u": "Back aboard. We need to move the boat to the next site.",
+     "t": "Back aboard; relocating."
+    },
+    {
+     "k": "You can drive!",
+     "e": "Next stop: captain the boat!",
+     "u": "Next stop: take the helm.",
+     "t": "Next: helm."
+    }
+   ],
+   "act": {
+    "type": "boat",
+    "start": {
+     "k": "Tap the water where the boat should go.",
+     "e": "Use the throttle and the wheel. Find the yellow mooring buoy.",
+     "u": "Throttle up, steer with the wheel, and head for the mooring buoy. Watch the current push you sideways.",
+     "t": "Helm is yours. Throttle, wheel, current and a forecast wind shift. Head for the mooring."
+    },
+    "hintK": "Tap the water to go",
+    "hint": {
+     "k": "",
+     "e": "Throttle up, then steer",
+     "u": "Steer for the buoy; mind the current",
+     "t": "Correct for drift; watch fuel"
+    },
+    "throttleLabels": {
+     "k": [
+      "Stop",
+      "Slow",
+      "Fast"
+     ],
+     "e": [
+      "Stop",
+      "Slow",
+      "Fast"
+     ],
+     "u": [
+      "Stop",
+      "Slow",
+      "Fast"
+     ],
+     "t": [
+      "Idle",
+      "Slow",
+      "Cruise"
+     ]
+    },
+    "legend": {
+     "k": {
+      "deep": "Deep",
+      "shallow": "Shallow",
+      "reef": "Reef",
+      "zone": "Turtles",
+      "zoneShort": "SLOW"
+     },
+     "e": {
+      "deep": "Deep blue: safe",
+      "shallow": "Light blue: shallow",
+      "reef": "Brown: reef, keep off",
+      "zone": "Yellow: go slow, turtles",
+      "zoneShort": "GO SLOW"
+     },
+     "u": {
+      "deep": "Dark blue: deep water",
+      "shallow": "Pale blue: shallow",
+      "reef": "Brown: coral reef",
+      "zone": "Yellow ring: turtle go-slow zone",
+      "zoneShort": "GO SLOW"
+     },
+     "t": {
+      "deep": "Deep channel",
+      "shallow": "Shallows",
+      "reef": "Reef: no-go",
+      "zone": "Go-slow zone (turtles)",
+      "zoneShort": "GO SLOW"
+     }
+    },
+    "speedLabel": {
+     "k": "Speed",
+     "e": "Speed",
+     "u": "Speed",
+     "t": "Speed"
+    },
+    "bump": {
+     "k": "Bump! That is the reef. Back to the blue.",
+     "e": "Bump! Too shallow. Back to the deep blue water.",
+     "u": "Shallow reef! Back off into deep water. Hulls and propellers smash coral.",
+     "t": "Grounding risk. Back into the channel."
+    },
+    "slowZone": {
+     "k": "Turtles here! Go slow.",
+     "e": "Turtle zone! Go slow so we don't hit a turtle.",
+     "u": "Go-slow zone: turtles surface to breathe here. Keep it slow.",
+     "t": "Go-slow zone: boat strikes are a major cause of turtle injuries."
+    },
+    "tooFastZone": {
+     "k": "Slow, slow! Turtles!",
+     "e": "Too fast! Slow down for the turtles.",
+     "u": "Too fast for the turtle zone. Throttle back.",
+     "t": "Over the zone limit. Throttle back."
+    },
+    "slowOk": {
+     "k": "Good slow driving!",
+     "e": "Great, you went slow past the turtles.",
+     "u": "Nicely done: slow through the zone.",
+     "t": "Zone transited safely."
+    },
+    "moorNear": {
+     "k": "We are at the buoy!",
+     "e": "Here is the buoy. Pick up the mooring!",
+     "u": "Alongside the mooring. Pick it up.",
+     "t": "Alongside. Pick up the mooring."
+    },
+    "hintMoor": {
+     "k": "Tap the rope",
+     "e": "Pick up the mooring",
+     "u": "Pick up the mooring",
+     "t": "Secure to the mooring"
+    },
+    "moorBtn": {
+     "k": "Tie up",
+     "e": "Pick up the mooring",
+     "u": "Pick up the mooring",
+     "t": "Pick up mooring"
+    },
+    "tooFastMoor": {
+     "k": "Slow down!",
+     "e": "Too fast to grab the buoy. Slow down.",
+     "u": "Too fast to pick up the mooring. Slow right down.",
+     "t": "Too fast for a pick-up. Reduce speed."
+    },
+    "windShift": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Wind shift! The breeze now pushes us the other way."
+    },
+    "mooredGreat": {
+     "k": "Tied up! Super captain!",
+     "e": "Tied to the buoy, no anchor on the coral. Super captain!",
+     "u": "Moored cleanly: no anchor on the coral and no reef bumps. Excellent seamanship.",
+     "t": "Moored cleanly. No anchor damage, no groundings."
+    },
+    "mooredOk": {
+     "k": "Tied up! Good job, captain!",
+     "e": "Tied up! Next time, keep off the reef and go slow for turtles.",
+     "u": "Moored. Next time, steer a cleaner line.",
+     "t": "Moored. Review the groundings and zone speed."
+    },
+    "difficulty": {
+     "k": {
+      "input": "tap"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can drive the boat safely.",
+     "e": "I can read a simple map of deep and shallow water.",
+     "u": "I can plan a boat route that protects the reef.",
+     "t": "I can explain how boating rules protect reef animals."
+    },
+    "standards": {
+     "k": "K-ESS3-3",
+     "e": "2-ESS2-2",
+     "u": "5-ESS3-1",
+     "t": "MS-ESS3-3"
+    },
+    "journal": "Safe boating"
+   },
+   "facts": [
+    {
+     "k": "We tie the boat to a buoy, so we don't drop an anchor on coral.",
+     "e": "Boats tie up to mooring buoys, so anchors don't smash the coral.",
+     "u": "Public moorings let boats tie up without dropping anchors that smash coral.",
+     "t": "Anchors and chains can destroy decades of coral growth in seconds; public moorings prevent it."
+    },
+    {
+     "k": "Go slow when turtles are near.",
+     "e": "Turtles come up to breathe. Boats go slow so they don't hit them.",
+     "u": "Turtles surface to breathe, so go-slow zones protect them from boat strikes.",
+     "t": "Go-slow zones cut boat strikes on turtles and dugongs."
+    },
+    {
+     "k": "Light blue water is shallow.",
+     "e": "On a chart, light blue means shallow water and brown means reef.",
+     "u": "Charts show depth with colour: dark blue is deep, pale blue is shallow, brown is reef.",
+     "t": "Charts encode depth by colour; reading them, and the current, keeps hulls off the reef."
+    }
+   ],
+   "done": {
+    "k": "You drove the boat! Great captain!",
+    "e": "Great captain! Safe on the mooring.",
+    "u": "Safely moored. Great navigation!",
+    "t": "Navigation complete."
+   },
+   "q": {
+    "k": {
+     "q": "What do we tie the boat to?",
+     "o": [
+      {
+       "label": "A buoy",
+       "pic": "ans_mooring_buoy"
+      },
+      {
+       "label": "The coral",
+       "pic": "ans_coral_polyps"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! A buoy keeps the coral safe.",
+     "hint": "The yellow float."
+    },
+    "e": {
+     "q": "Why do boats use mooring buoys at the reef?",
+     "o": [
+      {
+       "label": "So anchors don't smash the coral",
+       "pic": "ans_mooring_buoy"
+      },
+      {
+       "label": "So the boat goes faster",
+       "pic": "ans_gbr_aerial"
+      },
+      {
+       "label": "To feed the fish",
+       "pic": "animal_clownfish"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! No anchor on the coral.",
+     "hint": "What would an anchor do?"
+    },
+    "u": {
+     "q": "On a chart, what does light blue usually mean?",
+     "o": [
+      {
+       "label": "Shallow water",
+       "pic": "ans_sand_beach"
+      },
+      {
+       "label": "Very deep water",
+       "pic": "ans_gbr_aerial"
+      },
+      {
+       "label": "Coral reef",
+       "pic": "ans_healthy_reef"
+      },
+      {
+       "label": "A shipping lane",
+       "pic": "ans_gbr_aerial"
+      }
+     ],
+     "a": 0,
+     "ok": "Right: shallow water.",
+     "hint": "Dark blue is deep."
+    },
+    "t": {
+     "q": "Why are there go-slow zones for boats?",
+     "o": [
+      {
+       "label": "To prevent boat strikes on turtles and dugongs",
+       "pic": "animal_turtle"
+      },
+      {
+       "label": "To stop boats running out of fuel",
+       "pic": "ans_gbr_aerial"
+      },
+      {
+       "label": "To keep the water clear for divers",
+       "pic": "ans_sand_beach"
+      },
+      {
+       "label": "To protect the coral from wakes",
+       "pic": "ans_healthy_reef"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct.",
+     "hint": "Who surfaces to breathe?"
+    }
+   },
+   "sticker": "prop_buoy",
+   "after": {
+    "k": "Next, who helps whom?",
+    "e": "Next stop: who helps whom on the reef?",
+    "u": "Next stop: reef partners.",
+    "t": "Next: species interactions."
+   }
+  },
+  {
+   "id": "pairs",
+   "name": "Who helps whom?",
+   "bd": {
+    "a": "bd_clean"
+   },
+   "rideVideo": "ride-glide",
+   "intro": {
+    "k": "Some reef animals help each other! Let us see.",
+    "e": "Some reef animals team up and help each other. Let us find the partners!",
+    "u": "Reef animals interact: some help each other, some eat each other. Let us sort them out.",
+    "t": "Map the interactions: mutualism, cleaning and predation on the reef."
+   },
+   "ride": [
+    {
+     "k": "Splash! Back in the water.",
+     "e": "Back into the water!",
+     "u": "Back in the water.",
+     "t": "Back in."
+    },
+    {
+     "k": "Let us find animal friends!",
+     "e": "Next stop: who helps whom?",
+     "u": "Next stop: reef partners.",
+     "t": "Next: interactions."
+    }
+   ],
+   "act": {
+    "type": "pairs",
+    "names": {
+     "k": {
+      "cod": "Big fish",
+      "station": "Cleaning spot",
+      "clown": "Clownfish",
+      "anemone": "Anemone",
+      "goby": "Goby",
+      "shrimp": "Shrimp",
+      "turtle": "Turtle",
+      "cleaner": "Cleaner fish"
+     },
+     "e": {
+      "cod": "Potato cod",
+      "station": "Cleaning station",
+      "clown": "Clownfish",
+      "anemone": "Sea anemone",
+      "goby": "Goby",
+      "shrimp": "Pistol shrimp",
+      "turtle": "Green turtle",
+      "cleaner": "Cleaner wrasse"
+     },
+     "u": {
+      "cod": "Potato cod",
+      "station": "Cleaning station",
+      "clown": "Clownfish",
+      "anemone": "Sea anemone",
+      "goby": "Goby",
+      "shrimp": "Pistol shrimp",
+      "turtle": "Green turtle",
+      "cleaner": "Cleaner wrasse"
+     },
+     "t": {
+      "cod": "Potato cod",
+      "station": "Cleaning station",
+      "clown": "Clownfish",
+      "anemone": "Sea anemone",
+      "goby": "Goby",
+      "shrimp": "Pistol shrimp",
+      "turtle": "Green turtle",
+      "cleaner": "Cleaner wrasse"
+     }
+    },
+    "start": {
+     "k": "This big fish is itchy! Tap the cleaning spot to take it there.",
+     "e": "This potato cod has itchy parasites. Guide it to the cleaning station!",
+     "u": "Guide the potato cod to the cleaner wrasse's cleaning station.",
+     "t": "Guide the potato cod to the cleaning station."
+    },
+    "hintCodK": "Tap the cleaning spot",
+    "hintCod": {
+     "k": "",
+     "e": "Drag or tap the cod to the cleaning station",
+     "u": "Drag the cod to the station",
+     "t": "Guide the cod"
+    },
+    "codMiss": {
+     "k": "",
+     "e": "Take it to the cleaning station, the coral with the little fish.",
+     "u": "Over to the coral with the cleaner wrasse.",
+     "t": "To the cleaning station."
+    },
+    "cleanLine": {
+     "k": "The little fish cleans the big fish. They are friends!",
+     "e": "The cleaner wrasse eats the itchy parasites. The cod gets clean and the wrasse gets a meal. Both win!",
+     "u": "The cleaner wrasse eats parasites off the cod: the cod gets cleaned, the wrasse gets fed. Both benefit.",
+     "t": "Cleaning symbiosis: the wrasse feeds on parasites, the cod loses them. Mutual benefit."
+    },
+    "pairsIntroK": "Who lives with the clownfish? Tap the clownfish, then its home.",
+    "pairsIntro": {
+     "k": "",
+     "e": "Now match each animal with its partner. Draw a line or tap one, then the other.",
+     "u": "Match each animal to its partner: drag a line, or tap one and then the other.",
+     "t": "Connect each species to its partner."
+    },
+    "hintPairsK": "Tap the clownfish, then its home",
+    "hintPairs": {
+     "k": "",
+     "e": "Drag a line, or tap two partners",
+     "u": "Connect the partners",
+     "t": "Connect the partners"
+    },
+    "pairNo": {
+     "k": "Not that one. Try again!",
+     "e": "Not partners. Think: who gives a home, who keeps watch, who cleans?",
+     "u": "Not a pair. Think about what each one gives the other.",
+     "t": "Not an interaction pair. What does each provide?"
+    },
+    "pairLines": {
+     "k": {
+      "clown": "Yes! The anemone is the clownfish's home."
+     },
+     "e": {
+      "clown": "Yes! The anemone's stinging arms protect the clownfish, and the clownfish chases off fish that eat anemones.",
+      "goby": "Yes! The shrimp digs a burrow for both; the goby keeps watch and warns the shrimp.",
+      "turtle": "Yes! Cleaner fish nibble algae and parasites off the turtle's shell."
+     },
+     "u": {
+      "clown": "Clownfish and anemone: shelter for the fish, defence and food scraps for the anemone.",
+      "goby": "Goby and pistol shrimp: the shrimp digs, the goby keeps watch. Both survive better.",
+      "turtle": "Turtle and cleaner fish: the turtle gets cleaned, the fish get a meal."
+     },
+     "t": {
+      "clown": "Clownfish–anemone: shelter and defence, plus nutrients. Mutualism.",
+      "goby": "Goby–pistol shrimp: burrow for lookout. Mutualism.",
+      "turtle": "Turtle–cleaner fish: cleaning symbiosis."
+     }
+    },
+    "sortIntro": {
+     "k": "",
+     "e": "",
+     "u": "Now sort: do both animals help each other, or does one eat the other?",
+     "t": "Classify each interaction: mutualism or predation."
+    },
+    "hintSort": {
+     "k": "",
+     "e": "",
+     "u": "Drag or tap each card into a box",
+     "t": "Classify each card"
+    },
+    "sortBins": {
+     "k": [
+      "Both help",
+      "One eats"
+     ],
+     "e": [
+      "Both help",
+      "One eats"
+     ],
+     "u": [
+      "Both help each other",
+      "One eats the other"
+     ],
+     "t": [
+      "Mutualism (both benefit)",
+      "Predation (one eats the other)"
+     ]
+    },
+    "sortItems": {
+     "k": [],
+     "e": [],
+     "u": [
+      {
+       "t": "Clownfish + anemone",
+       "p1": "animal_clownfish",
+       "p2": "prop_anemone",
+       "bin": 0,
+       "ok": "Both help: home and defence."
+      },
+      {
+       "t": "Reef shark eats parrotfish",
+       "p1": "ans_reef_shark",
+       "p2": "animal_parrotfish",
+       "bin": 1,
+       "ok": "One eats the other: predator and prey."
+      },
+      {
+       "t": "Goby + pistol shrimp",
+       "p1": "animal_goby",
+       "p2": "animal_shrimp",
+       "bin": 0,
+       "ok": "Both help: burrow and lookout."
+      },
+      {
+       "t": "Crown-of-thorns eats coral",
+       "p1": "animal_cots",
+       "p2": "prop_staghorn",
+       "bin": 1,
+       "ok": "One eats the other: the starfish eats coral polyps."
+      }
+     ],
+     "t": [
+      {
+       "t": "Clownfish + anemone",
+       "p1": "animal_clownfish",
+       "p2": "prop_anemone",
+       "bin": 0,
+       "ok": "Mutualism."
+      },
+      {
+       "t": "Reef shark + parrotfish",
+       "p1": "ans_reef_shark",
+       "p2": "animal_parrotfish",
+       "bin": 1,
+       "ok": "Predation."
+      },
+      {
+       "t": "Goby + pistol shrimp",
+       "p1": "animal_goby",
+       "p2": "animal_shrimp",
+       "bin": 0,
+       "ok": "Mutualism."
+      },
+      {
+       "t": "Crown-of-thorns + coral",
+       "p1": "animal_cots",
+       "p2": "prop_staghorn",
+       "bin": 1,
+       "ok": "Predation (corallivory)."
+      }
+     ]
+    },
+    "sortNo": {
+     "k": "",
+     "e": "",
+     "u": "Think again: does one of them get eaten?",
+     "t": "Re-check: who benefits?"
+    },
+    "gobyQ": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Prediction: the goby leaves the burrow for good. What happens to the shrimp?"
+    },
+    "gobyOpts": {
+     "k": [],
+     "e": [],
+     "u": [],
+     "t": [
+      "It is in more danger, because it can barely see and has no lookout",
+      "It digs faster and is fine",
+      "Nothing changes"
+     ]
+    },
+    "gobyOk": "Right: the nearly blind shrimp loses its lookout, so predators catch it more easily.",
+    "gobyNo": "The shrimp can barely see. Who was keeping watch?",
+    "difficulty": {
+     "k": {
+      "input": "tap"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can find which animals live together.",
+     "e": "I can explain how some reef animals help each other survive.",
+     "u": "I can sort animal interactions into helping and eating.",
+     "t": "I can predict how losing one partner affects the other."
+    },
+    "standards": {
+     "k": "K-ESS3-1",
+     "e": "3-LS4-3",
+     "u": "5-LS2-1",
+     "t": "MS-LS2-2"
+    },
+    "journal": "Reef partners"
+   },
+   "facts": [
+    {
+     "k": "The clownfish lives in an anemone.",
+     "e": "A clownfish lives safely in an anemone's stinging arms.",
+     "u": "Clownfish are coated in mucus that stops the anemone stinging them.",
+     "t": "A mucus coat protects clownfish from the anemone's stinging cells."
+    },
+    {
+     "k": "Some fish clean other fish.",
+     "e": "Cleaner wrasse run cleaning stations where big fish queue up to be cleaned.",
+     "u": "Big fish visit cleaning stations, where cleaner wrasse eat their parasites.",
+     "t": "Cleaning stations are mutualistic hubs; removing cleaners lowers fish diversity on a reef."
+    },
+    {
+     "k": "Animals on the reef need each other.",
+     "e": "When animals help each other, both can survive better on the reef.",
+     "u": "Helping partnerships let both animals survive better: that is called mutualism.",
+     "t": "Mutualism benefits both partners; predation benefits one at the other's cost."
+    }
+   ],
+   "done": {
+    "k": "You found the friends!",
+    "e": "You found the partners! Teamwork on the reef.",
+    "u": "Interactions sorted. Great thinking!",
+    "t": "Interaction map complete."
+   },
+   "q": {
+    "k": {
+     "q": "Where does the clownfish live?",
+     "o": [
+      {
+       "label": "In an anemone",
+       "pic": "ans_anemone_clown"
+      },
+      {
+       "label": "On the beach",
+       "pic": "ans_sand_beach"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The anemone is its home.",
+     "hint": "The wavy arms."
+    },
+    "e": {
+     "q": "How do the cleaner wrasse and the cod help each other?",
+     "o": [
+      {
+       "label": "The wrasse eats the cod's parasites",
+       "pic": "ans_cleaner_wrasse"
+      },
+      {
+       "label": "The cod eats the wrasse",
+       "pic": "animal_cod"
+      },
+      {
+       "label": "They don't",
+       "pic": "ans_apart"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Both win.",
+     "hint": "Who gets a meal, who gets cleaned?"
+    },
+    "u": {
+     "q": "A reef shark eats a parrotfish. Which kind of interaction is that?",
+     "o": [
+      {
+       "label": "One eats the other",
+       "pic": "ans_reef_shark"
+      },
+      {
+       "label": "Both help",
+       "pic": "ans_anemone_clown"
+      },
+      {
+       "label": "No interaction",
+       "pic": "ans_apart"
+      },
+      {
+       "label": "One helps, the other is harmed",
+       "pic": "ans_shrimp_alone"
+      }
+     ],
+     "a": 0,
+     "ok": "Right: predator and prey.",
+     "hint": "Does the parrotfish benefit?"
+    },
+    "t": {
+     "q": "The goby leaves its burrow for good. What happens to the pistol shrimp?",
+     "o": [
+      {
+       "label": "More danger: no lookout",
+       "pic": "animal_shrimp"
+      },
+      {
+       "label": "Nothing, it never needed the goby",
+       "pic": "ans_shrimp_alone"
+      },
+      {
+       "label": "It finds food more easily",
+       "pic": "animal_goby"
+      },
+      {
+       "label": "It builds a bigger burrow",
+       "pic": "ans_apart"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: it loses its lookout.",
+     "hint": "The shrimp can barely see."
+    }
+   },
+   "sticker": "animal_shrimp",
+   "after": {
+    "k": "Last stop: keep the reef healthy!",
+    "e": "Last stop: keep the reef healthy!",
+    "u": "Last stop: keep the reef in balance.",
+    "t": "Final: reef management."
+   }
+  },
+  {
+   "id": "reefsim",
+   "name": "Keep the reef in balance",
+   "bd": {
+    "a": "bd_clean"
+   },
+   "rideVideo": "ride-glide",
+   "intro": {
+    "k": "Let us help the reef! The parrotfish can eat the green algae.",
+    "e": "You are the reef manager! Choose how to help the reef, then run five years.",
+    "u": "Manage the reef: choose up to three actions and run five years. Watch the living coral.",
+    "t": "Manage the reef with limited resources. Pick two actions, run five years, and read the result honestly."
+   },
+   "ride": [
+    {
+     "k": "Look, algae on the coral!",
+     "e": "Some coral is covered in algae.",
+     "u": "This patch has algae spreading over the coral.",
+     "t": "Algae-dominated patch below."
+    },
+    {
+     "k": "Last stop!",
+     "e": "Last stop: help the reef!",
+     "u": "Last stop: manage the reef.",
+     "t": "Final: management."
+    }
+   ],
+   "act": {
+    "type": "reefsim",
+    "actNames": {
+     "k": {
+      "protect": "Protect fish",
+      "runoff": "Less farm mud",
+      "cots": "Remove starfish"
+     },
+     "e": {
+      "protect": "Protect parrotfish",
+      "runoff": "Cut farm runoff",
+      "cots": "Remove crown-of-thorns"
+     },
+     "u": {
+      "protect": "Protect parrotfish",
+      "runoff": "Cut farm runoff",
+      "cots": "Remove crown-of-thorns",
+      "emissions": "Cut emissions"
+     },
+     "t": {
+      "protect": "No-take zone for grazers",
+      "runoff": "Cut farm runoff",
+      "cots": "Crown-of-thorns control",
+      "emissions": "Cut emissions",
+      "shade": "Shade the reef"
+     }
+    },
+    "actWhy": {
+     "k": {
+      "protect": "",
+      "runoff": "",
+      "cots": ""
+     },
+     "e": {
+      "protect": "They eat algae off the coral",
+      "runoff": "Less mud and fertiliser",
+      "cots": "Divers remove coral-eaters"
+     },
+     "u": {
+      "protect": "Grazers keep algae down",
+      "runoff": "Fewer nutrients, less algae",
+      "cots": "Fewer coral-eating starfish",
+      "emissions": "Whole world, slow: fewer heatwaves later"
+     },
+     "t": {
+      "protect": "Grazers control algae",
+      "runoff": "Lower nutrients: less algae, fewer outbreaks",
+      "cots": "Culling limits coral loss",
+      "emissions": "Global and slow: fewer future heatwaves",
+      "shade": "Tiny area only; still being tested"
+     }
+    },
+    "startK": "Tap the green algae. A parrotfish will come and eat it!",
+    "hintK": "Tap the algae",
+    "algaeLabel": "Algae on the coral",
+    "kNibble": [
+     "Munch! The parrotfish eats the algae.",
+     "Yum! More clean coral.",
+     "Now the sun can reach the coral again!",
+     "Nearly done!"
+    ],
+    "kDone": "Hooray! The parrotfish cleaned the coral. Now it can grow!",
+    "start": {
+     "k": "",
+     "e": "Pick ways to help, then tap Run 5 years.",
+     "u": "Choose up to three actions, then run five years.",
+     "t": "Choose up to three actions, then run five years."
+    },
+    "startT": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Two actions only: choose, then run five years. Read the warning on the experimental option."
+    },
+    "hint": {
+     "k": "",
+     "e": "Pick actions, then Run",
+     "u": "Pick up to 3, then Run",
+     "t": "Pick up to 3, then Run"
+    },
+    "hintT": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Pick 2, then Run"
+    },
+    "tooMany": {
+     "k": "",
+     "e": "You can pick {n}. Tap one to switch it off first.",
+     "u": "Only {n} actions: switch one off first.",
+     "t": "Budget: {n} actions. Deselect one first."
+    },
+    "picksLabel": {
+     "k": "",
+     "e": "Picked",
+     "u": "Actions",
+     "t": "Budget used"
+    },
+    "runBtn": {
+     "k": "Go!",
+     "e": "Run 5 years",
+     "u": "Run 5 years",
+     "t": "Run 5 years"
+    },
+    "expLabel": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Experimental"
+    },
+    "actSay": {
+     "k": {},
+     "e": {
+      "protect": "Parrotfish graze algae off the coral.",
+      "runoff": "Less mud and fertiliser washing out to sea.",
+      "cots": "Divers remove the coral-eating starfish."
+     },
+     "u": {
+      "protect": "Grazers keep algae in check.",
+      "runoff": "Fewer nutrients means less algae and fewer starfish outbreaks.",
+      "cots": "Fewer crown-of-thorns, less coral eaten.",
+      "emissions": "The whole world has to cut emissions. It works slowly, over many years."
+     },
+     "t": {
+      "protect": "Grazer protection.",
+      "runoff": "Nutrient reduction.",
+      "cots": "Outbreak control.",
+      "emissions": "Emissions cuts are global and slow: they lower the odds of future heatwaves, not this one.",
+      "shade": "Experimental: shading can only cover a tiny patch, and it is still being tested."
+     }
+    },
+    "heatLabel": {
+     "k": "Hot",
+     "e": "Heatwave",
+     "u": "Heatwave",
+     "t": "Marine heatwave"
+    },
+    "yearShort": {
+     "k": "Y",
+     "e": "Y",
+     "u": "Y",
+     "t": "Y"
+    },
+    "yearLabel": {
+     "k": "Year",
+     "e": "Year",
+     "u": "Year",
+     "t": "Year"
+    },
+    "chartTitle": {
+     "k": "Coral",
+     "e": "Living coral",
+     "u": "Living coral",
+     "t": "Live coral cover"
+    },
+    "heatwave": {
+     "k": "",
+     "e": "Oh no! The sea is too warm. Some coral turns white. Nothing we do here can stop a heatwave. A healthy reef just gets better again faster.",
+     "u": "Marine heatwave! Warm water bleaches coral across the reef. No local action can stop a heatwave, but a healthy reef recovers faster.",
+     "t": "Year 3: a marine heatwave. Local actions cannot stop it; they only change how well the reef recovers."
+    },
+    "bleachTitle": {
+     "k": "",
+     "e": "What is bleaching?",
+     "u": "Coral bleaching",
+     "t": "Coral bleaching"
+    },
+    "bleachHealthy": {
+     "k": "",
+     "e": "Healthy: tiny algae inside give coral its colour and food",
+     "u": "Healthy: algae living inside feed the coral and give its colour",
+     "t": "Healthy: symbiotic algae (zooxanthellae) supply most of the coral's food"
+    },
+    "bleachWhite": {
+     "k": "",
+     "e": "Bleached: too hot, the algae leave and coral turns white",
+     "u": "Bleached: heat makes coral push out its algae, so it turns white and starves",
+     "t": "Bleached: heat stress breaks the partnership; the coral expels its algae and starves"
+    },
+    "bleachSay": {
+     "k": "",
+     "e": "Look! On the left the coral is healthy. Tiny algae live inside it and give it colour. On the right the water got too hot, so the algae left and the coral turned white. That is bleaching. If the water cools down soon, the coral can get its algae back.",
+     "u": "Here is bleaching up close. Healthy coral has algae living inside its tissue that make food from sunlight. In a heatwave the coral pushes them out, turns white and starts to starve. If the water cools within a few weeks it can recover; if not, it dies.",
+     "t": "Bleaching up close: the coral and its algae normally trade food for shelter. Heat stress breaks that deal, the coral expels the algae and turns white. Short heatwaves allow recovery; long or repeated ones kill coral, which is why cutting emissions matters."
+    },
+    "emissionsNote": {
+     "k": "",
+     "e": "",
+     "u": "Cutting emissions helps the whole ocean slowly. It cannot stop this heatwave.",
+     "t": "Cutting emissions does not stop this heatwave. It is global and slow, but it is the only fix for the cause."
+    },
+    "shadeNote": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Shading helped one small patch a little. It is experimental and cannot cover a whole reef."
+    },
+    "endGood": {
+     "k": "",
+     "e": "Great! The reef has {c}% living coral.",
+     "u": "{c}% living coral after five years. Your plan helped the reef bounce back.",
+     "t": "{c}% live cover after five years. A resilient outcome."
+    },
+    "endLow": {
+     "k": "",
+     "e": "The reef has {c}% living coral. Let us try a different plan next time.",
+     "u": "Only {c}% living coral. Which pressures did we leave unchecked?",
+     "t": "{c}% live cover. Which stressors went unmanaged?"
+    },
+    "tryAgain": {
+     "k": "",
+     "e": "",
+     "u": "Try a second plan, then compare the two lines.",
+     "t": "Run a second plan to compare."
+    },
+    "hintAgain": {
+     "k": "",
+     "e": "",
+     "u": "Change the plan and run again",
+     "t": "Change and rerun"
+    },
+    "compareQ": {
+     "k": "",
+     "e": "",
+     "u": "Which plan kept more living coral?",
+     "t": "Which plan performed better?"
+    },
+    "compareOpts": {
+     "k": [],
+     "e": [],
+     "u": [
+      "The first plan",
+      "The second plan",
+      "They came out the same"
+     ],
+     "t": [
+      "Plan 1",
+      "Plan 2",
+      "Same result"
+     ]
+    },
+    "compareOk": {
+     "k": "",
+     "e": "",
+     "u": "Yes! Look at where each line ends.",
+     "t": "Correct."
+    },
+    "compareNo": {
+     "k": "",
+     "e": "",
+     "u": "Look at where each line ends in year 5.",
+     "t": "Compare the year-5 values."
+    },
+    "teenQ": {
+     "k": "",
+     "e": "",
+     "u": "",
+     "t": "Which action deals with the cause of marine heatwaves?"
+    },
+    "teenOpts": {
+     "k": [],
+     "e": [],
+     "u": [],
+     "t": [
+      "Cutting greenhouse gas emissions",
+      "Shading the reef",
+      "Removing crown-of-thorns"
+     ]
+    },
+    "teenOk": "Correct: only cutting emissions tackles the cause. Local actions build resilience.",
+    "teenNo": "Local actions help recovery. Which one changes ocean temperature?",
+    "difficulty": {
+     "k": {
+      "input": "tap"
+     },
+     "e": {},
+     "u": {},
+     "t": {}
+    }
+   },
+   "learn": {
+    "objective": {
+     "k": "I can help keep the coral clean.",
+     "e": "I can choose ways to help a reef stay healthy.",
+     "u": "I can compare plans to keep a reef in balance.",
+     "t": "I can evaluate local and global solutions for reef health."
+    },
+    "standards": {
+     "k": "K-ESS3-3",
+     "e": "3-LS4-4",
+     "u": "5-ESS3-1",
+     "t": "MS-LS2-5, MS-ESS3-5"
+    },
+    "journal": "Keeping the reef healthy"
+   },
+   "facts": [
+    {
+     "k": "Parrotfish eat algae and keep coral clean.",
+     "e": "Parrotfish graze algae off the coral, which helps young corals settle.",
+     "u": "Grazing parrotfish keep algae from smothering coral, so the reef can recover.",
+     "t": "Herbivores such as parrotfish keep algae in check, a key part of reef resilience."
+    },
+    {
+     "k": "Warm water makes coral turn white.",
+     "e": "When the sea gets too warm, coral turns white. That is called bleaching.",
+     "u": "Too-warm water makes coral lose its algae and turn white: bleaching. Long heatwaves can kill it.",
+     "t": "Bleaching happens when heat stress breaks the coral–algae partnership; repeated heatwaves leave little time to recover."
+    },
+    {
+     "k": "We all can help the reef.",
+     "e": "Clean rivers and protected fish help the reef. Cooler oceans need the whole world to cut pollution.",
+     "u": "Local actions help the reef recover. Stopping heatwaves needs the whole world to cut greenhouse gases.",
+     "t": "Local management builds resilience; only global emissions cuts address ocean warming."
+    }
+   ],
+   "done": {
+    "k": "You helped the reef! Great job!",
+    "e": "Great managing! The reef has a better chance.",
+    "u": "Management complete. Good decisions!",
+    "t": "Management scenario complete."
+   },
+   "q": {
+    "k": {
+     "q": "Who eats the algae off the coral?",
+     "o": [
+      {
+       "label": "Parrotfish",
+       "pic": "animal_parrotfish"
+      },
+      {
+       "label": "Starfish",
+       "pic": "animal_cots"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! The parrotfish.",
+     "hint": "The colourful fish with a beak."
+    },
+    "e": {
+     "q": "What makes coral turn white?",
+     "o": [
+      {
+       "label": "Water that is too warm",
+       "pic": "ans_bleached"
+      },
+      {
+       "label": "Too many fish",
+       "pic": "animal_clownfish"
+      },
+      {
+       "label": "Sand",
+       "pic": "ans_sand_beach"
+      }
+     ],
+     "a": 0,
+     "ok": "Yes! Warm water causes bleaching.",
+     "hint": "Think of the heatwave."
+    },
+    "u": {
+     "q": "Which action helps the reef recover after a heatwave?",
+     "o": [
+      {
+       "label": "Protecting parrotfish",
+       "pic": "animal_parrotfish"
+      },
+      {
+       "label": "Dropping anchors",
+       "pic": "ans_anchor_chain"
+      },
+      {
+       "label": "More farm runoff",
+       "pic": "ans_algae_rock"
+      },
+      {
+       "label": "Breaking off bleached coral",
+       "pic": "ans_bleached"
+      }
+     ],
+     "a": 0,
+     "ok": "Right: grazers keep algae down so coral can regrow.",
+     "hint": "What keeps algae down?"
+    },
+    "t": {
+     "q": "Why can't a reef manager stop a marine heatwave?",
+     "o": [
+      {
+       "label": "Heatwaves come from global ocean warming",
+       "pic": "ans_warm_water"
+      },
+      {
+       "label": "Heatwaves only last a day",
+       "pic": "ans_thermo"
+      },
+      {
+       "label": "Shade cloth would cover the whole reef",
+       "pic": "ans_mooring_buoy"
+      },
+      {
+       "label": "Cooler water comes in by itself every week",
+       "pic": "ans_warm_water"
+      }
+     ],
+     "a": 0,
+     "ok": "Correct: the cause is global, so the fix is global emissions cuts.",
+     "hint": "Where does the extra heat come from?"
+    }
+   },
+   "sticker": "badge_medal",
+   "after": {
+    "k": "You did it!",
+    "e": "You did it! All five stops done!",
+    "u": "Expedition complete: all five stops done.",
+    "t": "All five field tasks complete."
+   }
+  }
+ ],
+ "finale": {
+  "k": "You are a Reef Guardian! You counted fish, grew coral, drove the boat, found animal friends and helped the reef!",
+  "e": "You are a Reef Guardian! You surveyed fish, grew coral, captained the boat, matched reef partners and managed the reef!",
+  "u": "You earned the Reef Guardian badge: survey, restoration, safe boating, interactions and reef management.",
+  "t": "Reef Guardian badge earned: transect survey, coral restoration, navigation, interaction mapping and resilience management."
+ },
+ "finaleBd": {
+  "wall": 1,
+  "x": 50
+ },
+ "intro": {
+  "style": "film"
+ }
+}
