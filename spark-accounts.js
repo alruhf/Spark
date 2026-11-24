@@ -1,12 +1,12 @@
-/* Spark family accounts (acc2, Allen 11/13-11/22). ON when config.js (or /api/accounts-config) gives the Supabase URL + publishable key (that endpoint
-   answers {on:false} on production, which has no SB_* variables), so production and signed-out guest play run exactly as before.
+/* Spark family accounts (acc2, Allen 11/13-11/24). ON when config.js (or /api/accounts-config) gives the Supabase URL + publishable key.
+   Signed-out guest play is unchanged. The legacy /api/kid-token fallback was retired 11/24 (pin-ticket live in production).
    Supabase project spark-accounts (migration 20261115100000_spark_accounts.sql, applied by Allen 11/16). Plain fetch, no SDK.
    Grown-up area (reached only by press-and-hold): sign in / create account (email + password), consent checkboxes with Review
    buttons, family list (max 5 kids, enforced by the DB trigger), add a player (grown-up types an optional nickname, taps a picture),
    clear a PIN, remove a player, sign out.
    Kid screens (TAP ONLY, never typing): one-time age picker + one-time explorer look at creation (stored on kid_profiles: age_band,
    look, look_done; start age also in the save and in start_age when the follow-up SQL is applied), the kid picks their own secret code
-   (tap pad: shapes for 4-9, numbers for 10+; set once via a one-time Supabase ticket (fallback: 2-minute token from /api/kid-token); checked server-side by
+   (tap pad: shapes for 4-9, numbers for 10+; set once via a one-time Supabase ticket; checked server-side by
    spark_check_kid_pin, 5 wrong tries lock it for 5 minutes), "Who's playing?" picker.
    Progress: every per-kid save key (localStorage spark* {profiles:{pid}} / {kids:{pid}}) is snapshotted into kid_progress via
    spark_save_progress (newer save wins) a few seconds after any change and when the page hides; loaded on profile pick; failed saves
@@ -213,18 +213,15 @@ function stepLook(k){var L=window.SparkKidLook,ov=overlay("look"),look={};if(!L)
   ov.appendChild(btn("sf-go","Let\u2019s go \u2192",function(){finishCreate(k,L.clean?L.clean(look):look)},"Let's go"));say(LINES.look)}
 function finishCreate(k,look){k.look=look;k.look_done=true;var f={look_done:true};if(look) f.look=look;if(k.age_band) f.age_band=k.age_band;
   rest("PATCH","kid_profiles?id=eq."+k.id,f,{prefer:"return=minimal"}).catch(function(){}).then(function(){var a=acc();ensureLocal(k,a.kids[k.id]&&a.kids[k.id].startAge);return kidPickPin(k)}).then(function(){say(LINES.go);screenPicker()})}
-/* Pages migration (Allen 11/22 11:41 PM ET): the kid's one-time code is set with a Supabase ONE-TIME TICKET first
-   (spark_begin_kid_pin on the parent session -> random 120 s single-use ticket -> spark_kid_set_pin_ticket), no custom JWT, works from any origin.
-   Only if those functions are missing (SQL not applied yet: PostgREST PGRST202 / 404) it falls back to the old 2-minute token from /api/kid-token. */
+/* The kid's one-time code is set only with a Supabase one-time ticket
+   (spark_begin_kid_pin on the parent session -> random 120 s single-use ticket -> spark_kid_set_pin_ticket).
+   The legacy /api/kid-token fallback was removed 11/24 after pin-ticket was live in production (Allen: "Go ahead"). */
 function kidPickPin(k){return pinStart(k).then(function(st){if(!st) return false;return pinPad({mode:"set",band:k.age_band,pic:k.avatar,skip:true,set:function(code,kind){
      return st.set(code,kind).then(function(ok){log("pinset",{ok:ok,via:st.via});return ok},function(){log("pinset",{ok:false,via:st.via});return false})}})})}
 function pinStart(k){return rpc("spark_begin_kid_pin",{p_kid:k.id}).then(function(r){r=Array.isArray(r)?r[0]:r;var t=r&&r.ticket;
     if(!/^[0-9a-f]{64}$/.test(t||"")){log("pinstart",{via:"ticket",ok:false});return null}log("pinstart",{via:"ticket",ok:true});
     return {via:"ticket",set:function(code,kind){return rpc("spark_kid_set_pin_ticket",{p_kid:k.id,p_ticket:t,p_pin:code,p_kind:kind}).then(function(x){return x===true})}}},
-  function(e){if(e&&(e.code==="PGRST202"||e.status===404)) return pinStartLegacy(k);log("pinstart",{via:"ticket",ok:false,code:e&&e.code});return null})}
-function pinStartLegacy(k){return token().then(function(at){return fetch("/api/kid-token",{method:"POST",headers:{"content-type":"application/json",authorization:"Bearer "+at},body:JSON.stringify({kid:k.id})})})
-   .then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(j){log("pinstart",{via:"kid-token",ok:!!(j&&j.token)});if(!j||!j.token) return null;
-     return {via:"kid-token",set:function(code,kind){return rpc("spark_kid_set_pin",{p_kid:k.id,p_pin:code,p_kind:kind},j.token).then(function(r){return r===true})}}})}
+  function(e){log("pinstart",{via:"ticket",ok:false,code:e&&e.code});return null})}
 /* the kid's tap-only code pad. band k/e -> shapes+colours; u/t -> numbers. resolves true (set/ok) or false (skipped/back/locked) */
 var SH={c:'<circle cx="24" cy="24" r="17"/>',s:'<rect x="8" y="8" width="32" height="32" rx="4"/>',t:'<path d="M24 6l19 34H5z"/>',h:'<path d="M24 42S6 30 6 17a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 13-18 25-18 25z"/>'};
 var COL={1:"#ff5a5f",2:"#2fb3ff",3:"#3ee07a",4:"#ffd23a"};
