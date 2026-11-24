@@ -8,7 +8,7 @@ var R=SB.defineRegion("arctic",{
   world:"areas/arctic/world.json",voice:"areas/arctic/voice/voice.json",
   intro:{file:"intro-8s-1080.mp4",hd:"intro-8s-4k.mp4",maxSeconds:10},
   seed:48211,
-  pics:{fox:{pic:"animal_fox",label:"fox"},seal:{pic:"animal_seal",label:"seal"},husky:{pic:"sbx/husky_1",label:"husky"},walrus:{pic:"animal_walrus",label:"walrus"},bear:{pic:"animal_polarbear",label:"polar bear"}},
+  pics:{fox:{pic:"avatars/fox.webp",label:"fox"},seal:{pic:"avatars/seal.webp",label:"seal"},husky:{pic:"avatars/husky.webp",label:"husky"},walrus:{pic:"avatars/walrus.webp",label:"walrus"},bear:{pic:"avatars/bear.webp",label:"polar bear"}},
   badge:[{id:"igloo",c:"#7fd3ff",pic:"build_igloo_done",label:"Igloo built"},{id:"delivery",c:"#f6c445",pic:"sbx/parcel",label:"First delivery"},{id:"fox",c:"#ffffff",pic:"sbx/fox_sit",label:"Fox photo"},{id:"sale",c:"#ffb347",pic:"sbx/coin",label:"First sale"},{id:"kennel",c:"#c98b5a",pic:"sbx/kennel",label:"Cozy dog house"}],
   journal:[{id:"fox",pic:"sbx/fox_sit",slots:[{id:"peek",pic:"sbx/fox_peek",label:{k:"peeking",e:"PEEK"},word:"peek"},{id:"sit",pic:"sbx/fox_sit",label:{k:"sitting",e:"SIT"},word:"sit"},{id:"pounce",pic:"sbx/fox_pounce",label:{k:"jumping",e:"HOP"},word:"hop"}]},
            {id:"seal",pic:"animal_seal",slots:[{id:"rest",pic:"animal_seal",label:{k:"resting",e:"NAP"},word:"nap"}]},

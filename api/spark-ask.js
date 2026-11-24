@@ -12,6 +12,7 @@
 //   A question nothing could answer (keyword 'unknown') is saved as a 'pending' / 'kid-unanswered' row for Allen to answer in Insights
 //   (deduped by normalized words, hits bumped). Grok answers (when Grok is on) are saved as 'pending' / 'grok' rows. Only 'approved'
 //   rows are ever said to a child. Personal-info sentences and kid ideas never touch the library. DB trouble never breaks answering.
+const { cors } = require('./_cors');
 const B = require('./_spark-brain');
 const L = require('./_spark-answers');
 const XAI_URL = 'https://api.x.ai/v1/chat/completions';
@@ -58,6 +59,7 @@ async function askModel(q, ctx) {
   } finally { clearTimeout(timer); }
 }
 module.exports = async (req, res) => {
+  if (cors(req, res, 'POST')) return;  // Pages migration: no-op unless SPARK_CORS_ORIGINS is set
   if (req.method !== 'POST') { res.setHeader('allow', 'POST'); return send(res, 405, { error: 'POST only' }); }
   let body; try { body = await readJson(req); } catch (e) { return send(res, 400, { error: 'bad json' }); }
   const q = String(body.q || '').replace(/[\u0000-\u001f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, MAXQ);

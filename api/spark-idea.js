@@ -2,6 +2,7 @@
 // Stored: idea text (max 200 chars, lightly redacted), area, time, tag ('test'|'live'), deployment env. No audio, no name, no child or device id.
 // Same Postgres as /api/signals (DATABASE_URL, Neon HTTPS). Table spark_ideas - read it from spark-insights later (see NOTES.md).
 // Non-production only: GET/DELETE ?tag=test lists / removes test rows, so automated checks can read back and clean up.
+const { cors } = require('./_cors');
 const { sql, dbUrl } = require('./_signals-db');
 const MIN = 60000, DAY = 864e5, hits = new Map();
 const TABLE = `CREATE TABLE IF NOT EXISTS spark_ideas (
@@ -25,6 +26,7 @@ async function readJson(req) {
 }
 const json = (res, code, o) => { res.statusCode = code; res.setHeader('content-type', 'application/json'); res.setHeader('cache-control', 'no-store'); res.end(JSON.stringify(o)); };
 module.exports = async (req, res) => {
+  if (cors(req, res, 'POST')) return;  // Pages migration: no-op unless SPARK_CORS_ORIGINS is set
   const env = process.env.VERCEL_ENV || 'local';
   const tagParam = new URL(req.url, 'http://x').searchParams.get('tag');
   if ((req.method === 'GET' || req.method === 'DELETE') && tagParam === 'test' && env !== 'production') {

@@ -18,7 +18,7 @@
   }
   function openClassic(id){return ready().then(function(A){return A.open(id)})}
   /* Sandbox pilot (Sandbox spec §10.12): regions in SBX open the new sandbox engine; ?sbx=1 / ?sbx=0 wins, then localStorage.sparkSbxV1, then on */
-  var SBX={"North America/Arctic":"arctic"},SV="9",sbxLoading=null;
+  var SBX={"North America/Arctic":"arctic"},SV="11",sbxLoading=null;
   function sbxIds(){var o={};for(var k in SBX) o[SBX[k]]=1;return o}
   function sbxOn(id){if(!sbxIds()[id]) return false;var q=null;try{q=new URLSearchParams(location.search).get("sbx")}catch(e){}
     if(q==="1") return true;if(q==="0") return false;var l=null;try{l=localStorage.getItem("sparkSbxV1")}catch(e){}if(l==="0") return false;if(l==="1") return true;return true}

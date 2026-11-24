@@ -23,7 +23,7 @@
     history.replaceState({}, "", u.pathname+q+u.hash);
   }catch(e){}
 })();
-var V="13",REGIONS={arctic:1};
+var V="15",REGIONS={arctic:1};
 function q(){try{return new URLSearchParams(location.search).get("sbx")}catch(e){return null}}
 function ls(k){try{return localStorage.getItem(k)}catch(e){return null}}
 if(q()==="0"||ls("sparkSbxV1")==="0") return;

@@ -376,7 +376,7 @@ SB.panel=function(cls,label){var s=SB.session,ov=U.el("div","sbx-panel "+(cls||"
 (function(){var SB=window.SparkSandbox,U=SB.u,H=SB.hud;
 /* who is playing: the child's animal photo; tap it to switch player (another child's save) */
 H.player=function(){var s=SB.session,p=SB.store.profile();if(!p||!H.ui) return;var P=s.def.pics[p.pic]||{};var b=H.playerB||(H.playerB=U.btn("sbx-hudb sbx-player","Switch player",""));
-  b.innerHTML='<img alt="" draggable="false" src="'+SB.img(P.pic)+'">';b.setAttribute("aria-label","Playing as the "+(P.label||p.pic)+". Tap to switch player");if(!b.isConnected){H.ui.appendChild(b);U.onTap(b,function(){SB.switchPlayer()})}};
+  b.innerHTML=SB.avaHtml(p.pic,SB.img(P.pic));b.setAttribute("aria-label","Playing as the "+(P.label||p.pic)+". Tap to switch player");if(!b.isConnected){H.ui.appendChild(b);U.onTap(b,function(){SB.switchPlayer()})}};
 })();
 
 /* ---- sbx-src/core/60-econ.js */
@@ -628,7 +628,10 @@ function bigScreen(){var dpr=window.devicePixelRatio||1,sw=Math.max(screen.width
   if(sw<2500||c.saveData||(c.effectiveType&&c.effectiveType!=="4g")||(navigator.deviceMemory&&navigator.deviceMemory<=4)) return false;if(/iPhone|iPad|Android/i.test(navigator.userAgent)) return false;return true}
 SB.wantHD=wantHD;
 /* asset url: "sbx/x" = new sandbox cut-outs (img/sbx/manifest.json); otherwise the classic Arctic art with its .4k.webp choice */
+SB.avaHtml=function(id,src){id=id||"fox";if(window.SparkAva&&SparkAva.html) return SparkAva.html(id);
+  return '<span class="sf-ava sf-ava-'+id+'" data-ava="'+id+'"><img alt="" draggable="false" src="'+(src||"")+'"><span class="sf-ava-spark" aria-hidden="true"><i></i><i></i></span></span>'};
 SB.img=function(a,region){var s=SB.session,r=region||(s&&s.id)||"arctic",m=SB.meta[r]||{};if(!a) return "";
+  if(a.indexOf("avatars/")===0) return BASE+r+"/img/"+a+(a.indexOf("?")>=0?"":"?v=2");
   if(a.indexOf("sbx/")===0){var n=a.slice(4),e=(m.man||{})[n];return BASE+r+"/img/sbx/"+n+".webp"+(e?"?v="+e.v:"")}
   var c=(m.cfg&&m.cfg.assets||{})[a];if(c&&c.hd&&c.hd.file&&wantHD()) return BASE+r+"/img/"+c.hd.file+"?v="+c.hd.v;return BASE+r+"/img/"+a+".webp"+(c&&c.v?"?v="+c.v:"")};
 SB.dims=function(a,region){var s=SB.session,r=region||(s&&s.id),m=SB.meta[r]||{};if(!a) return null;if(a.indexOf("sbx/")===0){var e=(m.man||{})[a.slice(4)];return e?{w:e.w,h:e.h}:null}var c=(m.cfg&&m.cfg.assets||{})[a];return c?{w:c.w,h:c.h}:null};
@@ -679,8 +682,8 @@ function picker(s,po){po=po||{};return new Promise(function(done0){/* items 3+7:
   var skip=U.btn("sbx-hudb sbx-skip sbx-pskip","Skip",SKIP);ov.appendChild(skip);
   U.onTap(skip,function(){SB.voice.cut();var d=SB.store.doc(),a=d.active&&d.profiles[d.active];if(a){U.log("pick",{pic:a.pic,existing:true,skip:true})}else{var k=Object.keys(def.pics).filter(function(k){return !used[k]})[0]||Object.keys(def.pics)[0];if(used[k]) SB.store.setActive(used[k]);else SB.store.newProfile(k,newAge);U.log("pick",{pic:k,existing:!!used[k],skip:true,age:newAge})}
     idle.stop();ov.remove();done()});
-  var first=null;Object.keys(def.pics).forEach(function(k){var P=def.pics[k],b=U.btn("sbx-pic"+(used[k]?" used":""),(used[k]?"Keep playing as the ":"Play as the ")+P.label,'<img alt="" draggable="false" src="'+SB.img(P.pic)+'">'+(used[k]?'<span class="sbx-mine" aria-hidden="true">'+SNOW+'</span>':""));b.dataset.pic=k;row.appendChild(b);if(!first||(used[k]&&!used[first.dataset.pic])) first=b;
-    U.onTap(b,function(){SB.voice.cut();U.sfx("happy");U.anim(b,"a-jump",500);U.log("pick",{pic:k,existing:!!used[k]});
+  var first=null;Object.keys(def.pics).forEach(function(k){var P=def.pics[k],b=U.btn("sbx-pic"+(used[k]?" used":""),(used[k]?"Keep playing as the ":"Play as the ")+P.label,SB.avaHtml(k,SB.img(P.pic))+(used[k]?'<span class="sbx-mine" aria-hidden="true">'+SNOW+'</span>':""));b.dataset.pic=k;row.appendChild(b);if(!first||(used[k]&&!used[first.dataset.pic])) first=b;
+    U.onTap(b,function(){SB.voice.cut();U.sfx("happy");U.anim(b,"a-jump",500);if(window.SparkAva) SparkAva.pop(b);U.log("pick",{pic:k,existing:!!used[k]});
       if(used[k]) SB.store.setActive(used[k]);else SB.store.newProfile(k,newAge);U.log("newage",{age:used[k]?null:newAge});setTimeout(function(){SB.hand.hide();idle.stop();ov.remove();done()},350)})});
   /* grown-ups: hold the small age chip 1 s to choose the age for a NEW save; the default is the parent-set age. Ages are kept per save. */
   var newAge=U.age(),chip=U.btn("sbx-agechip","Age for a new player (grown-ups: hold)",'<span>'+newAge+'</span>');ov.appendChild(chip);var ht=0;

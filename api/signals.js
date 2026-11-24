@@ -1,5 +1,6 @@
 // POST /api/signals: anonymous play signals from the game (progression plan). Batches of events, no names, no recordings.
 // Without DATABASE_URL it accepts (204) and logs a count only. With it, events go to Postgres table spark_signals.
+const { cors } = require('./_cors');
 const { sql, ensure, dbUrl } = require('./_signals-db');
 const MAX_BYTES = 64 * 1024, MAX_EVENTS = 200, WIN = 60000, PERMIN = 20, hits = new Map();
 const TYPES = new Set(['enter', 'leave', 'replay', 'result', 'wrong', 'skip', 'stuck', 'error', 'deadtap', 'lowfps', 'ladder', 'snapshot']);
@@ -32,6 +33,7 @@ function clean(body) {
   return { dev, rows };
 }
 module.exports = async (req, res) => {
+  if (cors(req, res, 'POST')) return;  // Pages migration: no-op unless SPARK_CORS_ORIGINS is set
   if (req.method !== 'POST') { res.statusCode = 405; res.setHeader('allow', 'POST'); return res.end(); }
   const len = Number(req.headers['content-length'] || 0);
   if (len > MAX_BYTES) { res.statusCode = 413; return res.end(); }

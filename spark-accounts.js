@@ -1,4 +1,4 @@
-/* Spark family accounts (acc2, Allen 11/13-11/21). PREVIEW ONLY: turns on only when /api/accounts-config says so (that endpoint
+/* Spark family accounts (acc2, Allen 11/13-11/22). ON when config.js (or /api/accounts-config) gives the Supabase URL + publishable key (that endpoint
    answers {on:false} on production, which has no SB_* variables), so production and signed-out guest play run exactly as before.
    Supabase project spark-accounts (migration 20261115100000_spark_accounts.sql, applied by Allen 11/16). Plain fetch, no SDK.
    Grown-up area (reached only by press-and-hold): sign in / create account (email + password), consent checkboxes with Review
@@ -6,7 +6,7 @@
    clear a PIN, remove a player, sign out.
    Kid screens (TAP ONLY, never typing): one-time age picker + one-time explorer look at creation (stored on kid_profiles: age_band,
    look, look_done; start age also in the save and in start_age when the follow-up SQL is applied), the kid picks their own secret code
-   (tap pad: shapes for 4-9, numbers for 10+; set once via a 2-minute kid-scoped token from /api/kid-token; checked server-side by
+   (tap pad: shapes for 4-9, numbers for 10+; set once via a one-time Supabase ticket (fallback: 2-minute token from /api/kid-token); checked server-side by
    spark_check_kid_pin, 5 wrong tries lock it for 5 minutes), "Who's playing?" picker.
    Progress: every per-kid save key (localStorage spark* {profiles:{pid}} / {kids:{pid}}) is snapshotted into kid_progress via
    spark_save_progress (newer save wins) a few seconds after any change and when the page hides; loaded on profile pick; failed saves
@@ -15,7 +15,8 @@
 var AUTH="sparkAuthV1",ACC="sparkAccountsV1",SKEY="sparkFamKid",WKEY="sparkWorldV1",CONSENT_VERSION="v1-2026-11-21";
 var LINES={pick:"Pick your secret code!",again:"Tap it again to be sure!",saved:"That's your secret code!",oops:"Oops! Let's try that again.",enter:"Tap your secret code!",
   locked:"Let's wait a little, then try again.",who:"Who's playing? Tap your picture!",age:"How old are you? Tap your age!",look:"Make your explorer! Tap the colors you like, then tap Let's go!",go:"Let's go, explorer!"};
-var PICS={fox:{img:"animal_fox",label:"Fox"},seal:{img:"animal_seal",label:"Seal"},husky:{img:"sbx/husky_1",label:"Husky"},walrus:{img:"animal_walrus",label:"Walrus"},bear:{img:"animal_polarbear",label:"Polar bear"}};
+var AVATAR_V="2";
+var PICS={fox:{img:"avatars/fox.webp",label:"Fox"},seal:{img:"avatars/seal.webp",label:"Seal"},husky:{img:"avatars/husky.webp",label:"Husky"},walrus:{img:"avatars/walrus.webp",label:"Walrus"},bear:{img:"avatars/bear.webp",label:"Polar bear"}};
 var SKIP=/^(sparkAuthV1|sparkAccountsV1|sparkFamKid|sparkTestfast.*|.*\.bak|sparkSbxDev|sparkEgypt3dOn|sparkReef3dOn)$/;
 var C=null,_si=Storage.prototype.setItem,quiet=0;
 function log(k,o){try{(window.__sbxLog=window.__sbxLog||[]).push(Object.assign({t:Math.round(performance.now()),kind:"acc_"+k},o||{}))}catch(e){}}
@@ -23,7 +24,14 @@ function say(t){try{window.SparkVoice&&SparkVoice.say(t,{owner:"accounts",kind:"
 function J(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(e){return null}}
 function W(k,v){quiet++;try{_si.call(localStorage,k,JSON.stringify(v))}catch(e){}finally{quiet--}}
 function acc(){var a=J(ACC);if(!a||typeof a!=="object") a={};a.kids=a.kids||{};return a}
-function picSrc(p){return "areas/arctic/img/"+((PICS[p]&&PICS[p].img)||"animal_fox")+".webp"}
+function picSrc(p){return "areas/arctic/img/"+((PICS[p]&&PICS[p].img)||"avatars/fox.webp")+"?v="+AVATAR_V}
+function avaId(p){return PICS[p]?p:"fox"}
+function avaHtml(p,extra){p=avaId(p);return '<span class="sf-ava sf-ava-'+p+(extra?" "+extra:"")+'" data-ava="'+p+'"><img alt="" draggable="false" src="'+picSrc(p)+'"><span class="sf-ava-spark" aria-hidden="true"><i></i><i></i></span></span>'}
+function popAva(a){if(!a||!a.classList) return;if(!a.classList.contains("sf-ava")) a=a.querySelector&&a.querySelector(".sf-ava");if(!a) return;
+  a.classList.remove("pop");void a.offsetWidth;a.classList.add("pop");clearTimeout(a._popT);a._popT=setTimeout(function(){a.classList.remove("pop")},640)}
+document.addEventListener("pointerup",function(e){var t=e.target&&e.target.closest&&e.target.closest(".sf-ava,.sf-pic,.sf-kid,.sf-chip,.sf-fam,.sbx-pic,.sbx-player");
+  if(!t||t.disabled) return;popAva(t)},true);
+window.SparkAva={html:avaHtml,pop:popAva,src:picSrc};
 function esc(t){return String(t==null?"":t).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 /* ------------------------------------------------------------------ auth (Supabase GoTrue over fetch) */
 function sess(){var s=J(AUTH);return s&&s.access_token&&s.refresh_token?s:null}
@@ -93,7 +101,7 @@ var css="body.sf-open .spk-askme,body.sf-open #sparkCompanion,body.sf-open .sf-c
  ".sf-ttl{font-size:clamp(26px,4.4vh,42px);text-align:center;text-shadow:0 2px 8px #0008;margin:0}.sf-sub{font-size:clamp(16px,2.2vh,20px);font-weight:600;opacity:.9;text-align:center;max-width:36em;margin:0}"+
  ".sf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(130px,20vw,200px),260px));justify-content:center;gap:clamp(10px,2vw,24px);width:min(1100px,96vw)}"+
  ".sf-kid{display:flex;flex-direction:column;align-items:center;gap:8px;border:5px solid #fff;border-radius:28px;background:linear-gradient(#bfe4ff,#7cc0f2);color:#10243e;padding:14px 8px;cursor:pointer;box-shadow:0 8px 22px #0007;min-height:170px;font:800 clamp(20px,3vh,28px)/1.1 system-ui}"+
- ".sf-kid img{width:clamp(90px,14vh,150px);height:clamp(90px,14vh,150px);object-fit:cover;border-radius:50%;background:#fff;border:4px solid #10243e}.sf-kid:active{transform:scale(.96)}.sf-kid[disabled]{opacity:.35;cursor:default}"+
+ ".sf-kid:active{transform:scale(.96)}.sf-kid[disabled]{opacity:.35;cursor:default}"+
  ".sf-kid.on{outline:6px solid #3ee07a;outline-offset:3px}"+
  ".sf-ages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,2vw,22px);width:min(860px,94vw)}@media(max-width:560px){.sf-ages{grid-template-columns:repeat(3,minmax(0,1fr))}}"+
  ".sf-age{min-height:clamp(84px,11vh,130px);border:5px solid #fff;border-radius:26px;background:linear-gradient(#ffe7a3,#ffc23a);color:#10243e;font:900 clamp(36px,6vh,60px)/1 system-ui;cursor:pointer;box-shadow:0 8px 22px #0007}.sf-age:active{transform:scale(.95)}"+
@@ -108,14 +116,14 @@ var css="body.sf-open .spk-askme,body.sf-open #sparkCompanion,body.sf-open .sf-c
  ".sf-btns{display:flex;gap:10px;flex-wrap:wrap}.sf-btns>*{flex:1 1 auto}.sf-msg{min-height:1.3em;color:#a3261f;font-weight:700}.sf-msg.ok{color:#18794e}"+
  ".sf-chk{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:#fff;border:2px solid #d5e0ec}.sf-chk input{width:34px;height:34px;flex:0 0 auto;accent-color:#1d6fd6}.sf-chk label{flex:1 1 auto}"+
  ".sf-chk .sf-btn{min-height:48px;padding:10px 16px;font-size:17px}.sf-fam{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:#fff;border:2px solid #d5e0ec;flex-wrap:wrap}"+
- ".sf-fam img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid #10243e}.sf-fam .sf-n{flex:1 1 8em;font-weight:800}.sf-fam .sf-btn{min-height:48px;padding:8px 14px;font-size:16px}"+
+ ".sf-fam .sf-n{flex:1 1 8em;font-weight:800}.sf-fam .sf-btn{min-height:48px;padding:8px 14px;font-size:16px}"+
  ".sf-pics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}@media(max-width:520px){.sf-pics{grid-template-columns:repeat(3,minmax(0,1fr))}}"+
  ".sf-pic{border:4px solid #d5e0ec;border-radius:18px;background:#fff;padding:6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;font:700 15px system-ui;color:#10243e;min-height:96px}"+
- ".sf-pic img{width:64px;height:64px;border-radius:50%;object-fit:cover}.sf-pic.on{border-color:#3ee07a;box-shadow:0 0 0 4px #3ee07a55}.sf-pic[disabled]{opacity:.3;cursor:default}"+
+ ".sf-pic.on{border-color:#3ee07a;box-shadow:0 0 0 4px #3ee07a55}.sf-pic[disabled]{opacity:.3;cursor:default}"+
  ".sf-rev{position:fixed;inset:0;z-index:2147483400;background:#0009;display:flex;align-items:center;justify-content:center;padding:14px}.sf-rev .sf-card{max-height:86vh;overflow:auto}"+
  ".sf-hold{position:relative;overflow:hidden;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation}.sf-hold *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;pointer-events:none}.top .tools,.top .tools *,.sf-chip,.sf-chip *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.sf-chip.sf-chip-r{left:auto;right:max(8px,env(safe-area-inset-right))}.sf-chip.sf-chip-up{bottom:calc(max(8px,env(safe-area-inset-bottom)) + 118px)}.sf-hold i{position:absolute;left:0;bottom:0;height:5px;width:0;background:#3ee07a}.sf-hold.holding i{width:100%;transition:width 3s linear}"+
  ".sf-chip{position:fixed;left:max(8px,env(safe-area-inset-left));bottom:max(8px,env(safe-area-inset-bottom));z-index:2147482000;display:flex;align-items:center;gap:8px;background:#10243ee6;color:#fff;border:3px solid #fff;border-radius:999px;padding:4px 14px 4px 4px;font:800 16px system-ui;cursor:pointer;min-height:52px;box-shadow:0 4px 14px #0007}"+
- ".sf-chip img{width:42px;height:42px;border-radius:50%;object-fit:cover;background:#fff}body.spark-safari .sf-chip,html.sbx-boot .sf-chip{display:none}"+
+ "body.spark-safari .sf-chip,html.sbx-boot .sf-chip{display:none}"+
  ".sf-pad{display:grid;gap:clamp(10px,1.6vh,16px)}.sf-pad button{width:clamp(70px,10vh,96px);height:clamp(70px,10vh,96px);border-radius:20px;border:4px solid #fff;background:#10243e;color:#fff;font:800 clamp(30px,5vh,44px) system-ui;cursor:pointer}.sf-pad button:active{transform:scale(.94)}.sf-pad6{gap:clamp(14px,2.4vh,24px)}.sf-pad6 button{width:clamp(96px,min(15vh,27vw),150px);height:clamp(96px,min(15vh,27vw),150px);border-radius:28px;border-width:5px}"+
  ".sf-dots{display:flex;gap:14px;min-height:64px;align-items:center}";
 function addCss(){if(document.getElementById("sf-css")) return;var s=document.createElement("style");s.id="sf-css";s.textContent=css;document.head.appendChild(s)}
@@ -166,7 +174,7 @@ function review(x){var r=el("div","sf-rev"),c=el("div","sf-card");c.innerHTML='<
 function screenFamily(){var ov=overlay("family"),c=el("div","sf-card"),s=sess();c.innerHTML='<h2>Your family</h2><div class="sf-sub" style="color:#3b4f66">Signed in as '+esc(s&&s.user&&s.user.email)+'</div><div class="sf-list">Loading\u2026</div><div class="sf-msg"></div>';ov.appendChild(c);
   var list=c.querySelector(".sf-list"),msg=c.querySelector(".sf-msg");
   listKids().then(function(kids){list.innerHTML="";if(!kids.length) list.appendChild(el("div","","No players yet. Add up to 5."));
-    kids.forEach(function(k){var r=el("div","sf-fam");r.dataset.kid=k.id;r.innerHTML='<img alt="" src="'+picSrc(k.avatar)+'"><span class="sf-n">'+esc(k.nickname||PICS[k.avatar]&&PICS[k.avatar].label||k.avatar)+
+    kids.forEach(function(k){var r=el("div","sf-fam");r.dataset.kid=k.id;r.innerHTML=avaHtml(k.avatar)+'<span class="sf-n">'+esc(k.nickname||PICS[k.avatar]&&PICS[k.avatar].label||k.avatar)+
         '<br><small style="font-weight:600">'+(k.age_band?"Ages "+({k:"4-6",e:"7-9",u:"10-12",t:"13+"})[k.age_band]:"")+' \u00b7 '+(k.has_pin?"secret code set":"no secret code")+'</small></span>';
       if(k.has_pin) r.appendChild(btn("sf-btn alt","Clear code",function(){rpc("spark_clear_kid_pin",{p_kid:k.id}).then(screenFamily)}));
       else r.appendChild(btn("sf-btn alt","Kid picks a code",function(){kidPickPin(k).then(screenFamily)}));
@@ -180,15 +188,15 @@ function screenFamily(){var ov=overlay("family"),c=el("div","sf-card"),s=sess();
 /* ---- grown-up: add a player (types an optional nickname, taps a picture) -> then the kid's one-time age + look + code */
 function screenAddKid(kids){var used={};kids.forEach(function(k){used[k.avatar]=1});var ov=overlay("addkid"),c=el("div","sf-card"),pick=null;
   c.innerHTML='<h2>Add a player</h2><label>Nickname (optional, grown-up types it)<input type="text" maxlength="16" data-f="nick" placeholder="e.g. Sam"></label><div>Tap a picture for this player:</div>';
-  var g=el("div","sf-pics");Object.keys(PICS).forEach(function(p){var b=btn("sf-pic",'<img alt="" src="'+picSrc(p)+'"><span>'+PICS[p].label+'</span>',function(){pick=p;[].forEach.call(g.children,function(x){x.classList.toggle("on",x===b)});next.disabled=false},PICS[p].label);
+  var g=el("div","sf-pics");Object.keys(PICS).forEach(function(p){var b=btn("sf-pic",avaHtml(p)+'<span>'+PICS[p].label+'</span>',function(){pick=p;[].forEach.call(g.children,function(x){x.classList.toggle("on",x===b)});popAva(b);next.disabled=false},PICS[p].label);
     b.dataset.pic=p;if(used[p]) b.disabled=true;g.appendChild(b)});c.appendChild(g);var msg=el("div","sf-msg");c.appendChild(msg);
   var next=btn("sf-btn","Next: hand it to your child",function(){var nick=c.querySelector('[data-f="nick"]').value.trim();if(nick&&!/^[A-Za-z0-9][A-Za-z0-9 .'-]{0,15}$/.test(nick)){msg.textContent="Nickname: letters and numbers only, up to 16.";return}
     next.disabled=true;var s=sess();rest("POST","kid_profiles",{parent_id:s.user.id,avatar:pick,nickname:nick||null},{prefer:"return=minimal"}).then(listKids).then(function(ks){var k=ks.filter(function(x){return x.avatar===pick})[0];log("addkid",{ok:1});kidCreate(k)},
       function(e){next.disabled=false;msg.textContent=/kid_limit/.test(e.message)?"5 players is the most for one family.":"Could not add the player. Try again."})});next.disabled=true;
   var bs=el("div","sf-btns");bs.appendChild(next);bs.appendChild(btn("sf-btn alt","Back",screenFamily));c.appendChild(bs);ov.appendChild(c)}
 /* ---- KID (tap only): one-time age, one-time look, own secret code */
-function kidCreate(k){var ov=overlay("handoff");ov.innerHTML='<img alt="" src="'+picSrc(k.avatar)+'" style="width:clamp(120px,22vh,200px);height:clamp(120px,22vh,200px);border-radius:50%;border:6px solid #fff;background:#fff;object-fit:cover">'+
-   '<p class="sf-ttl">'+esc(k.nickname||"Hi, explorer!")+'</p>';ov.appendChild(btn("sf-go","\u25B6 Let\u2019s start",function(){stepAge(k)},"Let's start"))}
+function kidCreate(k){var ov=overlay("handoff");ov.innerHTML=avaHtml(k.avatar,"sf-ava-hero")+'<p class="sf-ttl">'+esc(k.nickname||"Hi, explorer!")+'</p>';
+  ov.appendChild(btn("sf-go","▶ Let’s start",function(){stepAge(k)},"Let's start"));setTimeout(function(){popAva(ov)},180)}
 function stepAge(k){var ov=overlay("age");ov.appendChild(el("p","sf-ttl",'How old are you?'));var g=el("div","sf-ages");g.setAttribute("role","group");
   [3,4,5,6,7,8,9,10,11,12,13].forEach(function(a){g.appendChild(btn("sf-age",a===13?"13+":String(a),function(){var a2=acc(),m=a2.kids[k.id]||{};m.startAge=a;m.startAgeAt=new Date().toISOString();a2.kids[k.id]=m;W(ACC,a2);
     k.age_band=bandOf(a);log("age",{age:a,band:k.age_band});rest("PATCH","kid_profiles?id=eq."+k.id,{age_band:k.age_band},{prefer:"return=minimal"}).catch(function(){});
@@ -205,8 +213,18 @@ function stepLook(k){var L=window.SparkKidLook,ov=overlay("look"),look={};if(!L)
   ov.appendChild(btn("sf-go","Let\u2019s go \u2192",function(){finishCreate(k,L.clean?L.clean(look):look)},"Let's go"));say(LINES.look)}
 function finishCreate(k,look){k.look=look;k.look_done=true;var f={look_done:true};if(look) f.look=look;if(k.age_band) f.age_band=k.age_band;
   rest("PATCH","kid_profiles?id=eq."+k.id,f,{prefer:"return=minimal"}).catch(function(){}).then(function(){var a=acc();ensureLocal(k,a.kids[k.id]&&a.kids[k.id].startAge);return kidPickPin(k)}).then(function(){say(LINES.go);screenPicker()})}
-function kidPickPin(k){return fetch("/api/kid-token",{method:"POST",headers:{"content-type":"application/json",authorization:"Bearer "+(sess()||{}).access_token},body:JSON.stringify({kid:k.id})}).then(function(r){return r.ok?r.json():null})
-   .catch(function(){return null}).then(function(j){if(!j||!j.token) return false;return pinPad({mode:"set",band:k.age_band,skip:true,set:function(code,kind){return rpc("spark_kid_set_pin",{p_kid:k.id,p_pin:code,p_kind:kind},j.token).then(function(r){log("pinset",{ok:r===true});return r===true})}})})}
+/* Pages migration (Allen 11/22 11:41 PM ET): the kid's one-time code is set with a Supabase ONE-TIME TICKET first
+   (spark_begin_kid_pin on the parent session -> random 120 s single-use ticket -> spark_kid_set_pin_ticket), no custom JWT, works from any origin.
+   Only if those functions are missing (SQL not applied yet: PostgREST PGRST202 / 404) it falls back to the old 2-minute token from /api/kid-token. */
+function kidPickPin(k){return pinStart(k).then(function(st){if(!st) return false;return pinPad({mode:"set",band:k.age_band,pic:k.avatar,skip:true,set:function(code,kind){
+     return st.set(code,kind).then(function(ok){log("pinset",{ok:ok,via:st.via});return ok},function(){log("pinset",{ok:false,via:st.via});return false})}})})}
+function pinStart(k){return rpc("spark_begin_kid_pin",{p_kid:k.id}).then(function(r){r=Array.isArray(r)?r[0]:r;var t=r&&r.ticket;
+    if(!/^[0-9a-f]{64}$/.test(t||"")){log("pinstart",{via:"ticket",ok:false});return null}log("pinstart",{via:"ticket",ok:true});
+    return {via:"ticket",set:function(code,kind){return rpc("spark_kid_set_pin_ticket",{p_kid:k.id,p_ticket:t,p_pin:code,p_kind:kind}).then(function(x){return x===true})}}},
+  function(e){if(e&&(e.code==="PGRST202"||e.status===404)) return pinStartLegacy(k);log("pinstart",{via:"ticket",ok:false,code:e&&e.code});return null})}
+function pinStartLegacy(k){return token().then(function(at){return fetch("/api/kid-token",{method:"POST",headers:{"content-type":"application/json",authorization:"Bearer "+at},body:JSON.stringify({kid:k.id})})})
+   .then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(j){log("pinstart",{via:"kid-token",ok:!!(j&&j.token)});if(!j||!j.token) return null;
+     return {via:"kid-token",set:function(code,kind){return rpc("spark_kid_set_pin",{p_kid:k.id,p_pin:code,p_kind:kind},j.token).then(function(r){return r===true})}}})}
 /* the kid's tap-only code pad. band k/e -> shapes+colours; u/t -> numbers. resolves true (set/ok) or false (skipped/back/locked) */
 var SH={c:'<circle cx="24" cy="24" r="17"/>',s:'<rect x="8" y="8" width="32" height="32" rx="4"/>',t:'<path d="M24 6l19 34H5z"/>',h:'<path d="M24 42S6 30 6 17a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 13-18 25-18 25z"/>'};
 var COL={1:"#ff5a5f",2:"#2fb3ff",3:"#3ee07a",4:"#ffd23a"};
@@ -218,7 +236,7 @@ var TILES=[{k:"c1",n:"red circle",c:"#ff4b4b",p:SH.c},{k:"s2",n:"blue square",c:
 var TILE={};TILES.forEach(function(t){TILE[t.k]=t});
 function tileSvg(k,size){var t=TILE[k];return t?'<svg width="'+size+'" height="'+size+'" viewBox="0 0 48 48" fill="'+t.c+'" aria-hidden="true">'+t.p+'</svg>':""}
 function pinPad(o){o=o||{};var band=o.band||(window.SparkAge?SparkAge.band:"k"),shapes=band==="k"||band==="e",kind=shapes?"shapes":"digits";
-  return new Promise(function(done){var ov=overlay(o.mode==="check"?"pincheck":"pinset");if(o.pic) ov.appendChild(el("div","",'<img alt="" src="'+picSrc(o.pic)+'" style="width:clamp(80px,12vh,120px);height:clamp(80px,12vh,120px);border-radius:50%;border:5px solid #fff;background:#fff;object-fit:cover">'));
+  return new Promise(function(done){var ov=overlay(o.mode==="check"?"pincheck":"pinset");if(o.pic){ov.appendChild(el("div","",avaHtml(o.pic,"sf-ava-pin")));setTimeout(function(){popAva(ov)},180)}
     var ttl=el("p","sf-ttl",o.mode==="check"?"Tap your secret code":"Pick your secret code");ov.appendChild(ttl);var dots=el("div","sf-dots"),grid=el("div","sf-pad");ov.appendChild(dots);ov.appendChild(grid);
     var info=el("p","sf-sub","");ov.appendChild(info);var cur=[],first=null,busy=false;
     function draw(){dots.innerHTML=cur.map(function(x){return shapes?tileSvg(x,54):'<b style="font-size:46px">\u25CF</b>'}).join("")+
@@ -240,9 +258,9 @@ function pinPad(o){o=o||{};var band=o.band||(window.SparkAge?SparkAge.band:"k"),
 var reloadOnPick=true;
 function screenPicker(fromBoot){reloadOnPick=!fromBoot;var ov=overlay("picker");ov.appendChild(el("p","sf-ttl","Who\u2019s playing?"));var g=el("div","sf-grid");ov.appendChild(g);
   var gb=holdBtn("sf-alt","Grown-ups (hold)",function(){screenFamily()});
-  listKids().then(function(kids){if(!kids.length){screenFamily();return}kids.forEach(function(k){var b=btn("sf-kid",'<img alt="" src="'+picSrc(k.avatar)+'"><span>'+esc(k.nickname||PICS[k.avatar]&&PICS[k.avatar].label||"Explorer")+'</span>',function(){pickKid(k)},k.nickname||k.avatar);b.dataset.kid=k.id;g.appendChild(b)});
+  listKids().then(function(kids){if(!kids.length){screenFamily();return}kids.forEach(function(k){var b=btn("sf-kid",avaHtml(k.avatar)+'<span>'+esc(k.nickname||PICS[k.avatar]&&PICS[k.avatar].label||"Explorer")+'</span>',function(){pickKid(k)},k.nickname||k.avatar);b.dataset.kid=k.id;g.appendChild(b)});
     say(LINES.who)},function(){g.appendChild(el("p","sf-sub","Can\u2019t reach the family list right now."));var a=acc(),d=world();Object.keys(a.kids).forEach(function(r){var p=d.profiles[a.kids[r].pid];if(!p) return;
-      g.appendChild(btn("sf-kid",'<img alt="" src="'+picSrc(p.pic)+'"><span>'+esc(a.kids[r].name||"Explorer")+'</span>',function(){startKid(r,a.kids[r].pid)}))})});
+      g.appendChild(btn("sf-kid",avaHtml(p.pic)+'<span>'+esc(a.kids[r].name||"Explorer")+'</span>',function(){startKid(r,a.kids[r].pid)}))})});
   var bs=el("div","sf-btns");bs.appendChild(gb);ov.appendChild(bs)}
 function pickKid(k){var go=function(){loadKid(k).then(function(r){var a=acc();a.kids[k.id].name=k.nickname||(PICS[k.avatar]&&PICS[k.avatar].label);W(ACC,a);startKid(k.id,r.pid)})};
   if(!k.has_pin){go();return}
@@ -251,7 +269,7 @@ function pickKid(k){var go=function(){loadKid(k).then(function(r){var a=acc();a.
 function startKid(remote,pid){try{sessionStorage.setItem(SKEY,remote)}catch(e){}setActive(pid);log("start",{pid:pid});
   if(reloadOnPick){quiet++;location.reload();return}closeOv();say(LINES.go);chip()}
 function chip(){var r=activeRemote();var old=document.querySelector(".sf-chip");if(old) old.remove();if(!r) return;var a=acc(),m=a.kids[r],p=world().profiles[m.pid];if(!p) return;addCss();
-  var b=btn("sf-chip",'<img alt="" src="'+picSrc(p.pic)+'"><span>'+esc(m.name||"Explorer")+' \u00b7 switch</span>',function(){pushAll().then(screenPicker)},"Switch player");document.body.appendChild(b);placeChip();if(!chipT)chipT=setInterval(placeChip,800)}
+  var b=btn("sf-chip",avaHtml(p.pic)+'<span>'+esc(m.name||"Explorer")+' \u00b7 switch</span>',function(){pushAll().then(screenPicker)},"Switch player");document.body.appendChild(b);placeChip();if(!chipT)chipT=setInterval(placeChip,800)}
 /* video fix (Allen 2:45): Spark and "Ask me" sit bottom-left on the world map and covered the switch chip - when they overlap, the chip moves to the right (or up) */
 var chipT=0;function placeChip(){var b=document.querySelector(".sf-chip");if(!b) return;var hit=function(){var A=b.getBoundingClientRect();return [].slice.call(document.querySelectorAll("#sparkCompanion,.spk-askme")).some(function(e){var r=e.getBoundingClientRect(),st=getComputedStyle(e);if(r.width<2||st.visibility==="hidden"||st.display==="none"||st.opacity==="0") return false;return !(r.right<=A.left||r.left>=A.right||r.bottom<=A.top||r.top>=A.bottom)})};
   b.classList.remove("sf-chip-r","sf-chip-up");if(!hit()) return;b.classList.add("sf-chip-r");if(!hit()) return;b.classList.add("sf-chip-up");if(!hit()) return;b.classList.remove("sf-chip-r")}
@@ -267,7 +285,10 @@ function panelHtml(){if(!C) return "";var s=sess();return '<h3>Family account</h
 function bind(){[].forEach.call(document.querySelectorAll("[data-sf-open]"),function(b){b.addEventListener("click",function(){try{SparkAge.closePanel()}catch(e){}openFamily()})})}
 function familyBtn(){if(document.getElementById("sfFamilyBtn")) return;var tools=document.querySelector(".top .tools");if(!tools) return;addCss();
   var b=holdBtn("","\uD83D\uDC6A Family",function(){openFamily()});b.id="sfFamilyBtn";b.title="Grown-ups: press and hold";tools.appendChild(b)}
-function boot(){fetch("/api/accounts-config",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(j){
+/* Pages migration: the static config.js (window.SPARK_CONFIG.sb, public URL + publishable key) is read first; without it, /api/accounts-config as before */
+function accountsConfig(){var c=window.SPARK_CONFIG&&window.SPARK_CONFIG.sb;if(c&&c.url&&c.key) return Promise.resolve({on:true,url:String(c.url).replace(/\/$/,""),key:String(c.key)});
+  return fetch("/api/accounts-config",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}
+function boot(){accountsConfig().then(function(j){
   if(!j||!j.on||!/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(j.url||"")||!j.key) return; /* production / guest: nothing changes */
   C={url:j.url,key:j.key};log("on",{});
   Storage.prototype.setItem=function(k,v){var r=_si.apply(this,arguments);try{if(this===window.localStorage&&!quiet&&/^spark[A-Z]/.test(k)&&!SKIP.test(k)) markDirty()}catch(e){}return r};

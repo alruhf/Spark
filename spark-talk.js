@@ -6,6 +6,8 @@
    Tapping Spark again while listening stops. No speech support / mic denied / nothing heard -> Spark says a friendly Ava line. Never a text box.
    Test hooks: SparkTalk.__fake(text) (as if heard), SparkTalk.__listening(on) (listening look only). */
 (function(){
+  /* Pages migration (11/22): API base from config.js; "" = same origin (unchanged); cross-origin posts are text/plain (no CORS preflight) */
+  function apiBase(){var a=window.SPARK_CONFIG&&window.SPARK_CONFIG.api;return typeof a==="string"&&/^https:\/\/[a-z0-9.-]+(:[0-9]+)?$/i.test(a)?a:""}
   var V=window.SparkVoice;if(!V||!window.SparkAsk||!window.SparkAI) return;
   var LINES={nosr:"I can't hear on this device yet. Tap the glowing places to explore!",denied:"I need a grown-up to turn on the microphone. Then tap me and ask!",
     none:"Hmm, I didn't hear that. Tap me and try again!",busy:"Let's take a little break. Ask me again in a minute!"};
@@ -31,7 +33,7 @@
   /* one question per tap -> server picks one action (off: keyword matcher) -> validated + run here */
   function heard(t){t=String(t||"").replace(/\s+/g," ").trim().slice(0,200);if(!t){st.last={fallback:"none"};sayLine(LINES.none);return Promise.resolve(st.last)}
     st.heard=t;st.busy=true;var h=H(),ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){ctl&&ctl.abort()},9000);
-    return fetch("/api/spark-ask",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({q:t,tab:h.tab,area:h.area||"",spot:h.spot||"",dev:dev()}),signal:ctl&&ctl.signal})
+    return fetch(apiBase()+"/api/spark-ask",{method:"POST",headers:{"content-type":apiBase()?"text/plain":"application/json"},body:JSON.stringify({q:t,tab:h.tab,area:h.area||"",spot:h.spot||"",dev:dev()}),signal:ctl&&ctl.signal})
       .then(function(r){return r.json().then(function(j){return {status:r.status,j:j}})})
       .then(function(o){clearTimeout(tm);st.busy=false;st.mode=o.j&&o.j.mode;var out=SparkAI.run(o.j&&o.j.action,{clip:o.j&&o.j.clip});st.last={q:t,status:o.status,mode:st.mode,server:o.j&&o.j.action,ran:out.action,result:out.result};return st.last})
       .catch(function(){clearTimeout(tm);st.busy=false;st.mode="local";var r=SparkAsk.ask(t);st.last={q:t,mode:"local",result:r};return st.last})}

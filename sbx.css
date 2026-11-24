@@ -94,8 +94,8 @@ body.sbx-on .spark-companion,body.sbx-on #sparkCompanion,body.sbx-on .savannah-f
 .sbx-back .ring{position:absolute;inset:-6px;width:calc(100% + 12px);height:calc(100% + 12px);transform:rotate(-90deg);pointer-events:none}
 .sbx-back .ring circle{fill:none;stroke:var(--gold);stroke-width:4;stroke-dasharray:145;stroke-dashoffset:145}
 .sbx-back.holding .ring circle{transition:stroke-dashoffset 1s linear;stroke-dashoffset:0}
-.sbx-player{left:calc(max(10px,env(safe-area-inset-left,0px)) + var(--t) + 10px);top:max(10px,env(safe-area-inset-top,0px));overflow:hidden;background:#cfe6ff}
-.sbx-player img{width:118%;height:118%;object-fit:cover}
+.sbx-player{left:calc(max(10px,env(safe-area-inset-left,0px)) + var(--t) + 10px);top:max(10px,env(safe-area-inset-top,0px));overflow:visible;background:transparent;border-color:transparent;padding:0}
+.sbx-player .sf-ava{width:100%;height:100%}
 .sbx-badge{left:calc(max(10px,env(safe-area-inset-left,0px)) + 2*var(--t) + 20px);top:max(10px,env(safe-area-inset-top,0px));background:#10243e}
 .sbx-badge svg{width:84%;height:84%}
 .sbx-again{right:calc(max(2px,env(safe-area-inset-right,0px)) + 82px);top:max(4px,env(safe-area-inset-top,0px));background:radial-gradient(circle at 35% 30%,#ffe58a,#f6a623 70%)}
@@ -176,9 +176,9 @@ body.sg-capl .sbx-cap{font-size:clamp(17px,2.9vh,26px)}body.sg-capxl .sbx-cap{fo
 /* ---------- picker */
 .sbx-picker{position:absolute;inset:0;z-index:85;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 20%,#3a6ea8,#10243e 75%)}
 .sbx-pics{display:flex;flex-wrap:wrap;gap:clamp(12px,3vw,30px);justify-content:center;max-width:960px;padding:90px 16px 20px}
-.sbx-pic{position:relative;width:clamp(120px,24vmin,190px);height:clamp(120px,24vmin,190px);border-radius:50%;border:5px solid #fff;background:radial-gradient(circle at 50% 35%,#ffffff,#cfe6ff);padding:10px;cursor:pointer;box-shadow:0 10px 26px #0007;overflow:visible}
-.sbx-pic img{width:100%;height:100%;object-fit:contain}
-.sbx-pic.used{border-color:var(--gold);box-shadow:0 0 0 6px #f6c44566,0 10px 26px #0007}
+.sbx-pic{position:relative;width:clamp(120px,24vmin,190px);height:clamp(120px,24vmin,190px);border-radius:50%;border:0;background:transparent;padding:0;cursor:pointer;box-shadow:none;overflow:visible}
+.sbx-pic .sf-ava{width:100%;height:100%}
+.sbx-pic.used{box-shadow:none}
 .sbx-mine{position:absolute;right:-6px;top:-6px;width:46px;height:46px;border-radius:50%;background:#3a8fd6;border:3px solid #fff;padding:6px}
 .sbx-mine svg{width:100%;height:100%}
 .sbx-pback{position:absolute}

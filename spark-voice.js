@@ -48,9 +48,12 @@
   /* spark14: Ava clips stored in the answer library DB (auto-written answers). Only same-origin /api/spark-clip?h=<sha256> is accepted.
      Fetched as a blob (works on iOS/Android/desktop, no Range quirks), cached for the session (max 24), then played on the ONE shared element. */
   var CLIP_RE=/^\/api\/spark-clip\?h=[0-9a-f]{64}$/,blobs={},blobOrder=[],dbclips=[];
+  /* Pages migration (11/22): the check above stays exact (the server still returns the relative /api/spark-clip?h= path); the fetch goes to
+     SPARK_CONFIG.api (an https origin, e.g. the Vercel site when the game runs on GitHub Pages) or same-origin when that is "" / unset. */
+  function apiBase(){var a=window.SPARK_CONFIG&&window.SPARK_CONFIG.api;return typeof a==="string"&&/^https:\/\/[a-z0-9.-]+(:[0-9]+)?$/i.test(a)?a:""}
   function fetchClip(u){if(blobs[u]) return Promise.resolve(blobs[u]);if(!window.fetch||!window.URL||!URL.createObjectURL) return Promise.reject(new Error("no-fetch"));
     var ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){ctl&&ctl.abort()},4000);
-    return fetch(u,{signal:ctl&&ctl.signal}).then(function(r){clearTimeout(tm);var ct=(r.headers.get("content-type")||"").toLowerCase();
+    return fetch(apiBase()+u,{signal:ctl&&ctl.signal}).then(function(r){clearTimeout(tm);var ct=(r.headers.get("content-type")||"").toLowerCase();
       if(!r.ok||ct.indexOf("audio/mpeg")<0) throw new Error("http-"+r.status);return r.blob()}).then(function(b){if(!b||b.size<1000) throw new Error("tiny");
       var bu=URL.createObjectURL(b);blobs[u]=bu;blobOrder.push(u);if(blobOrder.length>24){var old=blobOrder.shift();try{URL.revokeObjectURL(blobs[old])}catch(e){}delete blobs[old]}return bu},function(e){clearTimeout(tm);throw e})}
   /* say a platform line: DB Ava clip (o.clip) -> baked Ava clip -> caption only. Never the browser voice. */

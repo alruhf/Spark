@@ -4,6 +4,8 @@
    Places: only the 5 green playable ones. Challenges: only the current area's (spark-map.js). Spark never builds anything:
    "idea" thanks the child and saves the idea as text only (api/spark-idea), if the grown-up's data sharing is on. */
 (function(){
+  /* Pages migration (11/22): API base from config.js; "" = same origin (unchanged); cross-origin posts are text/plain (no CORS preflight) */
+  function apiBase(){var a=window.SPARK_CONFIG&&window.SPARK_CONFIG.api;return typeof a==="string"&&/^https:\/\/[a-z0-9.-]+(:[0-9]+)?$/i.test(a)?a:""}
   var M=window.SparkMap,V=window.SparkVoice;if(!M||!V) return;
   var PLAY=["earth","egypt","savannah","reef","arctic"],NAME={earth:"Earth",egypt:"Egypt",savannah:"Savannah",reef:"Reef",arctic:"Arctic"};
   var TYPES={highlight:1,open:1,point:1,say:1,start:1,hint:1,back:1,cheer:1,idea:1};
@@ -29,7 +31,7 @@
   function saveIdea(text){var h=H(),area=h.tab==="area"?h.area:(h.tab||"home");
     var ok=!(window.SparkProgress&&SparkProgress.collect&&SparkProgress.collect()===false);lastIdea={text:text,area:area,tag:ideaTag(),sent:ok,status:null};
     if(!ok) return Promise.resolve(lastIdea);
-    return fetch("/api/spark-idea",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({idea:text,area:area,tag:lastIdea.tag}),keepalive:true})
+    return fetch(apiBase()+"/api/spark-idea",{method:"POST",headers:{"content-type":apiBase()?"text/plain":"application/json"},body:JSON.stringify({idea:text,area:area,tag:lastIdea.tag}),keepalive:true})
       .then(function(r){lastIdea.status=r.status;return lastIdea}).catch(function(){lastIdea.status=0;return lastIdea})}
   function glowChallenge(ar,id,lead){var c=ar.challenges.filter(function(x){return x.id===id})[0];if(!c) return null;
     var g=window.SparkActions&&SparkActions.glow?SparkActions.glow(ar.id,id):null;say((lead?lead+" ":"")+c.line+(g&&g.found!==false?" Look for the sparkle!":""),"challenge");return {area:ar.id,challenge:id,glow:g}}

@@ -208,11 +208,13 @@ setInterval(function(){if(document.hidden) return;var idle=now()-lastProg;if(idl
   else if(cur||document.querySelector("canvas")){signal("stuck",{kind:"idle-nav",spot:lastSpot});gentleHint()}},5000);
 ["pointerdown","keydown"].forEach(function(t){document.addEventListener(t,function(){if(!cur) lastProg=now()},true)});
 /* ---- batching: every 30 s, and on pagehide with sendBeacon */
-var URL_="/api/signals";
+function apiBase(){var a=window.SPARK_CONFIG&&window.SPARK_CONFIG.api;return typeof a==="string"&&/^https:\/\/[a-z0-9.-]+(:[0-9]+)?$/i.test(a)?a:""}
+/* Pages migration (11/22): same-origin as before when SPARK_CONFIG.api is ""/unset; cross-origin posts go as text/plain (a CORS "simple" request, no preflight; the server parses the body as JSON either way) */
+var URL_=apiBase()+"/api/signals",CT=apiBase()?"text/plain":"application/json";
 function payload(evts){return JSON.stringify({v:1,dev:D.dev,sid:SID,age:ageBandIdx(),ua:innerWidth<700?"phone":"wide",events:evts})}
 function flush(beacon){if(!D.collect){Q=[];return Promise.resolve(0)}if(!Q.length) return Promise.resolve(0);var evts=Q.splice(0,CFG.maxBatch),body=payload(evts);
-  if(beacon&&navigator.sendBeacon){try{if(navigator.sendBeacon(URL_,new Blob([body],{type:"application/json"}))) return Promise.resolve(204)}catch(e){}}
-  try{return fetch(URL_,{method:"POST",headers:{"content-type":"application/json"},body:body,keepalive:true}).then(function(r){SP.lastStatus=r.status;return r.status}).catch(function(){return 0})}catch(e){return Promise.resolve(0)}}
+  if(beacon&&navigator.sendBeacon){try{if(navigator.sendBeacon(URL_,new Blob([body],{type:CT}))) return Promise.resolve(204)}catch(e){}}
+  try{return fetch(URL_,{method:"POST",headers:{"content-type":CT},body:body,keepalive:true}).then(function(r){SP.lastStatus=r.status;return r.status}).catch(function(){return 0})}catch(e){return Promise.resolve(0)}}
 setInterval(function(){flush(false)},CFG.batchMs);
 window.addEventListener("pagehide",function(){if(cur) leave(true,"pagehide");saveNow();flush(true)});
 document.addEventListener("visibilitychange",function(){if(document.hidden){saveNow();flush(true)}});

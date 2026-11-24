@@ -3,12 +3,14 @@
 // has text that hashes to h (content-addressed: two answers with the same words share one clip) (an edited/rejected answer never plays an old clip). Never writes, never runs DDL (the clips table is created only by
 // tools/auto-role.sql on Allen's go; until then every request is a clean 404 and the client falls back to the baked clip, then the caption).
 // Content-addressed -> long immutable cache on hits; misses are cached only briefly so a newly stored clip shows up within a minute. Supports Range (Safari).
+const { cors } = require('./_cors');
 const L = require('./_spark-answers');
 const { dbUrl } = require('./_signals-db');
 const DB_MS = 2500;
 function fail(res, code, err, cache) { res.statusCode = code; res.setHeader('content-type', 'application/json'); res.setHeader('x-robots-tag', 'noindex');
   res.setHeader('cache-control', cache || 'no-store'); res.end(JSON.stringify({ error: err })); }
 module.exports = async (req, res) => {
+  if (cors(req, res, 'GET, HEAD')) return;  // Pages migration: no-op unless SPARK_CORS_ORIGINS is set
   if (req.method !== 'GET' && req.method !== 'HEAD') { res.setHeader('allow', 'GET, HEAD'); return fail(res, 405, 'method'); }
   const h = String(new URL(req.url, 'http://x').searchParams.get('h') || '').toLowerCase();
   if (!L.CLIP_RE.test(h)) return fail(res, 400, 'bad_h', 'public, max-age=3600');
